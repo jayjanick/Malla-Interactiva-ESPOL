@@ -1,0 +1,5 @@
+{
+  "name": "Malla Interactiva ESPOL",
+  "description": "Una plataforma interactiva para visualizar y planificar mallas curriculares de ESPOL con estadísticas en tiempo real.",
+  "requestFramePermissions": []
+}
