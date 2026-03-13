@@ -1,23 +1,51 @@
-# Welcome to Jay Janick's Repository
+# ESPOL Curriculum Grid – Interactive Academic Planner
 
-Hello! I'm Jay Janick, a high school senior, and this repository has been created for educational purposes. Within, you'll find a project developed in HTML, CSS, and JavaScript as part of my learning journey.
+## About the Repository
+Hello! My name is **Jay Janick**, and I am currently a **university student pursuing a degree in Computer Engineering**.
 
-## About Me
-- **Name:** Jay Janick
-- **Educational Level:** High School Senior
+This repository was created for **educational purposes** and contains the source code of an interactive academic planning tool. The project is shared publicly so that **my professors and members of the educational community can access, review, and interact with the application**.
 
-## Project Description
-This project is a result of my exploration into web development. It comprises files in HTML, CSS, and JavaScript, created with the intention of sharing my work with my teachers and the educational community.
+## Project Overview
+This project is an **interactive curriculum grid (malla curricular)** designed to help students visualize and track their academic progress.
 
-## Access the Page
-You can access the resulting page of this project [here](link-to-your-page).
+The web application allows users to:
+- View the structure of their academic curriculum
+- Mark completed courses
+- Track approved credits
+- See the total number of subjects completed
+- Reset or clear their progress
 
-## Comments and Feedback
-I'm open to comments and suggestions! If you have any questions or feedback, feel free to [contact me](email-address).
+The goal of the project is to provide a **simple and visual way for students to monitor their academic progress throughout their degree program**.
 
-I hope you find this information helpful. Thank you for visiting my repository!
+## Technologies Used
+The project was built using modern frontend technologies:
 
+- **React**
+- **TypeScript**
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **Git & GitHub**
 
+## Live Application
+You can access the live version of the project here:
+
+**https://mallinespol.vercel.app**
+
+## Project Purpose
+This project was developed as part of my **academic learning process in software and web development**. It demonstrates concepts such as:
+
+- Frontend application structure
+- Component-based development
+- State management
+- Interactive UI for educational tools
+
+## Educational Use
+This repository is shared **only for academic and educational purposes**, allowing instructors and students to review the project and its implementation.
+
+## Author
+**Jay Janick**  
+Computer Engineering Student
 <div align="center">
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
