@@ -204,7 +204,7 @@ export function Sidebar({ currentView, setCurrentView }: SidebarProps) {
                       <span className="font-medium">{t.settings.version}</span>
                     </div>
                     <span className="text-sm font-mono text-white/50">
-                      v1.0.0
+                      v1.0.2
                     </span>
                   </div>
 
