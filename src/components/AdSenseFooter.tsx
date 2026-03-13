@@ -23,13 +23,12 @@ export function AdSenseFooter() {
   return (
     <div className="w-full max-w-4xl mx-auto my-4 px-4 h-[10vh] min-h-[60px] max-h-[100px] flex justify-center items-center overflow-hidden bg-white/5 rounded-xl border border-white/10 relative">
       {/* 
-        Reemplaza "ca-pub-XXXXXXXXXXXXXXXX" con tu ID de cliente de AdSense 
-        y "XXXXXXXXXX" con el ID de tu bloque de anuncios.
+        Reemplaza "XXXXXXXXXX" con el ID de tu bloque de anuncios (ad-slot).
       */}
       <ins
         className="adsbygoogle"
         style={{ display: 'block', width: '100%', height: '100%' }}
-        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+        data-ad-client="ca-pub-8362294904396944"
         data-ad-slot="XXXXXXXXXX"
         data-ad-format="horizontal"
         data-full-width-responsive="true"
