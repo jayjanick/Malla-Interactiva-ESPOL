@@ -22,7 +22,7 @@ export function Header() {
             onChange={setFaculty}
             options={facultyOptions}
             placeholder={t.header.faculty}
-            className="w-[140px] sm:w-[200px]"
+            className="w-[calc(50%-0.5rem)] sm:w-[200px]"
             dropdownClassName="w-[200px] sm:w-[240px]"
             align="left"
           />
@@ -33,7 +33,7 @@ export function Header() {
             options={careerOptions}
             placeholder={t.header.career}
             disabled={!selectedFacultyId}
-            className="w-[140px] sm:w-[200px]"
+            className="w-[calc(50%-0.5rem)] sm:w-[200px]"
             dropdownClassName="w-[200px] sm:w-[280px]"
             align="right"
           />
