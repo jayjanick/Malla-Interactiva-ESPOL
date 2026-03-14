@@ -919,12 +919,450 @@ export const careers: Career[] = [
       { id: 'comp3_tm', code: 'COMP3', name: 'Materia Complementaria 3', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
     ]
   },
-  { id: 'biol', name: 'Biología', facultyId: 'fcv', subjects: [] },
-  { id: 'agbi', name: 'Agricultura y Biología', facultyId: 'fcv', subjects: [] },
-  { id: 'nudi', name: 'Nutrición y Dietética', facultyId: 'fcv', subjects: [] },
-  { id: 'dipr', name: 'Diseño de productos', facultyId: 'fadcom', subjects: [] },
-  { id: 'digr', name: 'Diseño Gráfico', facultyId: 'fadcom', subjects: [] },
-  { id: 'prmc', name: 'Producción para Medios de Comunicación', facultyId: 'fadcom', subjects: [] },
+  {
+    id: 'biol',
+    name: 'Biología',
+    facultyId: 'fcv',
+    subjects: [
+      // Nivel 100 - I
+      { id: 'matg1045', code: 'MATG1045', name: 'Cálculo de una Variable', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], period: '100 - I' },
+      { id: 'fisg2002', code: 'FISG2002', name: 'Física General', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], period: '100 - I' },
+      { id: 'indg1033', code: 'INDG1033', name: 'Análisis y Resolución de Problemas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '100 - I' },
+      { id: 'quig1032', code: 'QUIG1032', name: 'Química General', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], period: '100 - I' },
+      { id: 'idig1006', code: 'IDIG1006', name: 'Inglés I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - I' },
+
+      // Nivel 100 - II
+      { id: 'matg1047', code: 'MATG1047', name: 'Cálculo de Varias Variables', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1045'], period: '100 - II' },
+      { id: 'ccpg1043', code: 'CCPG1043', name: 'Fundamentos de Programación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1045'], period: '100 - II' },
+      { id: 'quig1035', code: 'QUIG1035', name: 'Química Orgánica', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['quig1032'], period: '100 - II' },
+      { id: 'biog1022', code: 'BIOG1022', name: 'Biología General', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['quig1032'], period: '100 - II' },
+      { id: 'medg1017', code: 'MEDG1017', name: 'Botánica General', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], corequisites: ['biog1022'], period: '100 - II' },
+      { id: 'idig1007', code: 'IDIG1007', name: 'Inglés II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1006'], period: '100 - II' },
+
+      // Nivel 200 - I
+      { id: 'estg1034', code: 'ESTG1034', name: 'Estadística', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1047', 'ccpg1043'], period: '200 - I' },
+      { id: 'idig2012', code: 'IDIG2012', name: 'Comunicación', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 6, period: '200 - I' },
+      { id: 'biog1024', code: 'BIOG1024', name: 'Bioquímica', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['quig1035'], period: '200 - I' },
+      { id: 'biog1021', code: 'BIOG1021', name: 'Biología Celular y Molecular', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['biog1022'], period: '200 - I' },
+      { id: 'medg1026', code: 'MEDG1026', name: 'Zoología de Invertebrados', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['biog1022'], period: '200 - I' },
+      { id: 'medg1018', code: 'MEDG1018', name: 'Botánica Sistemática', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['medg1017'], period: '200 - I' },
+      { id: 'idig1008', code: 'IDIG1008', name: 'Inglés III', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1007'], period: '200 - I' },
+
+      // Nivel 200 - II
+      { id: 'biog1026', code: 'BIOG1026', name: 'Investigación en Ciencias de la Vida', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], period: '200 - II' },
+      { id: 'adsg1026', code: 'ADSG1026', name: 'Ciencias de la Sostenibilidad', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['adsg1022'], minApprovedSubjects: 20, period: '200 - II' },
+      { id: 'adsg1022', code: 'ADSG1022', name: 'Ecología General', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['biog1022'], period: '200 - II' },
+      { id: 'biog1028', code: 'BIOG1028', name: 'Microbiología General', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['biog1021'], period: '200 - II' },
+      { id: 'medg1020', code: 'MEDG1020', name: 'Entomología', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['medg1026'], period: '200 - II' },
+      { id: 'medg1025', code: 'MEDG1025', name: 'Zoología de Vertebrados', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['medg1026'], period: '200 - II' },
+      { id: 'idig1009', code: 'IDIG1009', name: 'Inglés IV', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1008'], period: '200 - II' },
+
+      // Nivel 300 - I
+      { id: 'admg1005', code: 'ADMG1005', name: 'Emprendimiento e Innovación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], minApprovedSubjects: 20, period: '300 - I' },
+      { id: 'estg1063', code: 'ESTG1063', name: 'Bioestadística', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['estg1034'], period: '300 - I' },
+      { id: 'adsg1021', code: 'ADSG1021', name: 'Ecología de Ecosistemas', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['adsg1022'], period: '300 - I' },
+      { id: 'medg1023', code: 'MEDG1023', name: 'Genética', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['biog1028'], period: '300 - I' },
+      { id: 'medg1019', code: 'MEDG1019', name: 'Embriología', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['medg1025', 'biog1028'], period: '300 - I' },
+      { id: 'agrg1027', code: 'AGRG1027', name: 'Fisiología Vegetal', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['medg1018', 'biog1024'], period: '300 - I' },
+      { id: 'idig1010', code: 'IDIG1010', name: 'Inglés V', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1009'], period: '300 - I' },
+
+      // Nivel 300 - II
+      { id: 'adsg1019', code: 'ADSG1019', name: 'Contaminación Ambiental', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['adsg1021'], period: '300 - II' },
+      { id: 'biog1030', code: 'BIOG1030', name: 'Bioinformática', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['estg1063', 'medg1023'], period: '300 - II' },
+      { id: 'adsg1020', code: 'ADSG1020', name: 'Ecología Acuática', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['adsg1021'], period: '300 - II' },
+      { id: 'medg1021', code: 'MEDG1021', name: 'Evolución', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['medg1023'], period: '300 - II' },
+      { id: 'biog1029', code: 'BIOG1029', name: 'Virología', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['medg1019'], period: '300 - II' },
+      { id: 'psc_biol', code: 'PSC', name: 'Prácticas de Servicio Comunitario', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '300 - II' },
+
+      // Nivel 400 - I
+      { id: 'biog1025', code: 'BIOG1025', name: 'Introducción a las Herramientas Ómicas', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['biog1030'], period: '400 - I' },
+      { id: 'adsg1024', code: 'ADSG1024', name: 'Principios de Ecotoxicología', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['adsg1020'], period: '400 - I' },
+      { id: 'medg1015', code: 'MEDG1015', name: 'Biogeografía', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['medg1021'], period: '400 - I' },
+      { id: 'medg1024', code: 'MEDG1024', name: 'Inmunología', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['biog1029'], period: '400 - I' },
+      { id: 'biog1023', code: 'BIOG1023', name: 'Fisiología Animal', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['medg1019'], period: '400 - I' },
+      { id: 'itin1_biol', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+
+      // Nivel 400 - II
+      { id: 'adsg1023', code: 'ADSG1023', name: 'Remediación Ambiental', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['adsg1024'], period: '400 - II' },
+      { id: 'biog1027', code: 'BIOG1027', name: 'Materia Integradora de Biología', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 44, period: '400 - II' },
+      { id: 'itin2_biol', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+
+      // Nivel 500
+      { id: 'ppp_biol', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
+
+      // Complementarias
+      { id: 'comp1_biol', code: 'COMP1', name: 'Complementaria de Artes, Deportes e Idiomas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_biol', code: 'COMP2', name: 'Complementaria de Humanísticas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true }
+    ]
+  },
+  {
+    id: 'agbi',
+    name: 'Ingeniería Agrícola y Biológica',
+    facultyId: 'fcv',
+    subjects: [
+      // Nivel 100 - I
+      { id: 'matg1045_ag', code: 'MATG1045', name: 'Cálculo de una Variable', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], period: '100 - I' },
+      { id: 'fisg2002_ag', code: 'FISG2002', name: 'Física General', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], period: '100 - I' },
+      { id: 'indg1033_ag', code: 'INDG1033', name: 'Análisis y Resolución de Problemas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '100 - I' },
+      { id: 'quig1032_ag', code: 'QUIG1032', name: 'Química General', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], period: '100 - I' },
+      { id: 'idig1006_ag', code: 'IDIG1006', name: 'Inglés I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - I' },
+
+      // Nivel 100 - II
+      { id: 'matg1047_ag', code: 'MATG1047', name: 'Cálculo de Varias Variables', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1045_ag'], period: '100 - II' },
+      { id: 'ccpg1043_ag', code: 'CCPG1043', name: 'Fundamentos de Programación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1045_ag'], period: '100 - II' },
+      { id: 'agrg1027_ag', code: 'AGRG1027', name: 'Fisiología Vegetal', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['fisg2002_ag'], period: '100 - II' },
+      { id: 'biog1022_ag', code: 'BIOG1022', name: 'Biología General', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['quig1032_ag'], period: '100 - II' },
+      { id: 'quig1035_ag', code: 'QUIG1035', name: 'Química Orgánica', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['quig1032_ag'], period: '100 - II' },
+      { id: 'idig1007_ag', code: 'IDIG1007', name: 'Inglés II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1006_ag'], period: '100 - II' },
+
+      // Nivel 200 - I
+      { id: 'estg1034_ag', code: 'ESTG1034', name: 'Estadística', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1047_ag', 'ccpg1043_ag'], period: '200 - I' },
+      { id: 'agrg1041', code: 'AGRG1041', name: 'Semilleros y Viveros', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['agrg1027_ag'], corequisites: ['medg1017_ag'], period: '200 - I' },
+      { id: 'medg1017_ag', code: 'MEDG1017', name: 'Botánica General', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['agrg1027_ag'], period: '200 - I' },
+      { id: 'biog1021_ag', code: 'BIOG1021', name: 'Biología Celular y Molecular', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['biog1022_ag'], period: '200 - I' },
+      { id: 'biog1024_ag', code: 'BIOG1024', name: 'Bioquímica', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['quig1035_ag'], period: '200 - I' },
+      { id: 'idig2012_ag', code: 'IDIG2012', name: 'Comunicación', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 6, period: '200 - I' },
+      { id: 'idig1008_ag', code: 'IDIG1008', name: 'Inglés III', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1007_ag'], period: '200 - I' },
+
+      // Nivel 200 - II
+      { id: 'estg1063_ag', code: 'ESTG1063', name: 'Bioestadística', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['estg1034_ag'], period: '200 - II' },
+      { id: 'agrg1025', code: 'AGRG1025', name: 'Diagnóstico y Protección Vegetal I', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['agrg1041'], period: '200 - II' },
+      { id: 'agrg1032', code: 'AGRG1032', name: 'Producción Vegetal I', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['agrg1025'], corequisites: ['agrg1025'], period: '200 - II' },
+      { id: 'biog1028_ag', code: 'BIOG1028', name: 'Microbiología General', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['biog1021_ag'], period: '200 - II' },
+      { id: 'agrg1026', code: 'AGRG1026', name: 'Edafología', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['biog1024_ag'], period: '200 - II' },
+      { id: 'idig1009_ag', code: 'IDIG1009', name: 'Inglés IV', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1008_ag'], period: '200 - II' },
+
+      // Nivel 300 - I
+      { id: 'admg1005_ag', code: 'ADMG1005', name: 'Emprendimiento e Innovación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], minApprovedSubjects: 20, period: '300 - I' },
+      { id: 'agrg1024', code: 'AGRG1024', name: 'Diagnóstico y Protección Vegetal II', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['agrg1025'], period: '300 - I' },
+      { id: 'agrg1033', code: 'AGRG1033', name: 'Producción Vegetal II', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['agrg1032'], corequisites: ['agrg1024'], period: '300 - I' },
+      { id: 'medg1023_ag', code: 'MEDG1023', name: 'Genética', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['biog1028_ag'], period: '300 - I' },
+      { id: 'agrg1039', code: 'AGRG1039', name: 'Producción Pecuaria I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['quig1032_ag'], period: '300 - I' }, // Asumiendo BIOG1032 era typo por QUIG1032 o similar, ajustado a QUIG1032 por ahora
+      { id: 'agrg1037', code: 'AGRG1037', name: 'Nutrición Vegetal', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['agrg1026'], period: '300 - I' },
+      { id: 'idig1010_ag', code: 'IDIG1010', name: 'Inglés V', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1009_ag'], period: '300 - I' },
+
+      // Nivel 300 - II
+      { id: 'adsg1026_ag', code: 'ADSG1026', name: 'Ciencias de la Sostenibilidad', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 20, period: '300 - II' },
+      { id: 'ccag1002', code: 'CCAG1002', name: 'Extensionismo', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['agrg1033'], period: '300 - II' },
+      { id: 'agrg1035', code: 'AGRG1035', name: 'Riego y Drenaje', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['agrg1033'], period: '300 - II' },
+      { id: 'medg1022', code: 'MEDG1022', name: 'Genotecnia', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['medg1023_ag', 'estg1063_ag'], period: '300 - II' },
+      { id: 'agrg1038', code: 'AGRG1038', name: 'Producción Pecuaria II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['agrg1039'], period: '300 - II' },
+      { id: 'psc_ag', code: 'PSC', name: 'Prácticas de Servicio Comunitario', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '300 - II' },
+
+      // Nivel 400 - I
+      { id: 'agrg1028', code: 'AGRG1028', name: 'Gestión de Unidades de Producción Agropecuaria', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['ccag1002'], period: '400 - I' },
+      { id: 'ecog1008', code: 'ECOG1008', name: 'Proyectos Agrícolas', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['ccag1002'], period: '400 - I' }, // Asumiendo CCAG1008 era CCAG1002
+      { id: 'agrg1040', code: 'AGRG1040', name: 'Producción Vegetal III', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['agrg1035'], period: '400 - I' },
+      { id: 'agrg1030', code: 'AGRG1030', name: 'Mecanización Agrícola', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['agrg1035'], period: '400 - I' },
+      { id: 'agrg1022', code: 'AGRG1022', name: 'Agricultura de Precisión', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['agrg1038'], period: '400 - I' },
+      { id: 'agrg1036', code: 'AGRG1036', name: 'Silvicultura', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['agrg1037'], period: '400 - I' },
+      { id: 'itin1_ag', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+
+      // Nivel 400 - II
+      { id: 'agrg1029', code: 'AGRG1029', name: 'Materia Integradora de Ingeniería Agrícola y Biológica', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 44, period: '400 - II' },
+      { id: 'agrg1023', code: 'AGRG1023', name: 'Agroecosistemas', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['agrg1036'], period: '400 - II' },
+      { id: 'itin2_ag', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+
+      // Nivel 500
+      { id: 'ppp_ag', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
+
+      // Complementarias
+      { id: 'comp1_ag', code: 'COMP1', name: 'Complementaria de Artes, Deportes e Idiomas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_ag', code: 'COMP2', name: 'Complementaria de Humanísticas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true }
+    ]
+  },
+  {
+    id: 'nudi',
+    name: 'Nutrición y Dietética',
+    facultyId: 'fcv',
+    subjects: [
+      // Nivel 100 - I
+      { id: 'quig1032_nu', code: 'QUIG1032', name: 'Química General', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], period: '100 - I' },
+      { id: 'indg1033_nu', code: 'INDG1033', name: 'Análisis y Resolución de Problemas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '100 - I' },
+      { id: 'matg2007', code: 'MATG2007', name: 'Matemáticas', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], period: '100 - I' },
+      { id: 'medg2012', code: 'MEDG2012', name: 'Antropología Nutricional', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: [], period: '100 - I' },
+      { id: 'nutg2043', code: 'NUTG2043', name: 'Técnicas Culinarias', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - I' },
+      { id: 'idig1006_nu', code: 'IDIG1006', name: 'Inglés I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - I' },
+
+      // Nivel 100 - II
+      { id: 'biog1022_nu', code: 'BIOG1022', name: 'Biología General', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['quig1032_nu'], period: '100 - II' },
+      { id: 'quig1035_nu', code: 'QUIG1035', name: 'Química Orgánica', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], corequisites: ['biog1022_nu'], period: '100 - II' },
+      { id: 'ccpg1043_nu', code: 'CCPG1043', name: 'Fundamentos de Programación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg2007'], period: '100 - II' },
+      { id: 'medg2018', code: 'MEDG2018', name: 'Morfofisiología Humana I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['medg2012'], period: '100 - II' },
+      { id: 'medg2017', code: 'MEDG2017', name: 'Legislación y Soberanía Alimentaria', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['nutg2043'], period: '100 - II' },
+      { id: 'idig2012_nu', code: 'IDIG2012', name: 'Comunicación', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 6, period: '100 - II' },
+      { id: 'idig1007_nu', code: 'IDIG1007', name: 'Inglés II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1006_nu'], period: '100 - II' },
+
+      // Nivel 200 - I
+      { id: 'biog1024_nu', code: 'BIOG1024', name: 'Bioquímica', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['biog1022_nu'], period: '200 - I' },
+      { id: 'medg2013', code: 'MEDG2013', name: 'Análisis Nutricional de los Alimentos', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['quig1035_nu'], period: '200 - I' },
+      { id: 'estg2004', code: 'ESTG2004', name: 'Estadística', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['ccpg1043_nu'], period: '200 - I' },
+      { id: 'biog1021_nu', code: 'BIOG1021', name: 'Biología Celular y Molecular', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['quig1035_nu'], period: '200 - I' }, // Asumiendo BIOG1035 era QUIG1035
+      { id: 'medg2019', code: 'MEDG2019', name: 'Morfofisiología Humana II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['medg2018'], period: '200 - I' },
+      { id: 'idig1008_nu', code: 'IDIG1008', name: 'Inglés III', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1007_nu'], period: '200 - I' },
+
+      // Nivel 200 - II
+      { id: 'nutg2041', code: 'NUTG2041', name: 'Nutrición Humana y Metabolismo', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['biog1024_nu', 'medg2019'], period: '200 - II' },
+      { id: 'nutg2042', code: 'NUTG2042', name: 'Técnicas Dietéticas', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['medg2013'], period: '200 - II' },
+      { id: 'estg1063_nu', code: 'ESTG1063', name: 'Bioestadística', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['estg2004'], period: '200 - II' },
+      { id: 'biog1028_nu', code: 'BIOG1028', name: 'Microbiología General', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['biog1021_nu'], period: '200 - II' },
+      { id: 'biog1026_nu', code: 'BIOG1026', name: 'Investigación en Ciencias de la Vida', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], period: '200 - II' },
+      { id: 'nutg2026', code: 'NUTG2026', name: 'Bioética', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['biog1026_nu'], period: '200 - II' },
+      { id: 'idig1009_nu', code: 'IDIG1009', name: 'Inglés IV', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1008_nu'], period: '200 - II' },
+
+      // Nivel 300 - I
+      { id: 'medg2016', code: 'MEDG2016', name: 'Farmacología y Nutrición', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['nutg2041'], period: '300 - I' },
+      { id: 'nutg2036', code: 'NUTG2036', name: 'Nutrición en el Ciclo de la Vida I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['nutg2041'], period: '300 - I' },
+      { id: 'nutg2029', code: 'NUTG2029', name: 'Evaluación del Estado Nutricional I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['nutg2042'], corequisites: ['nutg2036'], period: '300 - I' },
+      { id: 'medg2015', code: 'MEDG2015', name: 'Epidemiología y Salud Pública', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['estg1063_nu'], period: '300 - I' },
+      { id: 'admg1005_nu', code: 'ADMG1005', name: 'Emprendimiento e Innovación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], minApprovedSubjects: 20, period: '300 - I' },
+      { id: 'idig1010_nu', code: 'IDIG1010', name: 'Inglés V', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1009_nu'], period: '300 - I' },
+
+      // Nivel 300 - II
+      { id: 'nutg2032', code: 'NUTG2032', name: 'Nutrición Clínica I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['medg2016'], corequisites: ['nutg2028'], period: '300 - II' },
+      { id: 'nutg2037', code: 'NUTG2037', name: 'Nutrición en el Ciclo de la Vida II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['nutg2036'], period: '300 - II' },
+      { id: 'nutg2030', code: 'NUTG2030', name: 'Evaluación del Estado Nutricional II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['nutg2029'], period: '300 - II' },
+      { id: 'nutg2028', code: 'NUTG2028', name: 'Dietoterapia Básica', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['nutg2029'], period: '300 - II' },
+      { id: 'medg2020', code: 'MEDG2020', name: 'Salud Comunitaria', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['medg2015'], period: '300 - II' },
+      { id: 'adsg1026_nu', code: 'ADSG1026', name: 'Ciencias de la Sostenibilidad', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 20, period: '300 - II' },
+
+      // Nivel 400 - I
+      { id: 'nutg2033', code: 'NUTG2033', name: 'Nutrición Clínica II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['nutg2032'], period: '400 - I' },
+      { id: 'nutg2040', code: 'NUTG2040', name: 'Toxicología Nutricional y Alimentaria', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['nutg2037'], period: '400 - I' },
+      { id: 'nutg2035', code: 'NUTG2035', name: 'Nutrición Deportiva', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['nutg2030'], period: '400 - I' },
+      { id: 'nutg2027', code: 'NUTG2027', name: 'Dietoterapia Avanzada', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['nutg2028'], period: '400 - I' },
+      { id: 'nutg2039', code: 'NUTG2039', name: 'Servicios de Alimentación', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['nutg2028'], period: '400 - I' },
+      { id: 'medg2014', code: 'MEDG2014', name: 'Consejería Nutricional', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['medg2020'], period: '400 - I' },
+      { id: 'nutg2038', code: 'NUTG2038', name: 'Tendencias en Nutrición', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: [], corequisites: ['medg2014'], period: '400 - I' },
+
+      // Nivel 400 - II
+      { id: 'nutg2034', code: 'NUTG2034', name: 'Nutrición Clínica III', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['nutg2033'], period: '400 - II' },
+      { id: 'int_nu', code: 'INT', name: 'Internado Rotativo', credits: 0, hoursTotal: 0, prerequisites: [], period: '400 - II' }, // Asumiendo 0 créditos/horas por falta de datos
+      { id: 'nutg2031', code: 'NUTG2031', name: 'Materia Integradora de Nutrición y Dietética', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 44, period: '400 - II' },
+
+      // Complementarias
+      { id: 'comp1_nu', code: 'COMP1', name: 'Complementaria de Artes, Deportes e Idiomas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_nu', code: 'COMP2', name: 'Complementaria de Humanísticas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp3_nu', code: 'COMP3', name: 'Complementaria de Humanísticas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true }
+    ]
+  },
+  {
+    id: 'dipr',
+    name: 'Diseño de Productos',
+    facultyId: 'fadcom',
+    subjects: [
+      // Nivel 100 - I
+      { id: 'artg2024_dp', code: 'ARTG2024', name: 'Arte y Tecnología', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - I' },
+      { id: 'indg1033_dp', code: 'INDG1033', name: 'Análisis y Resolución de Problemas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '100 - I' },
+      { id: 'matg2009_dp', code: 'MATG2009', name: 'Matemáticas', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], period: '100 - I' },
+      { id: 'artg2025_dp', code: 'ARTG2025', name: 'Dibujo I', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], period: '100 - I' },
+      { id: 'idig1006_dp', code: 'IDIG1006', name: 'Inglés I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - I' },
+
+      // Nivel 100 - II
+      { id: 'ding2031', code: 'DING2031', name: 'Historia del Diseño Industrial', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['artg2024_dp'], period: '100 - II' },
+      { id: 'ding2043', code: 'DING2043', name: 'Teoría del Diseño', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['artg2024_dp'], period: '100 - II' },
+      { id: 'fisg2002_dp', code: 'FISG2002', name: 'Física General', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg2009_dp'], period: '100 - II' },
+      { id: 'ccpg1043_dp', code: 'CCPG1043', name: 'Fundamentos de Programación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg2009_dp'], period: '100 - II' },
+      { id: 'artg2026_dp', code: 'ARTG2026', name: 'Dibujo II', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['artg2025_dp'], period: '100 - II' },
+      { id: 'idig1007_dp', code: 'IDIG1007', name: 'Inglés II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1006_dp'], period: '100 - II' },
+
+      // Nivel 200 - I
+      { id: 'ding2023', code: 'DING2023', name: 'Diseño de Productos I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ding2031', 'ding2043'], period: '200 - I' },
+      { id: 'ding2039', code: 'DING2039', name: 'Taller de Diseño I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['ding2043'], period: '200 - I' },
+      { id: 'ding2033', code: 'DING2033', name: 'Materiales y Manufactura I', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['fisg2002_dp'], period: '200 - I' },
+      { id: 'ding2029', code: 'DING2029', name: 'Estructuras y Mecanismos I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['fisg2002_dp'], period: '200 - I' },
+      { id: 'estg2004_dp', code: 'ESTG2004', name: 'Estadística', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['ccpg1043_dp'], period: '200 - I' },
+      { id: 'idig1008_dp', code: 'IDIG1008', name: 'Inglés III', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1007_dp'], period: '200 - I' },
+
+      // Nivel 200 - II
+      { id: 'idig2012_dp', code: 'IDIG2012', name: 'Comunicación', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 6, period: '200 - II' },
+      { id: 'ding2024', code: 'DING2024', name: 'Diseño de Productos II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ding2023', 'ding2029'], period: '200 - II' },
+      { id: 'ding2040', code: 'DING2040', name: 'Taller de Diseño II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['ding2039', 'ding2029'], period: '200 - II' },
+      { id: 'ding2034', code: 'DING2034', name: 'Materiales y Manufactura II', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['ding2033'], period: '200 - II' },
+      { id: 'admg2030', code: 'ADMG2030', name: 'Fundamentos de Marketing', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], minApprovedSubjects: 15, period: '200 - II' },
+      { id: 'ding2027', code: 'DING2027', name: 'Diseño Digital', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['artg2026_dp'], period: '200 - II' },
+      { id: 'idig1009_dp', code: 'IDIG1009', name: 'Inglés IV', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1008_dp'], period: '200 - II' },
+
+      // Nivel 300 - I
+      { id: 'admg1005_dp', code: 'ADMG1005', name: 'Emprendimiento e Innovación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], minApprovedSubjects: 20, period: '300 - I' },
+      { id: 'ding2028', code: 'DING2028', name: 'Ergonomía', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['ding2024', 'ding2040'], period: '300 - I' },
+      { id: 'ding2041', code: 'DING2041', name: 'Taller de Diseño III', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['ding2040', 'ding2034'], period: '300 - I' },
+      { id: 'ding2030', code: 'DING2030', name: 'Estructuras y Mecanismos II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ding2029', 'ding2027'], period: '300 - I' },
+      { id: 'ding2036', code: 'DING2036', name: 'Modelado Tridimensional', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['ding2027'], period: '300 - I' },
+      { id: 'idig1010_dp', code: 'IDIG1010', name: 'Inglés V', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1009_dp'], period: '300 - I' },
+
+      // Nivel 300 - II
+      { id: 'adsg1026_dp', code: 'ADSG1026', name: 'Ciencias de la Sostenibilidad', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 20, period: '300 - II' },
+      { id: 'ding2025', code: 'DING2025', name: 'Diseño de Productos III', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ding2028', 'ding2041'], period: '300 - II' },
+      { id: 'ding2042', code: 'DING2042', name: 'Taller de Diseño IV', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['ding2041'], period: '300 - II' },
+      { id: 'ding2035', code: 'DING2035', name: 'Materiales y Manufactura III', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ding2030', 'ding2034'], period: '300 - II' },
+      { id: 'digg2041_dp', code: 'DIGG2041', name: 'Investigación Aplicada al Diseño', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['estg2004_dp'], period: '300 - II' },
+      { id: 'psc_dp', code: 'PSC', name: 'Prácticas de Servicio Comunitario', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '300 - II' },
+
+      // Nivel 400 - I
+      { id: 'ding2026', code: 'DING2026', name: 'Diseño de Productos IV', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ding2025'], period: '400 - I' },
+      { id: 'ding2037', code: 'DING2037', name: 'Portafolio', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 25, period: '400 - I' },
+      { id: 'ding2038', code: 'DING2038', name: 'Prototipado Avanzado', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['ding2035', 'ding2036'], period: '400 - I' },
+      { id: 'digg2028_dp', code: 'DIGG2028', name: 'Diseño Estratégico', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], corequisites: ['ecog2041_dp'], period: '400 - I' },
+      { id: 'ecog2041_dp', code: 'ECOG2041', name: 'Gestión del Diseño', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['digg2041_dp'], period: '400 - I' },
+      { id: 'itin1_dp', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+
+      // Nivel 400 - II
+      { id: 'ding2032', code: 'DING2032', name: 'Materia Integradora de Diseño de Productos', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 41, period: '400 - II' },
+      { id: 'itin2_dp', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+
+      // Nivel 500
+      { id: 'ppp_dp', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
+
+      // Complementarias
+      { id: 'comp1_dp', code: 'COMP1', name: 'Complementaria de Artes, Deportes e Idiomas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_dp', code: 'COMP2', name: 'Complementaria de Humanísticas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true }
+    ]
+  },
+  {
+    id: 'digr',
+    name: 'Diseño Gráfico',
+    facultyId: 'fadcom',
+    subjects: [
+      // Nivel 100 - I
+      { id: 'artg2024_dg', code: 'ARTG2024', name: 'Arte y Tecnología', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - I' },
+      { id: 'artg2025_dg', code: 'ARTG2025', name: 'Dibujo I', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], period: '100 - I' },
+      { id: 'indg1033_dg', code: 'INDG1033', name: 'Análisis y Resolución de Problemas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '100 - I' },
+      { id: 'matg2009_dg', code: 'MATG2009', name: 'Matemáticas', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], period: '100 - I' },
+      { id: 'idig1006_dg', code: 'IDIG1006', name: 'Inglés I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - I' },
+
+      // Nivel 100 - II
+      { id: 'artg2028_dg', code: 'ARTG2028', name: 'Historia del Arte', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['artg2024_dg'], period: '100 - II' },
+      { id: 'artg2026_dg', code: 'ARTG2026', name: 'Dibujo II', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['artg2025_dg'], period: '100 - II' },
+      { id: 'artg2023_dg', code: 'ARTG2023', name: 'Arte y Ciencia', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '100 - II' },
+      { id: 'ccpg1043_dg', code: 'CCPG1043', name: 'Fundamentos de Programación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg2009_dg'], period: '100 - II' },
+      { id: 'idig1007_dg', code: 'IDIG1007', name: 'Inglés II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1006_dg'], period: '100 - II' },
+
+      // Nivel 200 - I
+      { id: 'idig2012_dg', code: 'IDIG2012', name: 'Comunicación', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 6, period: '200 - I' },
+      { id: 'digg2033', code: 'DIGG2033', name: 'Historia del Diseño', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['artg2028_dg'], period: '200 - I' },
+      { id: 'artg2033', code: 'ARTG2033', name: 'Técnicas Pictóricas', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['artg2026_dg'], period: '200 - I' },
+      { id: 'comg2002_dg', code: 'COMG2002', name: 'Teoría de la Comunicación', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['artg2023_dg'], period: '200 - I' },
+      { id: 'estg2004_dg', code: 'ESTG2004', name: 'Estadística', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['ccpg1043_dg'], period: '200 - I' },
+      { id: 'idig1008_dg', code: 'IDIG1008', name: 'Inglés III', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1007_dg'], period: '200 - I' },
+
+      // Nivel 200 - II
+      { id: 'digg2036', code: 'DIGG2036', name: 'Tipografía', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['digg2033'], period: '200 - II' },
+      { id: 'digg2029', code: 'DIGG2029', name: 'Diseño Gráfico I', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['digg2033'], period: '200 - II' },
+      { id: 'artg2032', code: 'ARTG2032', name: 'Taller de Ilustración', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['artg2033'], period: '200 - II' },
+      { id: 'digg2040', code: 'DIGG2040', name: 'Antropología del Diseño', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['comg2002_dg'], corequisites: ['digg2040'], period: '200 - II' }, // CO-R a sí misma en el txt, lo dejo así
+      { id: 'digg2039_dg', code: 'DIGG2039', name: 'Redacción Creativa', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['comg2002_dg'], period: '200 - II' },
+      { id: 'idig1009_dg', code: 'IDIG1009', name: 'Inglés IV', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1008_dg'], period: '200 - II' },
+
+      // Nivel 300 - I
+      { id: 'admg1005_dg', code: 'ADMG1005', name: 'Emprendimiento e Innovación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], minApprovedSubjects: 20, period: '300 - I' },
+      { id: 'digg2030', code: 'DIGG2030', name: 'Diseño Gráfico II', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['digg2029', 'digg2036'], period: '300 - I' },
+      { id: 'ccag2021', code: 'CCAG2021', name: 'Semiótica', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['digg2040'], period: '300 - I' },
+      { id: 'cadg2045_dg', code: 'CADG2045', name: 'Fotografía Digital', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], corequisites: ['ccag2021'], period: '300 - I' },
+      { id: 'digg2041_dg', code: 'DIGG2041', name: 'Investigación Aplicada al Diseño', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['estg2004_dg'], minApprovedSubjects: 20, period: '300 - I' },
+      { id: 'idig1010_dg', code: 'IDIG1010', name: 'Inglés V', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1009_dg'], period: '300 - I' },
+
+      // Nivel 300 - II
+      { id: 'digg2037', code: 'DIGG2037', name: 'Técnicas de Impresión', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['digg2030'], period: '300 - II' },
+      { id: 'digg2031', code: 'DIGG2031', name: 'Diseño Gráfico III', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['digg2030'], period: '300 - II' },
+      { id: 'digg2027', code: 'DIGG2027', name: 'Diseño Editorial', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['digg2030', 'artg2032'], period: '300 - II' },
+      { id: 'digg2023_dg', code: 'DIGG2023', name: 'Dirección de Arte', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['cadg2045_dg'], period: '300 - II' },
+      { id: 'digg2026', code: 'DIGG2026', name: 'Diseño de Marca', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['digg2041_dg'], period: '300 - II' },
+      { id: 'adsg1026_dg', code: 'ADSG1026', name: 'Ciencias de la Sostenibilidad', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 20, period: '300 - II' },
+      { id: 'psc_dg', code: 'PSC', name: 'Prácticas de Servicio Comunitario', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '300 - II' },
+
+      // Nivel 400 - I
+      { id: 'digg2025', code: 'DIGG2025', name: 'Diseño de Información', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['digg2037'], period: '400 - I' },
+      { id: 'digg2032', code: 'DIGG2032', name: 'Diseño Gráfico IV', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['digg2031', 'digg2026'], period: '400 - I' },
+      { id: 'digg2035', code: 'DIGG2035', name: 'Proyecto de Diseño', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['digg2023_dg', 'digg2031'], period: '400 - I' },
+      { id: 'ecog2041_dg', code: 'ECOG2041', name: 'Gestión del Diseño', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['digg2023_dg'], period: '400 - I' },
+      { id: 'digg2028_dg', code: 'DIGG2028', name: 'Diseño Estratégico', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], corequisites: ['ecog2041_dg'], period: '400 - I' },
+      { id: 'itin1_dg', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+
+      // Nivel 400 - II
+      { id: 'digg2034', code: 'DIGG2034', name: 'Materia Integradora de Diseño Gráfico', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 40, period: '400 - II' },
+      { id: 'itin2_dg', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+
+      // Nivel 500
+      { id: 'ppp_dg', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
+
+      // Complementarias
+      { id: 'comp1_dg', code: 'COMP1', name: 'Complementaria de Artes, Deportes e Idiomas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_dg', code: 'COMP2', name: 'Complementaria de Humanísticas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true }
+    ]
+  },
+  {
+    id: 'prmc',
+    name: 'Producción para Medios Audiovisuales',
+    facultyId: 'fadcom',
+    subjects: [
+      // Nivel 100 - I
+      { id: 'artg2024_pm', code: 'ARTG2024', name: 'Arte y Tecnología', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - I' },
+      { id: 'matg2009_pm', code: 'MATG2009', name: 'Matemáticas', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], period: '100 - I' },
+      { id: 'indg1033_pm', code: 'INDG1033', name: 'Análisis y Resolución de Problemas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '100 - I' },
+      { id: 'artg2025_pm', code: 'ARTG2025', name: 'Dibujo I', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], period: '100 - I' },
+      { id: 'idig1006_pm', code: 'IDIG1006', name: 'Inglés I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - I' },
+
+      // Nivel 100 - II
+      { id: 'artg2028_pm', code: 'ARTG2028', name: 'Historia del Arte', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['artg2024_pm'], period: '100 - II' },
+      { id: 'ccpg1043_pm', code: 'CCPG1043', name: 'Fundamentos de Programación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg2009_pm'], period: '100 - II' },
+      { id: 'artg2023_pm', code: 'ARTG2023', name: 'Arte y Ciencia', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '100 - II' },
+      { id: 'artg2026_pm', code: 'ARTG2026', name: 'Dibujo II', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['artg2025_pm'], period: '100 - II' },
+      { id: 'idig1007_pm', code: 'IDIG1007', name: 'Inglés II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1006_pm'], period: '100 - II' },
+
+      // Nivel 200 - I
+      { id: 'comg2002_pm', code: 'COMG2002', name: 'Teoría de la Comunicación', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['artg2028_pm'], period: '200 - I' },
+      { id: 'artg2030', code: 'ARTG2030', name: 'Investigación Audiovisual', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['artg2028_pm'], corequisites: ['estg2004_pm'], period: '200 - I' },
+      { id: 'estg2004_pm', code: 'ESTG2004', name: 'Estadística', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['ccpg1043_pm'], period: '200 - I' },
+      { id: 'artg2029', code: 'ARTG2029', name: 'Historia del Cine', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['artg2023_pm'], period: '200 - I' },
+      { id: 'cadg2036', code: 'CADG2036', name: 'Preproducción', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['artg2026_pm'], period: '200 - I' },
+      { id: 'idig1008_pm', code: 'IDIG1008', name: 'Inglés III', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1007_pm'], period: '200 - I' },
+
+      // Nivel 200 - II
+      { id: 'cadg2034', code: 'CADG2034', name: 'Narrativa Audiovisual', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['comg2002_pm'], period: '200 - II' },
+      { id: 'digg2039_pm', code: 'DIGG2039', name: 'Redacción Creativa', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['artg2030'], corequisites: ['cadg2034'], period: '200 - II' },
+      { id: 'idig2012_pm', code: 'IDIG2012', name: 'Comunicación', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 6, period: '200 - II' },
+      { id: 'cadg2031', code: 'CADG2031', name: 'Fotografía para Medios', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['artg2029'], period: '200 - II' },
+      { id: 'cadg2029', code: 'CADG2029', name: 'Diseño de Producción', credits: 3, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['cadg2036'], period: '200 - II' }, // 3CR pero 2/1/3 = 6h en el txt, mantengo 3CR y 6h
+      { id: 'idig1009_pm', code: 'IDIG1009', name: 'Inglés IV', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1008_pm'], period: '200 - II' },
+
+      // Nivel 300 - I
+      { id: 'cadg2030', code: 'CADG2030', name: 'Edición y Montaje', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['cadg2034'], period: '300 - I' },
+      { id: 'cadg2032', code: 'CADG2032', name: 'Guion', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['digg2039_pm'], period: '300 - I' },
+      { id: 'admg1005_pm', code: 'ADMG1005', name: 'Emprendimiento e Innovación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], minApprovedSubjects: 20, period: '300 - I' },
+      { id: 'cadg2046', code: 'CADG2046', name: 'Videografía', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['cadg2031', 'cadg2029'], period: '300 - I' },
+      { id: 'cadg2042', code: 'CADG2042', name: 'Diseño de Sonido', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['cadg2029'], period: '300 - I' },
+      { id: 'idig1010_pm', code: 'IDIG1010', name: 'Inglés V', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1009_pm'], period: '300 - I' },
+
+      // Nivel 300 - II
+      { id: 'cadg2039', code: 'CADG2039', name: 'Proyecto Audiovisual I', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['cadg2030', 'cadg2032'], period: '300 - II' },
+      { id: 'cadg2038', code: 'CADG2038', name: 'Producción para Nuevos Medios', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['cadg2032'], period: '300 - II' },
+      { id: 'adsg1026_pm', code: 'ADSG1026', name: 'Ciencias de la Sostenibilidad', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 20, period: '300 - II' },
+      { id: 'cadg2025', code: 'CADG2025', name: 'Animación I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['cadg2046'], period: '300 - II' },
+      { id: 'cadg2028', code: 'CADG2028', name: 'Dirección Escénica', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['cadg2042'], period: '300 - II' },
+      { id: 'psc_pm', code: 'PSC', name: 'Prácticas de Servicio Comunitario', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 24, period: '300 - II' },
+
+      // Nivel 400 - I
+      { id: 'cadg2040', code: 'CADG2040', name: 'Proyecto Audiovisual II', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['cadg2039'], period: '400 - I' },
+      { id: 'cadg2035', code: 'CADG2035', name: 'Postproducción', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['cadg2038'], corequisites: ['cadg2040'], period: '400 - I' },
+      { id: 'cadg2037', code: 'CADG2037', name: 'Producción Ejecutiva', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['cadg2038'], period: '400 - I' },
+      { id: 'cadg2026', code: 'CADG2026', name: 'Animación II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['cadg2025'], period: '400 - I' },
+      { id: 'cadg2027', code: 'CADG2027', name: 'Dirección Audiovisual', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['cadg2028'], period: '400 - I' },
+      { id: 'itin1_pm', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+
+      // Nivel 400 - II
+      { id: 'cadg2033', code: 'CADG2033', name: 'Legislación Audiovisual', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['cadg2037'], period: '400 - II' },
+      { id: 'cadg2043', code: 'CADG2043', name: 'Materia Integradora de Producción para Medios de Comunicación', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 40, period: '400 - II' },
+      { id: 'itin2_pm', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+
+      // Nivel 500
+      { id: 'ppp_pm', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
+
+      // Complementarias
+      { id: 'comp1_pm', code: 'COMP1', name: 'Complementaria de Artes, Deportes e Idiomas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_pm', code: 'COMP2', name: 'Complementaria de Humanísticas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true }
+    ]
+  },
   { id: 'alim', name: 'Alimentos', facultyId: 'fimcp', subjects: [] },
   { id: 'indu', name: 'Industrial', facultyId: 'fimcp', subjects: [] },
   { id: 'mate', name: 'Materiales', facultyId: 'fimcp', subjects: [] },
