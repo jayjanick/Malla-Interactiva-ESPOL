@@ -83,9 +83,20 @@ export default function App() {
           </AnimatePresence>
         </main>
 
-        <footer className="w-full text-center py-6 text-[11px] text-white/30 relative z-10 mt-auto flex flex-col items-center justify-center">
+        <footer className="w-full text-center py-8 px-4 text-[11px] text-white/30 relative z-10 mt-auto flex flex-col items-center justify-center border-t border-white/5 bg-black/20">
+          <div className="max-w-4xl mx-auto mb-6 text-left space-y-3 hidden md:block">
+            <h3 className="text-white/50 font-medium text-xs uppercase tracking-wider">Sobre el Planificador de Mallas ESPOL</h3>
+            <p className="leading-relaxed">
+              El Planificador Interactivo de Mallas Curriculares es una herramienta no oficial diseñada para ayudar a los estudiantes de la Escuela Superior Politécnica del Litoral (ESPOL) a organizar su progreso académico. Permite visualizar las materias por semestre, verificar prerrequisitos y correquisitos, y calcular automáticamente los créditos aprobados.
+            </p>
+            <p className="leading-relaxed">
+              Nuestra plataforma soporta múltiples facultades incluyendo FIEC, FCSH, FCV, FADCOM y FIMCM. Esta aplicación web facilita la toma de decisiones durante el proceso de registro de materias, ofreciendo una interfaz clara y moderna para la comunidad politécnica.
+            </p>
+          </div>
+
           <AdSenseFooter />
-          <div className="mt-4 flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+          
+          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 w-full">
             <span className="hidden xl:inline-block font-mono bg-white/5 px-2 py-0.5 rounded-md border border-white/10">v1.0.2</span>
             <span className="hidden xl:inline">•</span>
             <span>© {new Date().getFullYear()} - Hecho con ❤️ por <a href="https://github.com/jayjanick" target="_blank" rel="noopener noreferrer" className="hover:text-white/50 transition-colors">Jay</a></span>
