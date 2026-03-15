@@ -1368,9 +1368,228 @@ export const careers: Career[] = [
   { id: 'mate', name: 'Materiales', facultyId: 'fimcp', subjects: [] },
   { id: 'meca', name: 'Mecánica', facultyId: 'fimcp', subjects: [] },
   { id: 'mect', name: 'Mecatrónica', facultyId: 'fimcp', subjects: [] },
-  { id: 'acui', name: 'Acuicultura', facultyId: 'fimcm', subjects: [] },
-  { id: 'nava', name: 'Naval', facultyId: 'fimcm', subjects: [] },
-  { id: 'ocea', name: 'Oceaografía', facultyId: 'fimcm', subjects: [] },
+  {
+    id: 'acui',
+    name: 'Acuicultura',
+    facultyId: 'fimcm',
+    subjects: [
+      // Nivel 100 - I
+      { id: 'matg1045_ac', code: 'MATG1045', name: 'Cálculo de una Variable', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], period: '100 - I' },
+      { id: 'fisg1005_ac', code: 'FISG1005', name: 'Física: Mecánica', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '100 - I' },
+      { id: 'indg1033_ac', code: 'INDG1033', name: 'Análisis y Resolución de Problemas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '100 - I' },
+      { id: 'quig1032_ac', code: 'QUIG1032', name: 'Química General', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], period: '100 - I' },
+      { id: 'idig1006_ac', code: 'IDIG1006', name: 'Inglés I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - I' },
+
+      // Nivel 100 - II
+      { id: 'matg1047_ac', code: 'MATG1047', name: 'Cálculo de Varias Variables', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1045_ac'], period: '100 - II' },
+      { id: 'ccpg1043_ac', code: 'CCPG1043', name: 'Fundamentos de Programación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1045_ac'], period: '100 - II' },
+      { id: 'acug1055', code: 'ACUG1055', name: 'Problemas de la Actualidad Acuícola', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['indg1033_ac'], period: '100 - II' },
+      { id: 'biog1022_ac', code: 'BIOG1022', name: 'Biología General', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['quig1032_ac'], period: '100 - II' },
+      { id: 'quig1035_ac', code: 'QUIG1035', name: 'Química Orgánica', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['quig1032_ac'], period: '100 - II' },
+      { id: 'idig1007_ac', code: 'IDIG1007', name: 'Inglés II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1006_ac'], period: '100 - II' },
+
+      // Nivel 200 - I
+      { id: 'idig2012_ac', code: 'IDIG2012', name: 'Comunicación', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 6, period: '200 - I' },
+      { id: 'estg1034_ac', code: 'ESTG1034', name: 'Estadística', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1047_ac', 'ccpg1043_ac'], period: '200 - I' },
+      { id: 'acug1041', code: 'ACUG1041', name: 'Ecosistemas Acuícolas', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['acug1055'], period: '200 - I' },
+      { id: 'acug1054', code: 'ACUG1054', name: 'Introducción a la Acuicultura', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['biog1022_ac'], period: '200 - I' },
+      { id: 'biog1024_ac', code: 'BIOG1024', name: 'Bioquímica', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['quig1035_ac'], period: '200 - I' },
+      { id: 'idig1008_ac', code: 'IDIG1008', name: 'Inglés III', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1007_ac'], period: '200 - I' },
+
+      // Nivel 200 - II
+      { id: 'acug1042', code: 'ACUG1042', name: 'Fundamentos de Ingeniería Acuícola', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 15, period: '200 - II' },
+      { id: 'acug1036', code: 'ACUG1036', name: 'Análisis de Datos Acuícolas', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['estg1034_ac'], period: '200 - II' },
+      { id: 'acug1053', code: 'ACUG1053', name: 'Manejo Acuícola', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['acug1041'], period: '200 - II' },
+      { id: 'acug1052', code: 'ACUG1052', name: 'Morfología y Fisiología de Organismos Acuícolas', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['acug1054'], period: '200 - II' },
+      { id: 'acug1051', code: 'ACUG1051', name: 'Nutrición Acuícola', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['biog1024_ac'], period: '200 - II' },
+      { id: 'idig1009_ac', code: 'IDIG1009', name: 'Inglés IV', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1008_ac'], period: '200 - II' },
+
+      // Nivel 300 - I
+      { id: 'acug1050', code: 'ACUG1050', name: 'Ingeniería para la Acuicultura I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['acug1042'], period: '300 - I' },
+      { id: 'admg1005_ac', code: 'ADMG1005', name: 'Emprendimiento e Innovación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], minApprovedSubjects: 20, period: '300 - I' },
+      { id: 'acug1059', code: 'ACUG1059', name: 'Buenas Prácticas en Acuicultura', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['acug1053'], period: '300 - I' },
+      { id: 'acug1057', code: 'ACUG1057', name: 'Patología Acuícola I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['acug1052'], period: '300 - I' },
+      { id: 'idig1010_ac', code: 'IDIG1010', name: 'Inglés V', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1009_ac'], period: '300 - I' },
+
+      // Nivel 300 - II
+      { id: 'acug1049', code: 'ACUG1049', name: 'Ingeniería para la Acuicultura II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['acug1050'], period: '300 - II' },
+      { id: 'acug1048', code: 'ACUG1048', name: 'Sistemas Acuícolas', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['acug1036'], period: '300 - II' },
+      { id: 'adsg1026_ac', code: 'ADSG1026', name: 'Ciencias de la Sostenibilidad', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 20, period: '300 - II' },
+      { id: 'acug1056', code: 'ACUG1056', name: 'Patología Acuícola II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['acug1057'], period: '300 - II' },
+      { id: 'acug1040', code: 'ACUG1040', name: 'Cultivo de Plancton', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['acug1051'], period: '300 - II' },
+      { id: 'psc_ac', code: 'PSC', name: 'Prácticas de Servicio Comunitario', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '300 - II' },
+
+      // Nivel 400 - I
+      { id: 'acug1047', code: 'ACUG1047', name: 'Piscicultura', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['acug1049'], period: '400 - I' },
+      { id: 'acug1035', code: 'ACUG1035', name: 'Acuicultura Ornamental', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['acug1048'], period: '400 - I' },
+      { id: 'acug1039', code: 'ACUG1039', name: 'Cultivo de Especies No Tradicionales', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['adsg1026_ac'], period: '400 - I' }, // ADSG1040 en txt, asumo ADSG1026
+      { id: 'acug1043', code: 'ACUG1043', name: 'Herramientas para el Diagnóstico de Enfermedades Acuícolas', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['acug1056'], period: '400 - I' },
+      { id: 'acug1046', code: 'ACUG1046', name: 'Producción Acuícola I', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['acug1040'], period: '400 - I' },
+      { id: 'itin1_ac', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+
+      // Nivel 400 - II
+      { id: 'acug1058', code: 'ACUG1058', name: 'Materia Integradora de Acuicultura', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 40, period: '400 - II' },
+      { id: 'acug1045', code: 'ACUG1045', name: 'Producción Acuícola II', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['acug1046'], period: '400 - II' },
+      { id: 'itin2_ac', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+
+      // Nivel 500
+      { id: 'ppp_ac', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
+
+      // Complementarias
+      { id: 'comp1_ac', code: 'COMP1', name: 'Complementaria de Artes, Deportes e Idiomas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_ac', code: 'COMP2', name: 'Complementaria de Humanísticas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true }
+    ]
+  },
+  {
+    id: 'nava',
+    name: 'Ingeniería Naval',
+    facultyId: 'fimcm',
+    subjects: [
+      // Nivel 100 - I
+      { id: 'matg1045_na', code: 'MATG1045', name: 'Cálculo de una Variable', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], period: '100 - I' },
+      { id: 'fisg1005_na', code: 'FISG1005', name: 'Física: Mecánica', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], corequisites: ['matg1045_na'], period: '100 - I' },
+      { id: 'indg1033_na', code: 'INDG1033', name: 'Análisis y Resolución de Problemas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '100 - I' },
+      { id: 'quig1032_na', code: 'QUIG1032', name: 'Química General', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], period: '100 - I' },
+      { id: 'idig1006_na', code: 'IDIG1006', name: 'Inglés I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - I' },
+
+      // Nivel 100 - II
+      { id: 'matg1046_na', code: 'MATG1046', name: 'Cálculo Vectorial', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1045_na'], period: '100 - II' },
+      { id: 'fisg1006_na', code: 'FISG1006', name: 'Física: Electricidad y Magnetismo', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['fisg1005_na'], period: '100 - II' },
+      { id: 'ccpg1043_na', code: 'CCPG1043', name: 'Fundamentos de Programación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1045_na'], period: '100 - II' },
+      { id: 'idig2012_na', code: 'IDIG2012', name: 'Comunicación', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 6, period: '100 - II' },
+      { id: 'navg1040', code: 'NAVG1040', name: 'Materiales en Medios Marinos', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['quig1032_na'], period: '100 - II' },
+      { id: 'idig1007_na', code: 'IDIG1007', name: 'Inglés II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1006_na'], period: '100 - II' },
+
+      // Nivel 200 - I
+      { id: 'matg1048_na', code: 'MATG1048', name: 'Ecuaciones Diferenciales y Álgebra Lineal', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1046_na'], period: '200 - I' },
+      { id: 'matg1052_na', code: 'MATG1052', name: 'Métodos Numéricos', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['ccpg1043_na', 'matg1048_na'], period: '200 - I' },
+      { id: 'estg1034_na', code: 'ESTG1034', name: 'Estadística', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1046_na', 'ccpg1043_na'], period: '200 - I' },
+      { id: 'mecg1052_na', code: 'MECG1052', name: 'Mecánica Vectorial', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['fisg1006_na'], period: '200 - I' },
+      { id: 'idig1008_na', code: 'IDIG1008', name: 'Inglés III', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1007_na'], period: '200 - I' },
+
+      // Nivel 200 - II
+      { id: 'mecg1061_na', code: 'MECG1061', name: 'Termodinámica', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['fisg1005_na'], minApprovedSubjects: 15, period: '200 - II' },
+      { id: 'navg1032', code: 'NAVG1032', name: 'Formas e Hidrostática del Buque', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1052_na', 'estg1034_na'], period: '200 - II' },
+      { id: 'mecg1050_na', code: 'MECG1050', name: 'Mecánica de Sólidos', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1052_na'], period: '200 - II' },
+      { id: 'adsg1026_na', code: 'ADSG1026', name: 'Ciencias de la Sostenibilidad', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 16, period: '200 - II' },
+      { id: 'idig1009_na', code: 'IDIG1009', name: 'Inglés IV', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1008_na'], period: '200 - II' },
+
+      // Nivel 300 - I
+      { id: 'navg1039', code: 'NAVG1039', name: 'Maquinaria Marítima I', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mecg1061_na', 'navg1032'], period: '300 - I' },
+      { id: 'navg1030', code: 'NAVG1030', name: 'Estabilidad del Buque', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['navg1032'], period: '300 - I' },
+      { id: 'mecg1049_na', code: 'MECG1049', name: 'Mecánica de Fluidos', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['fisg1005_na'], minApprovedSubjects: 15, period: '300 - I' },
+      { id: 'navg1031', code: 'NAVG1031', name: 'Estructura del Buque', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mecg1050_na'], period: '300 - I' },
+      { id: 'idig1010_na', code: 'IDIG1010', name: 'Inglés V', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1009_na'], period: '300 - I' },
+
+      // Nivel 300 - II
+      { id: 'navg1037', code: 'NAVG1037', name: 'Maquinaria Marítima II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['navg1039', 'mecg1049_na'], period: '300 - II' },
+      { id: 'navg1029', code: 'NAVG1029', name: 'Electricidad y Electrónica para Buques', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 20, period: '300 - II' },
+      { id: 'navg1038', code: 'NAVG1038', name: 'Resistencia y Propulsión de Buques', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mecg1049_na'], period: '300 - II' },
+      { id: 'navg1041', code: 'NAVG1041', name: 'Vibraciones Mecánicas', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['navg1031'], period: '300 - II' },
+      { id: 'navg1042', code: 'NAVG1042', name: 'Elementos Finitos', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['navg1031'], period: '300 - II' },
+      { id: 'psc_na', code: 'PSC', name: 'Prácticas de Servicio Comunitario', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 20, period: '300 - II' },
+
+      // Nivel 400 - I
+      { id: 'navg1025', code: 'NAVG1025', name: 'Construcciones Metálicas de Buques', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['navg1037'], period: '400 - I' },
+      { id: 'navg1028', code: 'NAVG1028', name: 'Diseño de Buques', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['navg1029', 'navg1042', 'navg1030'], corequisites: ['navg1025', 'navg1027'], period: '400 - I' },
+      { id: 'navg1027', code: 'NAVG1027', name: 'Dinámica del Buque', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['navg1038', 'navg1041', 'navg1030'], period: '400 - I' },
+      { id: 'navg1033', code: 'NAVG1033', name: 'Gestión Marítima Portuaria', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 30, period: '400 - I' },
+      { id: 'admg1005_na', code: 'ADMG1005', name: 'Emprendimiento e Innovación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], minApprovedSubjects: 20, period: '400 - I' },
+      { id: 'itin1_na', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+
+      // Nivel 400 - II
+      { id: 'navg1034', code: 'NAVG1034', name: 'Materia Integradora de Ingeniería Naval', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['navg1028'], period: '400 - II' },
+      { id: 'navg1035', code: 'NAVG1035', name: 'Transporte Marítimo', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['navg1033'], period: '400 - II' },
+      { id: 'itin2_na', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+
+      // Nivel 500
+      { id: 'ppp_na', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
+
+      // Complementarias
+      { id: 'comp1_na', code: 'COMP1', name: 'Complementaria de Artes, Deportes e Idiomas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_na', code: 'COMP2', name: 'Complementaria de Humanísticas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true }
+    ]
+  },
+  {
+    id: 'ocea',
+    name: 'Oceanografía',
+    facultyId: 'fimcm',
+    subjects: [
+      // Nivel 100 - I
+      { id: 'matg1045_oc', code: 'MATG1045', name: 'Cálculo de una Variable', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], period: '100 - I' },
+      { id: 'fisg1005_oc', code: 'FISG1005', name: 'Física: Mecánica', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], corequisites: ['matg1045_oc'], period: '100 - I' },
+      { id: 'quig1032_oc', code: 'QUIG1032', name: 'Química General', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], period: '100 - I' },
+      { id: 'indg1033_oc', code: 'INDG1033', name: 'Análisis y Resolución de Problemas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '100 - I' },
+      { id: 'idig1006_oc', code: 'IDIG1006', name: 'Inglés I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - I' },
+
+      // Nivel 100 - II
+      { id: 'matg1046_oc', code: 'MATG1046', name: 'Cálculo Vectorial', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1045_oc'], period: '100 - II' },
+      { id: 'ccpg1043_oc', code: 'CCPG1043', name: 'Fundamentos de Programación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1045_oc'], period: '100 - II' },
+      { id: 'fisg1009_oc', code: 'FISG1009', name: 'Física: Termodinámica y Óptica', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['fisg1005_oc'], period: '100 - II' },
+      { id: 'oceg1035', code: 'OCEG1035', name: 'Fundamentos de Ingeniería Oceanográfica', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], period: '100 - II' },
+      { id: 'oceg1051', code: 'OCEG1051', name: 'Oceanografía Descriptiva', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['oceg1035'], period: '100 - II' },
+      { id: 'idig1007_oc', code: 'IDIG1007', name: 'Inglés II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1006_oc'], period: '100 - II' },
+
+      // Nivel 200 - I
+      { id: 'estg1034_oc', code: 'ESTG1034', name: 'Estadística', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1046_oc', 'ccpg1043_oc'], period: '200 - I' },
+      { id: 'matg1048_oc', code: 'MATG1048', name: 'Ecuaciones Diferenciales y Álgebra Lineal', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1046_oc', 'ccpg1043_oc'], period: '200 - I' },
+      { id: 'matg1052_oc', code: 'MATG1052', name: 'Métodos Numéricos', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], corequisites: ['matg1048_oc'], period: '200 - I' },
+      { id: 'idig2012_oc', code: 'IDIG2012', name: 'Comunicación', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 6, period: '200 - I' },
+      { id: 'oceg1030', code: 'OCEG1030', name: 'Climatología y Meteorología', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['oceg1051'], period: '200 - I' },
+      { id: 'idig1008_oc', code: 'IDIG1008', name: 'Inglés III', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1007_oc'], period: '200 - I' },
+
+      // Nivel 200 - II
+      { id: 'mecg1052_oc', code: 'MECG1052', name: 'Mecánica Vectorial', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['fisg1005_oc'], minApprovedSubjects: 12, period: '200 - II' },
+      { id: 'mecg1049_oc', code: 'MECG1049', name: 'Mecánica de Fluidos', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1048_oc', 'fisg1009_oc', 'matg1052_oc'], period: '200 - II' },
+      { id: 'oceg1050', code: 'OCEG1050', name: 'Oceanografía Física', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['fisg1009_oc', 'oceg1030'], period: '200 - II' },
+      { id: 'oceg1036', code: 'OCEG1036', name: 'Geología Marina', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['oceg1030'], period: '200 - II' },
+      { id: 'oceg1029', code: 'OCEG1029', name: 'Biogeoquímica Marina', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['oceg1032', 'oceg1030'], period: '200 - II' }, // OCEG1032 is in 300-II, might be a typo in source, keeping as requested
+      { id: 'idig1009_oc', code: 'IDIG1009', name: 'Inglés IV', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1008_oc'], period: '200 - II' },
+
+      // Nivel 300 - I
+      { id: 'civg1056_oc', code: 'CIVG1056', name: 'Resistencia de Materiales', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['mecg1052_oc'], period: '300 - I' },
+      { id: 'oceg1049', code: 'OCEG1049', name: 'Ondas Marinas', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['mecg1049_oc', 'oceg1030', 'estg1034_oc'], period: '300 - I' },
+      { id: 'civg1060_oc', code: 'CIVG1060', name: 'Mecánica de Suelos y Rocas', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['oceg1036'], period: '300 - I' },
+      { id: 'admg1005_oc', code: 'ADMG1005', name: 'Emprendimiento e Innovación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], minApprovedSubjects: 20, period: '300 - I' },
+      { id: 'idig1010_oc', code: 'IDIG1010', name: 'Inglés V', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1009_oc'], period: '300 - I' },
+
+      // Nivel 300 - II
+      { id: 'civg1034_oc', code: 'CIVG1034', name: 'Análisis Estructural', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['civg1056_oc'], period: '300 - II' },
+      { id: 'oceg1028', code: 'OCEG1028', name: 'Análisis de Información Oceanográfica', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['oceg1050', 'estg1034_oc'], period: '300 - II' },
+      { id: 'oceg1048', code: 'OCEG1048', name: 'Oceanografía Costera', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['oceg1049'], period: '300 - II' },
+      { id: 'adsg1026_oc', code: 'ADSG1026', name: 'Ciencias de la Sostenibilidad', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 20, period: '300 - II' },
+      { id: 'oceg1032', code: 'OCEG1032', name: 'Contaminación Marina', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['oceg1029'], period: '300 - II' },
+      { id: 'psc_oc', code: 'PSC', name: 'Prácticas de Servicio Comunitario', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 24, period: '300 - II' },
+
+      // Nivel 400 - I
+      { id: 'civg1045_oc', code: 'CIVG1045', name: 'Hormigón Armado', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['civg1034_oc'], period: '400 - I' },
+      { id: 'oceg1040', code: 'OCEG1040', name: 'Planificación de Dragados', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['civg1060_oc'], minApprovedSubjects: 33, period: '400 - I' },
+      { id: 'oceg1047', code: 'OCEG1047', name: 'Modelaje Costero', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['oceg1048'], period: '400 - I' },
+      { id: 'oceg1046', code: 'OCEG1046', name: 'Procesos Estuarinos', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['oceg1048'], period: '400 - I' },
+      { id: 'oceg1039', code: 'OCEG1039', name: 'Impacto Ambiental Marino-Costero', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['oceg1032'], period: '400 - I' },
+      { id: 'oceg1033', code: 'OCEG1033', name: 'Dimensionamiento Portuario', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], minApprovedSubjects: 33, period: '400 - I' },
+
+      // Nivel 400 - II
+      { id: 'oceg1031', code: 'OCEG1031', name: 'Construcción de Obras Portuarias', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['civg1045_oc', 'oceg1033'], period: '400 - II' },
+      { id: 'oceg1037', code: 'OCEG1037', name: 'Gestión de Dragados', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['oceg1040'], period: '400 - II' },
+      { id: 'oceg1034', code: 'OCEG1034', name: 'Diseño Costero', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['oceg1047', 'civg1045_oc'], period: '400 - II' }, // CIVIG1045 in txt, corrected to CIVG1045
+      { id: 'oceg1044', code: 'OCEG1044', name: 'Técnicas de Manejo Costero', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['oceg1046'], period: '400 - II' },
+      { id: 'oceg1045', code: 'OCEG1045', name: 'Planificación y Construcción', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['oceg1033'], period: '400 - II' },
+      { id: 'itin1_oc', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+
+      // Nivel 500 - I
+      { id: 'oceg1043', code: 'OCEG1043', name: 'Materia Integradora de Oceanografía', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['oceg1034'], period: '500 - I' },
+      { id: 'oceg1038', code: 'OCEG1038', name: 'Gestión de Zonas Marino-Costeras', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['oceg1034'], period: '500 - I' },
+      { id: 'itin2_oc', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '500 - I', isItinerary: true },
+
+      // Nivel 500 - II
+      { id: 'ppp_oc', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - II' },
+
+      // Complementarias
+      { id: 'comp1_oc', code: 'COMP1', name: 'Complementaria de Artes, Deportes e Idiomas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_oc', code: 'COMP2', name: 'Complementaria de Humanísticas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true }
+    ]
+  },
   { id: 'esta', name: 'Estadística', facultyId: 'fcnm', subjects: [] },
   { id: 'quim', name: 'Química', facultyId: 'fcnm', subjects: [] },
   { id: 'lotr', name: 'Logística y Transporte', facultyId: 'fcnm', subjects: [] },
