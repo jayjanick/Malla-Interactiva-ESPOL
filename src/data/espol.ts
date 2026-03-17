@@ -991,8 +991,9 @@ export const careers: Career[] = [
       { id: 'ppp_biol', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
 
       // Complementarias
-      { id: 'comp1_biol', code: 'COMP1', name: 'Complementaria de Artes, Deportes e Idiomas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
-      { id: 'comp2_biol', code: 'COMP2', name: 'Complementaria de Humanísticas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true }
+      { id: 'comp1_biol', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_biol', code: 'COMP2', name: 'Materia Complementaria 2', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp3_biol', code: 'COMP3', name: 'Materia Complementaria 3', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true }
     ]
   },
   {
@@ -1067,8 +1068,9 @@ export const careers: Career[] = [
       { id: 'ppp_ag', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
 
       // Complementarias
-      { id: 'comp1_ag', code: 'COMP1', name: 'Complementaria de Artes, Deportes e Idiomas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
-      { id: 'comp2_ag', code: 'COMP2', name: 'Complementaria de Humanísticas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true }
+      { id: 'comp1_ag', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_ag', code: 'COMP2', name: 'Materia Complementaria 2', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp3_ag', code: 'COMP3', name: 'Materia Complementaria 3', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true }
     ]
   },
   {
@@ -1141,9 +1143,9 @@ export const careers: Career[] = [
       { id: 'nutg2031', code: 'NUTG2031', name: 'Materia Integradora de Nutrición y Dietética', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 44, period: '400 - II' },
 
       // Complementarias
-      { id: 'comp1_nu', code: 'COMP1', name: 'Complementaria de Artes, Deportes e Idiomas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
-      { id: 'comp2_nu', code: 'COMP2', name: 'Complementaria de Humanísticas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
-      { id: 'comp3_nu', code: 'COMP3', name: 'Complementaria de Humanísticas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true }
+      { id: 'comp1_nu', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_nu', code: 'COMP2', name: 'Materia Complementaria 2', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp3_nu', code: 'COMP3', name: 'Materia Complementaria 3', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true }
     ]
   },
   {
@@ -1215,8 +1217,9 @@ export const careers: Career[] = [
       { id: 'ppp_dp', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
 
       // Complementarias
-      { id: 'comp1_dp', code: 'COMP1', name: 'Complementaria de Artes, Deportes e Idiomas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
-      { id: 'comp2_dp', code: 'COMP2', name: 'Complementaria de Humanísticas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true }
+      { id: 'comp1_dp', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_dp', code: 'COMP2', name: 'Materia Complementaria 2', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp3_dp', code: 'COMP3', name: 'Materia Complementaria 3', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true }
     ]
   },
   {
@@ -1287,8 +1290,9 @@ export const careers: Career[] = [
       { id: 'ppp_dg', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
 
       // Complementarias
-      { id: 'comp1_dg', code: 'COMP1', name: 'Complementaria de Artes, Deportes e Idiomas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
-      { id: 'comp2_dg', code: 'COMP2', name: 'Complementaria de Humanísticas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true }
+      { id: 'comp1_dg', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_dg', code: 'COMP2', name: 'Materia Complementaria 2', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp3_dg', code: 'COMP3', name: 'Materia Complementaria 3', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true }
     ]
   },
   {
@@ -1359,8 +1363,9 @@ export const careers: Career[] = [
       { id: 'ppp_pm', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
 
       // Complementarias
-      { id: 'comp1_pm', code: 'COMP1', name: 'Complementaria de Artes, Deportes e Idiomas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
-      { id: 'comp2_pm', code: 'COMP2', name: 'Complementaria de Humanísticas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true }
+      { id: 'comp1_pm', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_pm', code: 'COMP2', name: 'Materia Complementaria 2', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp3_pm', code: 'COMP3', name: 'Materia Complementaria 3', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true }
     ]
   },
   { id: 'alim', name: 'Alimentos', facultyId: 'fimcp', subjects: [] },
@@ -1436,8 +1441,9 @@ export const careers: Career[] = [
       { id: 'ppp_ac', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
 
       // Complementarias
-      { id: 'comp1_ac', code: 'COMP1', name: 'Complementaria de Artes, Deportes e Idiomas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
-      { id: 'comp2_ac', code: 'COMP2', name: 'Complementaria de Humanísticas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true }
+      { id: 'comp1_ac', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_ac', code: 'COMP2', name: 'Materia Complementaria 2', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp3_ac', code: 'COMP3', name: 'Materia Complementaria 3', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true }
     ]
   },
   {
@@ -1506,8 +1512,9 @@ export const careers: Career[] = [
       { id: 'ppp_na', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
 
       // Complementarias
-      { id: 'comp1_na', code: 'COMP1', name: 'Complementaria de Artes, Deportes e Idiomas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
-      { id: 'comp2_na', code: 'COMP2', name: 'Complementaria de Humanísticas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true }
+      { id: 'comp1_na', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_na', code: 'COMP2', name: 'Materia Complementaria 2', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp3_na', code: 'COMP3', name: 'Materia Complementaria 3', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true }
     ]
   },
   {
@@ -1586,8 +1593,9 @@ export const careers: Career[] = [
       { id: 'ppp_oc', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - II' },
 
       // Complementarias
-      { id: 'comp1_oc', code: 'COMP1', name: 'Complementaria de Artes, Deportes e Idiomas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
-      { id: 'comp2_oc', code: 'COMP2', name: 'Complementaria de Humanísticas', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true }
+      { id: 'comp1_oc', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_oc', code: 'COMP2', name: 'Materia Complementaria 2', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp3_oc', code: 'COMP3', name: 'Materia Complementaria 3', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true }
     ]
   },
   { id: 'esta', name: 'Estadística', facultyId: 'fcnm', subjects: [] },

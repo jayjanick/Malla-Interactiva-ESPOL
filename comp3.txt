@@ -1,0 +1,12 @@
+comp3_adme
+comp3_arq
+comp3_aud
+comp3_e
+comp3_ea
+comp3_eco
+comp3_h
+comp3_nu
+comp3_o
+comp3_t
+comp3_tm
+comp3_tur

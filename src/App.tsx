@@ -15,6 +15,7 @@ import { Sidebar } from './components/Sidebar';
 import { AdSenseFooter } from './components/AdSenseFooter';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { TermsOfService } from './components/TermsOfService';
+import { LandingPage } from './components/LandingPage';
 import { motion, AnimatePresence } from 'motion/react';
 import { BookOpen } from 'lucide-react';
 import { translations } from './i18n/translations';
@@ -28,10 +29,10 @@ export default function App() {
   const t = translations[language];
 
   return (
-    <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-emerald-500/30 flex">
+    <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-emerald-500/30">
       <Sidebar currentView={currentView} setCurrentView={setCurrentView} />
       
-      <div className="flex-1 flex flex-col relative z-10 min-h-screen pb-24 md:pb-0">
+      <div className="flex flex-col relative z-10 min-h-screen pb-24 md:pb-0 md:ml-64 min-w-0">
         <div className="fixed inset-0 pointer-events-none z-0">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-[120px]" />
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-[120px]" />
@@ -68,17 +69,7 @@ export default function App() {
                 </motion.div>
               )
             ) : (
-              <motion.div 
-                key="empty"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="flex-1 flex flex-col items-center justify-center text-center opacity-50"
-              >
-                <BookOpen className="w-16 h-16 mb-4" />
-                <h2 className="text-2xl font-medium">{t.dashboard.selectCareer}</h2>
-                <p className="text-sm mt-2">{t.dashboard.selectCareerDesc}</p>
-              </motion.div>
+              <LandingPage key="empty" />
             )}
           </AnimatePresence>
         </main>

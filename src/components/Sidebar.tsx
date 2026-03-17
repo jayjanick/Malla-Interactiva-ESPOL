@@ -42,7 +42,7 @@ export function Sidebar({ currentView, setCurrentView }: SidebarProps) {
   return (
     <>
       {/* Desktop Sidebar */}
-      <div className="hidden md:flex w-64 bg-[#0a0a0a] border-r border-white/5 flex-col h-screen sticky top-0 shrink-0">
+      <div className="hidden md:flex w-64 bg-[#0a0a0a] border-r border-white/5 flex-col h-screen fixed top-0 left-0 shrink-0 z-50">
         <div className="p-6 flex items-center gap-3 border-b border-white/5">
           <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-500">
             <GraduationCap className="w-6 h-6" />
