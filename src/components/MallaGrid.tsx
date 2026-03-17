@@ -27,7 +27,7 @@ export function MallaGrid({ career }: MallaGridProps) {
           <div key={period} className="flex flex-col gap-4">
             <div className="flex items-center justify-between px-2 border-b border-white/10 pb-2">
               <h3 className="text-sm font-medium text-white/70 uppercase tracking-widest">
-                {t.malla.level} {period}
+                {period.toLowerCase() === 'complementarias' ? 'COMPLEMENTARIAS' : `${t.malla.level} ${period}`}
               </h3>
               <span className="text-xs font-mono text-white/40 bg-white/5 px-2 py-1 rounded-md border border-white/5">
                 {approvedInPeriod}/{subjectsInPeriod.length} - {approvedCredits}/{totalCredits} CR

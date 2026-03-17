@@ -44,7 +44,7 @@ export function PlannerPage({ career }: PlannerPageProps) {
   const subjectOptions = Object.entries(subjectsByLevel)
     .sort(([levelA], [levelB]) => Number(levelA) - Number(levelB))
     .map(([level, subjects]) => ({
-      label: level === '0' ? 'Complementarias' : `Nivel ${level}`,
+      label: level === '0' ? 'COMPLEMENTARIAS' : `Nivel ${level}`,
       options: subjects.map(s => ({
         value: s.id,
         label: `${s.name} (${s.credits} CR)`

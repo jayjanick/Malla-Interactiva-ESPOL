@@ -53,7 +53,7 @@ export function LandingPage() {
           <GraduationCap className="w-8 h-8 text-emerald-500 mb-4" />
           <h2 className="text-xl font-medium mb-2">Múltiples Facultades</h2>
           <p className="text-sm text-white/50 leading-relaxed">
-            Soportamos carreras de FIEC, FCSH, FCV, FADCOM y FIMCM. Nuestra base de datos se actualiza constantemente para incluir más programas de estudio de la ESPOL.
+            Soportamos carreras de FIEC, FCSH, FCV, FADCOM, FIMCM y FCNM. Nuestra base de datos se actualiza constantemente para incluir más programas de estudio de la ESPOL.
           </p>
         </div>
       </div>
