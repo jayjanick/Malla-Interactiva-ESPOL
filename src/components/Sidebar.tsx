@@ -67,7 +67,7 @@ export function Sidebar({ currentView, setCurrentView }: SidebarProps) {
               !isHovered && "justify-center",
               currentView === 'dashboard' 
                 ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20" 
-                : "text-white/50 hover:text-white hover:bg-white/5 border border-transparent"
+                : "text-white/50 hover:text-white hover:bg-white/[0.03] border border-transparent"
             )}
           >
             <Home className="w-5 h-5 shrink-0" />
@@ -80,7 +80,7 @@ export function Sidebar({ currentView, setCurrentView }: SidebarProps) {
               !isHovered && "justify-center",
               currentView === 'planner' 
                 ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20" 
-                : "text-white/50 hover:text-white hover:bg-white/5 border border-transparent"
+                : "text-white/50 hover:text-white hover:bg-white/[0.03] border border-transparent"
             )}
           >
             <CalendarDays className="w-5 h-5 shrink-0" />
@@ -92,7 +92,7 @@ export function Sidebar({ currentView, setCurrentView }: SidebarProps) {
           <button
             onClick={() => setIsSettingsOpen(true)}
             className={cn(
-              "w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-sm font-medium text-white/50 hover:text-white hover:bg-white/5",
+              "w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-sm font-medium text-white/50 hover:text-white hover:bg-white/[0.03]",
               !isHovered && "justify-center"
             )}
           >

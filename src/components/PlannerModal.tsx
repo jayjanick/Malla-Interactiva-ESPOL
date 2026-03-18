@@ -79,20 +79,20 @@ export function PlannerModal({ onClose, career }: PlannerModalProps) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         onClick={onClose}
-        className="absolute inset-0 bg-slate-800/20 dark:bg-black/60 backdrop-blur-sm"
+        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
       />
       
       <motion.div 
         initial={{ opacity: 0, scale: 0.95, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 20 }}
-        className="relative w-full max-w-2xl bg-white dark:bg-[#0a0a0a] border border-slate-300 dark:border-white/10 rounded-2xl shadow-2xl shadow-slate-200/50 dark:shadow-black/50 overflow-hidden flex flex-col max-h-[90vh]"
+        className="relative w-full max-w-2xl bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden flex flex-col max-h-[90vh]"
       >
-        <div className="flex items-center justify-between p-6 border-b border-slate-200 dark:border-white/5">
+        <div className="flex items-center justify-between p-6 border-b border-white/5">
           <h2 className="text-xl font-medium tracking-tight">{t.planner.title}</h2>
           <button 
             onClick={onClose}
-            className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-white/50 hover:text-slate-900 dark:text-white transition-colors"
+            className="p-2 rounded-lg hover:bg-white/5 text-white/50 hover:text-white transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
@@ -100,10 +100,10 @@ export function PlannerModal({ onClose, career }: PlannerModalProps) {
 
         <div className="p-6 flex flex-col gap-6 overflow-y-auto custom-scrollbar">
           {/* Form */}
-          <div className="flex flex-col gap-4 bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 rounded-xl p-5">
+          <div className="flex flex-col gap-4 bg-white/[0.02] border border-white/5 rounded-xl p-5">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-medium text-slate-500 dark:text-white/50 uppercase tracking-wider">{t.planner.period}</label>
+                <label className="text-xs font-medium text-white/50 uppercase tracking-wider">{t.planner.period}</label>
                 <CustomSelect
                   value={selectedPeriod}
                   onChange={(val) => setSelectedPeriod(val as any)}
@@ -114,7 +114,7 @@ export function PlannerModal({ onClose, career }: PlannerModalProps) {
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-medium text-slate-500 dark:text-white/50 uppercase tracking-wider">{t.planner.addSubject}</label>
+                <label className="text-xs font-medium text-white/50 uppercase tracking-wider">{t.planner.addSubject}</label>
                 <CustomSelect
                   value={selectedSubjectId}
                   onChange={setSelectedSubjectId}
@@ -127,7 +127,7 @@ export function PlannerModal({ onClose, career }: PlannerModalProps) {
 
             {selectedSubject?.isComplementary && (
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-medium text-slate-500 dark:text-white/50 uppercase tracking-wider">Materia Específica</label>
+                <label className="text-xs font-medium text-white/50 uppercase tracking-wider">Materia Específica</label>
                 <CustomSelect
                   value={selectedOptionId}
                   onChange={setSelectedOptionId}
@@ -145,7 +145,7 @@ export function PlannerModal({ onClose, career }: PlannerModalProps) {
 
             {selectedSubject?.isItinerary && (
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-medium text-slate-500 dark:text-white/50 uppercase tracking-wider">Opción de Itinerario</label>
+                <label className="text-xs font-medium text-white/50 uppercase tracking-wider">Opción de Itinerario</label>
                 <CustomSelect
                   value={selectedOptionId}
                   onChange={setSelectedOptionId}
@@ -166,20 +166,20 @@ export function PlannerModal({ onClose, career }: PlannerModalProps) {
 
             <div className="flex flex-col sm:flex-row gap-4 items-end">
               <div className="flex flex-col gap-1.5 flex-1 w-full">
-                <label className="text-xs font-medium text-slate-500 dark:text-white/50 uppercase tracking-wider">{t.planner.professor}</label>
+                <label className="text-xs font-medium text-white/50 uppercase tracking-wider">{t.planner.professor}</label>
                 <input 
                   type="text"
                   placeholder="Ej. Juan Pérez"
                   value={professor}
                   onChange={(e) => setProfessor(e.target.value)}
-                  className="bg-slate-100 dark:bg-white/5 border border-slate-300 dark:border-white/10 hover:border-slate-400 dark:border-white/20 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/50 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-300 dark:text-white/20 transition-all"
+                  className="bg-white/5 border border-white/10 hover:border-white/15 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/50 text-white placeholder:text-white/20 transition-all"
                 />
               </div>
               
               <button
                 onClick={handleAdd}
                 disabled={!selectedSubjectId || ((selectedSubject?.isComplementary || selectedSubject?.isItinerary) && !selectedOptionId)}
-                className="w-full sm:w-auto px-6 py-2 bg-emerald-600 hover:bg-emerald-500 disabled:bg-slate-100 dark:disabled:bg-white/5 disabled:text-slate-400 dark:disabled:text-white/30 disabled:cursor-not-allowed text-slate-900 dark:text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2 h-[38px]"
+                className="w-full sm:w-auto px-6 py-2 bg-emerald-600 hover:bg-emerald-500 disabled:bg-white/5 disabled:text-white/30 disabled:cursor-not-allowed text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2 h-[38px]"
               >
                 <Plus className="w-4 h-4" />
                 {t.planner.add}
@@ -190,19 +190,19 @@ export function PlannerModal({ onClose, career }: PlannerModalProps) {
           {/* List */}
           <div className="flex flex-col gap-4">
             <div className="flex items-center justify-between">
-              <h3 className="text-sm font-medium text-slate-600 dark:text-white/70">{t.planner.plannedSubjects} - {periods.find(p => p.id === selectedPeriod)?.name || ''}</h3>
+              <h3 className="text-sm font-medium text-white/70">{t.planner.plannedSubjects} - {periods.find(p => p.id === selectedPeriod)?.name || ''}</h3>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
               <div className={cn("p-3 rounded-xl border flex flex-col gap-1", isRegular ? "bg-emerald-500/10 border-emerald-500/20" : "bg-amber-500/10 border-amber-500/20")}>
-                <span className="text-[10px] font-medium text-slate-500 dark:text-white/50 uppercase tracking-wider">{t.planner.studentState}</span>
+                <span className="text-[10px] font-medium text-white/50 uppercase tracking-wider">{t.planner.studentState}</span>
                 <span className={cn("text-sm font-medium flex items-center gap-1.5", isRegular ? "text-emerald-400" : "text-amber-400")}>
                   {isRegular ? <CheckCircle2 className="w-4 h-4" /> : <AlertCircle className="w-4 h-4" />}
                   {isRegular ? `${t.planner.regular} (≥9 CR)` : `${t.planner.irregular} (<9 CR)`}
                 </span>
               </div>
               <div className={cn("p-3 rounded-xl border flex flex-col gap-1", isOverLimit ? "bg-red-500/10 border-red-500/20" : "bg-indigo-500/10 border-indigo-500/20")}>
-                <span className="text-[10px] font-medium text-slate-500 dark:text-white/50 uppercase tracking-wider">{t.planner.availableCredits}</span>
+                <span className="text-[10px] font-medium text-white/50 uppercase tracking-wider">{t.planner.availableCredits}</span>
                 <span className={cn("text-sm font-medium flex items-center gap-1.5", isOverLimit ? "text-red-400" : "text-indigo-400")}>
                   {isOverLimit ? <AlertCircle className="w-4 h-4" /> : <CheckCircle2 className="w-4 h-4" />}
                   {availableCredits} / 15 CR {isOverLimit && `(${t.planner.exceeded})`}
@@ -211,7 +211,7 @@ export function PlannerModal({ onClose, career }: PlannerModalProps) {
             </div>
 
             {plannedForPeriod.length === 0 ? (
-              <div className="text-center py-8 text-slate-400 dark:text-white/30 text-sm border border-dashed border-slate-300 dark:border-white/10 rounded-xl mt-2">
+              <div className="text-center py-8 text-white/30 text-sm border border-dashed border-white/10 rounded-xl mt-2">
                 {t.planner.noPlannedSubjects}
               </div>
             ) : (
@@ -228,25 +228,25 @@ export function PlannerModal({ onClose, career }: PlannerModalProps) {
                     : subject.name;
 
                   return (
-                    <div key={planned.id} className="flex items-center justify-between p-3 rounded-lg bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 group hover:bg-slate-100 dark:hover:bg-slate-100 dark:bg-white/[0.04] transition-colors">
+                    <div key={planned.id} className="flex items-center justify-between p-3 rounded-lg bg-white/[0.02] border border-white/5 group hover:bg-white/[0.04] transition-colors">
                       <div className="flex flex-col">
-                        <span className="text-sm font-medium text-slate-800 dark:text-white/90">
+                        <span className="text-sm font-medium text-white/90">
                           {displayTitle}
                         </span>
                         <div className="flex items-center gap-2 mt-1">
-                          <span className="text-xs font-mono text-slate-400 dark:text-white/40">{subject.code}</span>
-                          <span className="text-slate-300 dark:text-white/20 text-xs">•</span>
-                          <span className="text-xs text-slate-500 dark:text-white/50">{planned.professor}</span>
+                          <span className="text-xs font-mono text-white/40">{subject.code}</span>
+                          <span className="text-white/20 text-xs">•</span>
+                          <span className="text-xs text-white/50">{planned.professor}</span>
                         </div>
                       </div>
                       
                       <div className="flex items-center gap-4">
-                        <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-white/50">
+                        <span className="text-xs font-medium px-2 py-1 rounded-md bg-white/5 text-white/50">
                           {subject.credits} CR
                         </span>
                         <button
                           onClick={() => removePlanned(planned.id)}
-                          className="p-1.5 rounded-md text-slate-400 dark:text-white/40 hover:text-red-400 hover:bg-red-400/10 transition-colors"
+                          className="p-1.5 rounded-md text-white/40 hover:text-red-400 hover:bg-red-400/10 transition-colors"
                           title={t.planner.removeSubject}
                         >
                           <Trash2 className="w-4 h-4" />
