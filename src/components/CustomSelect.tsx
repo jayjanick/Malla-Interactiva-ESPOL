@@ -72,7 +72,7 @@ export function CustomSelect({
           "flex items-center justify-between w-full px-3 py-2 text-sm transition-colors rounded-lg text-left group",
           isSelected 
             ? "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-medium" 
-            : "text-slate-600 dark:text-white/70 hover:bg-slate-100 dark:hover:bg-slate-100 dark:bg-white/5 hover:text-slate-900 dark:text-white"
+            : "text-slate-600 dark:text-white/70 hover:bg-slate-100 dark:hover:bg-white/[0.03] hover:text-slate-900 dark:hover:text-white"
         )}
       >
         <span className="truncate">{option.label}</span>
@@ -91,7 +91,7 @@ export function CustomSelect({
           "flex items-center justify-between w-full gap-2 px-3 py-2 text-sm font-medium transition-all border rounded-lg outline-none focus:ring-2 focus:ring-emerald-500/50",
           disabled 
             ? "opacity-50 cursor-not-allowed bg-slate-50 dark:bg-white/[0.02] border-slate-200 dark:border-white/5 text-slate-400 dark:text-white/30" 
-            : "bg-slate-100 dark:bg-white/5 border-slate-300 dark:border-white/10 hover:bg-slate-200 dark:hover:bg-slate-200 dark:bg-white/10 hover:border-slate-400 dark:border-white/20 text-slate-700 dark:text-white/80 hover:text-slate-900 dark:text-white cursor-pointer"
+            : "bg-slate-100 dark:bg-white/5 border-slate-300 dark:border-white/10 hover:bg-slate-200 dark:hover:bg-white/[0.05] hover:border-slate-400 dark:hover:border-white/15 text-slate-700 dark:text-white/80 hover:text-slate-900 dark:hover:text-white cursor-pointer"
         )}
       >
         <span className="truncate">{selectedOption ? selectedOption.label : placeholder}</span>

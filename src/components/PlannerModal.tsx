@@ -228,7 +228,7 @@ export function PlannerModal({ onClose, career }: PlannerModalProps) {
                     : subject.name;
 
                   return (
-                    <div key={planned.id} className="flex items-center justify-between p-3 rounded-lg bg-white/[0.02] border border-white/5 group hover:bg-white/[0.04] transition-colors">
+                    <div key={planned.id} className="flex items-center justify-between p-3 rounded-lg bg-white/[0.02] border border-white/5 group hover:bg-white/[0.01] transition-colors">
                       <div className="flex flex-col">
                         <span className="text-sm font-medium text-white/90">
                           {displayTitle}
