@@ -109,7 +109,7 @@ export function PlannerPage({ career }: PlannerPageProps) {
         {!isAddingPeriod ? (
           <button
             onClick={() => setIsAddingPeriod(true)}
-            className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
+            className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-slate-900 dark:text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
           >
             <Plus className="w-4 h-4" />
             {t.planner.addPeriod}
@@ -121,14 +121,14 @@ export function PlannerPage({ career }: PlannerPageProps) {
               placeholder={t.planner.periodName}
               value={newPeriodName}
               onChange={(e) => setNewPeriodName(e.target.value)}
-              className="bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/50 text-white"
+              className="bg-slate-100 dark:bg-white/5 border border-slate-300 dark:border-white/10 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/50 text-slate-900 dark:text-white"
               autoFocus
               onKeyDown={(e) => e.key === 'Enter' && handleAddPeriod()}
             />
             <button
               onClick={handleAddPeriod}
               disabled={!newPeriodName.trim()}
-              className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white rounded-lg font-medium transition-colors"
+              className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-slate-900 dark:text-white rounded-lg font-medium transition-colors"
             >
               {t.planner.add}
             </button>
@@ -137,7 +137,7 @@ export function PlannerPage({ career }: PlannerPageProps) {
                 setIsAddingPeriod(false);
                 setNewPeriodName('');
               }}
-              className="px-4 py-2 bg-white/5 hover:bg-white/10 text-white rounded-lg font-medium transition-colors"
+              className="px-4 py-2 bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-slate-200 dark:bg-white/10 text-slate-900 dark:text-white rounded-lg font-medium transition-colors"
             >
               {t.planner.cancel}
             </button>
@@ -147,8 +147,8 @@ export function PlannerPage({ career }: PlannerPageProps) {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {periods.length === 0 ? (
-          <div className="col-span-full flex flex-col items-center justify-center py-20 text-center border border-dashed border-white/10 rounded-2xl bg-white/[0.02]">
-            <p className="text-lg text-white/50 mb-4">{t.planner.emptyState}</p>
+          <div className="col-span-full flex flex-col items-center justify-center py-20 text-center border border-dashed border-slate-300 dark:border-white/10 rounded-2xl bg-slate-50 dark:bg-white/[0.02]">
+            <p className="text-lg text-slate-500 dark:text-white/50 mb-4">{t.planner.emptyState}</p>
             <button
               onClick={() => setIsAddingPeriod(true)}
               className="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl font-medium transition-colors flex items-center justify-center gap-2"
@@ -170,9 +170,9 @@ export function PlannerPage({ career }: PlannerPageProps) {
                 key={period.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-6 flex flex-col gap-4 relative"
+                className="bg-white dark:bg-[#0a0a0a] border border-slate-300 dark:border-white/10 rounded-2xl p-6 flex flex-col gap-4 relative"
               >
-              <div className="flex items-center justify-between border-b border-white/5 pb-4">
+              <div className="flex items-center justify-between border-b border-slate-200 dark:border-white/5 pb-4">
                 {editingPeriodId === period.id ? (
                   <div className="flex items-center gap-2 flex-1 mr-4">
                     <input
@@ -184,7 +184,7 @@ export function PlannerPage({ career }: PlannerPageProps) {
                         if (e.key === 'Enter') handleSavePeriodName(period.id);
                         if (e.key === 'Escape') setEditingPeriodId(null);
                       }}
-                      className="bg-white/5 border border-white/10 rounded-lg px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/50 text-white w-full"
+                      className="bg-slate-100 dark:bg-white/5 border border-slate-300 dark:border-white/10 rounded-lg px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/50 text-slate-900 dark:text-white w-full"
                     />
                     <button
                       onClick={() => handleSavePeriodName(period.id)}
@@ -194,7 +194,7 @@ export function PlannerPage({ career }: PlannerPageProps) {
                     </button>
                     <button
                       onClick={() => setEditingPeriodId(null)}
-                      className="p-1.5 text-white/50 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+                      className="p-1.5 text-slate-500 dark:text-white/50 hover:text-slate-900 dark:text-white hover:bg-slate-200 dark:hover:bg-slate-200 dark:bg-white/10 rounded-lg transition-colors"
                     >
                       <X className="w-4 h-4" />
                     </button>
@@ -207,19 +207,19 @@ export function PlannerPage({ career }: PlannerPageProps) {
                         setEditingPeriodName(period.name);
                         setEditingPeriodId(period.id);
                       }}
-                      className="p-1.5 text-white/30 hover:text-white hover:bg-white/10 rounded-lg transition-colors opacity-0 group-hover/title:opacity-100"
+                      className="p-1.5 text-slate-400 dark:text-white/40 hover:text-slate-900 dark:text-white hover:bg-slate-200 dark:hover:bg-slate-200 dark:bg-white/10 rounded-lg transition-colors"
                     >
                       <Edit2 className="w-3.5 h-3.5" />
                     </button>
                   </div>
                 )}
                 <div className="flex items-center gap-4">
-                  <span className="text-sm font-medium px-3 py-1 rounded-full bg-white/5 text-emerald-400">
+                  <span className="text-sm font-medium px-3 py-1 rounded-full bg-slate-100 dark:bg-white/5 text-emerald-400">
                     {totalCredits} CR
                   </span>
                   <button
                     onClick={() => removePeriod(period.id)}
-                    className="p-1.5 text-white/30 hover:text-red-400 hover:bg-red-400/10 rounded-lg transition-colors"
+                    className="p-1.5 text-slate-400 dark:text-white/30 hover:text-red-400 hover:bg-red-400/10 rounded-lg transition-colors"
                     title={t.planner.removePeriod}
                   >
                     <Trash2 className="w-4 h-4" />
@@ -228,9 +228,9 @@ export function PlannerPage({ career }: PlannerPageProps) {
               </div>
 
               {addingToPeriodId === period.id ? (
-                <div className="flex flex-col gap-4 bg-white/[0.02] border border-white/5 rounded-xl p-4">
+                <div className="flex flex-col gap-4 bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 rounded-xl p-4">
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-xs font-medium text-white/50 uppercase tracking-wider">{t.planner.addSubject}</label>
+                    <label className="text-xs font-medium text-slate-500 dark:text-white/50 uppercase tracking-wider">{t.planner.addSubject}</label>
                     <CustomSelect
                       value={selectedSubjectId}
                       onChange={setSelectedSubjectId}
@@ -241,7 +241,7 @@ export function PlannerPage({ career }: PlannerPageProps) {
                   </div>
                   {selectedSubject?.isComplementary && (
                     <div className="flex flex-col gap-1.5">
-                      <label className="text-xs font-medium text-white/50 uppercase tracking-wider">Materia Específica</label>
+                      <label className="text-xs font-medium text-slate-500 dark:text-white/50 uppercase tracking-wider">Materia Específica</label>
                       <CustomSelect
                         value={selectedOptionId}
                         onChange={setSelectedOptionId}
@@ -258,7 +258,7 @@ export function PlannerPage({ career }: PlannerPageProps) {
                   )}
                   {selectedSubject?.isItinerary && (
                     <div className="flex flex-col gap-1.5">
-                      <label className="text-xs font-medium text-white/50 uppercase tracking-wider">Opción de Itinerario</label>
+                      <label className="text-xs font-medium text-slate-500 dark:text-white/50 uppercase tracking-wider">Opción de Itinerario</label>
                       <CustomSelect
                         value={selectedOptionId}
                         onChange={setSelectedOptionId}
@@ -277,13 +277,13 @@ export function PlannerPage({ career }: PlannerPageProps) {
                     </div>
                   )}
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-xs font-medium text-white/50 uppercase tracking-wider">{t.planner.professor}</label>
+                    <label className="text-xs font-medium text-slate-500 dark:text-white/50 uppercase tracking-wider">{t.planner.professor}</label>
                     <input 
                       type="text"
                       placeholder="Ej. Juan Pérez"
                       value={professor}
                       onChange={(e) => setProfessor(e.target.value)}
-                      className="bg-white/5 border border-white/10 hover:border-white/20 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/50 text-white placeholder:text-white/20 transition-all"
+                      className="bg-slate-100 dark:bg-white/5 border border-slate-300 dark:border-white/10 hover:border-slate-400 dark:border-white/20 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/50 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-300 dark:text-white/20 transition-all"
                     />
                   </div>
                   <div className="flex items-center gap-2 justify-end mt-2">
@@ -294,7 +294,7 @@ export function PlannerPage({ career }: PlannerPageProps) {
                         setSelectedOptionId('');
                         setProfessor('');
                       }}
-                      className="px-3 py-1.5 text-sm bg-white/5 hover:bg-white/10 text-white rounded-lg transition-colors"
+                      className="px-3 py-1.5 text-sm bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-slate-200 dark:bg-white/10 text-slate-900 dark:text-white rounded-lg transition-colors"
                     >
                       {t.planner.cancel}
                     </button>
@@ -310,7 +310,7 @@ export function PlannerPage({ career }: PlannerPageProps) {
               ) : (
                 <button
                   onClick={() => setAddingToPeriodId(period.id)}
-                  className="w-full py-3 border border-dashed border-white/20 hover:border-emerald-500/50 hover:bg-emerald-500/5 rounded-xl text-white/50 hover:text-emerald-400 transition-all flex items-center justify-center gap-2 text-sm font-medium"
+                  className="w-full py-3 border border-dashed border-slate-400 dark:border-white/20 hover:border-emerald-500/50 hover:bg-emerald-500/5 rounded-xl text-slate-500 dark:text-white/50 hover:text-emerald-400 transition-all flex items-center justify-center gap-2 text-sm font-medium"
                 >
                   <Plus className="w-4 h-4" />
                   {t.planner.addSubject}
@@ -330,23 +330,23 @@ export function PlannerPage({ career }: PlannerPageProps) {
                     : subject.name;
 
                   return (
-                    <div key={planned.id} className="flex items-center justify-between p-3 rounded-lg bg-white/[0.02] border border-white/5 group hover:bg-white/[0.04] transition-colors">
+                    <div key={planned.id} className="flex items-center justify-between p-3 rounded-lg bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 group hover:bg-slate-100 dark:hover:bg-slate-100 dark:bg-white/[0.04] transition-colors">
                       <div className="flex flex-col">
-                        <span className="text-sm font-medium text-white/90">{displayTitle}</span>
+                        <span className="text-sm font-medium text-slate-800 dark:text-white/90">{displayTitle}</span>
                         <div className="flex items-center gap-2 mt-1">
-                          <span className="text-xs font-mono text-white/40">{subject.code}</span>
-                          <span className="text-white/20 text-xs">•</span>
-                          <span className="text-xs text-white/50">{planned.professor}</span>
+                          <span className="text-xs font-mono text-slate-400 dark:text-white/40">{subject.code}</span>
+                          <span className="text-slate-300 dark:text-white/20 text-xs">•</span>
+                          <span className="text-xs text-slate-500 dark:text-white/50">{planned.professor}</span>
                         </div>
                       </div>
                       
                       <div className="flex items-center gap-4">
-                        <span className="text-xs font-medium px-2 py-1 rounded-md bg-white/5 text-white/50">
+                        <span className="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-white/50">
                           {subject.credits} CR
                         </span>
                         <button
                           onClick={() => removePlanned(planned.id)}
-                          className="p-1.5 rounded-md text-white/20 hover:text-red-400 hover:bg-red-400/10 transition-colors opacity-0 group-hover:opacity-100 focus:opacity-100"
+                          className="p-1.5 rounded-md text-slate-400 dark:text-white/40 hover:text-red-400 hover:bg-red-400/10 transition-colors"
                           title={t.planner.removeSubject}
                         >
                           <Trash2 className="w-4 h-4" />

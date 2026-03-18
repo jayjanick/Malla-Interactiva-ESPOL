@@ -7,9 +7,13 @@
 
 @layer base {
   html, body {
-    background-color: #050505;
+    @apply bg-slate-50 text-slate-900;
     overflow-x: hidden;
     width: 100%;
+  }
+
+  html.dark, html.dark body {
+    @apply bg-[#050505] text-white;
   }
 }
 
@@ -24,11 +28,19 @@
   }
   
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.1);
     border-radius: 10px;
   }
   
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.2);
   }
 }

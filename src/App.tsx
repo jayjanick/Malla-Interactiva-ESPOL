@@ -12,12 +12,11 @@ import { MallaGrid } from './components/MallaGrid';
 import { PlannerModal } from './components/PlannerModal';
 import { PlannerPage } from './components/PlannerPage';
 import { Sidebar } from './components/Sidebar';
-import { AdSenseFooter } from './components/AdSenseFooter';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { TermsOfService } from './components/TermsOfService';
 import { LandingPage } from './components/LandingPage';
 import { motion, AnimatePresence } from 'motion/react';
-import { BookOpen } from 'lucide-react';
+import { BookOpen, Github, Mail, Linkedin } from 'lucide-react';
 import { translations } from './i18n/translations';
 
 export default function App() {
@@ -32,7 +31,7 @@ export default function App() {
     <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-emerald-500/30">
       <Sidebar currentView={currentView} setCurrentView={setCurrentView} />
       
-      <div className="flex flex-col relative z-10 min-h-screen pb-24 md:pb-0 md:ml-64 min-w-0">
+      <div className="flex flex-col relative z-10 min-h-screen pb-24 md:pb-0 md:ml-24 min-w-0">
         <div className="fixed inset-0 pointer-events-none z-0">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-[120px]" />
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-[120px]" />
@@ -74,44 +73,80 @@ export default function App() {
           </AnimatePresence>
         </main>
 
-        <footer className="w-full text-center py-8 px-4 text-[11px] text-white/30 relative z-10 mt-auto flex flex-col items-center justify-center border-t border-white/5 bg-black/20">
-          <div className="max-w-4xl mx-auto mb-6 text-left space-y-3 hidden md:block">
-            <h3 className="text-white/50 font-medium text-xs uppercase tracking-wider">Sobre el Planificador de Mallas ESPOL</h3>
-            <p className="leading-relaxed">
-              El Planificador Interactivo de Mallas Curriculares es una herramienta no oficial diseñada para ayudar a los estudiantes de la Escuela Superior Politécnica del Litoral (ESPOL) a organizar su progreso académico. Permite visualizar las materias por semestre, verificar prerrequisitos y correquisitos, y calcular automáticamente los créditos aprobados.
-            </p>
-            <p className="leading-relaxed">
-              Nuestra plataforma soporta múltiples facultades incluyendo FIEC, FCSH, FCV, FADCOM y FIMCM. Esta aplicación web facilita la toma de decisiones durante el proceso de registro de materias, ofreciendo una interfaz clara y moderna para la comunidad politécnica.
-            </p>
-          </div>
+        <footer className="w-full py-8 px-6 sm:px-8 lg:px-12 text-[11px] text-white/30 relative z-10 mt-auto border-t border-white/5 bg-black/20">
+          <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row justify-between gap-10 md:gap-8">
+            
+            {/* Left Column (75%) */}
+            <div className="w-full md:w-[75%] flex flex-col gap-6 text-left">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+                <span>© {new Date().getFullYear()} - Hecho con ❤️ por <a href="https://github.com/jayjanick" target="_blank" rel="noopener noreferrer" className="hover:text-white/50 transition-colors">Jay</a></span>
+                <span className="hidden sm:inline">•</span>
+                <div className="flex flex-wrap gap-4">
+                  <button 
+                    onClick={() => {
+                      setCurrentView('privacy');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }} 
+                    className="hover:text-white/80 transition-colors underline decoration-white/20 underline-offset-2"
+                  >
+                    Políticas de Privacidad
+                  </button>
+                  <button 
+                    onClick={() => {
+                      setCurrentView('terms');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }} 
+                    className="hover:text-white/80 transition-colors underline decoration-white/20 underline-offset-2"
+                  >
+                    Términos de Uso
+                  </button>
+                </div>
+                <span className="hidden xl:inline-block font-mono bg-white/5 px-2 py-0.5 rounded-md border border-white/10 sm:ml-auto">v1.0.2</span>
+              </div>
 
-          <AdSenseFooter />
-          
-          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 w-full">
-            <span className="hidden xl:inline-block font-mono bg-white/5 px-2 py-0.5 rounded-md border border-white/10">v1.0.2</span>
-            <span className="hidden xl:inline">•</span>
-            <span>© {new Date().getFullYear()} - Hecho con ❤️ por <a href="https://github.com/jayjanick" target="_blank" rel="noopener noreferrer" className="hover:text-white/50 transition-colors">Jay</a></span>
-            <span className="hidden sm:inline">•</span>
-            <div className="flex gap-4">
-              <button 
-                onClick={() => {
-                  setCurrentView('privacy');
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }} 
-                className="hover:text-white/80 transition-colors underline decoration-white/20 underline-offset-2"
-              >
-                Políticas de Privacidad
-              </button>
-              <button 
-                onClick={() => {
-                  setCurrentView('terms');
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }} 
-                className="hover:text-white/80 transition-colors underline decoration-white/20 underline-offset-2"
-              >
-                Términos de Uso
-              </button>
+              <div className="space-y-3">
+                <h3 className="text-white/50 font-medium text-xs uppercase tracking-wider">Sobre el Planificador de Mallas ESPOL</h3>
+                <p className="leading-relaxed">
+                  Creé este Planificador Interactivo como una herramienta no oficial esperando que, al igual que a mí, les sirva a mis compañeros de la ESPOL para organizarse con tiempo y proyectar su carrera. Nos permite visualizar las materias por semestre, verificar prerrequisitos y calcular automáticamente los créditos aprobados.
+                </p>
+                <p className="leading-relaxed">
+                  Actualmente he agregado soporte para múltiples facultades incluyendo FIEC, FCSH, FCV, FADCOM, FIMCM y FCNM. Mi objetivo con esta aplicación web es facilitarnos la toma de decisiones durante el proceso de registro de materias, ofreciendo una interfaz clara y moderna que nos sea de gran utilidad a toda la comunidad politécnica.
+                </p>
+              </div>
             </div>
+
+            {/* Right Column (25%) */}
+            <div className="w-full md:w-[25%] flex flex-col items-center justify-center gap-4">
+              <h3 className="text-white/50 font-medium text-xs uppercase tracking-wider text-center">Contacto</h3>
+              <div className="flex gap-4 justify-center">
+                <a 
+                  href="https://github.com/jayjanick" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-3 bg-white/5 hover:bg-white/10 rounded-full text-white/50 hover:text-white transition-colors"
+                  aria-label="GitHub"
+                >
+                  <Github className="w-5 h-5" />
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/jay-janick" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-3 bg-white/5 hover:bg-white/10 rounded-full text-white/50 hover:text-white transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a 
+                  href="mailto:jay.palacios2111@gmail.com" 
+                  className="p-3 bg-white/5 hover:bg-white/10 rounded-full text-white/50 hover:text-white transition-colors"
+                  aria-label="Correo Electrónico"
+                >
+                  <Mail className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+
           </div>
         </footer>
 

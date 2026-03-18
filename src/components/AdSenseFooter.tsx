@@ -21,7 +21,7 @@ export function AdSenseFooter() {
   }, []);
 
   return (
-    <div className="w-full max-w-4xl mx-auto my-4 px-4 h-[10vh] min-h-[60px] max-h-[100px] flex justify-center items-center overflow-hidden bg-white/5 rounded-xl border border-white/10 relative">
+    <div className="w-full max-w-4xl mx-auto my-4 px-4 h-[10vh] min-h-[60px] max-h-[100px] flex justify-center items-center overflow-hidden bg-slate-100 dark:bg-white/5 rounded-xl border border-slate-300 dark:border-white/10 relative">
       <ins
         className="adsbygoogle"
         style={{ display: 'block', width: '100%', height: '100%' }}

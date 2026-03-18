@@ -57,13 +57,13 @@ function CircularStatCard({ title, value, progress }: { title: string, value: st
   return (
     <motion.div 
       whileHover={{ y: -2 }}
-      className="bg-white/[0.02] border border-white/[0.05] rounded-xl sm:rounded-2xl p-2 sm:p-4 relative overflow-hidden group flex flex-col sm:flex-row items-center justify-center sm:justify-between text-center sm:text-left"
+      className="bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/[0.05] rounded-xl sm:rounded-2xl p-2 sm:p-4 relative overflow-hidden group flex flex-col sm:flex-row items-center justify-center sm:justify-between text-center sm:text-left"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-100 dark:from-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
       
       <div className="relative z-10 flex flex-col justify-center h-full w-full">
-        <p className="text-white/50 text-[9px] sm:text-[11px] font-medium uppercase tracking-wider mb-0.5 sm:mb-1 truncate">{title}</p>
-        <h3 className="text-base sm:text-2xl font-mono font-medium tracking-tight text-white">{value}</h3>
+        <p className="text-slate-500 dark:text-white/50 text-[9px] sm:text-[11px] font-medium uppercase tracking-wider mb-0.5 sm:mb-1 truncate">{title}</p>
+        <h3 className="text-base sm:text-2xl font-mono font-medium tracking-tight text-slate-900 dark:text-white">{value}</h3>
       </div>
 
       <div className="hidden sm:flex relative z-10 items-center justify-center w-16 h-16 shrink-0">
@@ -73,8 +73,9 @@ function CircularStatCard({ title, value, progress }: { title: string, value: st
             cy="50"
             r={radius}
             fill="transparent"
-            stroke="rgba(255,255,255,0.05)"
+            stroke="currentColor"
             strokeWidth="8"
+            className="text-slate-200 dark:text-white/5"
           />
           <motion.circle
             cx="50"
@@ -97,7 +98,7 @@ function CircularStatCard({ title, value, progress }: { title: string, value: st
       </div>
       
       {/* Mobile progress bar */}
-      <div className="w-full h-1 bg-white/5 rounded-full overflow-hidden relative z-10 mt-2 sm:hidden">
+      <div className="w-full h-1 bg-slate-100 dark:bg-white/5 rounded-full overflow-hidden relative z-10 mt-2 sm:hidden">
         <motion.div 
           initial={{ width: 0 }}
           animate={{ width: `${progress}%` }}
@@ -125,21 +126,21 @@ function StatCard({ title, value, icon, progress, color }: { title: string, valu
   return (
     <motion.div 
       whileHover={{ y: -2 }}
-      className="bg-white/[0.02] border border-white/[0.05] rounded-xl sm:rounded-2xl p-2 sm:p-4 relative overflow-hidden group flex flex-col justify-between"
+      className="bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/[0.05] rounded-xl sm:rounded-2xl p-2 sm:p-4 relative overflow-hidden group flex flex-col justify-between"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-100 dark:from-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
       
       <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2 sm:mb-3 relative z-10 text-center sm:text-left w-full">
         <div className="w-full">
-          <p className="text-white/50 text-[9px] sm:text-[11px] font-medium uppercase tracking-wider mb-0.5 sm:mb-1 truncate">{title}</p>
-          <h3 className="text-base sm:text-2xl font-mono font-medium tracking-tight text-white">{value}</h3>
+          <p className="text-slate-500 dark:text-white/50 text-[9px] sm:text-[11px] font-medium uppercase tracking-wider mb-0.5 sm:mb-1 truncate">{title}</p>
+          <h3 className="text-base sm:text-2xl font-mono font-medium tracking-tight text-slate-900 dark:text-white">{value}</h3>
         </div>
-        <div className={cn("hidden sm:flex p-2.5 rounded-xl bg-white/[0.03] border border-white/[0.05]", textColors[color])}>
+        <div className={cn("hidden sm:flex p-2.5 rounded-xl bg-slate-100 dark:bg-white/[0.03] border border-slate-200 dark:border-white/[0.05]", textColors[color])}>
           {icon}
         </div>
       </div>
 
-      <div className="w-full h-1 sm:h-1.5 bg-white/5 rounded-full overflow-hidden relative z-10 mt-auto">
+      <div className="w-full h-1 sm:h-1.5 bg-slate-100 dark:bg-white/5 rounded-full overflow-hidden relative z-10 mt-auto">
         <motion.div 
           initial={{ width: 0 }}
           animate={{ width: `${progress}%` }}

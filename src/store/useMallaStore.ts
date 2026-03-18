@@ -14,6 +14,8 @@ export interface PlannedSubject {
   professor: string;
 }
 
+export type Theme = 'light' | 'dark';
+
 interface MallaState {
   selectedFacultyId: string;
   selectedCareerId: string;
@@ -22,10 +24,12 @@ interface MallaState {
   periods: Period[];
   itinerarySelections: Record<string, string>;
   language: Language;
+  theme: Theme;
   
   setFaculty: (id: string) => void;
   setCareer: (id: string) => void;
   setLanguage: (lang: Language) => void;
+  setTheme: (theme: Theme) => void;
   toggleApproved: (subjectId: string) => void;
   setItinerarySelection: (subjectId: string, optionId: string) => void;
   addPlanned: (subject: Omit<PlannedSubject, 'id'>) => void;
@@ -49,10 +53,12 @@ export const useMallaStore = create<MallaState>()(
       ],
       itinerarySelections: {},
       language: 'es',
+      theme: 'dark',
 
       setFaculty: (id) => set({ selectedFacultyId: id, selectedCareerId: '' }),
       setCareer: (id) => set({ selectedCareerId: id }),
       setLanguage: (lang) => set({ language: lang }),
+      setTheme: (theme) => set({ theme }),
       
       toggleApproved: (subjectId) => set((state) => {
         const isApproved = state.approvedSubjects.includes(subjectId);

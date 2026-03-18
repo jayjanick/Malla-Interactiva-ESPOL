@@ -19,57 +19,56 @@ export function LandingPage() {
         Planificador de Mallas <span className="text-emerald-500">ESPOL</span>
       </h1>
       
-      <p className="text-lg text-white/60 mb-12 max-w-2xl leading-relaxed">
-        Bienvenido a la herramienta no oficial para estudiantes de la Escuela Superior Politécnica del Litoral. 
-        Selecciona tu carrera en el menú superior para comenzar a organizar tu progreso académico.
+      <p className="text-lg text-slate-500 dark:text-white/60 mb-12 max-w-2xl leading-relaxed">
+        ¡Hola! Creé esta herramienta no oficial esperando que, al igual que a mí, les sirva a mis compañeros de la ESPOL para organizarse con tiempo y proyectar su carrera. Selecciona tu carrera en el menú superior para comenzar a planificar tu progreso académico.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full text-left mt-8">
-        <div className="bg-white/[0.02] border border-white/5 p-6 rounded-2xl hover:bg-white/[0.04] transition-colors">
+        <div className="bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 p-6 rounded-2xl hover:bg-slate-100 dark:hover:bg-slate-100 dark:bg-white/[0.04] transition-colors">
           <Map className="w-8 h-8 text-emerald-500 mb-4" />
           <h2 className="text-xl font-medium mb-2">Visualiza tu Malla</h2>
-          <p className="text-sm text-white/50 leading-relaxed">
-            Explora el plan de estudios completo de tu carrera. Revisa todas las materias organizadas por semestres y conoce los prerrequisitos y correquisitos necesarios para cada asignatura.
+          <p className="text-sm text-slate-500 dark:text-white/50 leading-relaxed">
+            Explora el plan de estudios completo de tu carrera. Revisa todas las materias organizadas por semestres y conoce los prerrequisitos y correquisitos necesarios para que no te tome por sorpresa ninguna asignatura.
           </p>
         </div>
 
-        <div className="bg-white/[0.02] border border-white/5 p-6 rounded-2xl hover:bg-white/[0.04] transition-colors">
+        <div className="bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 p-6 rounded-2xl hover:bg-slate-100 dark:hover:bg-slate-100 dark:bg-white/[0.04] transition-colors">
           <CheckCircle2 className="w-8 h-8 text-emerald-500 mb-4" />
           <h2 className="text-xl font-medium mb-2">Calcula tus Créditos</h2>
-          <p className="text-sm text-white/50 leading-relaxed">
-            Marca las materias que ya has aprobado y deja que el sistema calcule automáticamente tu progreso. Mantén un registro claro de cuántos créditos te faltan para graduarte.
+          <p className="text-sm text-slate-500 dark:text-white/50 leading-relaxed">
+            Marca las materias que ya has aprobado y deja que el sistema calcule automáticamente tu progreso. Así podrás mantener un registro claro de cuántos créditos te faltan para graduarte.
           </p>
         </div>
 
-        <div className="bg-white/[0.02] border border-white/5 p-6 rounded-2xl hover:bg-white/[0.04] transition-colors">
+        <div className="bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 p-6 rounded-2xl hover:bg-slate-100 dark:hover:bg-slate-100 dark:bg-white/[0.04] transition-colors">
           <Clock className="w-8 h-8 text-emerald-500 mb-4" />
           <h2 className="text-xl font-medium mb-2">Proyecta tus Semestres</h2>
-          <p className="text-sm text-white/50 leading-relaxed">
-            Utiliza el planificador interactivo para simular qué materias tomarás en los próximos términos académicos. Evita errores al registrarte asegurándote de cumplir con todas las reglas de la universidad.
+          <p className="text-sm text-slate-500 dark:text-white/50 leading-relaxed">
+            Diseñé el planificador interactivo para que podamos simular qué materias tomaremos en los próximos términos académicos, evitando errores en el registro y asegurándonos de cumplir con las reglas de la universidad.
           </p>
         </div>
 
-        <div className="bg-white/[0.02] border border-white/5 p-6 rounded-2xl hover:bg-white/[0.04] transition-colors">
+        <div className="bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 p-6 rounded-2xl hover:bg-slate-100 dark:hover:bg-slate-100 dark:bg-white/[0.04] transition-colors">
           <GraduationCap className="w-8 h-8 text-emerald-500 mb-4" />
           <h2 className="text-xl font-medium mb-2">Múltiples Facultades</h2>
-          <p className="text-sm text-white/50 leading-relaxed">
-            Soportamos carreras de FIEC, FCSH, FCV, FADCOM, FIMCM y FCNM. Nuestra base de datos se actualiza constantemente para incluir más programas de estudio de la ESPOL.
+          <p className="text-sm text-slate-500 dark:text-white/50 leading-relaxed">
+            He ido agregando carreras de FIEC, FCSH, FCV, FADCOM, FIMCM y FCNM. La idea es mantener la base de datos actualizada para incluir a más compañeros de otras facultades de la ESPOL.
           </p>
         </div>
       </div>
       
       <div className="mt-16 w-full text-left">
-        <h2 className="text-2xl font-bold mb-6 text-white/90">Carreras Soportadas</h2>
+        <h2 className="text-2xl font-bold mb-6 text-slate-800 dark:text-white/90">Carreras Soportadas</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {faculties.map(faculty => {
             const facultyCareers = careers.filter(c => c.facultyId === faculty.id);
             if (facultyCareers.length === 0) return null;
             return (
-              <div key={faculty.id} className="bg-white/[0.02] border border-white/5 p-5 rounded-xl">
-                <h3 className="text-lg font-semibold text-emerald-400 mb-3">{faculty.name} ({faculty.acronym})</h3>
+              <div key={faculty.id} className="bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 p-5 rounded-xl">
+                <h3 className="text-lg font-semibold text-emerald-600 dark:text-emerald-400 mb-3">{faculty.name} ({faculty.acronym})</h3>
                 <ul className="space-y-2">
                   {facultyCareers.map(career => (
-                    <li key={career.id} className="text-sm text-white/60 flex items-start gap-2">
+                    <li key={career.id} className="text-sm text-slate-500 dark:text-white/60 flex items-start gap-2">
                       <span className="text-emerald-500/50 mt-0.5">•</span>
                       <span>{career.name}</span>
                     </li>
@@ -81,10 +80,10 @@ export function LandingPage() {
         </div>
       </div>
 
-      <div className="mt-16 text-sm text-white/40 max-w-3xl text-left bg-black/20 p-6 rounded-xl border border-white/5">
-        <h3 className="font-medium text-white/60 mb-2">Nota sobre esta herramienta:</h3>
+      <div className="mt-16 text-sm text-slate-400 dark:text-white/40 max-w-3xl text-left bg-slate-100 dark:bg-black/20 p-6 rounded-xl border border-slate-200 dark:border-white/5">
+        <h3 className="font-medium text-slate-500 dark:text-white/60 mb-2">Nota sobre esta herramienta:</h3>
         <p>
-          Esta aplicación es un proyecto independiente creado por estudiantes y no está afiliada oficialmente a la Escuela Superior Politécnica del Litoral (ESPOL). Su propósito es facilitar la planificación académica, pero siempre debes verificar la información oficial en los canales institucionales de la universidad al momento de realizar tu registro de materias.
+          Esta aplicación es un proyecto personal e independiente que hice como estudiante y no está afiliada oficialmente a la Escuela Superior Politécnica del Litoral (ESPOL). Mi propósito es facilitarnos la planificación académica, pero recuerda siempre verificar la información oficial en los canales institucionales de la universidad al momento de realizar tu registro de materias.
         </p>
       </div>
     </motion.div>

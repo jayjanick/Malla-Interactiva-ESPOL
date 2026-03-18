@@ -66,13 +66,13 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
         isApproved 
           ? "bg-emerald-500/10 border-emerald-500/30 hover:bg-emerald-500/20" 
           : isLocked
-            ? "bg-white/[0.01] border-white/5 opacity-60 cursor-pointer"
-            : "bg-white/[0.02] border-white/10 hover:bg-white/[0.05] hover:border-white/20 cursor-pointer"
+            ? "bg-white/[0.01] border-slate-200 dark:border-white/5 opacity-60 cursor-pointer"
+            : "bg-slate-50 dark:bg-white/[0.02] border-slate-300 dark:border-white/10 hover:bg-slate-100 dark:bg-white/[0.05] hover:border-slate-400 dark:border-white/20 cursor-pointer"
       )}
     >
       {/* Background glow effect on hover */}
       {!isLocked && !isApproved && (
-        <div className="absolute inset-0 bg-gradient-to-br from-white/[0.05] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-200 dark:from-white/[0.05] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
       )}
       {isApproved && (
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/[0.05] to-transparent opacity-100" />
@@ -81,17 +81,17 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
       <div className="relative z-10 flex flex-col gap-2 flex-1 min-w-0">
         {/* Row 1: Code and Total Hours */}
         <div className="flex items-center justify-between w-full">
-          <span className="text-xs font-mono text-white/40">{subject.code}</span>
+          <span className="text-xs font-mono text-slate-400 dark:text-white/40">{subject.code}</span>
           <div className="flex items-center gap-2">
             {isApproved ? (
               <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
             ) : isLocked ? (
-              <Lock className="w-4 h-4 text-white/20 shrink-0" />
+              <Lock className="w-4 h-4 text-slate-300 dark:text-white/20 shrink-0" />
             ) : (
-              <Unlock className="w-4 h-4 text-white/20 shrink-0 transition-opacity" />
+              <Unlock className="w-4 h-4 text-slate-300 dark:text-white/20 shrink-0 transition-opacity" />
             )}
             {subject.hoursTotal && (
-              <span className="text-xs font-mono text-white/40">{subject.hoursTotal}h</span>
+              <span className="text-xs font-mono text-slate-400 dark:text-white/40">{subject.hoursTotal}h</span>
             )}
           </div>
         </div>
@@ -101,7 +101,7 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
           <div className="flex flex-col min-w-0">
             <h4 className={cn(
               "text-[11px] sm:text-sm md:text-xs lg:text-sm font-medium leading-tight break-words",
-              isApproved ? "text-emerald-50" : isLocked ? "text-white/50" : "text-white/90"
+              isApproved ? "text-emerald-900 dark:text-emerald-50" : isLocked ? "text-slate-500 dark:text-white/50" : "text-slate-800 dark:text-white/90"
             )}>
               {isApproved && subject.isItinerary && itinerarySelections[subject.id]
                 ? subject.itineraryOptions?.find(o => o.id === itinerarySelections[subject.id])?.name || subject.name
@@ -121,17 +121,17 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
             )}
           </div>
           {subject.hoursDetail && (
-            <span className="text-[10px] font-mono text-white/30 shrink-0 text-right mt-0.5">
+            <span className="text-[10px] font-mono text-slate-400 dark:text-white/30 shrink-0 text-right mt-0.5">
               {subject.hoursDetail}
             </span>
           )}
         </div>
 
-        <div className="flex flex-col gap-2 mt-2 pt-2 border-t border-white/5">
+        <div className="flex flex-col gap-2 mt-2 pt-2 border-t border-slate-200 dark:border-white/5">
           <div className="flex items-center justify-between">
             <span className={cn(
               "text-xs font-medium px-2 py-0.5 rounded-md",
-              isApproved ? "bg-emerald-500/20 text-emerald-300" : "bg-white/5 text-white/50"
+              isApproved ? "bg-emerald-500/20 text-emerald-300" : "bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-white/50"
             )}>
               {subject.credits} CR
             </span>
@@ -139,13 +139,13 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
             <div className="flex flex-col items-end gap-1">
               {subject.minApprovedSubjects && (
                 <div 
-                  className="flex gap-1 items-center cursor-pointer hover:bg-white/5 p-1 -mr-1 rounded transition-colors"
+                  className="flex gap-1 items-center cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-100 dark:bg-white/5 p-1 -mr-1 rounded transition-colors"
                   onClick={(e) => {
                     e.stopPropagation();
                     setShowAlert(true);
                   }}
                 >
-                  <span className="text-[9px] text-white/30 uppercase tracking-wider mr-1">{t.malla.min}</span>
+                  <span className="text-[9px] text-slate-400 dark:text-white/30 uppercase tracking-wider mr-1">{t.malla.min}</span>
                   <div 
                     className={cn(
                       "w-1.5 h-1.5 rounded-full",
@@ -156,13 +156,13 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
               )}
               {subject.prerequisites.length > 0 && (
                 <div 
-                  className="flex gap-1 items-center cursor-pointer hover:bg-white/5 p-1 -mr-1 rounded transition-colors"
+                  className="flex gap-1 items-center cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-100 dark:bg-white/5 p-1 -mr-1 rounded transition-colors"
                   onClick={(e) => {
                     e.stopPropagation();
                     setShowAlert(true);
                   }}
                 >
-                  <span className="text-[9px] text-white/30 uppercase tracking-wider mr-1">{t.malla.req}</span>
+                  <span className="text-[9px] text-slate-400 dark:text-white/30 uppercase tracking-wider mr-1">{t.malla.req}</span>
                   {subject.prerequisites.map(prereqId => {
                     const isPrereqApproved = approvedSubjects.includes(prereqId);
                     return (
@@ -179,13 +179,13 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
               )}
               {subject.corequisites && subject.corequisites.length > 0 && (
                 <div 
-                  className="flex gap-1 items-center cursor-pointer hover:bg-white/5 p-1 -mr-1 rounded transition-colors"
+                  className="flex gap-1 items-center cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-100 dark:bg-white/5 p-1 -mr-1 rounded transition-colors"
                   onClick={(e) => {
                     e.stopPropagation();
                     setShowAlert(true);
                   }}
                 >
-                  <span className="text-[9px] text-white/30 uppercase tracking-wider mr-1">{t.malla.coreq}</span>
+                  <span className="text-[9px] text-slate-400 dark:text-white/30 uppercase tracking-wider mr-1">{t.malla.coreq}</span>
                   {subject.corequisites.map(coreqId => {
                     const isCoreqApproved = approvedSubjects.includes(coreqId);
                     return (
@@ -213,17 +213,17 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.15 }}
-            className="absolute inset-0 z-20 bg-[#0a0a0a]/95 backdrop-blur-md p-4 flex flex-col gap-3 border border-white/10 rounded-xl shadow-2xl"
+            className="absolute inset-0 z-20 bg-white/95 dark:bg-[#0a0a0a]/95 backdrop-blur-md p-4 flex flex-col gap-3 border border-slate-300 dark:border-white/10 rounded-xl shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between">
-              <span className="text-xs font-medium text-white/90 uppercase tracking-wider">{t.malla.prerequisitesNotMet}</span>
+              <span className="text-xs font-medium text-slate-800 dark:text-white/90 uppercase tracking-wider">{t.malla.prerequisitesNotMet}</span>
               <button 
                 onClick={(e) => {
                   e.stopPropagation();
                   setShowAlert(false);
                 }} 
-                className="p-1.5 bg-white/5 hover:bg-white/10 rounded-lg text-white/50 hover:text-white transition-colors"
+                className="p-1.5 bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-slate-200 dark:bg-white/10 rounded-lg text-slate-500 dark:text-white/50 hover:text-slate-900 dark:text-white transition-colors"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -288,17 +288,17 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.15 }}
-            className="absolute inset-0 z-30 bg-[#0a0a0a]/95 backdrop-blur-md p-4 flex flex-col gap-3 border border-white/10 rounded-xl shadow-2xl"
+            className="absolute inset-0 z-30 bg-white/95 dark:bg-[#0a0a0a]/95 backdrop-blur-md p-4 flex flex-col gap-3 border border-slate-300 dark:border-white/10 rounded-xl shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between">
-              <span className="text-xs font-medium text-white/90 uppercase tracking-wider">{t.malla.chooseOption}</span>
+              <span className="text-xs font-medium text-slate-800 dark:text-white/90 uppercase tracking-wider">{t.malla.chooseOption}</span>
               <button 
                 onClick={(e) => {
                   e.stopPropagation();
                   setShowItineraryOptions(false);
                 }} 
-                className="p-1.5 bg-white/5 hover:bg-white/10 rounded-lg text-white/50 hover:text-white transition-colors"
+                className="p-1.5 bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-slate-200 dark:bg-white/10 rounded-lg text-slate-500 dark:text-white/50 hover:text-slate-900 dark:text-white transition-colors"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -332,8 +332,8 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
                     className={cn(
                       "text-xs flex flex-col gap-1 p-2 rounded-lg border transition-colors text-left",
                       isSelected 
-                        ? "bg-emerald-500/20 border-emerald-500/30 text-emerald-100" 
-                        : "bg-white/5 border-white/10 text-white/70 hover:bg-white/10 hover:text-white"
+                        ? "bg-emerald-500/20 border-emerald-500/30 text-emerald-900 dark:text-emerald-100" 
+                        : "bg-slate-100 dark:bg-white/5 border-slate-300 dark:border-white/10 text-slate-600 dark:text-white/70 hover:bg-slate-200 dark:hover:bg-slate-200 dark:bg-white/10 hover:text-slate-900 dark:text-white"
                     )}
                   >
                     <span className="font-semibold">{option.name}</span>
@@ -356,17 +356,17 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.15 }}
-            className="absolute inset-0 z-30 bg-[#0a0a0a]/95 backdrop-blur-md p-4 flex flex-col gap-3 border border-white/10 rounded-xl shadow-2xl"
+            className="absolute inset-0 z-30 bg-white/95 dark:bg-[#0a0a0a]/95 backdrop-blur-md p-4 flex flex-col gap-3 border border-slate-300 dark:border-white/10 rounded-xl shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between">
-              <span className="text-xs font-medium text-white/90 uppercase tracking-wider">{t.malla.chooseOption}</span>
+              <span className="text-xs font-medium text-slate-800 dark:text-white/90 uppercase tracking-wider">{t.malla.chooseOption}</span>
               <button 
                 onClick={(e) => {
                   e.stopPropagation();
                   setShowComplementaryOptions(false);
                 }} 
-                className="p-1.5 bg-white/5 hover:bg-white/10 rounded-lg text-white/50 hover:text-white transition-colors"
+                className="p-1.5 bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-slate-200 dark:bg-white/10 rounded-lg text-slate-500 dark:text-white/50 hover:text-slate-900 dark:text-white transition-colors"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -406,8 +406,8 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
                     className={cn(
                       "text-xs flex flex-col gap-1 p-2 rounded-lg border transition-colors text-left",
                       isSelected 
-                        ? "bg-emerald-500/20 border-emerald-500/30 text-emerald-100" 
-                        : "bg-white/5 border-white/10 text-white/70 hover:bg-white/10 hover:text-white"
+                        ? "bg-emerald-500/20 border-emerald-500/30 text-emerald-900 dark:text-emerald-100" 
+                        : "bg-slate-100 dark:bg-white/5 border-slate-300 dark:border-white/10 text-slate-600 dark:text-white/70 hover:bg-slate-200 dark:hover:bg-slate-200 dark:bg-white/10 hover:text-slate-900 dark:text-white"
                     )}
                   >
                     <span className="font-semibold">{option.label.split('] - ')[1]?.replace(' (1 CR)', '') || option.label}</span>

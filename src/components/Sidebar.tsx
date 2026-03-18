@@ -14,6 +14,7 @@ interface SidebarProps {
 export function Sidebar({ currentView, setCurrentView }: SidebarProps) {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isConfirmingReset, setIsConfirmingReset] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   const { clearAll, language, setLanguage } = useMallaStore();
   const [tempLanguage, setTempLanguage] = useState<Language>(language);
 
@@ -41,13 +42,18 @@ export function Sidebar({ currentView, setCurrentView }: SidebarProps) {
 
   return (
     <>
-      {/* Desktop Sidebar */}
-      <div className="hidden md:flex w-64 bg-[#0a0a0a] border-r border-white/5 flex-col h-screen fixed top-0 left-0 shrink-0 z-50">
-        <div className="p-6 flex items-center gap-3 border-b border-white/5">
-          <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-500">
+      <motion.div 
+        className="hidden md:flex bg-[#0a0a0a] border border-white/10 flex-col h-[95vh] fixed top-[2.5vh] left-4 rounded-2xl shrink-0 z-50 shadow-2xl shadow-black/50 overflow-hidden"
+        animate={{ width: isHovered ? 256 : 80 }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+      >
+        <div className={cn("p-6 flex items-center gap-3 border-b border-white/5 h-[88px]", !isHovered && "p-4 justify-center gap-0")}>
+          <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-500 shrink-0">
             <GraduationCap className="w-6 h-6" />
           </div>
-          <div className="flex flex-col">
+          <div className={cn("flex flex-col overflow-hidden transition-all duration-300 whitespace-nowrap", isHovered ? "w-auto opacity-100" : "w-0 opacity-0")}>
             <span className="font-bold tracking-tight leading-tight">{t.sidebar.logo}</span>
             <span className="text-xs font-bold text-emerald-500 leading-tight">{t.sidebar.university}</span>
           </div>
@@ -58,38 +64,43 @@ export function Sidebar({ currentView, setCurrentView }: SidebarProps) {
             onClick={() => setCurrentView('dashboard')}
             className={cn(
               "w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-sm font-medium",
+              !isHovered && "justify-center",
               currentView === 'dashboard' 
                 ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20" 
                 : "text-white/50 hover:text-white hover:bg-white/5 border border-transparent"
             )}
           >
-            <Home className="w-5 h-5" />
-            {t.sidebar.dashboard}
+            <Home className="w-5 h-5 shrink-0" />
+            {isHovered && t.sidebar.dashboard}
           </button>
           <button
             onClick={() => setCurrentView('planner')}
             className={cn(
               "w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-sm font-medium",
+              !isHovered && "justify-center",
               currentView === 'planner' 
                 ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20" 
                 : "text-white/50 hover:text-white hover:bg-white/5 border border-transparent"
             )}
           >
-            <CalendarDays className="w-5 h-5" />
-            {t.sidebar.planner}
+            <CalendarDays className="w-5 h-5 shrink-0" />
+            {isHovered && t.sidebar.planner}
           </button>
         </nav>
 
         <div className="p-4 border-t border-white/5">
           <button
             onClick={() => setIsSettingsOpen(true)}
-            className="w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-sm font-medium text-white/50 hover:text-white hover:bg-white/5"
+            className={cn(
+              "w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-sm font-medium text-white/50 hover:text-white hover:bg-white/5",
+              !isHovered && "justify-center"
+            )}
           >
-            <Settings className="w-5 h-5" />
-            {t.settings.title}
+            <Settings className="w-5 h-5 shrink-0" />
+            {isHovered && t.settings.title}
           </button>
         </div>
-      </div>
+      </motion.div>
 
       {/* Mobile Bottom Navigation */}
       <div className="md:hidden fixed bottom-4 left-1/2 -translate-x-1/2 w-[95%] z-50">

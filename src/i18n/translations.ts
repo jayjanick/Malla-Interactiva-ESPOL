@@ -65,6 +65,9 @@ export const translations = {
     },
     settings: {
       title: 'Configuración',
+      theme: 'Tema',
+      light: 'Claro',
+      dark: 'Oscuro',
       language: 'Idioma',
       university: 'Universidad',
       version: 'Versión',
@@ -141,6 +144,9 @@ export const translations = {
     },
     settings: {
       title: 'Settings',
+      theme: 'Theme',
+      light: 'Light',
+      dark: 'Dark',
       language: 'Language',
       university: 'University',
       version: 'Version',
