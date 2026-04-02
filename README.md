@@ -36,6 +36,6 @@ Lo que si funciona y está más abajo es un botón para resetear todo el progres
 
 
 --------------------------------------------------------------------------
-Si hay alguna sugerencia por favor indicármelo al correo institucional: jaypala@espol.edu.ec. Me serviría mucho el feedback que podrían dar.
+Si hay alguna sugerencia por favor indicármelo al correo. Me serviría mucho el feedback que podrían dar.
 
 ¡Gracias, espero les sirva el proyecto <3!
