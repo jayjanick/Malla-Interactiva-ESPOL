@@ -491,7 +491,7 @@ export const careers: Career[] = [
   },
   {
     id: 'cdia-h',
-    name: 'Ciencias de Datos e Inteligencia Artificial (Híbrido)',
+    name: 'CD e IA (Híbrido)',
     facultyId: 'fiec',
     subjects: [
       // NIVEL 100 - I
@@ -560,7 +560,7 @@ export const careers: Career[] = [
   },
   {
     id: 'cdia-o',
-    name: 'Ciencias de Datos e Inteligencia Artificial (Online)',
+    name: 'CD e IA (Online)',
     facultyId: 'fiec',
     subjects: [
       // NIVEL 100 - I
@@ -1368,11 +1368,364 @@ export const careers: Career[] = [
       { id: 'comp3_pm', code: 'COMP3', name: 'Materia Complementaria 3', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true }
     ]
   },
-  { id: 'alim', name: 'Alimentos', facultyId: 'fimcp', subjects: [] },
-  { id: 'indu', name: 'Industrial', facultyId: 'fimcp', subjects: [] },
-  { id: 'mate', name: 'Materiales', facultyId: 'fimcp', subjects: [] },
-  { id: 'meca', name: 'Mecánica', facultyId: 'fimcp', subjects: [] },
-  { id: 'mect', name: 'Mecatrónica', facultyId: 'fimcp', subjects: [] },
+  {
+    id: 'alim',
+    name: 'Alimentos',
+    facultyId: 'fimcp',
+    subjects: [
+      // NIVEL 100 - I
+      { id: 'indg1033', code: 'INDG1033', name: 'Análisis y Resolución de Problemas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '100 - I' },
+      { id: 'matg1045', code: 'MATG1045', name: 'Cálculo de Una Variable', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], period: '100 - I' },
+      { id: 'fisg1005', code: 'FISG1005', name: 'Física: Mecánica', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], corequisites: ['matg1045'], period: '100 - I' },
+      { id: 'quig1032', code: 'QUIG1032', name: 'Química General', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], period: '100 - I' },
+      { id: 'idig1006', code: 'IDIG1006', name: 'Inglés I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - I' },
+
+      // NIVEL 100 - II
+      { id: 'ccpg1043', code: 'CCPG1043', name: 'Fundamentos de Programación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1045'], period: '100 - II' },
+      { id: 'matg1046', code: 'MATG1046', name: 'Cálculo Vectorial', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1045'], period: '100 - II' },
+      { id: 'mecg1054', code: 'MECG1054', name: 'Termofluidos', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['fisg1005'], period: '100 - II' },
+      { id: 'biog1022', code: 'BIOG1022', name: 'Biología General', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['quig1032'], period: '100 - II' },
+      { id: 'quig1035', code: 'QUIG1035', name: 'Química Orgánica', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['quig1032'], period: '100 - II' },
+      { id: 'idig1007', code: 'IDIG1007', name: 'Inglés II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1006'], period: '100 - II' },
+
+      // NIVEL 200 - I
+      { id: 'estg1034', code: 'ESTG1034', name: 'Estadística', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['ccpg1043'], period: '200 - I' },
+      { id: 'matg1048', code: 'MATG1048', name: 'Ecuaciones Diferenciales y Álgebra Lineal', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1046'], period: '200 - I' },
+      { id: 'idig2012', code: 'IDIG2012', name: 'Comunicación', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 6, period: '200 - I' },
+      { id: 'alig1041', code: 'ALIG1041', name: 'Microbiología de Alimentos', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['biog1022'], period: '200 - I' },
+      { id: 'alig1050', code: 'ALIG1050', name: 'Química Alimentaria', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['quig1035'], period: '200 - I' },
+      { id: 'idig1008', code: 'IDIG1008', name: 'Inglés III', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1007'], period: '200 - I' },
+
+      // NIVEL 200 - II
+      { id: 'alig1031', code: 'ALIG1031', name: 'Control de Calidad y Evaluación Sensorial de Alimentos', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['estg1034'], period: '200 - II' },
+      { id: 'alig1037', code: 'ALIG1037', name: 'Fundamentos de la Ingeniería en Alimentos', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['matg1048'], period: '200 - II' },
+      { id: 'mecg1067', code: 'MECG1067', name: 'Reología de Fluidos', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['mecg1054'], period: '200 - II' },
+      { id: 'alig1039', code: 'ALIG1039', name: 'Inocuidad Alimentaria', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['alig1041'], period: '200 - II' },
+      { id: 'alig1030', code: 'ALIG1030', name: 'Bioquímica Alimentaria', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['alig1050'], period: '200 - II' },
+      { id: 'alig1029', code: 'ALIG1029', name: 'Análisis de Alimentos', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['alig1050'], period: '200 - II' },
+      { id: 'idig1009', code: 'IDIG1009', name: 'Inglés IV', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1008'], period: '200 - II' },
+
+      // NIVEL 300 - I
+      { id: 'indg1058', code: 'INDG1058', name: 'Sistemas y Programación de Producción', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['estg1034'], period: '300 - I' },
+      { id: 'mecg1068', code: 'MECG1068', name: 'Transferencia de Calor y Masa', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['mecg1067'], period: '300 - I' },
+      { id: 'admg1005', code: 'ADMG1005', name: 'Emprendimiento e Innovación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], minApprovedSubjects: 20, period: '300 - I' },
+      { id: 'alig1036', code: 'ALIG1036', name: 'Fermentación y Enzimología Alimentaria', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['alig1030', 'alig1039'], period: '300 - I' },
+      { id: 'alig1044', code: 'ALIG1044', name: 'Procesamiento de Frutas y Vegetales', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['alig1039', 'alig1031', 'alig1029'], corequisites: ['alig1036'], period: '300 - I' },
+      { id: 'idig1010', code: 'IDIG1010', name: 'Inglés V', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1009'], period: '300 - I' },
+
+      // NIVEL 300 - II
+      { id: 'adsg1026', code: 'ADSG1026', name: 'Ciencias de la Sostenibilidad', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 20, period: '300 - II' },
+      { id: 'alig1034', code: 'ALIG1034', name: 'Diseño de Procesos Térmicos I', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mecg1068'], period: '300 - II' },
+      { id: 'alig1038', code: 'ALIG1038', name: 'Ingeniería de Procesos Alimentarios', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], corequisites: ['alig1034'], period: '300 - II' },
+      { id: 'alig1045', code: 'ALIG1045', name: 'Procesamiento de Lácteos', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['alig1044'], period: '300 - II' },
+      { id: 'alig1046', code: 'ALIG1046', name: 'Procesamiento de Cárnicos, Pescados y Mariscos', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], corequisites: ['alig1045'], period: '300 - II' },
+      { id: 'psc_alim', code: 'PSC', name: 'Prácticas de Servicio Comunitario', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '300 - II' },
+
+      // NIVEL 400 - I
+      { id: 'alig1042', code: 'ALIG1042', name: 'Optimización y Simulación de Procesos Alimentarios', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['alig1038'], period: '400 - I' },
+      { id: 'alig1035', code: 'ALIG1035', name: 'Diseño de Procesos Térmicos II', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['alig1034'], period: '400 - I' },
+      { id: 'alig1047', code: 'ALIG1047', name: 'Sanidad e Higiene Alimentaria', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['alig1046'], period: '400 - I' },
+      { id: 'alig1043', code: 'ALIG1043', name: 'Procesamiento de Farináceos y Oleaginosas', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['alig1046'], period: '400 - I' },
+      { id: 'alig1032', code: 'ALIG1032', name: 'Desarrollo de Nuevos Productos Alimenticios', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], corequisites: ['alig1043'], period: '400 - I' },
+      { id: 'itin1_alim', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+
+      // NIVEL 400 - II
+      { id: 'alig1033', code: 'ALIG1033', name: 'Diseño de Plantas Alimentarias', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['alig1035', 'alig1032'], period: '400 - II' },
+      { id: 'alig1040', code: 'ALIG1040', name: 'Materia Integradora de Alimentos', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 42, period: '400 - II' },
+      { id: 'itin2_alim', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+
+      // NIVEL 500
+      { id: 'ppp_alim', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500' },
+
+      // COMPLEMENTARIAS
+      { id: 'comp1_alim', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_alim', code: 'COMP2', name: 'Materia Complementaria 2', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp3_alim', code: 'COMP3', name: 'Materia Complementaria 3', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+    ],
+  },
+  {
+    id: 'indu',
+    name: 'Industrial',
+    facultyId: 'fimcp',
+    subjects: [
+      // Nivel 100 - I
+      { id: 'indg1033', code: 'INDG1033', name: 'Análisis y Resolución de Problemas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '100 - I' },
+      { id: 'matg1045', code: 'MATG1045', name: 'Cálculo de Una Variable', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], period: '100 - I' },
+      { id: 'fisg1005', code: 'FISG1005', name: 'Física: Mecánica', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], corequisites: ['matg1045'], period: '100 - I' },
+      { id: 'quig1032', code: 'QUIG1032', name: 'Química General', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], period: '100 - I' },
+      { id: 'idig1006', code: 'IDIG1006', name: 'Inglés I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - I' },
+
+      // Nivel 100 - II
+      { id: 'matg1049', code: 'MATG1049', name: 'Álgebra Lineal', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1045'], period: '100 - II' },
+      { id: 'matg1046', code: 'MATG1046', name: 'Cálculo Vectorial', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1045'], period: '100 - II' },
+      { id: 'fisg1006', code: 'FISG1006', name: 'Física: Electricidad y Magnetismo', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['fisg1005'], corequisites: ['matg1046'], period: '100 - II' },
+      { id: 'ccpg1043', code: 'CCPG1043', name: 'Fundamentos de Programación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1045'], period: '100 - II' },
+      { id: 'idig1007', code: 'IDIG1007', name: 'Inglés II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1006'], period: '100 - II' },
+
+      // Nivel 200 - I
+      { id: 'indg1040', code: 'INDG1040', name: 'Introducción a la Ingeniería Industrial', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['indg1033'], period: '200 - I' },
+      { id: 'estg1036', code: 'ESTG1036', name: 'Estadística I', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1046', 'ccpg1043'], period: '200 - I' },
+      { id: 'mecg1052', code: 'MECG1052', name: 'Mecánica Vectorial', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['fisg1005'], period: '200 - I' },
+      { id: 'ecog2067', code: 'ECOG2067', name: 'Introducción a la Economía', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: [], minApprovedSubjects: 6, period: '200 - I' },
+      { id: 'idig2012', code: 'IDIG2012', name: 'Comunicación', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 6, period: '200 - I' },
+      { id: 'idig1008', code: 'IDIG1008', name: 'Inglés III', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1007'], period: '200 - I' },
+
+      // Nivel 200 - II
+      { id: 'indg1039', code: 'INDG1039', name: 'Ingeniería de Métodos', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['indg1040'], corequisites: ['estg1037'], period: '200 - II' },
+      { id: 'estg1037', code: 'ESTG1037', name: 'Estadística II', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['estg1036'], period: '200 - II' },
+      { id: 'mecg1054', code: 'MECG1054', name: 'Termofluidos', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['fisg1005'], period: '200 - II' },
+      { id: 'indg1041', code: 'INDG1041', name: 'Investigación de Operaciones', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['matg1049'], period: '200 - II' },
+      { id: 'idig1009', code: 'IDIG1009', name: 'Inglés IV', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1008'], period: '200 - II' },
+
+      // Nivel 300 - I
+      { id: 'indg1057', code: 'INDG1057', name: 'Ingeniería de la Calidad', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['estg1037'], period: '300 - I' },
+      { id: 'indg1056', code: 'INDG1056', name: 'Pronóstico y Control de Inventario', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['estg1037', 'indg1041'], period: '300 - I' },
+      { id: 'indg1055', code: 'INDG1055', name: 'Procesos Industriales', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['mecg1054', 'indg1040'], period: '300 - I' },
+      { id: 'indg1034', code: 'INDG1034', name: 'Análisis de Valor de Producto', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['ecog2067'], period: '300 - I' },
+      { id: 'mecg1041', code: 'MECG1041', name: 'Dibujo para Ingeniería', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], minApprovedSubjects: 15, period: '300 - I' },
+      { id: 'idig1010', code: 'IDIG1010', name: 'Inglés V', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1009'], period: '300 - I' },
+
+      // Nivel 300 - II
+      { id: 'indg1054', code: 'INDG1054', name: 'Seguridad y Salud Ocupacional', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['indg1039'], period: '300 - II' },
+      { id: 'indg1044', code: 'INDG1044', name: 'Metodologías para la Mejora Continua', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['indg1057', 'indg1055'], period: '300 - II' },
+      { id: 'indg1047', code: 'INDG1047', name: 'Planificación de la Producción', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['indg1056'], corequisites: ['indg1045'], period: '300 - II' },
+      { id: 'indg1045', code: 'INDG1045', name: 'Modelos Estocásticos para Manufactura y Servicios', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['estg1037'], period: '300 - II' },
+      { id: 'adsg1026', code: 'ADSG1026', name: 'Ciencias de la Sostenibilidad', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 20, period: '300 - II' },
+
+      // Nivel 400 - I
+      { id: 'indg1051', code: 'INDG1051', name: 'Programación Entera para Ingeniería', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['indg1047'], period: '400 - I' },
+      { id: 'indg1042', code: 'INDG1042', name: 'Logística y Servicio al Cliente', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['indg1045'], corequisites: ['indg1051'], period: '400 - I' },
+      { id: 'indg1053', code: 'INDG1053', name: 'Sistemas de Control de Producción', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['indg1047', 'indg1044'], period: '400 - I' },
+      { id: 'indg1052', code: 'INDG1052', name: 'Simulación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['mecg1041'], corequisites: ['indg1053'], period: '400 - I' },
+      { id: 'matg2008', code: 'MATG2008', name: 'Matemáticas Financieras', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['indg1034'], period: '400 - I' },
+      { id: 'psc_ind', code: 'PSC', name: 'Prácticas de Servicio Comunitario', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '400 - I' },
+
+      // Nivel 400 - II
+      { id: 'indg1046', code: 'INDG1046', name: 'Métodos de Analítica para la Industria', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['indg1051'], period: '400 - II' },
+      { id: 'indg1037', code: 'INDG1037', name: 'Gestión de la Cadena de Suministro Sostenible', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['indg1042'], period: '400 - II' },
+      { id: 'admg2025', code: 'ADMG2025', name: 'Comportamiento Organizacional', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['indg1044'], period: '400 - II' },
+      { id: 'indg1035', code: 'INDG1035', name: 'Diseño de Plantas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['indg1052', 'matg2008', 'indg1042'], period: '400 - II' },
+      { id: 'itin1_ind', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+
+      // Nivel 500 - I
+      { id: 'admg1005', code: 'ADMG1005', name: 'Emprendimiento e Innovación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], minApprovedSubjects: 20, period: '500 - I' },
+      { id: 'indg1043', code: 'INDG1043', name: 'Materia Integradora de Ingeniería Industrial', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 43, period: '500 - I' },
+      { id: 'itin2_ind', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '500 - I', isItinerary: true },
+
+      // Nivel 500 - II
+      { id: 'ppp_ind', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - II' },
+
+      // COMPLEMENTARIAS
+      { id: 'comp1_ind', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_ind', code: 'COMP2', name: 'Materia Complementaria 2', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp3_ind', code: 'COMP3', name: 'Materia Complementaria 3', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+    ],
+  },
+  {
+    id: 'mate',
+    name: 'Materiales',
+    facultyId: 'fimcp',
+    subjects: [
+      // Nivel 100 - I
+      { id: 'indg1033', code: 'INDG1033', name: 'Análisis y Resolución de Problemas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '100 - I' },
+      { id: 'matg1045', code: 'MATG1045', name: 'Cálculo de Una Variable', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], period: '100 - I' },
+      { id: 'fisg1005', code: 'FISG1005', name: 'Física: Mecánica', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], corequisites: ['matg1045'], period: '100 - I' },
+      { id: 'quig1032', code: 'QUIG1032', name: 'Química General', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], period: '100 - I' },
+      { id: 'idig1006', code: 'IDIG1006', name: 'Inglés I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - I' },
+
+      // Nivel 100 - II
+      { id: 'matg1049', code: 'MATG1049', name: 'Álgebra Lineal', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1045'], period: '100 - II' },
+      { id: 'matg1046', code: 'MATG1046', name: 'Cálculo Vectorial', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1045'], period: '100 - II' },
+      { id: 'fisg1006', code: 'FISG1006', name: 'Física: Electricidad y Magnetismo', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['fisg1005'], corequisites: ['matg1046'], period: '100 - II' },
+      { id: 'quig1033', code: 'QUIG1033', name: 'Química Inorgánica', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['quig1032'], period: '100 - II' },
+      { id: 'idig1007', code: 'IDIG1007', name: 'Inglés II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1006'], period: '100 - II' },
+
+      // Nivel 200 - I
+      { id: 'matg1048', code: 'MATG1048', name: 'Ecuaciones Diferenciales y Álgebra Lineal', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1046'], period: '200 - I' },
+      { id: 'mecg1052', code: 'MECG1052', name: 'Mecánica Vectorial', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['fisg1005'], period: '200 - I' },
+      { id: 'quig1035', code: 'QUIG1035', name: 'Química Orgánica', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['quig1032'], period: '200 - I' },
+      { id: 'matg1047', code: 'MATG1047', name: 'Cálculo Multivariable', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1046'], period: '200 - I' },
+      { id: 'idig2012', code: 'IDIG2012', name: 'Comunicación', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 6, period: '200 - I' },
+      { id: 'idig1008', code: 'IDIG1008', name: 'Inglés III', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1007'], period: '200 - I' },
+
+      // Nivel 200 - II
+      { id: 'matg1050', code: 'MATG1050', name: 'Métodos Numéricos', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1048'], period: '200 - II' },
+      { id: 'mecg1054', code: 'MECG1054', name: 'Termofluidos', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['fisg1005'], period: '200 - II' },
+      { id: 'mate1031', code: 'MATE1031', name: 'Ciencia de los Materiales', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['quig1033', 'fisg1006'], period: '200 - II' },
+      { id: 'mecg1041', code: 'MECG1041', name: 'Dibujo para Ingeniería', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], minApprovedSubjects: 15, period: '200 - II' },
+      { id: 'idig1009', code: 'IDIG1009', name: 'Inglés IV', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1008'], period: '200 - II' },
+
+      // Nivel 300 - I
+      { id: 'mecg1068', code: 'MECG1068', name: 'Transferencia de Calor y Masa', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['mecg1054'], period: '300 - I' },
+      { id: 'mate1032', code: 'MATE1032', name: 'Termodinámica de Materiales', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['mate1031', 'mecg1054'], period: '300 - I' },
+      { id: 'mate1033', code: 'MATE1033', name: 'Metalurgia Física', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mate1031'], period: '300 - I' },
+      { id: 'mate1034', code: 'MATE1034', name: 'Cerámicos y Vidrios', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mate1031'], period: '300 - I' },
+      { id: 'idig1010', code: 'IDIG1010', name: 'Inglés V', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1009'], period: '300 - I' },
+
+      // Nivel 300 - II
+      { id: 'mate1035', code: 'MATE1035', name: 'Polímeros', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mate1031'], period: '300 - II' },
+      { id: 'mate1036', code: 'MATE1036', name: 'Corrosión y Protección', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mate1032', 'mate1033'], period: '300 - II' },
+      { id: 'mate1037', code: 'MATE1037', name: 'Procesamiento de Materiales', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mate1033'], period: '300 - II' },
+      { id: 'admg1005', code: 'ADMG1005', name: 'Emprendimiento e Innovación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], minApprovedSubjects: 20, period: '300 - II' },
+      { id: 'psc_mat', code: 'PSC', name: 'Prácticas de Servicio Comunitario', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '300 - II' },
+
+      // Nivel 400 - I
+      { id: 'mate1038', code: 'MATE1038', name: 'Caracterización de Materiales', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mate1033', 'mate1034'], period: '400 - I' },
+      { id: 'mate1039', code: 'MATE1039', name: 'Materiales Compuestos', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mate1035'], period: '400 - I' },
+      { id: 'mate1040', code: 'MATE1040', name: 'Selección de Materiales', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['mate1037'], period: '400 - I' },
+      { id: 'adsg1026', code: 'ADSG1026', name: 'Ciencias de la Sostenibilidad', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 20, period: '400 - I' },
+      { id: 'itin1_mat', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+
+      // Nivel 400 - II
+      { id: 'mate1041', code: 'MATE1041', name: 'Falla de Materiales', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mate1038', 'mate1040'], period: '400 - II' },
+      { id: 'mate1042', code: 'MATE1042', name: 'Materia Integradora de Materiales', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 40, period: '400 - II' },
+      { id: 'itin2_mat', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+
+      // Nivel 500
+      { id: 'ppp_mat', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500' },
+
+      // COMPLEMENTARIAS
+      { id: 'comp1_mat', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_mat', code: 'COMP2', name: 'Materia Complementaria 2', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp3_mat', code: 'COMP3', name: 'Materia Complementaria 3', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+    ],
+  },
+  {
+    id: 'meca',
+    name: 'Mecánica',
+    facultyId: 'fimcp',
+    subjects: [
+      // Nivel 100 - I
+      { id: 'indg1033', code: 'INDG1033', name: 'Análisis y Resolución de Problemas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '100 - I' },
+      { id: 'matg1045', code: 'MATG1045', name: 'Cálculo de Una Variable', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], period: '100 - I' },
+      { id: 'fisg1005', code: 'FISG1005', name: 'Física: Mecánica', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], corequisites: ['matg1045'], period: '100 - I' },
+      { id: 'quig1032', code: 'QUIG1032', name: 'Química General', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], period: '100 - I' },
+      { id: 'idig1006', code: 'IDIG1006', name: 'Inglés I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - I' },
+
+      // Nivel 100 - II
+      { id: 'matg1049', code: 'MATG1049', name: 'Álgebra Lineal', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1045'], period: '100 - II' },
+      { id: 'matg1046', code: 'MATG1046', name: 'Cálculo Vectorial', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1045'], period: '100 - II' },
+      { id: 'fisg1006', code: 'FISG1006', name: 'Física: Electricidad y Magnetismo', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['fisg1005'], corequisites: ['matg1046'], period: '100 - II' },
+      { id: 'ccpg1043', code: 'CCPG1043', name: 'Fundamentos de Programación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1045'], period: '100 - II' },
+      { id: 'idig1007', code: 'IDIG1007', name: 'Inglés II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1006'], period: '100 - II' },
+
+      // Nivel 200 - I
+      { id: 'matg1048', code: 'MATG1048', name: 'Ecuaciones Diferenciales y Álgebra Lineal', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1046'], period: '200 - I' },
+      { id: 'mecg1052', code: 'MECG1052', name: 'Mecánica Vectorial', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['fisg1005'], period: '200 - I' },
+      { id: 'matg1047', code: 'MATG1047', name: 'Cálculo Multivariable', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1046'], period: '200 - I' },
+      { id: 'mecg1041', code: 'MECG1041', name: 'Dibujo para Ingeniería', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], minApprovedSubjects: 15, period: '200 - I' },
+      { id: 'idig2012', code: 'IDIG2012', name: 'Comunicación', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 6, period: '200 - I' },
+      { id: 'idig1008', code: 'IDIG1008', name: 'Inglés III', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1007'], period: '200 - I' },
+
+      // Nivel 200 - II
+      { id: 'matg1050', code: 'MATG1050', name: 'Métodos Numéricos', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1048'], period: '200 - II' },
+      { id: 'mecg1054', code: 'MECG1054', name: 'Termofluidos', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['fisg1005'], period: '200 - II' },
+      { id: 'mecg1066', code: 'MECG1066', name: 'Mecánica de Materiales', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mecg1052'], period: '200 - II' },
+      { id: 'mate1031', code: 'MATE1031', name: 'Ciencia de los Materiales', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['quig1032', 'fisg1006'], period: '200 - II' },
+      { id: 'idig1009', code: 'IDIG1009', name: 'Inglés IV', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1008'], period: '200 - II' },
+
+      // Nivel 300 - I
+      { id: 'mecg1068', code: 'MECG1068', name: 'Transferencia de Calor y Masa', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['mecg1054'], period: '300 - I' },
+      { id: 'mecg1053', code: 'MECG1053', name: 'Cinemática y Dinámica de Máquinas', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mecg1052'], period: '300 - I' },
+      { id: 'mecg1055', code: 'MECG1055', name: 'Diseño de Elementos de Máquinas', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mecg1066', 'mecg1041'], period: '300 - I' },
+      { id: 'mecg1056', code: 'MECG1056', name: 'Sistemas de Potencia', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mecg1054'], period: '300 - I' },
+      { id: 'idig1010', code: 'IDIG1010', name: 'Inglés V', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1009'], period: '300 - I' },
+
+      // Nivel 300 - II
+      { id: 'mecg1057', code: 'MECG1057', name: 'Sistemas de Control', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1048'], period: '300 - II' },
+      { id: 'mecg1058', code: 'MECG1058', name: 'Manufactura', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mate1031', 'mecg1055'], period: '300 - II' },
+      { id: 'mecg1059', code: 'MECG1059', name: 'Sistemas Térmicos', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mecg1068', 'mecg1056'], period: '300 - II' },
+      { id: 'admg1005', code: 'ADMG1005', name: 'Emprendimiento e Innovación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], minApprovedSubjects: 20, period: '300 - II' },
+      { id: 'psc_mec', code: 'PSC', name: 'Prácticas de Servicio Comunitario', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '300 - II' },
+
+      // Nivel 400 - I
+      { id: 'mecg1060', code: 'MECG1060', name: 'Diseño Mecánico', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mecg1055', 'mecg1053'], period: '400 - I' },
+      { id: 'mecg1061', code: 'MECG1061', name: 'Instrumentación y Medición', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mecg1057'], period: '400 - I' },
+      { id: 'mecg1062', code: 'MECG1062', name: 'Gestión de Mantenimiento', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['mecg1058'], period: '400 - I' },
+      { id: 'adsg1026', code: 'ADSG1026', name: 'Ciencias de la Sostenibilidad', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 20, period: '400 - I' },
+      { id: 'itin1_mec', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+
+      // Nivel 400 - II
+      { id: 'mecg1063', code: 'MECG1063', name: 'Materia Integradora de Mecánica', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 40, period: '400 - II' },
+      { id: 'itin2_mec', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+
+      // Nivel 500
+      { id: 'ppp_mec', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500' },
+
+      // COMPLEMENTARIAS
+      { id: 'comp1_mec', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_mec', code: 'COMP2', name: 'Materia Complementaria 2', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp3_mec', code: 'COMP3', name: 'Materia Complementaria 3', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+    ],
+  },
+  {
+    id: 'mect',
+    name: 'Mecatrónica',
+    facultyId: 'fimcp',
+    subjects: [
+      // Nivel 100 - I
+      { id: 'indg1033', code: 'INDG1033', name: 'Análisis y Resolución de Problemas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '100 - I' },
+      { id: 'matg1045', code: 'MATG1045', name: 'Cálculo de Una Variable', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], period: '100 - I' },
+      { id: 'fisg1005', code: 'FISG1005', name: 'Física: Mecánica', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], corequisites: ['matg1045'], period: '100 - I' },
+      { id: 'quig1032', code: 'QUIG1032', name: 'Química General', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], period: '100 - I' },
+      { id: 'idig1006', code: 'IDIG1006', name: 'Inglés I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - I' },
+
+      // Nivel 100 - II
+      { id: 'matg1049', code: 'MATG1049', name: 'Álgebra Lineal', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1045'], period: '100 - II' },
+      { id: 'matg1046', code: 'MATG1046', name: 'Cálculo Vectorial', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1045'], period: '100 - II' },
+      { id: 'fisg1006', code: 'FISG1006', name: 'Física: Electricidad y Magnetismo', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['fisg1005'], corequisites: ['matg1046'], period: '100 - II' },
+      { id: 'ccpg1043', code: 'CCPG1043', name: 'Fundamentos de Programación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1045'], period: '100 - II' },
+      { id: 'idig1007', code: 'IDIG1007', name: 'Inglés II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1006'], period: '100 - II' },
+
+      // Nivel 200 - I
+      { id: 'matg1048', code: 'MATG1048', name: 'Ecuaciones Diferenciales y Álgebra Lineal', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1046'], period: '200 - I' },
+      { id: 'mecg1052', code: 'MECG1052', name: 'Mecánica Vectorial', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['fisg1005'], period: '200 - I' },
+      { id: 'matg1047', code: 'MATG1047', name: 'Cálculo Multivariable', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1046'], period: '200 - I' },
+      { id: 'elcg1042', code: 'ELCG1042', name: 'Circuitos Eléctricos I', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['fisg1006', 'matg1048'], period: '200 - I' },
+      { id: 'idig2012', code: 'IDIG2012', name: 'Comunicación', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 6, period: '200 - I' },
+      { id: 'idig1008', code: 'IDIG1008', name: 'Inglés III', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1007'], period: '200 - I' },
+
+      // Nivel 200 - II
+      { id: 'matg1050', code: 'MATG1050', name: 'Métodos Numéricos', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1048'], period: '200 - II' },
+      { id: 'mecg1066', code: 'MECG1066', name: 'Mecánica de Materiales', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mecg1052'], period: '200 - II' },
+      { id: 'elcg1043', code: 'ELCG1043', name: 'Circuitos Eléctricos II', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['elcg1042'], period: '200 - II' },
+      { id: 'elcg1044', code: 'ELCG1044', name: 'Electrónica Analógica', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['elcg1042'], period: '200 - II' },
+      { id: 'idig1009', code: 'IDIG1009', name: 'Inglés IV', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1008'], period: '200 - II' },
+
+      // Nivel 300 - I
+      { id: 'mecg1053', code: 'MECG1053', name: 'Cinemática y Dinámica de Máquinas', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mecg1052'], period: '300 - I' },
+      { id: 'elcg1045', code: 'ELCG1045', name: 'Electrónica Digital', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['elcg1044'], period: '300 - I' },
+      { id: 'elcg1046', code: 'ELCG1046', name: 'Máquinas Eléctricas', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['elcg1043'], period: '300 - I' },
+      { id: 'mecg1055', code: 'MECG1055', name: 'Diseño de Elementos de Máquinas', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mecg1066', 'mecg1041'], period: '300 - I' },
+      { id: 'idig1010', code: 'IDIG1010', name: 'Inglés V', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1009'], period: '300 - I' },
+
+      // Nivel 300 - II
+      { id: 'mecg1057', code: 'MECG1057', name: 'Sistemas de Control', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1048'], period: '300 - II' },
+      { id: 'mect1031', code: 'MECT1031', name: 'Sensores y Actuadores', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['elcg1045'], period: '300 - II' },
+      { id: 'mect1032', code: 'MECT1032', name: 'Microcontroladores', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['elcg1045'], period: '300 - II' },
+      { id: 'admg1005', code: 'ADMG1005', name: 'Emprendimiento e Innovación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], minApprovedSubjects: 20, period: '300 - II' },
+      { id: 'psc_mect', code: 'PSC', name: 'Prácticas de Servicio Comunitario', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '300 - II' },
+
+      // Nivel 400 - I
+      { id: 'mect1033', code: 'MECT1033', name: 'Robótica', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mecg1053', 'mect1031'], period: '400 - I' },
+      { id: 'mect1034', code: 'MECT1034', name: 'Sistemas Embebidos', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mect1032'], period: '400 - I' },
+      { id: 'mect1035', code: 'MECT1035', name: 'Control Avanzado', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mecg1057'], period: '400 - I' },
+      { id: 'adsg1026', code: 'ADSG1026', name: 'Ciencias de la Sostenibilidad', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 20, period: '400 - I' },
+      { id: 'itin1_mect', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+
+      // Nivel 400 - II
+      { id: 'mect1036', code: 'MECT1036', name: 'Materia Integradora de Mecatrónica', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 40, period: '400 - II' },
+      { id: 'itin2_mect', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+
+      // Nivel 500
+      { id: 'ppp_mect', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500' },
+
+      // COMPLEMENTARIAS
+      { id: 'comp1_mect', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_mect', code: 'COMP2', name: 'Materia Complementaria 2', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp3_mect', code: 'COMP3', name: 'Materia Complementaria 3', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+    ],
+  },
   {
     id: 'acui',
     name: 'Acuicultura',
@@ -1603,7 +1956,6 @@ export const careers: Career[] = [
     name: 'Estadística',
     facultyId: 'fcnm',
     subjects: [
-      { id: 'comp1_esta', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
       { id: 'indg1033', code: 'INDG1033', name: 'Análisis y Resolución de Problemas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '100 - I' },
       { id: 'matg1045', code: 'MATG1045', name: 'Cálculo de Una Variable', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], period: '100 - I' },
       { id: 'ccpg1043', code: 'CCPG1043', name: 'Fundamentos de Programación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], period: '100 - I' },
@@ -1613,7 +1965,6 @@ export const careers: Career[] = [
       { id: 'matg1066', code: 'MATG1066', name: 'Álgebra Lineal I', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1045'], period: '100 - II' },
       { id: 'matg1046', code: 'MATG1046', name: 'Cálculo Vectorial', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1045'], period: '100 - II' },
       { id: 'estg1036', code: 'ESTG1036', name: 'Estadística I', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['ccpg1043'], corequisites: ['matg1046'], period: '100 - II' },
-      { id: 'comp2_esta', code: 'COMP2', name: 'Materia Complementaria 2', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
       { id: 'idig1007', code: 'IDIG1007', name: 'Inglés II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1006'], period: '100 - II' },
       { id: 'idig2012', code: 'IDIG2012', name: 'Comunicación', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 6, period: '200 - I' },
       { id: 'matg1050', code: 'MATG1050', name: 'Ecuaciones Diferenciales', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1066'], period: '200 - I' },
@@ -1646,6 +1997,10 @@ export const careers: Career[] = [
       { id: 'estg1056', code: 'ESTG1056', name: 'Datos No Estructurados', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['estg1055'], period: '400 - II' },
       { id: 'estg1062', code: 'ESTG1062', name: 'Materia Integradora de Estadística', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 38, period: '400 - II' },
       { id: 'iti2_esta', code: 'ITI2', name: 'Itinerario 2', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+
+      // COMPLEMENTARIAS
+      { id: 'comp1_esta', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_esta', code: 'COMP2', name: 'Materia Complementaria 2', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
       { id: 'comp3_esta', code: 'COMP3', name: 'Materia Complementaria 3', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true }
     ]
   },
@@ -1656,7 +2011,6 @@ export const careers: Career[] = [
     subjects: [
       { id: 'matg1045', code: 'MATG1045', name: 'Cálculo de Una Variable', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], period: '100 - I' },
       { id: 'fisg1005', code: 'FISG1005', name: 'Física: Mecánica', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], corequisites: ['matg1045'], period: '100 - I' },
-      { id: 'comp1_quim', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
       { id: 'indg1033', code: 'INDG1033', name: 'Análisis y Resolución de Problemas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '100 - I' },
       { id: 'quig1032', code: 'QUIG1032', name: 'Química General', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], period: '100 - I' },
       { id: 'idig1006', code: 'IDIG1006', name: 'Inglés I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - I' },
@@ -1673,7 +2027,6 @@ export const careers: Career[] = [
       { id: 'quig1036', code: 'QUIG1036', name: 'Química Orgánica I', credits: 3, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['quig1033'], period: '200 - I' },
       { id: 'idig1008', code: 'IDIG1008', name: 'Inglés III', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1007'], period: '200 - I' },
       { id: 'matg1053', code: 'MATG1053', name: 'Matemática Aplicada a la Ingeniería', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1048'], period: '200 - II' },
-      { id: 'comp2_quim', code: 'COMP2', name: 'Materia Complementaria 2', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
       { id: 'quig1037', code: 'QUIG1037', name: 'Balance de Materia y Energía', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['quig1034', 'matg1048'], period: '200 - II' },
       { id: 'mecg1064', code: 'MECG1064', name: 'Termodinámica I', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], corequisites: ['quig1037'], period: '200 - II' },
       { id: 'quig1038', code: 'QUIG1038', name: 'Química Orgánica II', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['quig1036', 'biog1022'], period: '200 - II' },
@@ -1698,6 +2051,10 @@ export const careers: Career[] = [
       { id: 'quig1050', code: 'QUIG1050', name: 'Materia Integradora de Ingeniería Química', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 38, period: '400 - II' },
       { id: 'iti2_quim', code: 'ITI2', name: 'Itinerario 2', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
       { id: 'ppp_quim', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500' },
+
+      // COMPLEMENTARIAS
+      { id: 'comp1_quim', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_quim', code: 'COMP2', name: 'Materia Complementaria 2', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
       { id: 'comp3_quim', code: 'COMP3', name: 'Materia Complementaria 3', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true }
     ]
   },
@@ -1706,7 +2063,6 @@ export const careers: Career[] = [
     name: 'Logística y Transporte',
     facultyId: 'fcnm',
     subjects: [
-      { id: 'comp1_lotr', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
       { id: 'matg1045', code: 'MATG1045', name: 'Cálculo de Una Variable', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], period: '100 - I' },
       { id: 'fisg1005', code: 'FISG1005', name: 'Física: Mecánica', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], corequisites: ['matg1045'], period: '100 - I' },
       { id: 'indg1033', code: 'INDG1033', name: 'Análisis y Resolución de Problemas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '100 - I' },
@@ -1716,7 +2072,6 @@ export const careers: Career[] = [
       { id: 'matg1046', code: 'MATG1046', name: 'Cálculo Vectorial', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1045'], period: '100 - II' },
       { id: 'logg1016', code: 'LOGG1016', name: 'Transporte Multimodal', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['fisg1005'], period: '100 - II' },
       { id: 'matg1051', code: 'MATG1051', name: 'Matemáticas Discretas', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], period: '100 - II' },
-      { id: 'comp2_lotr', code: 'COMP2', name: 'Materia Complementaria 2', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
       { id: 'idig1007', code: 'IDIG1007', name: 'Inglés II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1006'], period: '100 - II' },
       { id: 'matg1050', code: 'MATG1050', name: 'Ecuaciones Diferenciales', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1049'], period: '200 - I' },
       { id: 'matg1057', code: 'MATG1057', name: 'Optimización Lineal', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1049', 'matg1046'], period: '200 - I' },
@@ -1750,6 +2105,10 @@ export const careers: Career[] = [
       { id: 'logg1027', code: 'LOGG1027', name: 'Materia Integradora de Logística y Transporte', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 38, period: '400 - II' },
       { id: 'iti2_lotr', code: 'ITI2', name: 'Itinerario 2', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
       { id: 'ppp_lotr', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500' },
+
+      // COMPLEMENTARIAS
+      { id: 'comp1_lotr', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_lotr', code: 'COMP2', name: 'Materia Complementaria 2', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
       { id: 'comp3_lotr', code: 'COMP3', name: 'Materia Complementaria 3', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true }
     ]
   },
@@ -1762,7 +2121,6 @@ export const careers: Career[] = [
       { id: 'indg1033', code: 'INDG1033', name: 'Análisis y Resolución de Problemas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '100 - I' },
       { id: 'matg1062', code: 'MATG1062', name: 'Geometría Axiomática', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], period: '100 - I' },
       { id: 'matg1056', code: 'MATG1056', name: 'Introducción Al Razonamiento Matemático', credits: 1, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], period: '100 - I' },
-      { id: 'comp1_matm', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
       { id: 'idig1006', code: 'IDIG1006', name: 'Inglés I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - I' },
       { id: 'matg1064', code: 'MATG1064', name: 'Cálculo II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['matg1063'], period: '100 - II' },
       { id: 'fisg1005', code: 'FISG1005', name: 'Física: Mecánica', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], corequisites: ['matg1063'], period: '100 - II' },
@@ -1780,7 +2138,6 @@ export const careers: Career[] = [
       { id: 'estg1039', code: 'ESTG1039', name: 'Estadística Matemática', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['estg1036'], period: '200 - II' },
       { id: 'matg1072', code: 'MATG1072', name: 'Fundamentos de Optimización', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1066', 'matg1046'], period: '200 - II' },
       { id: 'matg1073', code: 'MATG1073', name: 'Estructuras Algebraicas', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1056'], period: '200 - II' },
-      { id: 'comp2_matm', code: 'COMP2', name: 'Materia Complementaria 2', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
       { id: 'idig1009', code: 'IDIG1009', name: 'Inglés IV', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1008'], period: '200 - II' },
       { id: 'matg1071', code: 'MATG1071', name: 'Análisis Matemático II', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1070'], period: '300 - I' },
       { id: 'matg1074', code: 'MATG1074', name: 'Topología', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], corequisites: ['matg1070'], period: '300 - I' },
@@ -1802,11 +2159,2244 @@ export const careers: Career[] = [
       { id: 'matg1086', code: 'MATG1086', name: 'Materia Integradora de Matemática', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 37, period: '400 - II' },
       { id: 'iti3_matm', code: 'ITI3', name: 'Itinerario 3', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: [], period: '400 - II', isItinerary: true },
       { id: 'ppp_matm', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500' },
+
+      // COMPLEMENTARIAS
+      { id: 'comp1_matm', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_matm', code: 'COMP2', name: 'Materia Complementaria 2', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
       { id: 'comp3_matm', code: 'COMP3', name: 'Materia Complementaria 3', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true }
     ]
   },
-  { id: 'geol', name: 'Geología', facultyId: 'fict', subjects: [] },
-  { id: 'civi', name: 'Civil', facultyId: 'fict', subjects: [] },
-  { id: 'mina', name: 'Minas', facultyId: 'fict', subjects: [] },
-  { id: 'petr', name: 'Petróleos', facultyId: 'fict', subjects: [] }
+  { id: 'geol', name: 'Geología', facultyId: 'fict', subjects: [
+      {
+            id: 'matg1045',
+            code: 'MATG1045',
+            name: 'CÁLCULO DE UNA VARIABLE',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/2/4',
+            prerequisites: [],
+            period: '100 - I'
+      },
+      {
+            id: 'fisg1005',
+            code: 'FISG1005',
+            name: 'FÍSICA: MECÁNICA',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/2/4',
+            prerequisites: [],
+            period: '100 - I',
+            corequisites: [
+                  'matg1045'
+            ]
+      },
+      {
+            id: 'indg1033',
+            code: 'INDG1033',
+            name: 'ANÁLISIS Y RESOLUCIÓN DE PROBLEMAS',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/0/6',
+            prerequisites: [],
+            period: '100 - I'
+      },
+      {
+            id: 'geog1041',
+            code: 'GEOG1041',
+            name: 'MINERALOGÍA',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [],
+            period: '100 - I'
+      },
+      {
+            id: 'geog1033',
+            code: 'GEOG1033',
+            name: 'GEOLOGÍA GENERAL',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [],
+            period: '100 - I',
+            corequisites: [
+                  'geog1041'
+            ]
+      },
+      {
+            id: 'idig1006',
+            code: 'IDIG1006',
+            name: 'INGLÉS I',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [],
+            period: '100 - I'
+      },
+      {
+            id: 'ccpg1043',
+            code: 'CCPG1043',
+            name: 'FUNDAMENTOS DE PROGRAMACIÓN',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'matg1045'
+            ],
+            period: '100 - II'
+      },
+      {
+            id: 'matg1046',
+            code: 'MATG1046',
+            name: 'CÁLCULO VECTORIAL',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/2/4',
+            prerequisites: [
+                  'matg1045'
+            ],
+            period: '100 - II'
+      },
+      {
+            id: 'quig1032',
+            code: 'QUIG1032',
+            name: 'QUÍMICA GENERAL',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [],
+            period: '100 - II'
+      },
+      {
+            id: 'geog1042',
+            code: 'GEOG1042',
+            name: 'MINERALOGÍA ÓPTICA',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [],
+            period: '100 - II'
+      },
+      {
+            id: 'geog1044',
+            code: 'GEOG1044',
+            name: 'PALEONTOLOGÍA APLICADA',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'geog1033'
+            ],
+            period: '100 - II'
+      },
+      {
+            id: 'idig1007',
+            code: 'IDIG1007',
+            name: 'INGLÉS II',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'idig1006'
+            ],
+            period: '100 - II'
+      },
+      {
+            id: 'matg1048',
+            code: 'MATG1048',
+            name: 'ECUACIONES DIFERENCIALES Y ÁLGEBRA LINEAL',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'matg1046',
+                  'ccpg1043'
+            ],
+            period: '200 - I'
+      },
+      {
+            id: 'idig2012',
+            code: 'IDIG2012',
+            name: 'COMUNICACIÓN',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [],
+            period: '200 - I',
+            minApprovedSubjects: 6
+      },
+      {
+            id: 'geog1051',
+            code: 'GEOG1051',
+            name: 'MECÁNICA DE MATERIALES GEOLÓGICOS',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'fisg1005'
+            ],
+            period: '200 - I'
+      },
+      {
+            id: 'geog1045',
+            code: 'GEOG1045',
+            name: 'PETROLOGÍA SEDIMENTARIA',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'geog1042',
+                  'quig1032'
+            ],
+            period: '200 - I'
+      },
+      {
+            id: 'geog1028',
+            code: 'GEOG1028',
+            name: 'ESTRATIGRAFÍA Y SEDIMENTACIÓN',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/1/3',
+            prerequisites: [
+                  'geog1044'
+            ],
+            period: '200 - I'
+      },
+      {
+            id: 'idig1008',
+            code: 'IDIG1008',
+            name: 'INGLÉS III',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'idig1007'
+            ],
+            period: '200 - I'
+      },
+      {
+            id: 'estg1034',
+            code: 'ESTG1034',
+            name: 'ESTADÍSTICA',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'ccpg1043'
+            ],
+            period: '200 - II'
+      },
+      {
+            id: 'fisg1006',
+            code: 'FISG1006',
+            name: 'FÍSICA: ELECTRICIDAD Y MAGNETISMO',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/2/4',
+            prerequisites: [
+                  'fisg1005'
+            ],
+            period: '200 - II'
+      },
+      {
+            id: 'geog1030',
+            code: 'GEOG1030',
+            name: 'GEOLOGÍA DE ECUADOR',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/1/3',
+            prerequisites: [],
+            period: '200 - II',
+            corequisites: [
+                  'geog1046'
+            ]
+      },
+      {
+            id: 'geog1046',
+            code: 'GEOG1046',
+            name: 'PETROLOGÍA ÍGNEA Y METAMÓRFICA',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/2/4',
+            prerequisites: [
+                  'geog1045'
+            ],
+            period: '200 - II'
+      },
+      {
+            id: 'geog1032',
+            code: 'GEOG1032',
+            name: 'GEOLOGÍA ESTRUCTURAL',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'geog1028',
+                  'geog1051'
+            ],
+            period: '200 - II'
+      },
+      {
+            id: 'idig1009',
+            code: 'IDIG1009',
+            name: 'INGLÉS IV',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'idig1008'
+            ],
+            period: '200 - II'
+      },
+      {
+            id: 'admg1005',
+            code: 'ADMG1005',
+            name: 'EMPRENDIMIENTO E INNOVACIÓN',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [],
+            period: '300 - I',
+            minApprovedSubjects: 20
+      },
+      {
+            id: 'geog1047',
+            code: 'GEOG1047',
+            name: 'SISTEMAS DE INFORMACIÓN GEOGRÁFICA',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/1/3',
+            prerequisites: [
+                  'matg1048'
+            ],
+            period: '300 - I'
+      },
+      {
+            id: 'estg1033',
+            code: 'ESTG1033',
+            name: 'GEOESTADÍSTICA',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'estg1034'
+            ],
+            period: '300 - I'
+      },
+      {
+            id: 'geog1035',
+            code: 'GEOG1035',
+            name: 'GEOQUÍMICA',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/1/3',
+            prerequisites: [
+                  'geog1046'
+            ],
+            period: '300 - I'
+      },
+      {
+            id: 'geog1048',
+            code: 'GEOG1048',
+            name: 'TECTÓNICA',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/1/3',
+            prerequisites: [
+                  'geog1032'
+            ],
+            period: '300 - I'
+      },
+      {
+            id: 'idig1010',
+            code: 'IDIG1010',
+            name: 'INGLÉS V',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'idig1009'
+            ],
+            period: '300 - I'
+      },
+      {
+            id: 'adsg1026',
+            code: 'ADSG1026',
+            name: 'CIENCIAS DE LA SOSTENIBILIDAD',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/0/6',
+            prerequisites: [],
+            period: '300 - II',
+            minApprovedSubjects: 20
+      },
+      {
+            id: 'geog1034',
+            code: 'GEOG1034',
+            name: 'GEOMORFOLOGÍA',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/1/3',
+            prerequisites: [
+                  'geog1047'
+            ],
+            period: '300 - II'
+      },
+      {
+            id: 'geog1040',
+            code: 'GEOG1040',
+            name: 'MÉTODOS GEOFÍSICOS',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/1/3',
+            prerequisites: [
+                  'fisg1006'
+            ],
+            period: '300 - II'
+      },
+      {
+            id: 'geog1026',
+            code: 'GEOG1026',
+            name: 'DEPÓSITOS MINERALES',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/1/3',
+            prerequisites: [
+                  'geog1035'
+            ],
+            period: '300 - II'
+      },
+      {
+            id: 'geog1037',
+            code: 'GEOG1037',
+            name: 'INGENIERÍA GEOLÓGICA',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'geog1048'
+            ],
+            period: '300 - II'
+      },
+      {
+            id: 'psc_geol',
+            code: 'PSC_GEOL',
+            name: 'PRÁCTICAS DE SERVICIO COMUNITARIO',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [],
+            period: '300 - II'
+      },
+      {
+            id: 'geog1050',
+            code: 'GEOG1050',
+            name: 'VULNERABILIDAD Y RIESGO GEOLÓGICO',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/1/3',
+            prerequisites: [
+                  'geog1034'
+            ],
+            period: '400 - I'
+      },
+      {
+            id: 'geog1036',
+            code: 'GEOG1036',
+            name: 'HIDROGEOLOGÍA',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/1/3',
+            prerequisites: [
+                  'geog1040'
+            ],
+            period: '400 - I'
+      },
+      {
+            id: 'geog1031',
+            code: 'GEOG1031',
+            name: 'GEOLOGÍA DEL PETRÓLEO',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'geog1040'
+            ],
+            period: '400 - I'
+      },
+      {
+            id: 'geog1029',
+            code: 'GEOG1029',
+            name: 'EVALUACIÓN DE YACIMIENTOS MINERALES',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/1/3',
+            prerequisites: [
+                  'geog1026'
+            ],
+            period: '400 - I'
+      },
+      {
+            id: 'geog1027',
+            code: 'GEOG1027',
+            name: 'DISEÑO DE CAMPO GEOLÓGICO',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'geog1037'
+            ],
+            period: '400 - I'
+      },
+      {
+            id: 'iti1',
+            code: 'ITI1',
+            name: 'ITINERARIO',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/0/6',
+            prerequisites: [],
+            period: '400 - I',
+            isItinerary: true
+      },
+      {
+            id: 'geog1038',
+            code: 'GEOG1038',
+            name: 'LEGISLACIÓN Y MITIGACIÓN AMBIENTAL',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/0/4',
+            prerequisites: [
+                  'geog1037'
+            ],
+            period: '400 - II'
+      },
+      {
+            id: 'geog1039',
+            code: 'GEOG1039',
+            name: 'MATERIA INTEGRADORA DE GEOLOGÍA',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/0/6',
+            prerequisites: [],
+            period: '400 - II',
+            minApprovedSubjects: 42
+      },
+      {
+            id: 'iti2',
+            code: 'ITI2',
+            name: 'ITINERARIO',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/0/6',
+            prerequisites: [],
+            period: '400 - II',
+            isItinerary: true
+      },
+      {
+            id: 'ppe_geol',
+            code: 'PPE_GEOL',
+            name: 'PRÁCTICAS PREPROFESIONALES EMPRESARIALES',
+            credits: 5,
+            hoursTotal: 5,
+            hoursDetail: '5/0/0',
+            prerequisites: [],
+            period: '500 - I'
+      },
+      {
+            id: 'comp1_geol',
+            code: 'COMP1',
+            name: 'Materia Complementaria 1',
+            credits: 1,
+            hoursTotal: 3,
+            prerequisites: [],
+            period: 'Complementarias',
+            isComplementary: true
+      },
+      {
+            id: 'comp2_geol',
+            code: 'COMP2',
+            name: 'Materia Complementaria 2',
+            credits: 1,
+            hoursTotal: 3,
+            prerequisites: [],
+            period: 'Complementarias',
+            isComplementary: true
+      },
+      {
+            id: 'comp3_geol',
+            code: 'COMP3',
+            name: 'Materia Complementaria 3',
+            credits: 1,
+            hoursTotal: 3,
+            prerequisites: [],
+            period: 'Complementarias',
+            isComplementary: true
+      }
+] },
+  { id: 'civi', name: 'Civil', facultyId: 'fict', subjects: [
+      {
+            id: 'indg1033',
+            code: 'INDG1033',
+            name: 'ANÁLISIS Y RESOLUCIÓN DE PROBLEMAS',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/0/6',
+            prerequisites: [],
+            period: '100 - I'
+      },
+      {
+            id: 'matg1045',
+            code: 'MATG1045',
+            name: 'CÁLCULO DE UNA VARIABLE',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/2/4',
+            prerequisites: [],
+            period: '100 - I'
+      },
+      {
+            id: 'fisg1005',
+            code: 'FISG1005',
+            name: 'FÍSICA: MECÁNICA',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/2/4',
+            prerequisites: [],
+            period: '100 - I',
+            corequisites: [
+                  'matg1045'
+            ]
+      },
+      {
+            id: 'quig1032',
+            code: 'QUIG1032',
+            name: 'QUÍMICA GENERAL',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [],
+            period: '100 - I'
+      },
+      {
+            id: 'idig1006',
+            code: 'IDIG1006',
+            name: 'INGLÉS I',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [],
+            period: '100 - I'
+      },
+      {
+            id: 'ccpg1043',
+            code: 'CCPG1043',
+            name: 'FUNDAMENTOS DE PROGRAMACIÓN',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'matg1045'
+            ],
+            period: '100 - II'
+      },
+      {
+            id: 'matg1046',
+            code: 'MATG1046',
+            name: 'CÁLCULO VECTORIAL',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/2/4',
+            prerequisites: [
+                  'matg1045'
+            ],
+            period: '100 - II'
+      },
+      {
+            id: 'matg1048',
+            code: 'MATG1048',
+            name: 'ECUACIONES DIFERENCIALES Y ÁLGEBRA LINEAL',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'matg1045'
+            ],
+            period: '100 - II'
+      },
+      {
+            id: 'fisg1008',
+            code: 'FISG1008',
+            name: 'FÍSICA: TERMODINÁMICA Y ELECTRÓNICA',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/2/4',
+            prerequisites: [
+                  'fisg1005'
+            ],
+            period: '100 - II'
+      },
+      {
+            id: 'idig1007',
+            code: 'IDIG1007',
+            name: 'INGLÉS II',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'idig1006'
+            ],
+            period: '100 - II'
+      },
+      {
+            id: 'estg1034',
+            code: 'ESTG1034',
+            name: 'ESTADÍSTICA',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'ccpg1043',
+                  'matg1046'
+            ],
+            period: '200 - I'
+      },
+      {
+            id: 'matg1053',
+            code: 'MATG1053',
+            name: 'MATEMÁTICA APLICADA A LA INGENIERÍA',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'matg1048'
+            ],
+            period: '200 - I'
+      },
+      {
+            id: 'mecg1060',
+            code: 'MECG1060',
+            name: 'ESTÁTICA',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'fisg1005'
+            ],
+            period: '200 - I'
+      },
+      {
+            id: 'civg1047',
+            code: 'CIVG1047',
+            name: 'HORMIGÓN Y MATERIALES DE CONSTRUCCIÓN',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'quig1032'
+            ],
+            period: '200 - I'
+      },
+      {
+            id: 'idig1008',
+            code: 'IDIG1008',
+            name: 'INGLÉS III',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'idig1007'
+            ],
+            period: '200 - I'
+      },
+      {
+            id: 'idig2012',
+            code: 'IDIG2012',
+            name: 'COMUNICACIÓN',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [],
+            period: '200 - II',
+            minApprovedSubjects: 6
+      },
+      {
+            id: 'geog1047',
+            code: 'GEOG1047',
+            name: 'SISTEMAS DE INFORMACIÓN GEOGRÁFICA',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/1/3',
+            prerequisites: [
+                  'estg1034'
+            ],
+            period: '200 - II'
+      },
+      {
+            id: 'mecg1049',
+            code: 'MECG1049',
+            name: 'MECÁNICA DE FLUIDOS',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'fisg1005'
+            ],
+            period: '200 - II'
+      },
+      {
+            id: 'civg1056',
+            code: 'CIVG1056',
+            name: 'RESISTENCIA DE MATERIALES',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'mecg1060'
+            ],
+            period: '200 - II'
+      },
+      {
+            id: 'civg1035',
+            code: 'CIVG1035',
+            name: 'DIBUJO TÉCNICO Y PLANOS',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'civg1047'
+            ],
+            period: '200 - II'
+      },
+      {
+            id: 'idig1009',
+            code: 'IDIG1009',
+            name: 'INGLÉS IV',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'idig1008'
+            ],
+            period: '200 - II'
+      },
+      {
+            id: 'admg1005',
+            code: 'ADMG1005',
+            name: 'EMPRENDIMIENTO E INNOVACIÓN',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [],
+            period: '300 - I',
+            minApprovedSubjects: 20
+      },
+      {
+            id: 'civg1043',
+            code: 'CIVG1043',
+            name: 'HIDROLOGÍA',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'geog1047',
+                  'mecg1049'
+            ],
+            period: '300 - I'
+      },
+      {
+            id: 'civg1034',
+            code: 'CIVG1034',
+            name: 'ANÁLISIS ESTRUCTURAL',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/2/4',
+            prerequisites: [
+                  'civg1056',
+                  'civg1047'
+            ],
+            period: '300 - I'
+      },
+      {
+            id: 'civg1059',
+            code: 'CIVG1059',
+            name: 'TOPOGRAFÍA',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'civg1035'
+            ],
+            period: '300 - I'
+      },
+      {
+            id: 'idig1010',
+            code: 'IDIG1010',
+            name: 'INGLÉS V',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'idig1009'
+            ],
+            period: '300 - I'
+      },
+      {
+            id: 'adsg1026',
+            code: 'ADSG1026',
+            name: 'CIENCIAS DE LA SOSTENIBILIDAD',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/0/6',
+            prerequisites: [],
+            period: '300 - II',
+            minApprovedSubjects: 20
+      },
+      {
+            id: 'civg1044',
+            code: 'CIVG1044',
+            name: 'HIDRÁULICA',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'civg1043',
+                  'matg1053'
+            ],
+            period: '300 - II'
+      },
+      {
+            id: 'civg1060',
+            code: 'CIVG1060',
+            name: 'MECÁNICA DE SUELOS Y ROCAS',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/2/4',
+            prerequisites: [
+                  'civg1056'
+            ],
+            period: '300 - II'
+      },
+      {
+            id: 'civg1045',
+            code: 'CIVG1045',
+            name: 'HORMIGÓN ARMADO',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'civg1034'
+            ],
+            period: '300 - II'
+      },
+      {
+            id: 'civg1038',
+            code: 'CIVG1038',
+            name: 'DISEÑO DE VÍAS',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'civg1059'
+            ],
+            period: '300 - II'
+      },
+      {
+            id: 'civg1058',
+            code: 'CIVG1058',
+            name: 'SISTEMAS DE RECOLECCIÓN Y DISTRIBUCIÓN DE AGUA',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'civg1044'
+            ],
+            period: '400 - I'
+      },
+      {
+            id: 'civg1049',
+            code: 'CIVG1049',
+            name: 'INGENIERÍA DE CIMENTACIÓN',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'civg1060',
+                  'civg1045'
+            ],
+            period: '400 - I'
+      },
+      {
+            id: 'civg1039',
+            code: 'CIVG1039',
+            name: 'DISEÑO ESTRUCTURAL',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'civg1045 -'
+            ],
+            period: '400 - I',
+            corequisites: [
+                  'civg1049'
+            ]
+      },
+      {
+            id: 'civg1036',
+            code: 'CIVG1036',
+            name: 'DISEÑO DE PAVIMENTOS',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'civg1038',
+                  'civg1060'
+            ],
+            period: '400 - I'
+      },
+      {
+            id: 'psc_civi',
+            code: 'PSC_CIVI',
+            name: 'PRÁCTICAS DE SERVICIO COMUNITARIO',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [],
+            period: '400 - I'
+      },
+      {
+            id: 'civg1041',
+            code: 'CIVG1041',
+            name: 'GESTIÓN DE OBRAS CIVILES',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [],
+            period: '400 - II',
+            minApprovedSubjects: 35
+      },
+      {
+            id: 'civg1055',
+            code: 'CIVG1055',
+            name: 'POTABILIZACIÓN Y TRATAMIENTO DEL AGUA',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'civg1058'
+            ],
+            period: '400 - II'
+      },
+      {
+            id: 'civg1040',
+            code: 'CIVG1040',
+            name: 'ESTRUCTURAS METÁLICAS',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'civg1039'
+            ],
+            period: '400 - II'
+      },
+      {
+            id: 'civg1037',
+            code: 'CIVG1037',
+            name: 'DISEÑO DE PUENTES',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/1/3',
+            prerequisites: [
+                  'civg1039'
+            ],
+            period: '400 - II'
+      },
+      {
+            id: 'civg1046',
+            code: 'CIVG1046',
+            name: 'HORMIGÓN PREFORZADO',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/0/4',
+            prerequisites: [
+                  'civg1045'
+            ],
+            period: '400 - II'
+      },
+      {
+            id: 'iti3',
+            code: 'ITI3',
+            name: 'ITINERARIO',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/0/6',
+            prerequisites: [],
+            period: '400 - II',
+            isItinerary: true
+      },
+      {
+            id: 'civg1050',
+            code: 'CIVG1050',
+            name: 'INGENIERÍA DE LA CONSTRUCCIÓN',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'civg1041'
+            ],
+            period: '500 - I'
+      },
+      {
+            id: 'civg1053',
+            code: 'CIVG1053',
+            name: 'INSTALACIONES',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'civg1058'
+            ],
+            period: '500 - I'
+      },
+      {
+            id: 'civg1054',
+            code: 'CIVG1054',
+            name: 'MATERIA INTEGRADORA DE INGENIERÍA CIVIL',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/0/6',
+            prerequisites: [],
+            period: '500 - I',
+            minApprovedSubjects: 43
+      },
+      {
+            id: 'iti4',
+            code: 'ITI4',
+            name: 'ITINERARIO',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/0/6',
+            prerequisites: [],
+            period: '500 - I',
+            isItinerary: true
+      },
+      {
+            id: 'ppe_civi',
+            code: 'PPE_CIVI',
+            name: 'PRÁCTICAS PREPROFESIONALES EMPRESARIALES',
+            credits: 5,
+            hoursTotal: 5,
+            hoursDetail: '5/0/0',
+            prerequisites: [],
+            period: '500 - II'
+      },
+      {
+            id: 'comp1_civi',
+            code: 'COMP1',
+            name: 'Materia Complementaria 1',
+            credits: 1,
+            hoursTotal: 3,
+            prerequisites: [],
+            period: 'Complementarias',
+            isComplementary: true
+      },
+      {
+            id: 'comp2_civi',
+            code: 'COMP2',
+            name: 'Materia Complementaria 2',
+            credits: 1,
+            hoursTotal: 3,
+            prerequisites: [],
+            period: 'Complementarias',
+            isComplementary: true
+      },
+      {
+            id: 'comp3_civi',
+            code: 'COMP3',
+            name: 'Materia Complementaria 3',
+            credits: 1,
+            hoursTotal: 3,
+            prerequisites: [],
+            period: 'Complementarias',
+            isComplementary: true
+      }
+] },
+  { id: 'mina', name: 'Minas', facultyId: 'fict', subjects: [
+      {
+            id: 'matg1045',
+            code: 'MATG1045',
+            name: 'CÁLCULO DE UNA VARIABLE',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/2/4',
+            prerequisites: [],
+            period: '100 - I'
+      },
+      {
+            id: 'fisg1005',
+            code: 'FISG1005',
+            name: 'FÍSICA: MECÁNICA',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/2/4',
+            prerequisites: [],
+            period: '100 - I',
+            corequisites: [
+                  'matg1045'
+            ]
+      },
+      {
+            id: 'ming1025',
+            code: 'MING1025',
+            name: 'FUNDAMENTOS DE MINERÍA',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/0/4',
+            prerequisites: [],
+            period: '100 - I'
+      },
+      {
+            id: 'geog1041',
+            code: 'GEOG1041',
+            name: 'MINERALOGÍA',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [],
+            period: '100 - I'
+      },
+      {
+            id: 'indg1033',
+            code: 'INDG1033',
+            name: 'ANÁLISIS Y RESOLUCIÓN DE PROBLEMAS',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/0/6',
+            prerequisites: [],
+            period: '100 - I'
+      },
+      {
+            id: 'idig1006',
+            code: 'IDIG1006',
+            name: 'INGLÉS I',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [],
+            period: '100 - I'
+      },
+      {
+            id: 'matg1046',
+            code: 'MATG1046',
+            name: 'CÁLCULO VECTORIAL',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/2/4',
+            prerequisites: [
+                  'matg1045'
+            ],
+            period: '100 - II'
+      },
+      {
+            id: 'ccpg1043',
+            code: 'CCPG1043',
+            name: 'FUNDAMENTOS DE PROGRAMACIÓN',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'matg1045'
+            ],
+            period: '100 - II'
+      },
+      {
+            id: 'quig1032',
+            code: 'QUIG1032',
+            name: 'QUÍMICA GENERAL',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [],
+            period: '100 - II'
+      },
+      {
+            id: 'ming1036',
+            code: 'MING1036',
+            name: 'PETROGRAFÍA',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'geog1041',
+                  'ming1025'
+            ],
+            period: '100 - II',
+            corequisites: [
+                  'quig1032'
+            ]
+      },
+      {
+            id: 'idig2012',
+            code: 'IDIG2012',
+            name: 'COMUNICACIÓN',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [],
+            period: '100 - II',
+            minApprovedSubjects: 6
+      },
+      {
+            id: 'idig1007',
+            code: 'IDIG1007',
+            name: 'INGLÉS II',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'idig1006'
+            ],
+            period: '100 - II'
+      },
+      {
+            id: 'matg1049',
+            code: 'MATG1049',
+            name: 'ÁLGEBRA LINEAL',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'matg1045'
+            ],
+            period: '200 - I'
+      },
+      {
+            id: 'estg1034',
+            code: 'ESTG1034',
+            name: 'ESTADÍSTICA',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'matg1046',
+                  'ccpg1043'
+            ],
+            period: '200 - I'
+      },
+      {
+            id: 'ming1033',
+            code: 'MING1033',
+            name: 'TOPOGRAFÍA MINERA',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [],
+            period: '200 - I',
+            minApprovedSubjects: 10
+      },
+      {
+            id: 'mecg1060',
+            code: 'MECG1060',
+            name: 'ESTÁTICA',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'fisg1005'
+            ],
+            period: '200 - I'
+      },
+      {
+            id: 'geog1032',
+            code: 'GEOG1032',
+            name: 'GEOLOGÍA ESTRUCTURAL',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [],
+            period: '200 - I'
+      },
+      {
+            id: 'idig1008',
+            code: 'IDIG1008',
+            name: 'INGLÉS III',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'idig1007'
+            ],
+            period: '200 - I'
+      },
+      {
+            id: 'matg1050',
+            code: 'MATG1050',
+            name: 'ECUACIONES DIFERENCIALES',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/2/4',
+            prerequisites: [
+                  'matg1049'
+            ],
+            period: '200 - II'
+      },
+      {
+            id: 'ming1026',
+            code: 'MING1026',
+            name: 'GEOMÁTICA MINERA',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'ming1033'
+            ],
+            period: '200 - II'
+      },
+      {
+            id: 'fisg1008',
+            code: 'FISG1008',
+            name: 'FÍSICA: TERMODINÁMICA Y ELECTRÓNICA',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/2/4',
+            prerequisites: [
+                  'fisg1005'
+            ],
+            period: '200 - II'
+      },
+      {
+            id: 'ming1034',
+            code: 'MING1034',
+            name: 'GEOLOGÍA MINERA',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/1/3',
+            prerequisites: [
+                  'geog1036'
+            ],
+            period: '200 - II'
+      },
+      {
+            id: 'civg1056',
+            code: 'CIVG1056',
+            name: 'RESISTENCIA DE MATERIALES',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'mecg1060'
+            ],
+            period: '200 - II'
+      },
+      {
+            id: 'idig1009',
+            code: 'IDIG1009',
+            name: 'INGLÉS IV',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'idig1008'
+            ],
+            period: '200 - II'
+      },
+      {
+            id: 'admg1005',
+            code: 'ADMG1005',
+            name: 'EMPRENDIMIENTO E INNOVACIÓN',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [],
+            period: '300 - I',
+            minApprovedSubjects: 20
+      },
+      {
+            id: 'mecg1049',
+            code: 'MECG1049',
+            name: 'MECÁNICA DE FLUIDOS',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'fisg1005'
+            ],
+            period: '300 - I'
+      },
+      {
+            id: 'ming1038',
+            code: 'MING1038',
+            name: 'TECNOLOGÍA DE EQUIPAMIENTOS MINEROS',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/1/3',
+            prerequisites: [],
+            period: '300 - I'
+      },
+      {
+            id: 'ming1030',
+            code: 'MING1030',
+            name: 'PERFORACIÓN Y VOLADURA',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/1/3',
+            prerequisites: [
+                  'fisg1008'
+            ],
+            period: '300 - I'
+      },
+      {
+            id: 'ming1035',
+            code: 'MING1035',
+            name: 'GEOMECÁNICA',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'civg1056',
+                  'geog1032'
+            ],
+            period: '300 - I'
+      },
+      {
+            id: 'idig1010',
+            code: 'IDIG1010',
+            name: 'INGLÉS V',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'idig1009'
+            ],
+            period: '300 - I'
+      },
+      {
+            id: 'adsg1026',
+            code: 'ADSG1026',
+            name: 'CIENCIAS DE LA SOSTENIBILIDAD',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/0/6',
+            prerequisites: [],
+            period: '300 - II',
+            minApprovedSubjects: 20
+      },
+      {
+            id: 'ming1041',
+            code: 'MING1041',
+            name: 'PREPARACIÓN MECÁNICA',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/1/3',
+            prerequisites: [],
+            period: '300 - II',
+            minApprovedSubjects: 25
+      },
+      {
+            id: 'ming1037',
+            code: 'MING1037',
+            name: 'SEGURIDAD MINERA',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/0/4',
+            prerequisites: [
+                  'ming1030'
+            ],
+            period: '300 - II'
+      },
+      {
+            id: 'ming1040',
+            code: 'MING1040',
+            name: 'EXPLOTACIÓN A CIELO ABIERTO',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/0/4',
+            prerequisites: [
+                  'ming1030'
+            ],
+            period: '300 - II',
+            corequisites: [
+                  'ming1027'
+            ]
+      },
+      {
+            id: 'ming1027',
+            code: 'MING1027',
+            name: 'GEOTECNIA MINERA',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'ming1035'
+            ],
+            period: '300 - II'
+      },
+      {
+            id: 'ming1024',
+            code: 'MING1024',
+            name: 'EXPLOTACIÓN SUBTERRÁNEA',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/0/4',
+            prerequisites: [
+                  'ming1030'
+            ],
+            period: '300 - II'
+      },
+      {
+            id: 'psc_mina',
+            code: 'PSC_MINA',
+            name: 'PRÁCTICAS DE SERVICIO COMUNITARIO',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [],
+            period: '300 - II'
+      },
+      {
+            id: 'ming1029',
+            code: 'MING1029',
+            name: 'MINERALURGIA Y METALURGIA EXTRACTIVA',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'ming1041'
+            ],
+            period: '400 - I'
+      },
+      {
+            id: 'ming1032',
+            code: 'MING1032',
+            name: 'VENTILACIÓN, DRENAJE Y SISTEMAS ELÉCTRICOS',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/1/3',
+            prerequisites: [
+                  'mecg1049'
+            ],
+            period: '400 - I'
+      },
+      {
+            id: 'ming1023',
+            code: 'MING1023',
+            name: 'AMBIENTE Y GESTIÓN DE RESIDUOS MINEROS',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/0/4',
+            prerequisites: [],
+            period: '400 - I',
+            minApprovedSubjects: 30
+      },
+      {
+            id: 'ming1031',
+            code: 'MING1031',
+            name: 'PLANEAMIENTO Y DISEÑO MINERO',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'ming1040',
+                  'ming1024'
+            ],
+            period: '400 - I'
+      },
+      {
+            id: 'iti5',
+            code: 'ITI5',
+            name: 'ITINERARIO',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/0/6',
+            prerequisites: [],
+            period: '400 - I',
+            isItinerary: true
+      },
+      {
+            id: 'ming1039',
+            code: 'MING1039',
+            name: 'MATERIA INTEGRADORA DE MINAS',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/0/6',
+            prerequisites: [],
+            period: '400 - II',
+            minApprovedSubjects: 41
+      },
+      {
+            id: 'iti6',
+            code: 'ITI6',
+            name: 'ITINERARIO',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/0/6',
+            prerequisites: [],
+            period: '400 - II',
+            isItinerary: true
+      },
+      {
+            id: 'ppe_mina',
+            code: 'PPE_MINA',
+            name: 'PRÁCTICAS PREPROFESIONALES EMPRESARIALES',
+            credits: 5,
+            hoursTotal: 5,
+            hoursDetail: '5/0/0',
+            prerequisites: [],
+            period: '500 - I'
+      },
+      {
+            id: 'comp1_mina',
+            code: 'COMP1',
+            name: 'Materia Complementaria 1',
+            credits: 1,
+            hoursTotal: 3,
+            prerequisites: [],
+            period: 'Complementarias',
+            isComplementary: true
+      },
+      {
+            id: 'comp2_mina',
+            code: 'COMP2',
+            name: 'Materia Complementaria 2',
+            credits: 1,
+            hoursTotal: 3,
+            prerequisites: [],
+            period: 'Complementarias',
+            isComplementary: true
+      },
+      {
+            id: 'comp3_mina',
+            code: 'COMP3',
+            name: 'Materia Complementaria 3',
+            credits: 1,
+            hoursTotal: 3,
+            prerequisites: [],
+            period: 'Complementarias',
+            isComplementary: true
+      }
+] },
+  { id: 'petr', name: 'Petróleos', facultyId: 'fict', subjects: [
+      {
+            id: 'matg1045',
+            code: 'MATG1045',
+            name: 'CÁLCULO DE UNA VARIABLE',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/2/4',
+            prerequisites: [],
+            period: '100 - I'
+      },
+      {
+            id: 'fisg1005',
+            code: 'FISG1005',
+            name: 'FÍSICA: MECÁNICA',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/2/4',
+            prerequisites: [],
+            period: '100 - I',
+            corequisites: [
+                  'matg1045'
+            ]
+      },
+      {
+            id: 'quig1032',
+            code: 'QUIG1032',
+            name: 'QUÍMICA GENERAL',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [],
+            period: '100 - I'
+      },
+      {
+            id: 'indg1033',
+            code: 'INDG1033',
+            name: 'ANÁLISIS Y RESOLUCIÓN DE PROBLEMAS',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/0/6',
+            prerequisites: [],
+            period: '100 - I'
+      },
+      {
+            id: 'idig1006',
+            code: 'IDIG1006',
+            name: 'INGLÉS I',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [],
+            period: '100 - I'
+      },
+      {
+            id: 'matg1046',
+            code: 'MATG1046',
+            name: 'CÁLCULO VECTORIAL',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/2/4',
+            prerequisites: [
+                  'matg1045'
+            ],
+            period: '100 - II'
+      },
+      {
+            id: 'ccpg1043',
+            code: 'CCPG1043',
+            name: 'FUNDAMENTOS DE PROGRAMACIÓN',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'matg1045'
+            ],
+            period: '100 - II'
+      },
+      {
+            id: 'fisg1008',
+            code: 'FISG1008',
+            name: 'FÍSICA: TERMODINÁMICA Y ELECTRÓNICA',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/2/4',
+            prerequisites: [
+                  'fisg1005'
+            ],
+            period: '100 - II'
+      },
+      {
+            id: 'petg1032',
+            code: 'PETG1032',
+            name: 'INTRODUCCIÓN A LA INDUSTRIA HIDROCARBURÍFERA',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/0/4',
+            prerequisites: [
+                  'indg1033'
+            ],
+            period: '100 - II'
+      },
+      {
+            id: 'geog1052',
+            code: 'GEOG1052',
+            name: 'GEOLOGÍA PARA INGENIEROS EN PETRÓLEO',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/0/4',
+            prerequisites: [],
+            period: '100 - II',
+            corequisites: [
+                  'petg1032'
+            ]
+      },
+      {
+            id: 'idig1007',
+            code: 'IDIG1007',
+            name: 'INGLÉS II',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'idig1006'
+            ],
+            period: '100 - II'
+      },
+      {
+            id: 'estg1034',
+            code: 'ESTG1034',
+            name: 'ESTADÍSTICA',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'ccpg1043'
+            ],
+            period: '200 - I'
+      },
+      {
+            id: 'mecg1061',
+            code: 'MECG1061',
+            name: 'TERMODINÁMICA',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'fisg1008'
+            ],
+            period: '200 - I'
+      },
+      {
+            id: 'mecg1060',
+            code: 'MECG1060',
+            name: 'ESTÁTICA',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'fisg1005'
+            ],
+            period: '200 - I'
+      },
+      {
+            id: 'idig2012',
+            code: 'IDIG2012',
+            name: 'COMUNICACIÓN',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [],
+            period: '200 - I',
+            minApprovedSubjects: 6
+      },
+      {
+            id: 'idig1008',
+            code: 'IDIG1008',
+            name: 'INGLÉS III',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'idig1007'
+            ],
+            period: '200 - I'
+      },
+      {
+            id: 'matg1048',
+            code: 'MATG1048',
+            name: 'ECUACIONES DIFERENCIALES Y ÁLGEBRA LINEAL',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'matg1045'
+            ],
+            period: '200 - II'
+      },
+      {
+            id: 'matg1052',
+            code: 'MATG1052',
+            name: 'MÉTODOS NUMÉRICOS',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'matg1046'
+            ],
+            period: '200 - II'
+      },
+      {
+            id: 'petg1031',
+            code: 'PETG1031',
+            name: 'PROPIEDADES DE HIDROCARBUROS Y COMPORTAMIENTO DE FASES',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/1/3',
+            prerequisites: [
+                  'mecg1061',
+                  'quig1032'
+            ],
+            period: '200 - II'
+      },
+      {
+            id: 'petg1027',
+            code: 'PETG1027',
+            name: 'PETROFÍSICA',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'mecg1060',
+                  'geog1052'
+            ],
+            period: '200 - II'
+      },
+      {
+            id: 'petg1025',
+            code: 'PETG1025',
+            name: 'PERFORACIÓN',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [],
+            period: '200 - II',
+            corequisites: [
+                  'petg1027'
+            ]
+      },
+      {
+            id: 'idig1009',
+            code: 'IDIG1009',
+            name: 'INGLÉS IV',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'idig1008'
+            ],
+            period: '200 - II'
+      },
+      {
+            id: 'admg1005',
+            code: 'ADMG1005',
+            name: 'EMPRENDIMIENTO E INNOVACIÓN',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [],
+            period: '300 - I',
+            minApprovedSubjects: 20
+      },
+      {
+            id: 'mecg1049',
+            code: 'MECG1049',
+            name: 'MECÁNICA DE FLUIDOS',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'matg1048',
+                  'fisg1005'
+            ],
+            period: '300 - I',
+            minApprovedSubjects: 15
+      },
+      {
+            id: 'petg1030',
+            code: 'PETG1030',
+            name: 'EVALUACIÓN DE FORMACIONES I',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'petg1031',
+                  'estg1034'
+            ],
+            period: '300 - I'
+      },
+      {
+            id: 'petg1026',
+            code: 'PETG1026',
+            name: 'PERFORACIÓN DIRECCIONAL',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'petg1025'
+            ],
+            period: '300 - I'
+      },
+      {
+            id: 'idig1010',
+            code: 'IDIG1010',
+            name: 'INGLÉS V',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [
+                  'idig1009'
+            ],
+            period: '300 - I'
+      },
+      {
+            id: 'adsg1026',
+            code: 'ADSG1026',
+            name: 'CIENCIAS DE LA SOSTENIBILIDAD',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/0/6',
+            prerequisites: [],
+            period: '300 - II',
+            minApprovedSubjects: 20
+      },
+      {
+            id: 'petg1021',
+            code: 'PETG1021',
+            name: 'INGENIERÍA DE PRODUCCIÓN I',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'mecg1049'
+            ],
+            period: '300 - II'
+      },
+      {
+            id: 'petg1034',
+            code: 'PETG1034',
+            name: 'EVALUACIÓN DE FORMACIONES II',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'petg1030'
+            ],
+            period: '300 - II'
+      },
+      {
+            id: 'petg1023',
+            code: 'PETG1023',
+            name: 'INGENIERÍA DE YACIMIENTOS I',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [],
+            period: '300 - II'
+      },
+      {
+            id: 'petg1020',
+            code: 'PETG1020',
+            name: 'COMPLETACIÓN Y REACONDICIONAMIENTO DE POZOS',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/0/4',
+            prerequisites: [
+                  'petg1026'
+            ],
+            period: '300 - II'
+      },
+      {
+            id: 'petg1022',
+            code: 'PETG1022',
+            name: 'INGENIERÍA DE PRODUCCIÓN II',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'petg1021'
+            ],
+            period: '400 - I'
+      },
+      {
+            id: 'petg1028',
+            code: 'PETG1028',
+            name: 'SIMULACIÓN DE RESERVORIOS',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/1/3',
+            prerequisites: [],
+            period: '400 - I',
+            corequisites: [
+                  'petg1024'
+            ]
+      },
+      {
+            id: 'petg1024',
+            code: 'PETG1024',
+            name: 'INGENIERÍA DE YACIMIENTOS II',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/1/5',
+            prerequisites: [
+                  'petg1023'
+            ],
+            period: '400 - I'
+      },
+      {
+            id: 'indg1061',
+            code: 'INDG1061',
+            name: 'HSEQ EN LA INDUSTRIA HIDROCARBURÍFERA',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/0/4',
+            prerequisites: [],
+            period: '400 - I',
+            minApprovedSubjects: 25
+      },
+      {
+            id: 'psc_petr',
+            code: 'PSC_PETR',
+            name: 'PRÁCTICAS DE SERVICIO COMUNITARIO',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/2/2',
+            prerequisites: [],
+            period: '400 - I',
+            minApprovedSubjects: 20
+      },
+      {
+            id: 'iti7',
+            code: 'ITI7',
+            name: 'ITINERARIO',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/0/6',
+            prerequisites: [],
+            period: '400 - I',
+            isItinerary: true
+      },
+      {
+            id: 'ecog1009',
+            code: 'ECOG1009',
+            name: 'EVALUACIÓN DE PROYECTOS HIDROCARBURÍFEROS',
+            credits: 2,
+            hoursTotal: 6,
+            hoursDetail: '2/0/4',
+            prerequisites: [],
+            period: '400 - II',
+            minApprovedSubjects: 30
+      },
+      {
+            id: 'petg1033',
+            code: 'PETG1033',
+            name: 'MATERIA INTEGRADORA PARA PETRÓLEOS',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/0/6',
+            prerequisites: [],
+            period: '400 - II',
+            minApprovedSubjects: 38
+      },
+      {
+            id: 'iti8',
+            code: 'ITI8',
+            name: 'ITINERARIO',
+            credits: 3,
+            hoursTotal: 9,
+            hoursDetail: '3/0/6',
+            prerequisites: [],
+            period: '400 - II',
+            isItinerary: true
+      },
+      {
+            id: 'ppe_petr',
+            code: 'PPE_PETR',
+            name: 'PRÁCTICAS PREPROFESIONALES EMPRESARIALES',
+            credits: 5,
+            hoursTotal: 5,
+            hoursDetail: '5/0/0',
+            prerequisites: [],
+            period: '500 - I'
+      },
+      {
+            id: 'comp1_petr',
+            code: 'COMP1',
+            name: 'Materia Complementaria 1',
+            credits: 1,
+            hoursTotal: 3,
+            prerequisites: [],
+            period: 'Complementarias',
+            isComplementary: true
+      },
+      {
+            id: 'comp2_petr',
+            code: 'COMP2',
+            name: 'Materia Complementaria 2',
+            credits: 1,
+            hoursTotal: 3,
+            prerequisites: [],
+            period: 'Complementarias',
+            isComplementary: true
+      },
+      {
+            id: 'comp3_petr',
+            code: 'COMP3',
+            name: 'Materia Complementaria 3',
+            credits: 1,
+            hoursTotal: 3,
+            prerequisites: [],
+            period: 'Complementarias',
+            isComplementary: true
+      }
+] }
 ];

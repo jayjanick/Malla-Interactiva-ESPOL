@@ -24,7 +24,7 @@ export function LandingPage() {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full text-left mt-8">
-        <div className="bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 p-6 rounded-2xl hover:bg-slate-100 dark:hover:bg-slate-100 dark:bg-white/[0.04] transition-colors">
+        <div className="bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 p-6 rounded-2xl hover:bg-slate-100 dark:hover:bg-white/[0.04] transition-colors">
           <Map className="w-8 h-8 text-emerald-500 mb-4" />
           <h2 className="text-xl font-medium mb-2">Visualiza tu Malla</h2>
           <p className="text-sm text-slate-500 dark:text-white/50 leading-relaxed">
@@ -32,7 +32,7 @@ export function LandingPage() {
           </p>
         </div>
 
-        <div className="bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 p-6 rounded-2xl hover:bg-slate-100 dark:hover:bg-slate-100 dark:bg-white/[0.04] transition-colors">
+        <div className="bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 p-6 rounded-2xl hover:bg-slate-100 dark:hover:bg-white/[0.04] transition-colors">
           <CheckCircle2 className="w-8 h-8 text-emerald-500 mb-4" />
           <h2 className="text-xl font-medium mb-2">Calcula tus Créditos</h2>
           <p className="text-sm text-slate-500 dark:text-white/50 leading-relaxed">
@@ -40,7 +40,7 @@ export function LandingPage() {
           </p>
         </div>
 
-        <div className="bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 p-6 rounded-2xl hover:bg-slate-100 dark:hover:bg-slate-100 dark:bg-white/[0.04] transition-colors">
+        <div className="bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 p-6 rounded-2xl hover:bg-slate-100 dark:hover:bg-white/[0.04] transition-colors">
           <Clock className="w-8 h-8 text-emerald-500 mb-4" />
           <h2 className="text-xl font-medium mb-2">Proyecta tus Semestres</h2>
           <p className="text-sm text-slate-500 dark:text-white/50 leading-relaxed">
@@ -48,7 +48,7 @@ export function LandingPage() {
           </p>
         </div>
 
-        <div className="bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 p-6 rounded-2xl hover:bg-slate-100 dark:hover:bg-slate-100 dark:bg-white/[0.04] transition-colors">
+        <div className="bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 p-6 rounded-2xl hover:bg-slate-100 dark:hover:bg-white/[0.04] transition-colors">
           <GraduationCap className="w-8 h-8 text-emerald-500 mb-4" />
           <h2 className="text-xl font-medium mb-2">Múltiples Facultades</h2>
           <p className="text-sm text-slate-500 dark:text-white/50 leading-relaxed">

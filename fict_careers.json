@@ -1,0 +1,2247 @@
+{
+  "Geología": {
+    "id": "geol",
+    "subjects": [
+      {
+        "id": "matg1045",
+        "code": "MATG1045",
+        "name": "CÁLCULO DE UNA VARIABLE",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/2/4",
+        "prerequisites": [],
+        "period": "100 - I"
+      },
+      {
+        "id": "fisg1005",
+        "code": "FISG1005",
+        "name": "FÍSICA: MECÁNICA",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/2/4",
+        "prerequisites": [],
+        "period": "100 - I",
+        "corequisites": [
+          "matg1045"
+        ]
+      },
+      {
+        "id": "indg1033",
+        "code": "INDG1033",
+        "name": "ANÁLISIS Y RESOLUCIÓN DE PROBLEMAS",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/0/6",
+        "prerequisites": [],
+        "period": "100 - I"
+      },
+      {
+        "id": "geog1041",
+        "code": "GEOG1041",
+        "name": "MINERALOGÍA",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [],
+        "period": "100 - I"
+      },
+      {
+        "id": "geog1033",
+        "code": "GEOG1033",
+        "name": "GEOLOGÍA GENERAL",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [],
+        "period": "100 - I",
+        "corequisites": [
+          "geog1041"
+        ]
+      },
+      {
+        "id": "idig1006",
+        "code": "IDIG1006",
+        "name": "INGLÉS I",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [],
+        "period": "100 - I"
+      },
+      {
+        "id": "ccpg1043",
+        "code": "CCPG1043",
+        "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "matg1045"
+        ],
+        "period": "100 - II"
+      },
+      {
+        "id": "matg1046",
+        "code": "MATG1046",
+        "name": "CÁLCULO VECTORIAL",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/2/4",
+        "prerequisites": [
+          "matg1045"
+        ],
+        "period": "100 - II"
+      },
+      {
+        "id": "quig1032",
+        "code": "QUIG1032",
+        "name": "QUÍMICA GENERAL",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [],
+        "period": "100 - II"
+      },
+      {
+        "id": "geog1042",
+        "code": "GEOG1042",
+        "name": "MINERALOGÍA ÓPTICA",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [],
+        "period": "100 - II"
+      },
+      {
+        "id": "geog1044",
+        "code": "GEOG1044",
+        "name": "PALEONTOLOGÍA APLICADA",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "geog1033"
+        ],
+        "period": "100 - II"
+      },
+      {
+        "id": "idig1007",
+        "code": "IDIG1007",
+        "name": "INGLÉS II",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "idig1006"
+        ],
+        "period": "100 - II"
+      },
+      {
+        "id": "matg1048",
+        "code": "MATG1048",
+        "name": "ECUACIONES DIFERENCIALES Y ÁLGEBRA LINEAL",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "matg1046",
+          "ccpg1043"
+        ],
+        "period": "200 - I"
+      },
+      {
+        "id": "idig2012",
+        "code": "IDIG2012",
+        "name": "COMUNICACIÓN",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [],
+        "period": "200 - I",
+        "minApprovedSubjects": 6
+      },
+      {
+        "id": "geog1051",
+        "code": "GEOG1051",
+        "name": "MECÁNICA DE MATERIALES GEOLÓGICOS",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "fisg1005"
+        ],
+        "period": "200 - I"
+      },
+      {
+        "id": "geog1045",
+        "code": "GEOG1045",
+        "name": "PETROLOGÍA SEDIMENTARIA",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "geog1042",
+          "quig1032"
+        ],
+        "period": "200 - I"
+      },
+      {
+        "id": "geog1028",
+        "code": "GEOG1028",
+        "name": "ESTRATIGRAFÍA Y SEDIMENTACIÓN",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/1/3",
+        "prerequisites": [
+          "geog1044"
+        ],
+        "period": "200 - I"
+      },
+      {
+        "id": "idig1008",
+        "code": "IDIG1008",
+        "name": "INGLÉS III",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "idig1007"
+        ],
+        "period": "200 - I"
+      },
+      {
+        "id": "estg1034",
+        "code": "ESTG1034",
+        "name": "ESTADÍSTICA",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "ccpg1043"
+        ],
+        "period": "200 - II"
+      },
+      {
+        "id": "fisg1006",
+        "code": "FISG1006",
+        "name": "FÍSICA: ELECTRICIDAD Y MAGNETISMO",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/2/4",
+        "prerequisites": [
+          "fisg1005"
+        ],
+        "period": "200 - II"
+      },
+      {
+        "id": "geog1030",
+        "code": "GEOG1030",
+        "name": "GEOLOGÍA DE ECUADOR",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/1/3",
+        "prerequisites": [],
+        "period": "200 - II",
+        "corequisites": [
+          "geog1046"
+        ]
+      },
+      {
+        "id": "geog1046",
+        "code": "GEOG1046",
+        "name": "PETROLOGÍA ÍGNEA Y METAMÓRFICA",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/2/4",
+        "prerequisites": [
+          "geog1045"
+        ],
+        "period": "200 - II"
+      },
+      {
+        "id": "geog1032",
+        "code": "GEOG1032",
+        "name": "GEOLOGÍA ESTRUCTURAL",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "geog1028",
+          "geog1051"
+        ],
+        "period": "200 - II"
+      },
+      {
+        "id": "idig1009",
+        "code": "IDIG1009",
+        "name": "INGLÉS IV",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "idig1008"
+        ],
+        "period": "200 - II"
+      },
+      {
+        "id": "admg1005",
+        "code": "ADMG1005",
+        "name": "EMPRENDIMIENTO E INNOVACIÓN",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [],
+        "period": "300 - I",
+        "minApprovedSubjects": 20
+      },
+      {
+        "id": "geog1047",
+        "code": "GEOG1047",
+        "name": "SISTEMAS DE INFORMACIÓN GEOGRÁFICA",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/1/3",
+        "prerequisites": [
+          "matg1048"
+        ],
+        "period": "300 - I"
+      },
+      {
+        "id": "estg1033",
+        "code": "ESTG1033",
+        "name": "GEOESTADÍSTICA",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "estg1034"
+        ],
+        "period": "300 - I"
+      },
+      {
+        "id": "geog1035",
+        "code": "GEOG1035",
+        "name": "GEOQUÍMICA",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/1/3",
+        "prerequisites": [
+          "geog1046"
+        ],
+        "period": "300 - I"
+      },
+      {
+        "id": "geog1048",
+        "code": "GEOG1048",
+        "name": "TECTÓNICA",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/1/3",
+        "prerequisites": [
+          "geog1032"
+        ],
+        "period": "300 - I"
+      },
+      {
+        "id": "idig1010",
+        "code": "IDIG1010",
+        "name": "INGLÉS V",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "idig1009"
+        ],
+        "period": "300 - I"
+      },
+      {
+        "id": "adsg1026",
+        "code": "ADSG1026",
+        "name": "CIENCIAS DE LA SOSTENIBILIDAD",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/0/6",
+        "prerequisites": [],
+        "period": "300 - II",
+        "minApprovedSubjects": 20
+      },
+      {
+        "id": "geog1034",
+        "code": "GEOG1034",
+        "name": "GEOMORFOLOGÍA",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/1/3",
+        "prerequisites": [
+          "geog1047"
+        ],
+        "period": "300 - II"
+      },
+      {
+        "id": "geog1040",
+        "code": "GEOG1040",
+        "name": "MÉTODOS GEOFÍSICOS",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/1/3",
+        "prerequisites": [
+          "fisg1006"
+        ],
+        "period": "300 - II"
+      },
+      {
+        "id": "geog1026",
+        "code": "GEOG1026",
+        "name": "DEPÓSITOS MINERALES",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/1/3",
+        "prerequisites": [
+          "geog1035"
+        ],
+        "period": "300 - II"
+      },
+      {
+        "id": "geog1037",
+        "code": "GEOG1037",
+        "name": "INGENIERÍA GEOLÓGICA",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "geog1048"
+        ],
+        "period": "300 - II"
+      },
+      {
+        "id": "psc_geol",
+        "code": "PSC_GEOL",
+        "name": "PRÁCTICAS DE SERVICIO COMUNITARIO",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [],
+        "period": "300 - II"
+      },
+      {
+        "id": "geog1050",
+        "code": "GEOG1050",
+        "name": "VULNERABILIDAD Y RIESGO GEOLÓGICO",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/1/3",
+        "prerequisites": [
+          "geog1034"
+        ],
+        "period": "400 - I"
+      },
+      {
+        "id": "geog1036",
+        "code": "GEOG1036",
+        "name": "HIDROGEOLOGÍA",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/1/3",
+        "prerequisites": [
+          "geog1040"
+        ],
+        "period": "400 - I"
+      },
+      {
+        "id": "geog1031",
+        "code": "GEOG1031",
+        "name": "GEOLOGÍA DEL PETRÓLEO",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "geog1040"
+        ],
+        "period": "400 - I"
+      },
+      {
+        "id": "geog1029",
+        "code": "GEOG1029",
+        "name": "EVALUACIÓN DE YACIMIENTOS MINERALES",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/1/3",
+        "prerequisites": [
+          "geog1026"
+        ],
+        "period": "400 - I"
+      },
+      {
+        "id": "geog1027",
+        "code": "GEOG1027",
+        "name": "DISEÑO DE CAMPO GEOLÓGICO",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "geog1037"
+        ],
+        "period": "400 - I"
+      },
+      {
+        "id": "iti1",
+        "code": "ITI1",
+        "name": "ITINERARIO",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/0/6",
+        "prerequisites": [],
+        "period": "400 - I",
+        "isItinerary": true
+      },
+      {
+        "id": "geog1038",
+        "code": "GEOG1038",
+        "name": "LEGISLACIÓN Y MITIGACIÓN AMBIENTAL",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/0/4",
+        "prerequisites": [
+          "geog1037"
+        ],
+        "period": "400 - II"
+      },
+      {
+        "id": "geog1039",
+        "code": "GEOG1039",
+        "name": "MATERIA INTEGRADORA DE GEOLOGÍA",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/0/6",
+        "prerequisites": [],
+        "period": "400 - II",
+        "minApprovedSubjects": 42
+      },
+      {
+        "id": "iti2",
+        "code": "ITI2",
+        "name": "ITINERARIO",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/0/6",
+        "prerequisites": [],
+        "period": "400 - II",
+        "isItinerary": true
+      },
+      {
+        "id": "ppe_geol",
+        "code": "PPE_GEOL",
+        "name": "PRÁCTICAS PREPROFESIONALES EMPRESARIALES",
+        "credits": 5,
+        "hoursTotal": 5,
+        "hoursDetail": "5/0/0",
+        "prerequisites": [],
+        "period": "500 - I"
+      },
+      {
+        "id": "comp1_geol",
+        "code": "COMP1",
+        "name": "Materia Complementaria 1",
+        "credits": 1,
+        "hoursTotal": 3,
+        "prerequisites": [],
+        "period": "Complementarias",
+        "isComplementary": true
+      },
+      {
+        "id": "comp2_geol",
+        "code": "COMP2",
+        "name": "Materia Complementaria 2",
+        "credits": 1,
+        "hoursTotal": 3,
+        "prerequisites": [],
+        "period": "Complementarias",
+        "isComplementary": true
+      },
+      {
+        "id": "comp3_geol",
+        "code": "COMP3",
+        "name": "Materia Complementaria 3",
+        "credits": 1,
+        "hoursTotal": 3,
+        "prerequisites": [],
+        "period": "Complementarias",
+        "isComplementary": true
+      }
+    ]
+  },
+  "Civil": {
+    "id": "civi",
+    "subjects": [
+      {
+        "id": "indg1033",
+        "code": "INDG1033",
+        "name": "ANÁLISIS Y RESOLUCIÓN DE PROBLEMAS",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/0/6",
+        "prerequisites": [],
+        "period": "100 - I"
+      },
+      {
+        "id": "matg1045",
+        "code": "MATG1045",
+        "name": "CÁLCULO DE UNA VARIABLE",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/2/4",
+        "prerequisites": [],
+        "period": "100 - I"
+      },
+      {
+        "id": "fisg1005",
+        "code": "FISG1005",
+        "name": "FÍSICA: MECÁNICA",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/2/4",
+        "prerequisites": [],
+        "period": "100 - I",
+        "corequisites": [
+          "matg1045"
+        ]
+      },
+      {
+        "id": "quig1032",
+        "code": "QUIG1032",
+        "name": "QUÍMICA GENERAL",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [],
+        "period": "100 - I"
+      },
+      {
+        "id": "idig1006",
+        "code": "IDIG1006",
+        "name": "INGLÉS I",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [],
+        "period": "100 - I"
+      },
+      {
+        "id": "ccpg1043",
+        "code": "CCPG1043",
+        "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "matg1045"
+        ],
+        "period": "100 - II"
+      },
+      {
+        "id": "matg1046",
+        "code": "MATG1046",
+        "name": "CÁLCULO VECTORIAL",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/2/4",
+        "prerequisites": [
+          "matg1045"
+        ],
+        "period": "100 - II"
+      },
+      {
+        "id": "matg1048",
+        "code": "MATG1048",
+        "name": "ECUACIONES DIFERENCIALES Y ÁLGEBRA LINEAL",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "matg1045"
+        ],
+        "period": "100 - II"
+      },
+      {
+        "id": "fisg1008",
+        "code": "FISG1008",
+        "name": "FÍSICA: TERMODINÁMICA Y ELECTRÓNICA",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/2/4",
+        "prerequisites": [
+          "fisg1005"
+        ],
+        "period": "100 - II"
+      },
+      {
+        "id": "idig1007",
+        "code": "IDIG1007",
+        "name": "INGLÉS II",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "idig1006"
+        ],
+        "period": "100 - II"
+      },
+      {
+        "id": "estg1034",
+        "code": "ESTG1034",
+        "name": "ESTADÍSTICA",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "ccpg1043",
+          "matg1046"
+        ],
+        "period": "200 - I"
+      },
+      {
+        "id": "matg1053",
+        "code": "MATG1053",
+        "name": "MATEMÁTICA APLICADA A LA INGENIERÍA",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "matg1048"
+        ],
+        "period": "200 - I"
+      },
+      {
+        "id": "mecg1060",
+        "code": "MECG1060",
+        "name": "ESTÁTICA",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "fisg1005"
+        ],
+        "period": "200 - I"
+      },
+      {
+        "id": "civg1047",
+        "code": "CIVG1047",
+        "name": "HORMIGÓN Y MATERIALES DE CONSTRUCCIÓN",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "quig1032"
+        ],
+        "period": "200 - I"
+      },
+      {
+        "id": "idig1008",
+        "code": "IDIG1008",
+        "name": "INGLÉS III",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "idig1007"
+        ],
+        "period": "200 - I"
+      },
+      {
+        "id": "idig2012",
+        "code": "IDIG2012",
+        "name": "COMUNICACIÓN",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [],
+        "period": "200 - II",
+        "minApprovedSubjects": 6
+      },
+      {
+        "id": "geog1047",
+        "code": "GEOG1047",
+        "name": "SISTEMAS DE INFORMACIÓN GEOGRÁFICA",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/1/3",
+        "prerequisites": [
+          "estg1034"
+        ],
+        "period": "200 - II"
+      },
+      {
+        "id": "mecg1049",
+        "code": "MECG1049",
+        "name": "MECÁNICA DE FLUIDOS",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "fisg1005"
+        ],
+        "period": "200 - II"
+      },
+      {
+        "id": "civg1056",
+        "code": "CIVG1056",
+        "name": "RESISTENCIA DE MATERIALES",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "mecg1060"
+        ],
+        "period": "200 - II"
+      },
+      {
+        "id": "civg1035",
+        "code": "CIVG1035",
+        "name": "DIBUJO TÉCNICO Y PLANOS",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "civg1047"
+        ],
+        "period": "200 - II"
+      },
+      {
+        "id": "idig1009",
+        "code": "IDIG1009",
+        "name": "INGLÉS IV",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "idig1008"
+        ],
+        "period": "200 - II"
+      },
+      {
+        "id": "admg1005",
+        "code": "ADMG1005",
+        "name": "EMPRENDIMIENTO E INNOVACIÓN",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [],
+        "period": "300 - I",
+        "minApprovedSubjects": 20
+      },
+      {
+        "id": "civg1043",
+        "code": "CIVG1043",
+        "name": "HIDROLOGÍA",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "geog1047",
+          "mecg1049"
+        ],
+        "period": "300 - I"
+      },
+      {
+        "id": "civg1034",
+        "code": "CIVG1034",
+        "name": "ANÁLISIS ESTRUCTURAL",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/2/4",
+        "prerequisites": [
+          "civg1056",
+          "civg1047"
+        ],
+        "period": "300 - I"
+      },
+      {
+        "id": "civg1059",
+        "code": "CIVG1059",
+        "name": "TOPOGRAFÍA",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "civg1035"
+        ],
+        "period": "300 - I"
+      },
+      {
+        "id": "idig1010",
+        "code": "IDIG1010",
+        "name": "INGLÉS V",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "idig1009"
+        ],
+        "period": "300 - I"
+      },
+      {
+        "id": "adsg1026",
+        "code": "ADSG1026",
+        "name": "CIENCIAS DE LA SOSTENIBILIDAD",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/0/6",
+        "prerequisites": [],
+        "period": "300 - II",
+        "minApprovedSubjects": 20
+      },
+      {
+        "id": "civg1044",
+        "code": "CIVG1044",
+        "name": "HIDRÁULICA",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "civg1043",
+          "matg1053"
+        ],
+        "period": "300 - II"
+      },
+      {
+        "id": "civg1060",
+        "code": "CIVG1060",
+        "name": "MECÁNICA DE SUELOS Y ROCAS",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/2/4",
+        "prerequisites": [
+          "civg1056"
+        ],
+        "period": "300 - II"
+      },
+      {
+        "id": "civg1045",
+        "code": "CIVG1045",
+        "name": "HORMIGÓN ARMADO",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "civg1034"
+        ],
+        "period": "300 - II"
+      },
+      {
+        "id": "civg1038",
+        "code": "CIVG1038",
+        "name": "DISEÑO DE VÍAS",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "civg1059"
+        ],
+        "period": "300 - II"
+      },
+      {
+        "id": "civg1058",
+        "code": "CIVG1058",
+        "name": "SISTEMAS DE RECOLECCIÓN Y DISTRIBUCIÓN DE AGUA",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "civg1044"
+        ],
+        "period": "400 - I"
+      },
+      {
+        "id": "civg1049",
+        "code": "CIVG1049",
+        "name": "INGENIERÍA DE CIMENTACIÓN",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "civg1060",
+          "civg1045"
+        ],
+        "period": "400 - I"
+      },
+      {
+        "id": "civg1039",
+        "code": "CIVG1039",
+        "name": "DISEÑO ESTRUCTURAL",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "civg1045 -"
+        ],
+        "period": "400 - I",
+        "corequisites": [
+          "civg1049"
+        ]
+      },
+      {
+        "id": "civg1036",
+        "code": "CIVG1036",
+        "name": "DISEÑO DE PAVIMENTOS",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "civg1038",
+          "civg1060"
+        ],
+        "period": "400 - I"
+      },
+      {
+        "id": "psc_civi",
+        "code": "PSC_CIVI",
+        "name": "PRÁCTICAS DE SERVICIO COMUNITARIO",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [],
+        "period": "400 - I"
+      },
+      {
+        "id": "civg1041",
+        "code": "CIVG1041",
+        "name": "GESTIÓN DE OBRAS CIVILES",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [],
+        "period": "400 - II",
+        "minApprovedSubjects": 35
+      },
+      {
+        "id": "civg1055",
+        "code": "CIVG1055",
+        "name": "POTABILIZACIÓN Y TRATAMIENTO DEL AGUA",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "civg1058"
+        ],
+        "period": "400 - II"
+      },
+      {
+        "id": "civg1040",
+        "code": "CIVG1040",
+        "name": "ESTRUCTURAS METÁLICAS",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "civg1039"
+        ],
+        "period": "400 - II"
+      },
+      {
+        "id": "civg1037",
+        "code": "CIVG1037",
+        "name": "DISEÑO DE PUENTES",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/1/3",
+        "prerequisites": [
+          "civg1039"
+        ],
+        "period": "400 - II"
+      },
+      {
+        "id": "civg1046",
+        "code": "CIVG1046",
+        "name": "HORMIGÓN PREFORZADO",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/0/4",
+        "prerequisites": [
+          "civg1045"
+        ],
+        "period": "400 - II"
+      },
+      {
+        "id": "iti3",
+        "code": "ITI3",
+        "name": "ITINERARIO",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/0/6",
+        "prerequisites": [],
+        "period": "400 - II",
+        "isItinerary": true
+      },
+      {
+        "id": "civg1050",
+        "code": "CIVG1050",
+        "name": "INGENIERÍA DE LA CONSTRUCCIÓN",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "civg1041"
+        ],
+        "period": "500 - I"
+      },
+      {
+        "id": "civg1053",
+        "code": "CIVG1053",
+        "name": "INSTALACIONES",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "civg1058"
+        ],
+        "period": "500 - I"
+      },
+      {
+        "id": "civg1054",
+        "code": "CIVG1054",
+        "name": "MATERIA INTEGRADORA DE INGENIERÍA CIVIL",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/0/6",
+        "prerequisites": [],
+        "period": "500 - I",
+        "minApprovedSubjects": 43
+      },
+      {
+        "id": "iti4",
+        "code": "ITI4",
+        "name": "ITINERARIO",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/0/6",
+        "prerequisites": [],
+        "period": "500 - I",
+        "isItinerary": true
+      },
+      {
+        "id": "ppe_civi",
+        "code": "PPE_CIVI",
+        "name": "PRÁCTICAS PREPROFESIONALES EMPRESARIALES",
+        "credits": 5,
+        "hoursTotal": 5,
+        "hoursDetail": "5/0/0",
+        "prerequisites": [],
+        "period": "500 - II"
+      },
+      {
+        "id": "comp1_civi",
+        "code": "COMP1",
+        "name": "Materia Complementaria 1",
+        "credits": 1,
+        "hoursTotal": 3,
+        "prerequisites": [],
+        "period": "Complementarias",
+        "isComplementary": true
+      },
+      {
+        "id": "comp2_civi",
+        "code": "COMP2",
+        "name": "Materia Complementaria 2",
+        "credits": 1,
+        "hoursTotal": 3,
+        "prerequisites": [],
+        "period": "Complementarias",
+        "isComplementary": true
+      },
+      {
+        "id": "comp3_civi",
+        "code": "COMP3",
+        "name": "Materia Complementaria 3",
+        "credits": 1,
+        "hoursTotal": 3,
+        "prerequisites": [],
+        "period": "Complementarias",
+        "isComplementary": true
+      }
+    ]
+  },
+  "Minas": {
+    "id": "mina",
+    "subjects": [
+      {
+        "id": "matg1045",
+        "code": "MATG1045",
+        "name": "CÁLCULO DE UNA VARIABLE",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/2/4",
+        "prerequisites": [],
+        "period": "100 - I"
+      },
+      {
+        "id": "fisg1005",
+        "code": "FISG1005",
+        "name": "FÍSICA: MECÁNICA",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/2/4",
+        "prerequisites": [],
+        "period": "100 - I",
+        "corequisites": [
+          "matg1045"
+        ]
+      },
+      {
+        "id": "ming1025",
+        "code": "MING1025",
+        "name": "FUNDAMENTOS DE MINERÍA",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/0/4",
+        "prerequisites": [],
+        "period": "100 - I"
+      },
+      {
+        "id": "geog1041",
+        "code": "GEOG1041",
+        "name": "MINERALOGÍA",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [],
+        "period": "100 - I"
+      },
+      {
+        "id": "indg1033",
+        "code": "INDG1033",
+        "name": "ANÁLISIS Y RESOLUCIÓN DE PROBLEMAS",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/0/6",
+        "prerequisites": [],
+        "period": "100 - I"
+      },
+      {
+        "id": "idig1006",
+        "code": "IDIG1006",
+        "name": "INGLÉS I",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [],
+        "period": "100 - I"
+      },
+      {
+        "id": "matg1046",
+        "code": "MATG1046",
+        "name": "CÁLCULO VECTORIAL",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/2/4",
+        "prerequisites": [
+          "matg1045"
+        ],
+        "period": "100 - II"
+      },
+      {
+        "id": "ccpg1043",
+        "code": "CCPG1043",
+        "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "matg1045"
+        ],
+        "period": "100 - II"
+      },
+      {
+        "id": "quig1032",
+        "code": "QUIG1032",
+        "name": "QUÍMICA GENERAL",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [],
+        "period": "100 - II"
+      },
+      {
+        "id": "ming1036",
+        "code": "MING1036",
+        "name": "PETROGRAFÍA",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "geog1041",
+          "ming1025"
+        ],
+        "period": "100 - II",
+        "corequisites": [
+          "quig1032"
+        ]
+      },
+      {
+        "id": "idig2012",
+        "code": "IDIG2012",
+        "name": "COMUNICACIÓN",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [],
+        "period": "100 - II",
+        "minApprovedSubjects": 6
+      },
+      {
+        "id": "idig1007",
+        "code": "IDIG1007",
+        "name": "INGLÉS II",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "idig1006"
+        ],
+        "period": "100 - II"
+      },
+      {
+        "id": "matg1049",
+        "code": "MATG1049",
+        "name": "ÁLGEBRA LINEAL",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "matg1045"
+        ],
+        "period": "200 - I"
+      },
+      {
+        "id": "estg1034",
+        "code": "ESTG1034",
+        "name": "ESTADÍSTICA",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "matg1046",
+          "ccpg1043"
+        ],
+        "period": "200 - I"
+      },
+      {
+        "id": "ming1033",
+        "code": "MING1033",
+        "name": "TOPOGRAFÍA MINERA",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [],
+        "period": "200 - I",
+        "minApprovedSubjects": 10
+      },
+      {
+        "id": "mecg1060",
+        "code": "MECG1060",
+        "name": "ESTÁTICA",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "fisg1005"
+        ],
+        "period": "200 - I"
+      },
+      {
+        "id": "geog1032",
+        "code": "GEOG1032",
+        "name": "GEOLOGÍA ESTRUCTURAL",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [],
+        "period": "200 - I"
+      },
+      {
+        "id": "idig1008",
+        "code": "IDIG1008",
+        "name": "INGLÉS III",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "idig1007"
+        ],
+        "period": "200 - I"
+      },
+      {
+        "id": "matg1050",
+        "code": "MATG1050",
+        "name": "ECUACIONES DIFERENCIALES",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/2/4",
+        "prerequisites": [
+          "matg1049"
+        ],
+        "period": "200 - II"
+      },
+      {
+        "id": "ming1026",
+        "code": "MING1026",
+        "name": "GEOMÁTICA MINERA",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "ming1033"
+        ],
+        "period": "200 - II"
+      },
+      {
+        "id": "fisg1008",
+        "code": "FISG1008",
+        "name": "FÍSICA: TERMODINÁMICA Y ELECTRÓNICA",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/2/4",
+        "prerequisites": [
+          "fisg1005"
+        ],
+        "period": "200 - II"
+      },
+      {
+        "id": "ming1034",
+        "code": "MING1034",
+        "name": "GEOLOGÍA MINERA",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/1/3",
+        "prerequisites": [
+          "geog1036"
+        ],
+        "period": "200 - II"
+      },
+      {
+        "id": "civg1056",
+        "code": "CIVG1056",
+        "name": "RESISTENCIA DE MATERIALES",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "mecg1060"
+        ],
+        "period": "200 - II"
+      },
+      {
+        "id": "idig1009",
+        "code": "IDIG1009",
+        "name": "INGLÉS IV",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "idig1008"
+        ],
+        "period": "200 - II"
+      },
+      {
+        "id": "admg1005",
+        "code": "ADMG1005",
+        "name": "EMPRENDIMIENTO E INNOVACIÓN",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [],
+        "period": "300 - I",
+        "minApprovedSubjects": 20
+      },
+      {
+        "id": "mecg1049",
+        "code": "MECG1049",
+        "name": "MECÁNICA DE FLUIDOS",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "fisg1005"
+        ],
+        "period": "300 - I"
+      },
+      {
+        "id": "ming1038",
+        "code": "MING1038",
+        "name": "TECNOLOGÍA DE EQUIPAMIENTOS MINEROS",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/1/3",
+        "prerequisites": [],
+        "period": "300 - I"
+      },
+      {
+        "id": "ming1030",
+        "code": "MING1030",
+        "name": "PERFORACIÓN Y VOLADURA",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/1/3",
+        "prerequisites": [
+          "fisg1008"
+        ],
+        "period": "300 - I"
+      },
+      {
+        "id": "ming1035",
+        "code": "MING1035",
+        "name": "GEOMECÁNICA",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "civg1056",
+          "geog1032"
+        ],
+        "period": "300 - I"
+      },
+      {
+        "id": "idig1010",
+        "code": "IDIG1010",
+        "name": "INGLÉS V",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "idig1009"
+        ],
+        "period": "300 - I"
+      },
+      {
+        "id": "adsg1026",
+        "code": "ADSG1026",
+        "name": "CIENCIAS DE LA SOSTENIBILIDAD",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/0/6",
+        "prerequisites": [],
+        "period": "300 - II",
+        "minApprovedSubjects": 20
+      },
+      {
+        "id": "ming1041",
+        "code": "MING1041",
+        "name": "PREPARACIÓN MECÁNICA",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/1/3",
+        "prerequisites": [],
+        "period": "300 - II",
+        "minApprovedSubjects": 25
+      },
+      {
+        "id": "ming1037",
+        "code": "MING1037",
+        "name": "SEGURIDAD MINERA",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/0/4",
+        "prerequisites": [
+          "ming1030"
+        ],
+        "period": "300 - II"
+      },
+      {
+        "id": "ming1040",
+        "code": "MING1040",
+        "name": "EXPLOTACIÓN A CIELO ABIERTO",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/0/4",
+        "prerequisites": [
+          "ming1030"
+        ],
+        "period": "300 - II",
+        "corequisites": [
+          "ming1027"
+        ]
+      },
+      {
+        "id": "ming1027",
+        "code": "MING1027",
+        "name": "GEOTECNIA MINERA",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "ming1035"
+        ],
+        "period": "300 - II"
+      },
+      {
+        "id": "ming1024",
+        "code": "MING1024",
+        "name": "EXPLOTACIÓN SUBTERRÁNEA",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/0/4",
+        "prerequisites": [
+          "ming1030"
+        ],
+        "period": "300 - II"
+      },
+      {
+        "id": "psc_mina",
+        "code": "PSC_MINA",
+        "name": "PRÁCTICAS DE SERVICIO COMUNITARIO",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [],
+        "period": "300 - II"
+      },
+      {
+        "id": "ming1029",
+        "code": "MING1029",
+        "name": "MINERALURGIA Y METALURGIA EXTRACTIVA",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "ming1041"
+        ],
+        "period": "400 - I"
+      },
+      {
+        "id": "ming1032",
+        "code": "MING1032",
+        "name": "VENTILACIÓN, DRENAJE Y SISTEMAS ELÉCTRICOS",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/1/3",
+        "prerequisites": [
+          "mecg1049"
+        ],
+        "period": "400 - I"
+      },
+      {
+        "id": "ming1023",
+        "code": "MING1023",
+        "name": "AMBIENTE Y GESTIÓN DE RESIDUOS MINEROS",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/0/4",
+        "prerequisites": [],
+        "period": "400 - I",
+        "minApprovedSubjects": 30
+      },
+      {
+        "id": "ming1031",
+        "code": "MING1031",
+        "name": "PLANEAMIENTO Y DISEÑO MINERO",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "ming1040",
+          "ming1024"
+        ],
+        "period": "400 - I"
+      },
+      {
+        "id": "iti5",
+        "code": "ITI5",
+        "name": "ITINERARIO",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/0/6",
+        "prerequisites": [],
+        "period": "400 - I",
+        "isItinerary": true
+      },
+      {
+        "id": "ming1039",
+        "code": "MING1039",
+        "name": "MATERIA INTEGRADORA DE MINAS",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/0/6",
+        "prerequisites": [],
+        "period": "400 - II",
+        "minApprovedSubjects": 41
+      },
+      {
+        "id": "iti6",
+        "code": "ITI6",
+        "name": "ITINERARIO",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/0/6",
+        "prerequisites": [],
+        "period": "400 - II",
+        "isItinerary": true
+      },
+      {
+        "id": "ppe_mina",
+        "code": "PPE_MINA",
+        "name": "PRÁCTICAS PREPROFESIONALES EMPRESARIALES",
+        "credits": 5,
+        "hoursTotal": 5,
+        "hoursDetail": "5/0/0",
+        "prerequisites": [],
+        "period": "500 - I"
+      },
+      {
+        "id": "comp1_mina",
+        "code": "COMP1",
+        "name": "Materia Complementaria 1",
+        "credits": 1,
+        "hoursTotal": 3,
+        "prerequisites": [],
+        "period": "Complementarias",
+        "isComplementary": true
+      },
+      {
+        "id": "comp2_mina",
+        "code": "COMP2",
+        "name": "Materia Complementaria 2",
+        "credits": 1,
+        "hoursTotal": 3,
+        "prerequisites": [],
+        "period": "Complementarias",
+        "isComplementary": true
+      },
+      {
+        "id": "comp3_mina",
+        "code": "COMP3",
+        "name": "Materia Complementaria 3",
+        "credits": 1,
+        "hoursTotal": 3,
+        "prerequisites": [],
+        "period": "Complementarias",
+        "isComplementary": true
+      }
+    ]
+  },
+  "Petróleos": {
+    "id": "petr",
+    "subjects": [
+      {
+        "id": "matg1045",
+        "code": "MATG1045",
+        "name": "CÁLCULO DE UNA VARIABLE",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/2/4",
+        "prerequisites": [],
+        "period": "100 - I"
+      },
+      {
+        "id": "fisg1005",
+        "code": "FISG1005",
+        "name": "FÍSICA: MECÁNICA",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/2/4",
+        "prerequisites": [],
+        "period": "100 - I",
+        "corequisites": [
+          "matg1045"
+        ]
+      },
+      {
+        "id": "quig1032",
+        "code": "QUIG1032",
+        "name": "QUÍMICA GENERAL",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [],
+        "period": "100 - I"
+      },
+      {
+        "id": "indg1033",
+        "code": "INDG1033",
+        "name": "ANÁLISIS Y RESOLUCIÓN DE PROBLEMAS",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/0/6",
+        "prerequisites": [],
+        "period": "100 - I"
+      },
+      {
+        "id": "idig1006",
+        "code": "IDIG1006",
+        "name": "INGLÉS I",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [],
+        "period": "100 - I"
+      },
+      {
+        "id": "matg1046",
+        "code": "MATG1046",
+        "name": "CÁLCULO VECTORIAL",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/2/4",
+        "prerequisites": [
+          "matg1045"
+        ],
+        "period": "100 - II"
+      },
+      {
+        "id": "ccpg1043",
+        "code": "CCPG1043",
+        "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "matg1045"
+        ],
+        "period": "100 - II"
+      },
+      {
+        "id": "fisg1008",
+        "code": "FISG1008",
+        "name": "FÍSICA: TERMODINÁMICA Y ELECTRÓNICA",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/2/4",
+        "prerequisites": [
+          "fisg1005"
+        ],
+        "period": "100 - II"
+      },
+      {
+        "id": "petg1032",
+        "code": "PETG1032",
+        "name": "INTRODUCCIÓN A LA INDUSTRIA HIDROCARBURÍFERA",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/0/4",
+        "prerequisites": [
+          "indg1033"
+        ],
+        "period": "100 - II"
+      },
+      {
+        "id": "geog1052",
+        "code": "GEOG1052",
+        "name": "GEOLOGÍA PARA INGENIEROS EN PETRÓLEO",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/0/4",
+        "prerequisites": [],
+        "period": "100 - II",
+        "corequisites": [
+          "petg1032"
+        ]
+      },
+      {
+        "id": "idig1007",
+        "code": "IDIG1007",
+        "name": "INGLÉS II",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "idig1006"
+        ],
+        "period": "100 - II"
+      },
+      {
+        "id": "estg1034",
+        "code": "ESTG1034",
+        "name": "ESTADÍSTICA",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "ccpg1043"
+        ],
+        "period": "200 - I"
+      },
+      {
+        "id": "mecg1061",
+        "code": "MECG1061",
+        "name": "TERMODINÁMICA",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "fisg1008"
+        ],
+        "period": "200 - I"
+      },
+      {
+        "id": "mecg1060",
+        "code": "MECG1060",
+        "name": "ESTÁTICA",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "fisg1005"
+        ],
+        "period": "200 - I"
+      },
+      {
+        "id": "idig2012",
+        "code": "IDIG2012",
+        "name": "COMUNICACIÓN",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [],
+        "period": "200 - I",
+        "minApprovedSubjects": 6
+      },
+      {
+        "id": "idig1008",
+        "code": "IDIG1008",
+        "name": "INGLÉS III",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "idig1007"
+        ],
+        "period": "200 - I"
+      },
+      {
+        "id": "matg1048",
+        "code": "MATG1048",
+        "name": "ECUACIONES DIFERENCIALES Y ÁLGEBRA LINEAL",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "matg1045"
+        ],
+        "period": "200 - II"
+      },
+      {
+        "id": "matg1052",
+        "code": "MATG1052",
+        "name": "MÉTODOS NUMÉRICOS",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "matg1046"
+        ],
+        "period": "200 - II"
+      },
+      {
+        "id": "petg1031",
+        "code": "PETG1031",
+        "name": "PROPIEDADES DE HIDROCARBUROS Y COMPORTAMIENTO DE FASES",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/1/3",
+        "prerequisites": [
+          "mecg1061",
+          "quig1032"
+        ],
+        "period": "200 - II"
+      },
+      {
+        "id": "petg1027",
+        "code": "PETG1027",
+        "name": "PETROFÍSICA",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "mecg1060",
+          "geog1052"
+        ],
+        "period": "200 - II"
+      },
+      {
+        "id": "petg1025",
+        "code": "PETG1025",
+        "name": "PERFORACIÓN",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [],
+        "period": "200 - II",
+        "corequisites": [
+          "petg1027"
+        ]
+      },
+      {
+        "id": "idig1009",
+        "code": "IDIG1009",
+        "name": "INGLÉS IV",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "idig1008"
+        ],
+        "period": "200 - II"
+      },
+      {
+        "id": "admg1005",
+        "code": "ADMG1005",
+        "name": "EMPRENDIMIENTO E INNOVACIÓN",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [],
+        "period": "300 - I",
+        "minApprovedSubjects": 20
+      },
+      {
+        "id": "mecg1049",
+        "code": "MECG1049",
+        "name": "MECÁNICA DE FLUIDOS",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "matg1048",
+          "fisg1005"
+        ],
+        "period": "300 - I",
+        "minApprovedSubjects": 15
+      },
+      {
+        "id": "petg1030",
+        "code": "PETG1030",
+        "name": "EVALUACIÓN DE FORMACIONES I",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "petg1031",
+          "estg1034"
+        ],
+        "period": "300 - I"
+      },
+      {
+        "id": "petg1026",
+        "code": "PETG1026",
+        "name": "PERFORACIÓN DIRECCIONAL",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "petg1025"
+        ],
+        "period": "300 - I"
+      },
+      {
+        "id": "idig1010",
+        "code": "IDIG1010",
+        "name": "INGLÉS V",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [
+          "idig1009"
+        ],
+        "period": "300 - I"
+      },
+      {
+        "id": "adsg1026",
+        "code": "ADSG1026",
+        "name": "CIENCIAS DE LA SOSTENIBILIDAD",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/0/6",
+        "prerequisites": [],
+        "period": "300 - II",
+        "minApprovedSubjects": 20
+      },
+      {
+        "id": "petg1021",
+        "code": "PETG1021",
+        "name": "INGENIERÍA DE PRODUCCIÓN I",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "mecg1049"
+        ],
+        "period": "300 - II"
+      },
+      {
+        "id": "petg1034",
+        "code": "PETG1034",
+        "name": "EVALUACIÓN DE FORMACIONES II",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "petg1030"
+        ],
+        "period": "300 - II"
+      },
+      {
+        "id": "petg1023",
+        "code": "PETG1023",
+        "name": "INGENIERÍA DE YACIMIENTOS I",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [],
+        "period": "300 - II"
+      },
+      {
+        "id": "petg1020",
+        "code": "PETG1020",
+        "name": "COMPLETACIÓN Y REACONDICIONAMIENTO DE POZOS",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/0/4",
+        "prerequisites": [
+          "petg1026"
+        ],
+        "period": "300 - II"
+      },
+      {
+        "id": "petg1022",
+        "code": "PETG1022",
+        "name": "INGENIERÍA DE PRODUCCIÓN II",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "petg1021"
+        ],
+        "period": "400 - I"
+      },
+      {
+        "id": "petg1028",
+        "code": "PETG1028",
+        "name": "SIMULACIÓN DE RESERVORIOS",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/1/3",
+        "prerequisites": [],
+        "period": "400 - I",
+        "corequisites": [
+          "petg1024"
+        ]
+      },
+      {
+        "id": "petg1024",
+        "code": "PETG1024",
+        "name": "INGENIERÍA DE YACIMIENTOS II",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/1/5",
+        "prerequisites": [
+          "petg1023"
+        ],
+        "period": "400 - I"
+      },
+      {
+        "id": "indg1061",
+        "code": "INDG1061",
+        "name": "HSEQ EN LA INDUSTRIA HIDROCARBURÍFERA",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/0/4",
+        "prerequisites": [],
+        "period": "400 - I",
+        "minApprovedSubjects": 25
+      },
+      {
+        "id": "psc_petr",
+        "code": "PSC_PETR",
+        "name": "PRÁCTICAS DE SERVICIO COMUNITARIO",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/2/2",
+        "prerequisites": [],
+        "period": "400 - I",
+        "minApprovedSubjects": 20
+      },
+      {
+        "id": "iti7",
+        "code": "ITI7",
+        "name": "ITINERARIO",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/0/6",
+        "prerequisites": [],
+        "period": "400 - I",
+        "isItinerary": true
+      },
+      {
+        "id": "ecog1009",
+        "code": "ECOG1009",
+        "name": "EVALUACIÓN DE PROYECTOS HIDROCARBURÍFEROS",
+        "credits": 2,
+        "hoursTotal": 6,
+        "hoursDetail": "2/0/4",
+        "prerequisites": [],
+        "period": "400 - II",
+        "minApprovedSubjects": 30
+      },
+      {
+        "id": "petg1033",
+        "code": "PETG1033",
+        "name": "MATERIA INTEGRADORA PARA PETRÓLEOS",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/0/6",
+        "prerequisites": [],
+        "period": "400 - II",
+        "minApprovedSubjects": 38
+      },
+      {
+        "id": "iti8",
+        "code": "ITI8",
+        "name": "ITINERARIO",
+        "credits": 3,
+        "hoursTotal": 9,
+        "hoursDetail": "3/0/6",
+        "prerequisites": [],
+        "period": "400 - II",
+        "isItinerary": true
+      },
+      {
+        "id": "ppe_petr",
+        "code": "PPE_PETR",
+        "name": "PRÁCTICAS PREPROFESIONALES EMPRESARIALES",
+        "credits": 5,
+        "hoursTotal": 5,
+        "hoursDetail": "5/0/0",
+        "prerequisites": [],
+        "period": "500 - I"
+      },
+      {
+        "id": "comp1_petr",
+        "code": "COMP1",
+        "name": "Materia Complementaria 1",
+        "credits": 1,
+        "hoursTotal": 3,
+        "prerequisites": [],
+        "period": "Complementarias",
+        "isComplementary": true
+      },
+      {
+        "id": "comp2_petr",
+        "code": "COMP2",
+        "name": "Materia Complementaria 2",
+        "credits": 1,
+        "hoursTotal": 3,
+        "prerequisites": [],
+        "period": "Complementarias",
+        "isComplementary": true
+      },
+      {
+        "id": "comp3_petr",
+        "code": "COMP3",
+        "name": "Materia Complementaria 3",
+        "credits": 1,
+        "hoursTotal": 3,
+        "prerequisites": [],
+        "period": "Complementarias",
+        "isComplementary": true
+      }
+    ]
+  }
+}
