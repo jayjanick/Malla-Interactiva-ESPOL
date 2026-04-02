@@ -13,7 +13,7 @@ De principio cuando se empieza a usar la app esta muestra por default disponible
 
 A un costado de cada título de nivel están detalladas las materias y la cantidad de créditos que se tomen.
 
-A medida que se vayan seleccionando las materias como aprobadas se desbloquearán las siguientes necesarias según la carrera. La información está obtenida desde espol.edu.ec, cualquier error con respecto a los datos de las cátedras pueden enviármelo a jaypala@espol.edu.ec.
+A medida que se vayan seleccionando las materias como aprobadas se desbloquearán las siguientes necesarias según la carrera. La información está obtenida desde espol.edu.ec, cualquier error con respecto a los datos de las cátedras pueden enviármelo a jay.palacios2111@gmail.com.
 
 --------------------------------------------------------------------------
 **PLANIFICACIÓN**
