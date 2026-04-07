@@ -1667,7 +1667,6 @@ export const careers: Career[] = [
       { id: 'indg1033', code: 'INDG1033', name: 'Análisis y Resolución de Problemas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '100 - I' },
       { id: 'matg1045', code: 'MATG1045', name: 'Cálculo de Una Variable', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], period: '100 - I' },
       { id: 'fisg1005', code: 'FISG1005', name: 'Física: Mecánica', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], corequisites: ['matg1045'], period: '100 - I' },
-      { id: 'quig1032', code: 'QUIG1032', name: 'Química General', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], period: '100 - I' },
       { id: 'idig1006', code: 'IDIG1006', name: 'Inglés I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - I' },
 
       // Nivel 100 - II
@@ -2130,7 +2129,7 @@ export const careers: Career[] = [
       { id: 'idig1007', code: 'IDIG1007', name: 'Inglés II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1006'], period: '100 - II' },
       { id: 'matg1046', code: 'MATG1046', name: 'Cálculo Vectorial', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1064'], period: '200 - I' },
       { id: 'estg1036', code: 'ESTG1036', name: 'Estadística I', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['ccpg1043'], corequisites: ['matg1046'], period: '200 - I' },
-      { id: 'matg1068', code: 'MATG1068', name: 'Ecuaciones Diferenciales I', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1066 -co-r: matg1046'], period: '200 - I' },
+      { id: 'matg1068', code: 'MATG1068', name: 'Ecuaciones Diferenciales I', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1066'], corequisites: ['matg1046'], period: '200 - I' },
       { id: 'matg1067', code: 'MATG1067', name: 'Álgebra Lineal II', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['matg1066'], period: '200 - I' },
       { id: 'idig2012', code: 'IDIG2012', name: 'Comunicación', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 6, period: '200 - I' },
       { id: 'idig1008', code: 'IDIG1008', name: 'Inglés III', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1007'], period: '200 - I' },
