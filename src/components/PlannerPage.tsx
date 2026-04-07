@@ -93,9 +93,10 @@ export function PlannerPage({ career }: PlannerPageProps) {
 
   const selectedSubject = career.subjects.find(s => s.id === selectedSubjectId);
 
-  const itineraryGroupedOptions = Array.from(new Set(itineraryOptions.map(o => o.track))).map(track => ({
+  const currentItineraryOptions = selectedSubject?.itineraryOptions || itineraryOptions;
+  const itineraryGroupedOptions = Array.from(new Set(currentItineraryOptions.map(o => o.track))).map(track => ({
     label: track,
-    options: itineraryOptions.filter(o => o.track === track).map(o => ({
+    options: currentItineraryOptions.filter(o => o.track === track).map(o => ({
       value: o.id,
       label: `${o.name} - ${o.code} - ${o.hoursTotal} horas`
     }))

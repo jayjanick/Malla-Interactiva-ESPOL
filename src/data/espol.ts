@@ -29,6 +29,11 @@ export const itineraryOptions: ItineraryOption[] = [
   { id: 'pdi1001', code: 'PDI1001', name: 'Procesamiento Digital de imágenes', track: 'Multimedia', hoursTotal: 9 },
 ];
 
+export const mecatronicaItineraryOptions: ItineraryOption[] = [
+  { id: 'mctg1025', code: 'MCTG1025', name: 'Vehículos No Tripulados', track: 'Mecatrónica', hoursTotal: 9 },
+  { id: 'mctr1024', code: 'MCTR1024', name: 'Control por Aprendizaje Reforzado', track: 'Mecatrónica', hoursTotal: 9 },
+];
+
 export interface Career {
   id: string;
   name: string;
@@ -1664,60 +1669,72 @@ export const careers: Career[] = [
     facultyId: 'fimcp',
     subjects: [
       // Nivel 100 - I
-      { id: 'indg1033', code: 'INDG1033', name: 'Análisis y Resolución de Problemas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '100 - I' },
       { id: 'matg1045', code: 'MATG1045', name: 'Cálculo de Una Variable', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], period: '100 - I' },
       { id: 'fisg1005', code: 'FISG1005', name: 'Física: Mecánica', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], corequisites: ['matg1045'], period: '100 - I' },
+      { id: 'ccpg1043', code: 'CCPG1043', name: 'Fundamentos de Programación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], period: '100 - I' },
+      { id: 'indg1033', code: 'INDG1033', name: 'Análisis y Resolución de Problemas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '100 - I' },
       { id: 'idig1006', code: 'IDIG1006', name: 'Inglés I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - I' },
 
       // Nivel 100 - II
       { id: 'matg1049', code: 'MATG1049', name: 'Álgebra Lineal', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1045'], period: '100 - II' },
       { id: 'matg1046', code: 'MATG1046', name: 'Cálculo Vectorial', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1045'], period: '100 - II' },
-      { id: 'fisg1006', code: 'FISG1006', name: 'Física: Electricidad y Magnetismo', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['fisg1005'], corequisites: ['matg1046'], period: '100 - II' },
-      { id: 'ccpg1043', code: 'CCPG1043', name: 'Fundamentos de Programación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1045'], period: '100 - II' },
+      { id: 'fisg1006', code: 'FISG1006', name: 'Física: Electricidad y Magnetismo', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['fisg1005'], period: '100 - II' },
+      { id: 'mecg1041', code: 'MECG1041', name: 'Dibujo para Ingeniería', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], period: '100 - II' },
+      { id: 'idig2012', code: 'IDIG2012', name: 'Comunicación', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 6, period: '100 - II' },
       { id: 'idig1007', code: 'IDIG1007', name: 'Inglés II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1006'], period: '100 - II' },
 
       // Nivel 200 - I
-      { id: 'matg1048', code: 'MATG1048', name: 'Ecuaciones Diferenciales y Álgebra Lineal', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1046'], period: '200 - I' },
+      { id: 'matg1050', code: 'MATG1050', name: 'Ecuaciones Diferenciales', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1049'], period: '200 - I' },
+      { id: 'matg1052', code: 'MATG1052', name: 'Métodos Numéricos', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], corequisites: ['matg1050'], period: '200 - I' },
       { id: 'mecg1052', code: 'MECG1052', name: 'Mecánica Vectorial', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['fisg1005'], period: '200 - I' },
-      { id: 'matg1047', code: 'MATG1047', name: 'Cálculo Multivariable', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1046'], period: '200 - I' },
-      { id: 'elcg1042', code: 'ELCG1042', name: 'Circuitos Eléctricos I', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['fisg1006', 'matg1048'], period: '200 - I' },
-      { id: 'idig2012', code: 'IDIG2012', name: 'Comunicación', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 6, period: '200 - I' },
+      { id: 'eyag1044', code: 'EYAG1044', name: 'Sistemas Digitales I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['fisg1006'], period: '200 - I' },
+      { id: 'mctg1018', code: 'MCTG1018', name: 'Introducción a la Mecatrónica', credits: 2, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['fisg1006', 'ccpg1043'], period: '200 - I' },
       { id: 'idig1008', code: 'IDIG1008', name: 'Inglés III', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1007'], period: '200 - I' },
 
       // Nivel 200 - II
-      { id: 'matg1050', code: 'MATG1050', name: 'Métodos Numéricos', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1048'], period: '200 - II' },
-      { id: 'mecg1066', code: 'MECG1066', name: 'Mecánica de Materiales', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mecg1052'], period: '200 - II' },
-      { id: 'elcg1043', code: 'ELCG1043', name: 'Circuitos Eléctricos II', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['elcg1042'], period: '200 - II' },
-      { id: 'elcg1044', code: 'ELCG1044', name: 'Electrónica Analógica', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['elcg1042'], period: '200 - II' },
+      { id: 'matg1054', code: 'MATG1054', name: 'Matemáticas Superiores', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1046'], period: '200 - II' },
+      { id: 'mctg1012', code: 'MCTG1012', name: 'Diseño de Elementos de Máquinas', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['mecg1052', 'mecg1041'], period: '200 - II' },
+      { id: 'eleg1034', code: 'ELEG1034', name: 'Electricidad Básica', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['fisg1006'], period: '200 - II' },
+      { id: 'ccpg1052', code: 'CCPG1052', name: 'Programación Orientada a Objetos', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['ccpg1043'], period: '200 - II' },
       { id: 'idig1009', code: 'IDIG1009', name: 'Inglés IV', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1008'], period: '200 - II' },
 
       // Nivel 300 - I
-      { id: 'mecg1053', code: 'MECG1053', name: 'Cinemática y Dinámica de Máquinas', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mecg1052'], period: '300 - I' },
-      { id: 'elcg1045', code: 'ELCG1045', name: 'Electrónica Digital', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['elcg1044'], period: '300 - I' },
-      { id: 'elcg1046', code: 'ELCG1046', name: 'Máquinas Eléctricas', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['elcg1043'], period: '300 - I' },
-      { id: 'mecg1055', code: 'MECG1055', name: 'Diseño de Elementos de Máquinas', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mecg1066', 'mecg1041'], period: '300 - I' },
+      { id: 'mecg1055', code: 'MECG1055', name: 'Sistemas de Control Aplicados', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1050', 'mecg1052', 'eleg1034'], period: '300 - I' },
+      { id: 'mctg1017', code: 'MCTG1017', name: 'Introducción a la Manufactura', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['mctg1012'], period: '300 - I' },
+      { id: 'estg1034', code: 'ESTG1034', name: 'Estadística', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['ccpg1043'], period: '300 - I' },
+      { id: 'eyag1040', code: 'EYAG1040', name: 'Principios de Electrónica', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['eleg1034'], period: '300 - I' },
+      { id: 'tlmg1037', code: 'TLMG1037', name: 'Programación de Sistemas Telemáticos', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['ccpg1052', 'mctg1018'], period: '300 - I' },
       { id: 'idig1010', code: 'IDIG1010', name: 'Inglés V', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1009'], period: '300 - I' },
 
       // Nivel 300 - II
-      { id: 'mecg1057', code: 'MECG1057', name: 'Sistemas de Control', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1048'], period: '300 - II' },
-      { id: 'mect1031', code: 'MECT1031', name: 'Sensores y Actuadores', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['elcg1045'], period: '300 - II' },
-      { id: 'mect1032', code: 'MECT1032', name: 'Microcontroladores', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['elcg1045'], period: '300 - II' },
-      { id: 'admg1005', code: 'ADMG1005', name: 'Emprendimiento e Innovación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], minApprovedSubjects: 20, period: '300 - II' },
+      { id: 'eyag1038', code: 'EYAG1038', name: 'Instrumentación Industrial', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['mecg1055', 'eyag1040'], period: '300 - II' },
+      { id: 'mecg1051', code: 'MECG1051', name: 'Mecánica de Maquinaria', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['mecg1052'], period: '300 - II' },
+      { id: 'mecg1054', code: 'MECG1054', name: 'Termofluidos', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], minApprovedSubjects: 20, period: '300 - II' },
+      { id: 'mctg1011', code: 'MCTG1011', name: 'Actuadores Mecatrónicos', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['eyag1040'], period: '300 - II' },
+      { id: 'adsg1026', code: 'ADSG1026', name: 'Ciencias de la Sostenibilidad', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 20, period: '300 - II' },
       { id: 'psc_mect', code: 'PSC', name: 'Prácticas de Servicio Comunitario', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '300 - II' },
 
       // Nivel 400 - I
-      { id: 'mect1033', code: 'MECT1033', name: 'Robótica', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mecg1053', 'mect1031'], period: '400 - I' },
-      { id: 'mect1034', code: 'MECT1034', name: 'Sistemas Embebidos', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mect1032'], period: '400 - I' },
-      { id: 'mect1035', code: 'MECT1035', name: 'Control Avanzado', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mecg1057'], period: '400 - I' },
-      { id: 'adsg1026', code: 'ADSG1026', name: 'Ciencias de la Sostenibilidad', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 20, period: '400 - I' },
-      { id: 'itin1_mect', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+      { id: 'mctg1022', code: 'MCTG1022', name: 'Sistemas de Monitoreo y Control Industrial', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['mecg1055'], period: '400 - I' },
+      { id: 'mctg1014', code: 'MCTG1014', name: 'Diseño y Manufactura Asistida por Computadora', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['mctg1017'], period: '400 - I' },
+      { id: 'mctg1015', code: 'MCTG1015', name: 'Diseño y Simulación de Máquinas', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['mecg1051', 'mctg1012'], period: '400 - I' },
+      { id: 'mctg1021', code: 'MCTG1021', name: 'Robots Móviles y Articulados', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], minApprovedSubjects: 30, period: '400 - I' },
+      { id: 'eyag1046', code: 'EYAG1046', name: 'Sistemas Embebidos', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['eyag1044', 'tlmg1037'], period: '400 - I' },
 
       // Nivel 400 - II
-      { id: 'mect1036', code: 'MECT1036', name: 'Materia Integradora de Mecatrónica', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 40, period: '400 - II' },
-      { id: 'itin2_mect', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+      { id: 'admg1005', code: 'ADMG1005', name: 'Emprendimiento e Innovación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], minApprovedSubjects: 20, period: '400 - II' },
+      { id: 'mctg1013', code: 'MCTG1013', name: 'Diseño Mecatrónico', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['mctg1015', 'eyag1038'], period: '400 - II' },
+      { id: 'mctg1020', code: 'MCTG1020', name: 'Sistemas Flexibles de Manufactura', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['mctg1014', 'estg1034'], period: '400 - II' },
+      { id: 'mctg1016', code: 'MCTG1016', name: 'Hidráulica y Neumática', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['eyag1038', 'mecg1054'], period: '400 - II' },
+      { id: 'mctg1019', code: 'MCTG1019', name: 'Sistemas Biomecatrónicos', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['eyag1038'], period: '400 - II' },
+      { id: 'itin1_mect', code: 'ITIN1', name: 'Itinerario', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: mecatronicaItineraryOptions },
 
-      // Nivel 500
-      { id: 'ppp_mect', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500' },
+      // Nivel 500 - I
+      { id: 'mctg1028', code: 'MCTG1028', name: 'Materia Integradora de Mecatrónica', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 44, period: '500 - I' },
+      { id: 'itin2_mect', code: 'ITIN2', name: 'Itinerario', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '500 - I', isItinerary: true, itineraryOptions: mecatronicaItineraryOptions },
+
+      // Nivel 500 - II
+      { id: 'ppp_mect', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - II' },
 
       // COMPLEMENTARIAS
       { id: 'comp1_mect', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
