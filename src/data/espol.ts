@@ -22,12 +22,43 @@ export interface Subject {
   isComplementary?: boolean;
 }
 
-export const itineraryOptions: ItineraryOption[] = [
+export const cdiaItineraryOptions: ItineraryOption[] = [
+  { id: 'cdiag1810', code: 'CDIAG1810', name: 'Analítica Urbana', track: 'CDIA para la Sociedad', hoursTotal: 9 },
+  { id: 'cdiag1813', code: 'CDIAG1813', name: 'Inteligencia Artificial para la Sostenibilidad', track: 'CDIA para la Sociedad', hoursTotal: 9 },
+];
+
+export const computacionItineraryOptions: ItineraryOption[] = [
   { id: 'ticg1019', code: 'TICG1019', name: 'Sistemas de bases de datos avanzados', track: 'Gestión y Analítica de Datos', hoursTotal: 9 },
   { id: 'ccpg1047', code: 'CCPG1047', name: 'Introducción a la ciencia de datos', track: 'Gestión y Analítica de Datos', hoursTotal: 9 },
   { id: 'ccpg1040', code: 'CCPG1040', name: 'Desarrollo de Juegos de Video', track: 'Multimedia', hoursTotal: 9 },
-  { id: 'pdi1001', code: 'PDI1001', name: 'Procesamiento Digital de imágenes', track: 'Multimedia', hoursTotal: 9 },
+  { id: 'ccpg1050', code: 'CCPG1050', name: 'Procesamiento Digital de Imágenes', track: 'Multimedia', hoursTotal: 9 },
 ];
+
+export const electricidadItineraryOptions: ItineraryOption[] = [
+  { id: 'eleg1048', code: 'ELEG1048', name: 'SCADA Aplicado a Sistemas de Potencia', track: 'Sistemas de Potencia', hoursTotal: 9 },
+  { id: 'eleg1045', code: 'ELEG1045', name: 'Optimización de Sistemas de Potencia', track: 'Sistemas de Potencia', hoursTotal: 9 },
+];
+
+export const electronicaItineraryOptions: ItineraryOption[] = [
+  { id: 'eyag1026', code: 'EYAG1026', name: 'Electrónica Médica', track: 'Sistemas Electrónicos Aplicados', hoursTotal: 9 },
+  { id: 'eyag1032', code: 'EYAG1032', name: 'Desarrollo de Prototipos Electrónicos', track: 'Sistemas Electrónicos Aplicados', hoursTotal: 9 },
+  { id: 'eyag1033', code: 'EYAG1033', name: 'Domótica e Inmótica', track: 'Sistemas Automáticos Aplicados', hoursTotal: 9 },
+  { id: 'eyag1031', code: 'EYAG1031', name: 'Control de Procesos Industriales', track: 'Sistemas Automáticos Aplicados', hoursTotal: 9 },
+];
+
+export const telecomunicacionesItineraryOptions: ItineraryOption[] = [
+  { id: 'telg1041', code: 'TELG1041', name: 'Telecomunicaciones en la Industria 4.0', track: 'Redes de Telecomunicaciones', hoursTotal: 9 },
+  { id: 'telg1036', code: 'TELG1036', name: 'Redes Móviles de Última Generación', track: 'Redes de Telecomunicaciones', hoursTotal: 9 },
+  { id: 'ticp2012_t', code: 'TICP2012', name: 'Visión por Computador', track: 'Maestría en Ciencias de la Computación', hoursTotal: 9 },
+  { id: 'ticp2027_t', code: 'TICP2027', name: 'Aprendizaje Profundo', track: 'Maestría en Ciencias de la Computación', hoursTotal: 9 },
+];
+
+export const maestriaComputacionItineraryOptions: ItineraryOption[] = [
+  { id: 'ticp2012', code: 'TICP2012', name: 'Visión por Computador', track: 'Maestría en Ciencias de la Computación', hoursTotal: 9 },
+  { id: 'ticp2027', code: 'TICP2027', name: 'Aprendizaje Profundo', track: 'Maestría en Ciencias de la Computación', hoursTotal: 9 },
+];
+
+export const itineraryOptions: ItineraryOption[] = [];
 
 export const mecatronicaItineraryOptions: ItineraryOption[] = [
   { id: 'mctg1025', code: 'MCTG1025', name: 'Vehículos No Tripulados', track: 'Mecatrónica', hoursTotal: 9 },
@@ -116,11 +147,11 @@ export const careers: Career[] = [
       { id: 'ccpg1054', code: 'CCPG1054', name: 'Sistemas de Información', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], minApprovedSubjects: 30, period: '400 - I' },
       { id: 'ccpg1055', code: 'CCPG1055', name: 'Sistemas Distribuidos y Computación en la Nube', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['ccpg1051', 'tlmg1032'], period: '400 - I' },
       { id: 'ccpg1041', code: 'CCPG1041', name: 'Dirección de Proyectos Informáticos', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['admg1005'], period: '400 - I' },
-      { id: 'itin1', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 30, period: '400 - I', isItinerary: true, itineraryOptions },
+      { id: 'itin1', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 30, period: '400 - I', isItinerary: true, itineraryOptions: computacionItineraryOptions },
 
       // NIVEL 400 - II
       { id: 'ccpg1035', code: 'CCPG1035', name: 'Materia Integradora de Computación', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 39, period: '400 - II' },
-      { id: 'itin2', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 30, period: '400 - II', isItinerary: true, itineraryOptions },
+      { id: 'itin2', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 30, period: '400 - II', isItinerary: true, itineraryOptions: computacionItineraryOptions },
 
       // COMPLEMENTARIAS
       { id: 'comp1', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
@@ -524,7 +555,7 @@ export const careers: Career[] = [
       // NIVEL 200 - II
       { id: 'ccpg1036', code: 'CCPG1036', name: 'Análisis de Algoritmos', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['ccpg1034'], period: '200 - II' },
       { id: 'sofg1006', code: 'SOFG1006', name: 'Desarrollo de Aplicaciones Web y Móviles', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], minApprovedSubjects: 12, period: '200 - II' },
-      { id: 'sofg007', code: 'SOFG007', name: 'Ingeniería de Software I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['ccpg1046'], corequisites: ['sofg1006'], period: '200 - II' },
+      { id: 'sofg007', code: 'SOFG007', name: 'Ingeniería de Software I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], corequisites: ['sofg1006'], period: '200 - II' },
       { id: 'cdiag1001', code: 'CDIAG1001', name: 'Algoritmos de Optimización', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1049', 'ccpg1043'], period: '200 - II' },
       { id: 'estg1803', code: 'ESTG1803', name: 'Estadística II', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['estg1036'], period: '200 - II' },
       { id: 'idig1009', code: 'IDIG1009', name: 'Inglés IV', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1008'], period: '200 - II' },
@@ -550,12 +581,12 @@ export const careers: Career[] = [
       { id: 'cdiag1808', code: 'CDIAG1808', name: 'Sistemas de Machine Learning', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['cdiag1806', 'ccpg1810'], period: '400 - I' },
       { id: 'ticg1801', code: 'TICG1801', name: 'Bases de Datos Avanzadas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 30, period: '400 - I' },
       { id: 'cdiag1809', code: 'CDIAG1809', name: 'Procesamiento de Lenguaje Natural', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['estg1801'], period: '400 - I' },
-      { id: 'itin1_h', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 30, period: '400 - I', isItinerary: true, itineraryOptions },
+      { id: 'itin1_h', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 30, period: '400 - I', isItinerary: true, itineraryOptions: cdiaItineraryOptions },
 
       // NIVEL 400 - II
       { id: 'ppp_h', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/5/0', prerequisites: [], period: '400 - II' },
       { id: 'cdiag1812', code: 'CDIAG1812', name: 'Materia Integradora de Ciencia de Datos e Inteligencia Artificial', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 30, period: '400 - II' },
-      { id: 'itin2_h', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 30, period: '400 - II', isItinerary: true, itineraryOptions },
+      { id: 'itin2_h', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 30, period: '400 - II', isItinerary: true, itineraryOptions: cdiaItineraryOptions },
 
       // COMPLEMENTARIAS
       { id: 'comp1_h', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
@@ -619,12 +650,12 @@ export const careers: Career[] = [
       { id: 'cdiag1808_o', code: 'CDIAG1808', name: 'Sistemas de Machine Learning', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['cdiag1806_o', 'ccpg1810_o'], period: '400 - I' },
       { id: 'ticg1801_o', code: 'TICG1801', name: 'Bases de Datos Avanzadas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 30, period: '400 - I' },
       { id: 'cdiag1809_o', code: 'CDIAG1809', name: 'Procesamiento de Lenguaje Natural', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['estg1801_o'], period: '400 - I' },
-      { id: 'itin1_o', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 30, period: '400 - I', isItinerary: true, itineraryOptions },
+      { id: 'itin1_o', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 30, period: '400 - I', isItinerary: true, itineraryOptions: cdiaItineraryOptions },
 
       // NIVEL 400 - II
       { id: 'ppp_o', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/5/0', prerequisites: [], period: '400 - II' },
       { id: 'cdiag1812_o', code: 'CDIAG1812', name: 'Materia Integradora de Ciencia de Datos e Inteligencia Artificial', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 30, period: '400 - II' },
-      { id: 'itin2_o', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 30, period: '400 - II', isItinerary: true, itineraryOptions },
+      { id: 'itin2_o', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 30, period: '400 - II', isItinerary: true, itineraryOptions: cdiaItineraryOptions },
 
       // COMPLEMENTARIAS
       { id: 'comp1_o', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
@@ -695,12 +726,12 @@ export const careers: Career[] = [
       { id: 'eleg1033', code: 'ELEG1033', name: 'Distribución Eléctrica II', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['eleg1032'], period: '400 - II' },
       { id: 'eleg1036', code: 'ELEG1036', name: 'Estabilidad y Control de Sistemas de Potencia', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['eleg1050'], period: '400 - II' },
       { id: 'eleg1039', code: 'ELEG1039', name: 'Líneas de Transmisión y Subestaciones', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['eleg1050'], period: '400 - II' },
-      { id: 'itin1_e', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+      { id: 'itin1_e', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: electricidadItineraryOptions },
 
       // NIVEL 500 - I
       { id: 'eleg1037', code: 'ELEG1037', name: 'Gestión y Marco Regulatorio del Sector Eléctrico', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['eleg1033'], period: '500 - I' },
       { id: 'eleg1042', code: 'ELEG1042', name: 'Materia Integradora de Electricidad', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 44, period: '500 - I' },
-      { id: 'itin2_e', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '500 - I', isItinerary: true },
+      { id: 'itin2_e', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '500 - I', isItinerary: true, itineraryOptions: electricidadItineraryOptions },
 
       // NIVEL 500 - II
       { id: 'ppp_e', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - II' },
@@ -766,11 +797,11 @@ export const careers: Career[] = [
       { id: 'eyag1036', code: 'EYAG1036', name: 'Electrónica de Potencia II', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['eyag1035'], period: '400 - I' },
       { id: 'eyag1029', code: 'EYAG1029', name: 'Comunicaciones Industriales y Sistemas SCADA', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['eyag1028'], period: '400 - I' },
       { id: 'psc_ea', code: 'PSC', name: 'Prácticas de Servicio Comunitario', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '400 - I' },
-      { id: 'itin1_ea', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+      { id: 'itin1_ea', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true, itineraryOptions: electronicaItineraryOptions },
 
       // NIVEL 400 - II
       { id: 'eyag1039', code: 'EYAG1039', name: 'Materia Integradora de Electrónica y Automatización', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 37, period: '400 - II' },
-      { id: 'itin2_ea', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+      { id: 'itin2_ea', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: electronicaItineraryOptions },
 
       // NIVEL 500 - I
       { id: 'ppp_ea', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
@@ -837,11 +868,11 @@ export const careers: Career[] = [
       { id: 'telg1029', code: 'TELG1029', name: 'Diseño de Aplicaciones en Telecomunicaciones', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['telg1034', 'eyag1044', 'telg1039'], period: '400 - I' },
       { id: 'telg1031', code: 'TELG1031', name: 'Fibras Ópticas', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['telg1030'], period: '400 - I' },
       { id: 'telg1042', code: 'TELG1042', name: 'Transmisión de Servicios Multimedia', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['telg1040'], period: '400 - I' },
-      { id: 'itin1_t', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+      { id: 'itin1_t', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true, itineraryOptions: telecomunicacionesItineraryOptions },
 
       // NIVEL 400 - II
       { id: 'telg1033', code: 'TELG1033', name: 'Materia Integradora de Telecomunicaciones', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 38, period: '400 - II' },
-      { id: 'itin2_t', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+      { id: 'itin2_t', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: telecomunicacionesItineraryOptions },
 
       // NIVEL 500 - I
       { id: 'ppp_t', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
