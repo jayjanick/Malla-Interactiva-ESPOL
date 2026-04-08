@@ -393,54 +393,55 @@ export const careers: Career[] = [
 
       // NIVEL 100 - II
       { id: 'matg1047', code: 'MATG1047', name: 'Cálculo de Varias Variables', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1045'], period: '100 - II' },
-      { id: 'ecog2063', code: 'ECOG2063', name: 'Macroeconomía I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ecog2067'], period: '100 - II' },
-      { id: 'ecog2047', code: 'ECOG2047', name: 'Economía Gerencial', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ecog2067'], period: '100 - II' },
-      { id: 'admg2029', code: 'ADMG2029', name: 'Fundamentos de Administración', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['ccag2022', 'ecog2067'], period: '100 - II' },
-      { id: 'matg2008', code: 'MATG2008', name: 'Matemáticas Financieras', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 5, period: '100 - II' },
+      { id: 'ccpg1043', code: 'CCPG1043', name: 'Fundamentos de Programación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1045'], period: '100 - II' },
+      { id: 'matg1049', code: 'MATG1049', name: 'Álgebra Lineal', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1045'], period: '100 - II' },
+      { id: 'admg2029', code: 'ADMG2029', name: 'Fundamentos de Administración', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['ccag2022'], period: '100 - II' },
+      { id: 'matg2008', code: 'MATG2008', name: 'Matemáticas Financieras', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - II' },
       { id: 'idig1007', code: 'IDIG1007', name: 'Inglés II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1006'], period: '100 - II' },
 
       // NIVEL 200 - I
       { id: 'estg1036', code: 'ESTG1036', name: 'Estadística I', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1047'], period: '200 - I' },
-      { id: 'ccpg1043', code: 'CCPG1043', name: 'Fundamentos de Programación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1045'], period: '200 - I' },
-      { id: 'ecog2064', code: 'ECOG2064', name: 'Macroeconomía II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ecog2063'], period: '200 - I' },
-      { id: 'ecog2048', code: 'ECOG2048', name: 'Microeconomía I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ecog2047'], period: '200 - I' },
+      { id: 'ecog2049', code: 'ECOG2049', name: 'Economía Matemática', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['matg1049'], period: '200 - I' },
+      { id: 'ecog2064', code: 'ECOG2064', name: 'Microeconomía I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['ecog2067'], period: '200 - I' },
+      { id: 'ecog2063', code: 'ECOG2063', name: 'Macroeconomía I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ecog2067'], period: '200 - I' },
       { id: 'idig2012', code: 'IDIG2012', name: 'Comunicación', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 6, period: '200 - I' },
       { id: 'idig1008', code: 'IDIG1008', name: 'Inglés III', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1007'], period: '200 - I' },
 
       // NIVEL 200 - II
       { id: 'estg1037', code: 'ESTG1037', name: 'Estadística II', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['estg1036'], period: '200 - II' },
-      { id: 'ecog2049', code: 'ECOG2049', name: 'Microeconomía II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ecog2048'], period: '200 - II' },
+      { id: 'ecog2062', code: 'ECOG2062', name: 'Microeconomía II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ecog2064'], period: '200 - II' },
+      { id: 'ecog2061', code: 'ECOG2061', name: 'Macroeconomía II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ecog2063', 'ecog2049'], period: '200 - II' },
       { id: 'ccag2023', code: 'CCAG2023', name: 'Sociología', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], minApprovedSubjects: 15, period: '200 - II' },
-      { id: 'ecog2042', code: 'ECOG2042', name: 'Análisis Financiero', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['matg2008', 'audg2034'], period: '200 - II' },
-      { id: 'ecog2051', code: 'ECOG2051', name: 'Historia Económica', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['ecog2063'], period: '200 - II' },
       { id: 'idig1009', code: 'IDIG1009', name: 'Inglés IV', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1008'], period: '200 - II' },
 
       // NIVEL 300 - I
+      { id: 'ecog2044', code: 'ECOG2044', name: 'Econometría I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['estg1037', 'matg1049'], period: '300 - I' },
       { id: 'admg1005', code: 'ADMG1005', name: 'Emprendimiento e Innovación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], minApprovedSubjects: 20, period: '300 - I' },
-      { id: 'ecog2052', code: 'ECOG2052', name: 'Econometría I', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['estg1037'], period: '300 - I' },
-      { id: 'ccpg1054', code: 'CCPG1054', name: 'Sistemas de Información', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], minApprovedSubjects: 15, period: '300 - I' },
-      { id: 'ecog2050', code: 'ECOG2050', name: 'Economía Internacional', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ecog2049', 'ecog2064'], period: '300 - I' },
-      { id: 'ecog2055', code: 'ECOG2055', name: 'Fundamentos de Inversiones', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['ecog2042'], period: '300 - I' },
+      { id: 'ecog2060', code: 'ECOG2060', name: 'Microeconomía III', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ecog2062'], period: '300 - I' },
+      { id: 'ecog2059', code: 'ECOG2059', name: 'Macroeconomía III', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ecog2061'], period: '300 - I' },
+      { id: 'ecog2042', code: 'ECOG2042', name: 'Análisis Financiero', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['matg2008', 'audg2034'], period: '300 - I' },
       { id: 'idig1010', code: 'IDIG1010', name: 'Inglés V', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1009'], period: '300 - I' },
 
       // NIVEL 300 - II
+      { id: 'ecog2069', code: 'ECOG2069', name: 'Historia y Filosofía del Pensamiento Económico', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: [], minApprovedSubjects: 25, period: '300 - II' },
+      { id: 'ecog2045', code: 'ECOG2045', name: 'Econometría II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['ecog2044'], period: '300 - II' },
+      { id: 'admg2035', code: 'ADMG2035', name: 'Investigación de Mercados', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['estg1037'], period: '300 - II' },
       { id: 'adsg1026', code: 'ADSG1026', name: 'Ciencias de la Sostenibilidad', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 20, period: '300 - II' },
-      { id: 'ecog2053', code: 'ECOG2053', name: 'Econometría II', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['ecog2052'], period: '300 - II' },
-      { id: 'ecog2054', code: 'ECOG2054', name: 'Economía Pública', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ecog2049', 'ecog2064'], period: '300 - II' },
-      { id: 'ecog2056', code: 'ECOG2056', name: 'Economía del Desarrollo', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['ecog2049', 'ecog2064'], period: '300 - II' },
-      { id: 'jurg2005', code: 'JURG2005', name: 'Derecho Societario y Laboral', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['admg2029'], period: '300 - II' },
+      { id: 'ecog2055', code: 'ECOG2055', name: 'Fundamentos de Inversiones', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['ecog2042'], period: '300 - II' },
       { id: 'psc_eco', code: 'PSC', name: 'Prácticas de Servicio Comunitario', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '300 - II' },
 
       // NIVEL 400 - I
-      { id: 'ecog2057', code: 'ECOG2057', name: 'Evaluación de Proyectos Sociales', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['ecog2054'], period: '400 - I' },
-      { id: 'ecog2058', code: 'ECOG2058', name: 'Política Económica', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ecog2054'], period: '400 - I' },
-      { id: 'ecog2059', code: 'ECOG2059', name: 'Economía Empresarial', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['ecog2049'], period: '400 - I' },
-      { id: 'admg2037', code: 'ADMG2037', name: 'Gestión de Proyectos', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['ecog2042'], period: '400 - I' },
+      { id: 'ecog2046', code: 'ECOG2046', name: 'Econometría III', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['ecog2045'], period: '400 - I' },
+      { id: 'ecog2068', code: 'ECOG2068', name: 'Organización Industrial', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['ecog2060'], period: '400 - I' },
+      { id: 'ecog2043', code: 'ECOG2043', name: 'Crecimiento y Desarrollo Económico', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['ecog2059'], period: '400 - I' },
+      { id: 'ecog2051', code: 'ECOG2051', name: 'Finanzas Internacionales', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['ecog2055'], period: '400 - I' },
+      { id: 'ecog2058', code: 'ECOG2058', name: 'Formulación y Evaluación de Proyectos', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['ecog2055', 'admg2035'], period: '400 - I' },
       { id: 'itin1_eco', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
 
       // NIVEL 400 - II
-      { id: 'ecog2060', code: 'ECOG2060', name: 'Economía Ecuatoriana', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ecog2051', 'ecog2058'], period: '400 - II' },
-      { id: 'ecog2061', code: 'ECOG2061', name: 'Materia Integradora de Economía', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 42, period: '400 - II' },
+      { id: 'jurg2004', code: 'JURG2004', name: 'Derecho Económico', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['ecog2069'], period: '400 - II' },
+      { id: 'ecog2053', code: 'ECOG2053', name: 'Materia Integradora de Economía', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 42, period: '400 - II' },
+      { id: 'ecog2057', code: 'ECOG2057', name: 'Formulación y Evaluación Social de Proyectos', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['ecog2058'], period: '400 - II' },
       { id: 'itin2_eco', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
 
       // NIVEL 500 - I
@@ -2020,7 +2021,7 @@ export const careers: Career[] = [
       { id: 'estg1038', code: 'ESTG1038', name: 'Medida y Probabilidad', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['estg1036'], period: '200 - I' },
       { id: 'idig1008', code: 'IDIG1008', name: 'Inglés III', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1007'], period: '200 - I' },
       { id: 'estg1041', code: 'ESTG1041', name: 'Muestreo', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['estg1039'], period: '200 - II' },
-      { id: 'estg1042', code: 'ESTG1042', name: 'Estadística Multivariante', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['estg1039'], period: '200 - II' },
+      { id: 'estg1042', code: 'ESTG1042', name: 'Estadística Multivariante', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['estg1039', 'matg1066'], period: '200 - II' },
       { id: 'estg1045', code: 'ESTG1045', name: 'Modelos Estadísticos Aplicados I', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['estg1039'], period: '200 - II' },
       { id: 'estg1044', code: 'ESTG1044', name: 'Datos Categóricos', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['estg1039'], period: '200 - II' },
       { id: 'estg1043', code: 'ESTG1043', name: 'Control Estadístico de Procesos', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['estg1039'], period: '200 - II' },
