@@ -18,7 +18,7 @@ import { LandingPage } from './components/LandingPage';
 import { motion, AnimatePresence } from 'motion/react';
 import { BookOpen, Github, Mail, Linkedin } from 'lucide-react';
 import { translations } from './i18n/translations';
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
   const { selectedCareerId, language } = useMallaStore();
