@@ -16,11 +16,11 @@ export function LandingPage() {
       </div>
       
       <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-        Planificador de Mallas <span className="text-emerald-500">ESPOL</span>
+        Mallin <span className="text-emerald-500">ESPOL</span>
       </h1>
       
       <p className="text-lg text-slate-500 dark:text-white/60 mb-12 max-w-2xl leading-relaxed">
-        ¡Hola! Creé esta herramienta no oficial esperando que, al igual que a mí, les sirva a mis compañeros de la ESPOL para organizarse con tiempo y proyectar su carrera. Selecciona tu carrera en el menú superior para comenzar a planificar tu progreso académico.
+        ¡Hola! Bienvenido a <strong>Mallin ESPOL</strong>, una herramienta no oficial creada para ayudarnos a organizar nuestras mallas curriculares con tiempo y proyectar nuestra carrera académica. Selecciona tu facultad y carrera en el menú superior para comenzar.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full text-left mt-8">
