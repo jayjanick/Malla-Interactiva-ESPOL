@@ -65,6 +65,138 @@ export const mecatronicaItineraryOptions: ItineraryOption[] = [
   { id: 'mctr1024', code: 'MCTR1024', name: 'Control por Aprendizaje Reforzado', track: 'Mecatrónica', hoursTotal: 9 },
 ];
 
+export const admeItineraryOptions: ItineraryOption[] = [
+  { id: 'admg2023', code: 'ADMG2023', name: 'Administración de la Innovación', track: 'Innovación y Desarrollo Profesional', hoursTotal: 9 },
+  { id: 'admg2027', code: 'ADMG2027', name: 'Desarrollo Profesional', track: 'Innovación y Desarrollo Profesional', hoursTotal: 9 },
+];
+
+export const arqueologiaItineraryOptions: ItineraryOption[] = [
+  { id: 'arqg2019', code: 'ARQG2019', name: 'Gestión del Patrimonio Cultural', track: 'Patrimonio Arqueológico', hoursTotal: 9 },
+  { id: 'arqg2027', code: 'ARQG2027', name: 'Museos y Espacios de Conservación de la Memoria', track: 'Patrimonio Arqueológico', hoursTotal: 9 },
+];
+
+export const auditoriaItineraryOptions: ItineraryOption[] = [
+  { id: 'audg2031', code: 'AUDG2031', name: 'Auditoría Tributaria', track: 'Auditoría Financiera', hoursTotal: 9 },
+  { id: 'audg2029', code: 'AUDG2029', name: 'Auditoría Forense', track: 'Auditoría Financiera', hoursTotal: 9 },
+];
+
+export const economiaItineraryOptions: ItineraryOption[] = [
+  { id: 'ecog2048', code: 'ECOG2048', name: 'Economía Internacional', track: 'Tópicos en Economía', hoursTotal: 9 },
+  { id: 'ecog2056', code: 'ECOG2056', name: 'Evaluación de Políticas Públicas', track: 'Tópicos en Economía', hoursTotal: 9 },
+];
+
+export const turismoItineraryOptions: ItineraryOption[] = [
+  { id: 'turg2028', code: 'TURG2028', name: 'Gestión de la Relación con el Cliente', track: 'Gestión de la Relación con el Cliente', hoursTotal: 9 },
+  { id: 'turg2027', code: 'TURG2027', name: 'Guianza y Manejo de Grupos', track: 'Gestión de la Relación con el Cliente', hoursTotal: 9 },
+];
+
+export const biologiaItineraryOptions: ItineraryOption[] = [
+  { id: 'medg1016', code: 'MEDG1016', name: 'Biología de la Conservación', track: 'Conservación de la Biodiversidad', hoursTotal: 9 },
+  { id: 'medg1027', code: 'MEDG1027', name: 'Ornitología', track: 'Conservación de la Biodiversidad', hoursTotal: 9 },
+];
+
+export const agricolaItineraryOptions: ItineraryOption[] = [
+  { id: 'agrg1034', code: 'AGRG1034', name: 'Tecnologías Alternativas en la Producción Agrícola', track: 'Estrategias de Producción Agrícola y Certificación', hoursTotal: 9 },
+  { id: 'agrg1031', code: 'AGRG1031', name: 'Procesos de Certificación y Trazabilidad', track: 'Estrategias de Producción Agrícola y Certificación', hoursTotal: 9 },
+];
+
+export const productosItineraryOptions: ItineraryOption[] = [
+  { id: 'ding2046', code: 'DING2046', name: 'Fundamentos de Branding y Packaging', track: 'Branding y Packaging', hoursTotal: 9 },
+  { id: 'ding2047', code: 'DING2047', name: 'Visual Merchandising y Packaging', track: 'Branding y Packaging', hoursTotal: 9 },
+];
+
+export const graficoItineraryOptions: ItineraryOption[] = [
+  { id: 'digg2038', code: 'DIGG2038', name: 'Diseño de Interfaces', track: 'Diseño y Experiencia de Usuario', hoursTotal: 9 },
+  { id: 'digg2024', code: 'DIGG2024', name: 'Diseño de Experiencia', track: 'Diseño y Experiencia de Usuario', hoursTotal: 9 },
+];
+
+export const produccionItineraryOptions: ItineraryOption[] = [
+  { id: 'cadg2024', code: 'CADG2024', name: 'Sonido de Campo', track: 'Registro y Postproducción Sonora', hoursTotal: 9 },
+  { id: 'cadg2044', code: 'CADG2044', name: 'Mezcla de Sonido', track: 'Registro y Postproducción Sonora', hoursTotal: 9 },
+];
+
+export const alimentosItineraryOptions: ItineraryOption[] = [
+  { id: 'alig1052', code: 'ALIG1052', name: 'Fundamentos de Envasado', track: 'Desarrollo Sostenible en la Industria Alimentaria', hoursTotal: 9 },
+  { id: 'alig1051', code: 'ALIG1051', name: 'Ingeniería de Bioprocesos', track: 'Desarrollo Sostenible en la Industria Alimentaria', hoursTotal: 9 },
+];
+
+export const industrialItineraryOptions: ItineraryOption[] = [
+  { id: 'indg1049', code: 'INDG1049', name: 'Sistemas Integrados de Gestión', track: 'Excelencia Operacional', hoursTotal: 9 },
+  { id: 'indg1038', code: 'INDG1038', name: 'Herramientas de Manufactura Esbelta', track: 'Excelencia Operacional', hoursTotal: 9 },
+];
+
+export const mecanicaItineraryOptions: ItineraryOption[] = [
+  { id: 'mtrg1035', code: 'MTRG1035', name: 'Tratamientos Térmicos y Fundición', track: 'Manufactura', hoursTotal: 9 },
+  { id: 'mtrg1033', code: 'MTRG1033', name: 'Manufactura Sostenible', track: 'Manufactura', hoursTotal: 9 },
+];
+
+export const materialesItineraryOptions: ItineraryOption[] = [
+  { id: 'mecg1070', code: 'MECG1070', name: 'Refrigeración y Climatización', track: 'Sistemas Energéticos', hoursTotal: 9 },
+  { id: 'mecg1071', code: 'MECG1071', name: 'Sistemas Energéticos Sostenibles', track: 'Sistemas Energéticos', hoursTotal: 9 },
+  { id: 'mecg1072', code: 'MECG1072', name: 'Modelado y Simulación en Termofluidos', track: 'Mecánica Computacional', hoursTotal: 9 },
+  { id: 'mecg1073', code: 'MECG1073', name: 'Modelado y Simulación de Estructuras y Máquinas', track: 'Mecánica Computacional', hoursTotal: 9 },
+];
+
+export const acuiculturaItineraryOptions: ItineraryOption[] = [
+  { id: 'acug1037', code: 'ACUG1037', name: 'Bienestar Animal', track: 'Salud y Bienestar Acuícola', hoursTotal: 9 },
+  { id: 'acug1044', code: 'ACUG1044', name: 'Principios y Prácticas para la Sostenibilidad de la Acuicultura', track: 'Salud y Bienestar Acuícola', hoursTotal: 9 },
+];
+
+export const navalItineraryOptions: ItineraryOption[] = [
+  { id: 'navg1036', code: 'NAVG1036', name: 'Mecánica de Laminados', track: 'Materiales Compuestos en Ingeniería Naval', hoursTotal: 9 },
+  { id: 'navg1026', code: 'NAVG1026', name: 'Construcción Naval con Materiales Compuestos', track: 'Materiales Compuestos en Ingeniería Naval', hoursTotal: 9 },
+];
+
+export const oceanografiaItineraryOptions: ItineraryOption[] = [
+  { id: 'oceg1041', code: 'OCEG1041', name: 'Sistemas de Alerta Temprana', track: 'Recursos Marinos y Gestión de Riesgos', hoursTotal: 9 },
+  { id: 'oceg1042', code: 'OCEG1042', name: 'Oceanografía Pesquera', track: 'Recursos Marinos y Gestión de Riesgos', hoursTotal: 9 },
+];
+
+export const estadisticaItineraryOptions: ItineraryOption[] = [
+  { id: 'estg1058', code: 'ESTG1058', name: 'Confiabilidad y Pruebas de Vida', track: 'Estadística Industrial', hoursTotal: 9 },
+  { id: 'estg1059', code: 'ESTG1059', name: 'Superficies de Respuesta', track: 'Estadística Industrial', hoursTotal: 9 },
+];
+
+export const quimicaItineraryOptions: ItineraryOption[] = [
+  { id: 'quig1048', code: 'QUIG1048', name: 'Tecnología de Procesos Químicos', track: 'Procesos y Productos', hoursTotal: 9 },
+  { id: 'quig1049', code: 'QUIG1049', name: 'Síntesis y Caracterización de Productos Químicos', track: 'Procesos y Productos', hoursTotal: 9 },
+  { id: 'adsg1028', code: 'ADSG1028', name: 'Gestión de Residuos Sólidos', track: 'Ambiente', hoursTotal: 9 },
+  { id: 'adsg1024', code: 'ADSG1024', name: 'Principios de Ecotoxicología', track: 'Ambiente', hoursTotal: 9 },
+];
+
+export const logisticaItineraryOptions: ItineraryOption[] = [
+  { id: 'logg1025', code: 'LOGG1025', name: 'Plataformas Multimodales', track: 'Logística y Servicio', hoursTotal: 9 },
+  { id: 'logg1026', code: 'LOGG1026', name: 'Logística en Servicio', track: 'Logística y Servicio', hoursTotal: 9 },
+];
+
+export const matematicaItineraryOptions: ItineraryOption[] = [
+  { id: 'matg1085', code: 'MATG1085', name: 'Programación Lineal', track: 'Matemática', hoursTotal: 6 },
+  { id: 'matg1084', code: 'MATG1084', name: 'Sistemas Dinámicos', track: 'Matemática', hoursTotal: 6 },
+  { id: 'matg1083', code: 'MATG1083', name: 'Ecuaciones en Derivadas Parciales', track: 'Matemática', hoursTotal: 6 },
+];
+
+export const geologiaItineraryOptions: ItineraryOption[] = [
+  { id: 'geog1043', code: 'GEOG1043', name: 'Modelamiento Geológico', track: 'Modelamiento de Datos Geológicos', hoursTotal: 9 },
+  { id: 'geog1049', code: 'GEOG1049', name: 'Teledetección', track: 'Modelamiento de Datos Geológicos', hoursTotal: 9 },
+];
+
+export const civilItineraryOptions: ItineraryOption[] = [
+  { id: 'civg1052', code: 'CIVG1052', name: 'Ingeniería Sismo-Resistente', track: 'Ambiente y Estructuras', hoursTotal: 9 },
+  { id: 'civg1048', code: 'CIVG1048', name: 'Ingeniería Ambiental', track: 'Ambiente y Estructuras', hoursTotal: 9 },
+  { id: 'civg1061', code: 'CIVG1061', name: 'Diseño y Gestión de Rellenos Sanitarios', track: 'Obras Civiles', hoursTotal: 9 },
+  { id: 'civg1051', code: 'CIVG1051', name: 'Ingeniería Portuaria', track: 'Obras Civiles', hoursTotal: 9 },
+];
+
+export const minasItineraryOptions: ItineraryOption[] = [
+  { id: 'ming1042', code: 'MING1042', name: 'Ingeniería de Túneles', track: 'Minería Aplicada', hoursTotal: 9 },
+  { id: 'ming1028', code: 'MING1028', name: 'Hidrogeología de Minas', track: 'Minería Aplicada', hoursTotal: 9 },
+];
+
+export const petroleosItineraryOptions: ItineraryOption[] = [
+  { id: 'petg1029', code: 'PETG1029', name: 'Software en Ingeniería en Petróleo', track: 'Geociencia y Energía', hoursTotal: 9 },
+  { id: 'eleg1052', code: 'ELEG1052', name: 'Introducción a las Energías Renovables', track: 'Geociencia y Energía', hoursTotal: 9 },
+];
+
 export interface Career {
   id: string;
   name: string;
@@ -218,12 +350,12 @@ export const careers: Career[] = [
       { id: 'admg2024', code: 'ADMG2024', name: 'Comercio Exterior', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['ecog2065'], period: '400 - I' },
       { id: 'ecog2066', code: 'ECOG2066', name: 'Planificación y Control Financiero', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['ecog2065'], period: '400 - I' },
       { id: 'admg2037', code: 'ADMG2037', name: 'Gestión de Proyectos', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['ecog2065'], period: '400 - I' },
-      { id: 'itin1_adme', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+      { id: 'itin1_adme', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true, itineraryOptions: admeItineraryOptions },
 
       // NIVEL 400 - II
       { id: 'admg2036', code: 'ADMG2036', name: 'Planificación Estratégica', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ccag2023', 'admg2033'], period: '400 - II' },
       { id: 'admg2031', code: 'ADMG2031', name: 'Materia Integradora de Administración de Empresas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 42, period: '400 - II' },
-      { id: 'itin2_adme', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+      { id: 'itin2_adme', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: admeItineraryOptions },
 
       // NIVEL 500 - I
       { id: 'ppp_adme', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
@@ -279,7 +411,7 @@ export const careers: Career[] = [
 
       // NIVEL 300 - II
       { id: 'arqg2029', code: 'ARQG2029', name: 'Laboratorio de Arqueología I', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['arqg2030', 'estg2004'], period: '300 - II' },
-      { id: 'itin1_arq', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '300 - II', isItinerary: true },
+      { id: 'itin1_arq', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '300 - II', isItinerary: true, itineraryOptions: arqueologiaItineraryOptions },
       { id: 'arqg2037', code: 'ARQG2037', name: 'Orígenes de los Estados Prehispánicos', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['arqg2031', 'arqg2021'], period: '300 - II' },
       { id: 'adsg1026', code: 'ADSG1026', name: 'Ciencias de la Sostenibilidad', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 20, period: '300 - II' },
       { id: 'idig1010', code: 'IDIG1010', name: 'Inglés V', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1009'], period: '300 - II' },
@@ -291,7 +423,7 @@ export const careers: Career[] = [
 
       // NIVEL 400 - II
       { id: 'arqg2026', code: 'ARQG2026', name: 'Laboratorio de Arqueología II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['arqg2043'], period: '400 - II' },
-      { id: 'itin2_arq', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+      { id: 'itin2_arq', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: arqueologiaItineraryOptions },
       { id: 'arqg2024', code: 'ARQG2024', name: 'Materia Integradora en Arqueología', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['arqg2043'], period: '400 - II' },
 
       // NIVEL 500 - I
@@ -362,12 +494,12 @@ export const careers: Career[] = [
       { id: 'admg2036', code: 'ADMG2036', name: 'Planificación Estratégica', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ccag2023', 'audg2037'], period: '400 - I' },
       { id: 'ecog2066', code: 'ECOG2066', name: 'Planificación y Control Financiero', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['ecog2065'], period: '400 - I' },
       { id: 'admg2037', code: 'ADMG2037', name: 'Gestión de Proyectos', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['ecog2065'], period: '400 - I' },
-      { id: 'itin1_aud', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+      { id: 'itin1_aud', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true, itineraryOptions: auditoriaItineraryOptions },
 
       // NIVEL 400 - II
       { id: 'audg2044', code: 'AUDG2044', name: 'Gestión de Riesgos', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['audg2041'], period: '400 - II' },
       { id: 'audg2043', code: 'AUDG2043', name: 'Materia Integradora de Auditoría y Control de Gestión', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 42, period: '400 - II' },
-      { id: 'itin2_aud', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+      { id: 'itin2_aud', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: auditoriaItineraryOptions },
 
       // NIVEL 500 - I
       { id: 'ppp_aud', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
@@ -436,13 +568,13 @@ export const careers: Career[] = [
       { id: 'ecog2043', code: 'ECOG2043', name: 'Crecimiento y Desarrollo Económico', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['ecog2059'], period: '400 - I' },
       { id: 'ecog2051', code: 'ECOG2051', name: 'Finanzas Internacionales', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['ecog2055'], period: '400 - I' },
       { id: 'ecog2058', code: 'ECOG2058', name: 'Formulación y Evaluación de Proyectos', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['ecog2055', 'admg2035'], period: '400 - I' },
-      { id: 'itin1_eco', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+      { id: 'itin1_eco', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true, itineraryOptions: economiaItineraryOptions },
 
       // NIVEL 400 - II
       { id: 'jurg2004', code: 'JURG2004', name: 'Derecho Económico', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['ecog2069'], period: '400 - II' },
       { id: 'ecog2053', code: 'ECOG2053', name: 'Materia Integradora de Economía', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 42, period: '400 - II' },
       { id: 'ecog2057', code: 'ECOG2057', name: 'Formulación y Evaluación Social de Proyectos', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['ecog2058'], period: '400 - II' },
-      { id: 'itin2_eco', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+      { id: 'itin2_eco', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: economiaItineraryOptions },
 
       // NIVEL 500 - I
       { id: 'ppp_eco', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
@@ -511,11 +643,11 @@ export const careers: Career[] = [
       { id: 'turg2034', code: 'TURG2034', name: 'Evaluación de Proyectos Turísticos', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['turg2031', 'ecog2042'], period: '400 - I' },
       { id: 'admg2036', code: 'ADMG2036', name: 'Planificación Estratégica', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ccag2023', 'turg2032'], period: '400 - I' },
       { id: 'turg2035', code: 'TURG2035', name: 'Turismo Sostenible', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['turg2031'], period: '400 - I' },
-      { id: 'itin1_tur', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+      { id: 'itin1_tur', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true, itineraryOptions: turismoItineraryOptions },
 
       // NIVEL 400 - II
       { id: 'turg2036', code: 'TURG2036', name: 'Materia Integradora de Turismo', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 42, period: '400 - II' },
-      { id: 'itin2_tur', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+      { id: 'itin2_tur', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: turismoItineraryOptions },
 
       // NIVEL 500 - I
       { id: 'ppp_tur', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
@@ -1017,12 +1149,12 @@ export const careers: Career[] = [
       { id: 'medg1015', code: 'MEDG1015', name: 'Biogeografía', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['medg1021'], period: '400 - I' },
       { id: 'medg1024', code: 'MEDG1024', name: 'Inmunología', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['biog1029'], period: '400 - I' },
       { id: 'biog1023', code: 'BIOG1023', name: 'Fisiología Animal', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['medg1019'], period: '400 - I' },
-      { id: 'itin1_biol', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+      { id: 'itin1_biol', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true, itineraryOptions: biologiaItineraryOptions },
 
       // Nivel 400 - II
       { id: 'adsg1023', code: 'ADSG1023', name: 'Remediación Ambiental', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['adsg1024'], period: '400 - II' },
       { id: 'biog1027', code: 'BIOG1027', name: 'Materia Integradora de Biología', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 44, period: '400 - II' },
-      { id: 'itin2_biol', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+      { id: 'itin2_biol', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: biologiaItineraryOptions },
 
       // Nivel 500
       { id: 'ppp_biol', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
@@ -1094,12 +1226,12 @@ export const careers: Career[] = [
       { id: 'agrg1030', code: 'AGRG1030', name: 'Mecanización Agrícola', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['agrg1035'], period: '400 - I' },
       { id: 'agrg1022', code: 'AGRG1022', name: 'Agricultura de Precisión', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['agrg1038'], period: '400 - I' },
       { id: 'agrg1036', code: 'AGRG1036', name: 'Silvicultura', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['agrg1037'], period: '400 - I' },
-      { id: 'itin1_ag', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+      { id: 'itin1_ag', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true, itineraryOptions: agricolaItineraryOptions },
 
       // Nivel 400 - II
       { id: 'agrg1029', code: 'AGRG1029', name: 'Materia Integradora de Ingeniería Agrícola y Biológica', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 44, period: '400 - II' },
       { id: 'agrg1023', code: 'AGRG1023', name: 'Agroecosistemas', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['agrg1036'], period: '400 - II' },
-      { id: 'itin2_ag', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+      { id: 'itin2_ag', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: agricolaItineraryOptions },
 
       // Nivel 500
       { id: 'ppp_ag', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
@@ -1244,11 +1376,11 @@ export const careers: Career[] = [
       { id: 'ding2038', code: 'DING2038', name: 'Prototipado Avanzado', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['ding2035', 'ding2036'], period: '400 - I' },
       { id: 'digg2028_dp', code: 'DIGG2028', name: 'Diseño Estratégico', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], corequisites: ['ecog2041_dp'], period: '400 - I' },
       { id: 'ecog2041_dp', code: 'ECOG2041', name: 'Gestión del Diseño', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['digg2041_dp'], period: '400 - I' },
-      { id: 'itin1_dp', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+      { id: 'itin1_dp', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true, itineraryOptions: productosItineraryOptions },
 
       // Nivel 400 - II
       { id: 'ding2032', code: 'DING2032', name: 'Materia Integradora de Diseño de Productos', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 41, period: '400 - II' },
-      { id: 'itin2_dp', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+      { id: 'itin2_dp', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: productosItineraryOptions },
 
       // Nivel 500
       { id: 'ppp_dp', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
@@ -1317,11 +1449,11 @@ export const careers: Career[] = [
       { id: 'digg2035', code: 'DIGG2035', name: 'Proyecto de Diseño', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['digg2023_dg', 'digg2031'], period: '400 - I' },
       { id: 'ecog2041_dg', code: 'ECOG2041', name: 'Gestión del Diseño', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['digg2023_dg'], period: '400 - I' },
       { id: 'digg2028_dg', code: 'DIGG2028', name: 'Diseño Estratégico', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], corequisites: ['ecog2041_dg'], period: '400 - I' },
-      { id: 'itin1_dg', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+      { id: 'itin1_dg', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true, itineraryOptions: graficoItineraryOptions },
 
       // Nivel 400 - II
       { id: 'digg2034', code: 'DIGG2034', name: 'Materia Integradora de Diseño Gráfico', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 40, period: '400 - II' },
-      { id: 'itin2_dg', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+      { id: 'itin2_dg', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: graficoItineraryOptions },
 
       // Nivel 500
       { id: 'ppp_dg', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
@@ -1389,12 +1521,12 @@ export const careers: Career[] = [
       { id: 'cadg2037', code: 'CADG2037', name: 'Producción Ejecutiva', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['cadg2038'], period: '400 - I' },
       { id: 'cadg2026', code: 'CADG2026', name: 'Animación II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['cadg2025'], period: '400 - I' },
       { id: 'cadg2027', code: 'CADG2027', name: 'Dirección Audiovisual', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['cadg2028'], period: '400 - I' },
-      { id: 'itin1_pm', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+      { id: 'itin1_pm', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true, itineraryOptions: produccionItineraryOptions },
 
       // Nivel 400 - II
       { id: 'cadg2033', code: 'CADG2033', name: 'Legislación Audiovisual', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['cadg2037'], period: '400 - II' },
       { id: 'cadg2043', code: 'CADG2043', name: 'Materia Integradora de Producción para Medios de Comunicación', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 40, period: '400 - II' },
-      { id: 'itin2_pm', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+      { id: 'itin2_pm', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: produccionItineraryOptions },
 
       // Nivel 500
       { id: 'ppp_pm', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
@@ -1464,12 +1596,12 @@ export const careers: Career[] = [
       { id: 'alig1047', code: 'ALIG1047', name: 'Sanidad e Higiene Alimentaria', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['alig1046'], period: '400 - I' },
       { id: 'alig1043', code: 'ALIG1043', name: 'Procesamiento de Farináceos y Oleaginosas', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['alig1046'], period: '400 - I' },
       { id: 'alig1032', code: 'ALIG1032', name: 'Desarrollo de Nuevos Productos Alimenticios', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], corequisites: ['alig1043'], period: '400 - I' },
-      { id: 'itin1_alim', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+      { id: 'itin1_alim', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true, itineraryOptions: alimentosItineraryOptions },
 
       // NIVEL 400 - II
       { id: 'alig1033', code: 'ALIG1033', name: 'Diseño de Plantas Alimentarias', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['alig1035', 'alig1032'], period: '400 - II' },
       { id: 'alig1040', code: 'ALIG1040', name: 'Materia Integradora de Alimentos', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 42, period: '400 - II' },
-      { id: 'itin2_alim', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+      { id: 'itin2_alim', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: alimentosItineraryOptions },
 
       // NIVEL 500
       { id: 'ppp_alim', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500' },
@@ -1542,12 +1674,12 @@ export const careers: Career[] = [
       { id: 'indg1037', code: 'INDG1037', name: 'Gestión de la Cadena de Suministro Sostenible', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['indg1042'], period: '400 - II' },
       { id: 'admg2025', code: 'ADMG2025', name: 'Comportamiento Organizacional', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['indg1044'], period: '400 - II' },
       { id: 'indg1035', code: 'INDG1035', name: 'Diseño de Plantas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['indg1052', 'matg2008', 'indg1042'], period: '400 - II' },
-      { id: 'itin1_ind', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+      { id: 'itin1_ind', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: industrialItineraryOptions },
 
       // Nivel 500 - I
       { id: 'admg1005', code: 'ADMG1005', name: 'Emprendimiento e Innovación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], minApprovedSubjects: 20, period: '500 - I' },
       { id: 'indg1043', code: 'INDG1043', name: 'Materia Integradora de Ingeniería Industrial', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 43, period: '500 - I' },
-      { id: 'itin2_ind', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '500 - I', isItinerary: true },
+      { id: 'itin2_ind', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '500 - I', isItinerary: true, itineraryOptions: industrialItineraryOptions },
 
       // Nivel 500 - II
       { id: 'ppp_ind', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - II' },
@@ -1611,12 +1743,12 @@ export const careers: Career[] = [
       { id: 'mate1039', code: 'MATE1039', name: 'Materiales Compuestos', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mate1035'], period: '400 - I' },
       { id: 'mate1040', code: 'MATE1040', name: 'Selección de Materiales', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['mate1037'], period: '400 - I' },
       { id: 'adsg1026', code: 'ADSG1026', name: 'Ciencias de la Sostenibilidad', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 20, period: '400 - I' },
-      { id: 'itin1_mat', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+      { id: 'itin1_mat', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true, itineraryOptions: materialesItineraryOptions },
 
       // Nivel 400 - II
       { id: 'mate1041', code: 'MATE1041', name: 'Falla de Materiales', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mate1038', 'mate1040'], period: '400 - II' },
       { id: 'mate1042', code: 'MATE1042', name: 'Materia Integradora de Materiales', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 40, period: '400 - II' },
-      { id: 'itin2_mat', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+      { id: 'itin2_mat', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: materialesItineraryOptions },
 
       // Nivel 500
       { id: 'ppp_mat', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500' },
@@ -1690,11 +1822,11 @@ export const careers: Career[] = [
       { id: 'indg1048', code: 'INDG1048', name: 'Proyectos Industriales', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], minApprovedSubjects: 35, period: '400 - II' },
       { id: 'mecg1055', code: 'MECG1055', name: 'Sistemas de Control Aplicados', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['mecg1042', 'eleg1034'], period: '400 - II' },
       { id: 'mecg1053', code: 'MECG1053', name: 'Procesos de Manufactura', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['mecg1057'], period: '400 - II' },
-      { id: 'itin1_mec', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+      { id: 'itin1_mec', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: mecanicaItineraryOptions },
 
       // Nivel 500 - I
       { id: 'mecg1066', code: 'MECG1066', name: 'Materia Integradora de Mecánica', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 43, period: '500 - I' },
-      { id: 'itin2_mec', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '500 - I', isItinerary: true },
+      { id: 'itin2_mec', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '500 - I', isItinerary: true, itineraryOptions: mecanicaItineraryOptions },
 
       // Nivel 500 - II
       { id: 'ppp_mec', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - II' },
@@ -1841,12 +1973,12 @@ export const careers: Career[] = [
       { id: 'acug1039', code: 'ACUG1039', name: 'Cultivo de Especies No Tradicionales', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['adsg1026_ac'], period: '400 - I' }, // ADSG1040 en txt, asumo ADSG1026
       { id: 'acug1043', code: 'ACUG1043', name: 'Herramientas para el Diagnóstico de Enfermedades Acuícolas', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['acug1056'], period: '400 - I' },
       { id: 'acug1046', code: 'ACUG1046', name: 'Producción Acuícola I', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['acug1040'], period: '400 - I' },
-      { id: 'itin1_ac', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+      { id: 'itin1_ac', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true, itineraryOptions: acuiculturaItineraryOptions },
 
       // Nivel 400 - II
       { id: 'acug1058', code: 'ACUG1058', name: 'Materia Integradora de Acuicultura', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 40, period: '400 - II' },
       { id: 'acug1045', code: 'ACUG1045', name: 'Producción Acuícola II', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['acug1046'], period: '400 - II' },
-      { id: 'itin2_ac', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+      { id: 'itin2_ac', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: acuiculturaItineraryOptions },
 
       // Nivel 500
       { id: 'ppp_ac', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
@@ -1912,12 +2044,12 @@ export const careers: Career[] = [
       { id: 'navg1027', code: 'NAVG1027', name: 'Dinámica del Buque', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['navg1038', 'navg1041', 'navg1030'], period: '400 - I' },
       { id: 'navg1033', code: 'NAVG1033', name: 'Gestión Marítima Portuaria', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 30, period: '400 - I' },
       { id: 'admg1005_na', code: 'ADMG1005', name: 'Emprendimiento e Innovación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], minApprovedSubjects: 20, period: '400 - I' },
-      { id: 'itin1_na', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+      { id: 'itin1_na', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true, itineraryOptions: navalItineraryOptions },
 
       // Nivel 400 - II
       { id: 'navg1034', code: 'NAVG1034', name: 'Materia Integradora de Ingeniería Naval', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['navg1028'], period: '400 - II' },
       { id: 'navg1035', code: 'NAVG1035', name: 'Transporte Marítimo', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['navg1033'], period: '400 - II' },
-      { id: 'itin2_na', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+      { id: 'itin2_na', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: navalItineraryOptions },
 
       // Nivel 500
       { id: 'ppp_na', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
@@ -1993,12 +2125,12 @@ export const careers: Career[] = [
       { id: 'oceg1034', code: 'OCEG1034', name: 'Diseño Costero', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['oceg1047', 'civg1045_oc'], period: '400 - II' }, // CIVIG1045 in txt, corrected to CIVG1045
       { id: 'oceg1044', code: 'OCEG1044', name: 'Técnicas de Manejo Costero', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['oceg1046'], period: '400 - II' },
       { id: 'oceg1045', code: 'OCEG1045', name: 'Planificación y Construcción', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['oceg1033'], period: '400 - II' },
-      { id: 'itin1_oc', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+      { id: 'itin1_oc', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: oceanografiaItineraryOptions },
 
       // Nivel 500 - I
       { id: 'oceg1043', code: 'OCEG1043', name: 'Materia Integradora de Oceanografía', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['oceg1034'], period: '500 - I' },
       { id: 'oceg1038', code: 'OCEG1038', name: 'Gestión de Zonas Marino-Costeras', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['oceg1034'], period: '500 - I' },
-      { id: 'itin2_oc', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '500 - I', isItinerary: true },
+      { id: 'itin2_oc', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '500 - I', isItinerary: true, itineraryOptions: oceanografiaItineraryOptions },
 
       // Nivel 500 - II
       { id: 'ppp_oc', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - II' },
@@ -2051,10 +2183,10 @@ export const careers: Career[] = [
       { id: 'estg1033', code: 'ESTG1033', name: 'Geoestadística', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['estg1048'], period: '400 - I' },
       { id: 'estg1055', code: 'ESTG1055', name: 'Aprendizaje Estadístico', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['estg1052', 'estg1051', 'estg1042'], period: '400 - I' },
       { id: 'admg1007', code: 'ADMG1007', name: 'Estrategia de Gestión', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: [], minApprovedSubjects: 30, period: '400 - I' },
-      { id: 'iti1_esta', code: 'ITI1', name: 'Itinerario 1', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+      { id: 'iti1_esta', code: 'ITI1', name: 'Itinerario 1', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true, itineraryOptions: estadisticaItineraryOptions },
       { id: 'estg1056', code: 'ESTG1056', name: 'Datos No Estructurados', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['estg1055'], period: '400 - II' },
       { id: 'estg1062', code: 'ESTG1062', name: 'Materia Integradora de Estadística', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 38, period: '400 - II' },
-      { id: 'iti2_esta', code: 'ITI2', name: 'Itinerario 2', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+      { id: 'iti2_esta', code: 'ITI2', name: 'Itinerario 2', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: estadisticaItineraryOptions },
 
       // COMPLEMENTARIAS
       { id: 'comp1_esta', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
@@ -2104,10 +2236,10 @@ export const careers: Career[] = [
       { id: 'quig1046', code: 'QUIG1046', name: 'Dinámica de Procesos y Control', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['quig1041'], period: '400 - I' },
       { id: 'quig1045', code: 'QUIG1045', name: 'Operaciones Unitarias II', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], corequisites: ['quig1046'], period: '400 - I' },
       { id: 'quig1047', code: 'QUIG1047', name: 'Diseño de Plantas', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], corequisites: ['quig1045'], period: '400 - I' },
-      { id: 'iti1_quim', code: 'ITI1', name: 'Itinerario 1', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+      { id: 'iti1_quim', code: 'ITI1', name: 'Itinerario 1', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true, itineraryOptions: quimicaItineraryOptions },
       { id: 'adsg1029', code: 'ADSG1029', name: 'Tratamiento de Aguas', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], minApprovedSubjects: 28, period: '400 - II' },
       { id: 'quig1050', code: 'QUIG1050', name: 'Materia Integradora de Ingeniería Química', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 38, period: '400 - II' },
-      { id: 'iti2_quim', code: 'ITI2', name: 'Itinerario 2', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+      { id: 'iti2_quim', code: 'ITI2', name: 'Itinerario 2', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: quimicaItineraryOptions },
       { id: 'ppp_quim', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500' },
 
       // COMPLEMENTARIAS
@@ -2157,11 +2289,11 @@ export const careers: Career[] = [
       { id: 'logg1023', code: 'LOGG1023', name: 'Presupuestos y Proyectos Logísticos', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['estg1051', 'logg1021'], period: '400 - I' },
       { id: 'matg1061', code: 'MATG1061', name: 'Metahurísticas', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['logg1020'], period: '400 - I' },
       { id: 'adsg1026', code: 'ADSG1026', name: 'Ciencias de la Sostenibilidad', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 20, period: '400 - I' },
-      { id: 'iti1_lotr', code: 'ITI1', name: 'Itinerario 1', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+      { id: 'iti1_lotr', code: 'ITI1', name: 'Itinerario 1', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true, itineraryOptions: logisticaItineraryOptions },
       { id: 'admg1007', code: 'ADMG1007', name: 'Estrategias de Gestión', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: [], minApprovedSubjects: 30, period: '400 - II' },
       { id: 'ccpg1058', code: 'CCPG1058', name: 'Sistemas de Información Aplicados a Logística', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 30, period: '400 - II' },
       { id: 'logg1027', code: 'LOGG1027', name: 'Materia Integradora de Logística y Transporte', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 38, period: '400 - II' },
-      { id: 'iti2_lotr', code: 'ITI2', name: 'Itinerario 2', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+      { id: 'iti2_lotr', code: 'ITI2', name: 'Itinerario 2', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: logisticaItineraryOptions },
       { id: 'ppp_lotr', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500' },
 
       // COMPLEMENTARIAS
@@ -2206,16 +2338,16 @@ export const careers: Career[] = [
       { id: 'matg1078', code: 'MATG1078', name: 'Análisis Complejo', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1070'], period: '300 - II' },
       { id: 'admg1005', code: 'ADMG1005', name: 'Emprendimiento E Innovación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], minApprovedSubjects: 20, period: '300 - II' },
       { id: 'matg1082', code: 'MATG1082', name: 'Elementos de Computación Científica', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1076'], period: '300 - II' },
-      { id: 'iti1_matm', code: 'ITI1', name: 'Itinerario 1', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: [], period: '300 - II', isItinerary: true },
+      { id: 'iti1_matm', code: 'ITI1', name: 'Itinerario 1', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: [], period: '300 - II', isItinerary: true, itineraryOptions: matematicaItineraryOptions },
       { id: 'psc_matm', code: 'PSC', name: 'Prácticas de Servicio Comunitario', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '300 - II' },
       { id: 'matg1079', code: 'MATG1079', name: 'Análisis Funcional', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1077'], period: '400 - I' },
       { id: 'matg1069', code: 'MATG1069', name: 'Ecuaciones Diferenciales II', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1071'], period: '400 - I' },
       { id: 'admg1007', code: 'ADMG1007', name: 'Estrategia de Gestión', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: [], minApprovedSubjects: 30, period: '400 - I' },
       { id: 'adsg1026', code: 'ADSG1026', name: 'Ciencias de la Sostenibilidad', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 20, period: '400 - I' },
-      { id: 'iti2_matm', code: 'ITI2', name: 'Itinerario 2', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: [], period: '400 - I', isItinerary: true },
+      { id: 'iti2_matm', code: 'ITI2', name: 'Itinerario 2', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: [], period: '400 - I', isItinerary: true, itineraryOptions: matematicaItineraryOptions },
       { id: 'matg1080', code: 'MATG1080', name: 'Geometría Diferencial', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], minApprovedSubjects: 24, period: '400 - II' },
       { id: 'matg1086', code: 'MATG1086', name: 'Materia Integradora de Matemática', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 37, period: '400 - II' },
-      { id: 'iti3_matm', code: 'ITI3', name: 'Itinerario 3', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: [], period: '400 - II', isItinerary: true },
+      { id: 'iti3_matm', code: 'ITI3', name: 'Itinerario 3', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: matematicaItineraryOptions },
       { id: 'ppp_matm', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500' },
 
       // COMPLEMENTARIAS
@@ -2715,7 +2847,8 @@ export const careers: Career[] = [
             hoursDetail: '3/0/6',
             prerequisites: [],
             period: '400 - I',
-            isItinerary: true
+            isItinerary: true,
+            itineraryOptions: geologiaItineraryOptions
       },
       {
             id: 'geog1038',
@@ -2749,7 +2882,8 @@ export const careers: Career[] = [
             hoursDetail: '3/0/6',
             prerequisites: [],
             period: '400 - II',
-            isItinerary: true
+            isItinerary: true,
+            itineraryOptions: geologiaItineraryOptions
       },
       {
             id: 'ppe_geol',
@@ -3290,7 +3424,8 @@ export const careers: Career[] = [
             hoursDetail: '3/0/6',
             prerequisites: [],
             period: '400 - II',
-            isItinerary: true
+            isItinerary: true,
+            itineraryOptions: civilItineraryOptions
       },
       {
             id: 'civg1050',
@@ -3336,7 +3471,8 @@ export const careers: Career[] = [
             hoursDetail: '3/0/6',
             prerequisites: [],
             period: '500 - I',
-            isItinerary: true
+            isItinerary: true,
+            itineraryOptions: civilItineraryOptions
       },
       {
             id: 'ppe_civi',
@@ -3868,7 +4004,8 @@ export const careers: Career[] = [
             hoursDetail: '3/0/6',
             prerequisites: [],
             period: '400 - I',
-            isItinerary: true
+            isItinerary: true,
+            itineraryOptions: minasItineraryOptions
       },
       {
             id: 'ming1039',
@@ -3890,7 +4027,8 @@ export const careers: Career[] = [
             hoursDetail: '3/0/6',
             prerequisites: [],
             period: '400 - II',
-            isItinerary: true
+            isItinerary: true,
+            itineraryOptions: minasItineraryOptions
       },
       {
             id: 'ppe_mina',
@@ -4381,7 +4519,8 @@ export const careers: Career[] = [
             hoursDetail: '3/0/6',
             prerequisites: [],
             period: '400 - I',
-            isItinerary: true
+            isItinerary: true,
+            itineraryOptions: petroleosItineraryOptions
       },
       {
             id: 'ecog1009',
@@ -4414,7 +4553,8 @@ export const careers: Career[] = [
             hoursDetail: '3/0/6',
             prerequisites: [],
             period: '400 - II',
-            isItinerary: true
+            isItinerary: true,
+            itineraryOptions: petroleosItineraryOptions
       },
       {
             id: 'ppe_petr',
