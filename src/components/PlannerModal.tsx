@@ -43,8 +43,7 @@ export function PlannerModal({ onClose, career }: PlannerModalProps) {
   };
 
   const selectedSubject = career.subjects.find(s => s.id === selectedSubjectId);
-
-  const currentItineraryOptions = selectedSubject?.itineraryOptions || itineraryOptions;
+  const currentItineraryOptions = selectedSubject?.itineraryOptions || [];
   const itineraryGroupedOptions = Array.from(new Set(currentItineraryOptions.map(o => o.track))).map(track => ({
     label: track,
     options: currentItineraryOptions.filter(o => o.track === track).map(o => ({

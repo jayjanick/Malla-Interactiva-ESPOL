@@ -65,6 +65,13 @@ export const mecatronicaItineraryOptions: ItineraryOption[] = [
   { id: 'mctr1024', code: 'MCTR1024', name: 'Control por Aprendizaje Reforzado', track: 'Mecatrónica', hoursTotal: 9 },
 ];
 
+export const telematicaItineraryOptions: ItineraryOption[] = [
+  { id: 'tlmg1037', code: 'TLMG1037', name: 'Ciberseguridad Avanzada', track: 'Ciberseguridad', hoursTotal: 9 },
+  { id: 'tlmg1038', code: 'TLMG1038', name: 'Gestión de Incidentes', track: 'Ciberseguridad', hoursTotal: 9 },
+  { id: 'tlmg1039', code: 'TLMG1039', name: 'Arquitecturas Cloud', track: 'Cloud Computing', hoursTotal: 9 },
+  { id: 'tlmg1040', code: 'TLMG1040', name: 'DevOps y Automatización', track: 'Cloud Computing', hoursTotal: 9 },
+];
+
 export const admeItineraryOptions: ItineraryOption[] = [
   { id: 'admg2023', code: 'ADMG2023', name: 'Administración de la Innovación', track: 'Innovación y Desarrollo Profesional', hoursTotal: 9 },
   { id: 'admg2027', code: 'ADMG2027', name: 'Desarrollo Profesional', track: 'Innovación y Desarrollo Profesional', hoursTotal: 9 },
@@ -1073,11 +1080,11 @@ export const careers: Career[] = [
       { id: 'ccpg1055', code: 'CCPG1055', name: 'Sistemas Distribuidos y Computación en la Nube', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['ccpg1051', 'tlmg1032'], period: '400 - I' },
       { id: 'tlmg1025', code: 'TLMG1025', name: 'Calidad de Servicio y Redes Multimedia', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['tlmg1030'], period: '400 - I' },
       { id: 'tlmg1029', code: 'TLMG1029', name: 'Gestión de Infraestructura y Servicios TI', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['tlmg1022'], period: '400 - I' },
-      { id: 'itin1_tm', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true },
+      { id: 'itin1_tm', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true, itineraryOptions: telematicaItineraryOptions },
 
       // NIVEL 400 - II
       { id: 'tlmg1031', code: 'TLMG1031', name: 'Materia Integradora de Telemática', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 39, period: '400 - II' },
-      { id: 'itin2_tm', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true },
+      { id: 'itin2_tm', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: telematicaItineraryOptions },
 
       // NIVEL 500 - I
       { id: 'ppp_tm', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
