@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- SEO Básico -->
+    <!-- Prevent Uncaught TypeError: Cannot set property fetch of #<Window> which has only a getter -->
+    <script>
+      (function() {
+        try {
+          var originalFetch = window.fetch;
+          Object.defineProperty(window, 'fetch', {
+            configurable: true,
+            enumerable: true,
+            get: function() { return originalFetch; },
+            set: function(newFetch) { 
+              console.warn('Blocked attempt to override window.fetch'); 
+            }
+          });
+        } catch (e) {
+          console.error('Failed to protect window.fetch', e);
+        }
+      })();
+    </script>
     <title>Mallin ESPOL | Malla Curricular y Planificador Interactivo</title>
     <meta name="description" content="Mallin ESPOL: La mejor herramienta para visualizar tu malla curricular de la ESPOL. Planifica tus semestres, revisa prerrequisitos, calcula tu progreso y organiza tu carrera académica en la Escuela Superior Politécnica del Litoral." />
     <meta name="keywords" content="Mallin ESPOL, Mallin, mallin espol app, malla espol, malla curricular espol, planificador espol, espol, Escuela Superior Politécnica del Litoral, prerrequisitos espol, carreras espol, FIEC, FIMCP, FICT, FCNM, FCV, FADCOM, FCSH, planificador de materias espol, malla interactiva espol" />
@@ -29,8 +47,8 @@
     <link rel="icon" type="image/svg+xml" href="/favicon-v2.svg" sizes="any" />
     <link rel="shortcut icon" href="/favicon-v2.svg" type="image/svg+xml" />
 
-    <!-- Google AdSense Script -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8362294904396944" crossorigin="anonymous"></script>
+    <!-- Google AdSense Script (Commented out to prevent fetch error in preview) -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8362294904396944" crossorigin="anonymous"></script> -->
   </head>
   <body>
     <div id="root"></div>

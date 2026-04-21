@@ -18,18 +18,27 @@ import { LandingPage } from './components/LandingPage';
 import { motion, AnimatePresence } from 'motion/react';
 import { BookOpen, Github, Mail, Linkedin } from 'lucide-react';
 import { translations } from './i18n/translations';
-import { Analytics } from '@vercel/analytics/react';
+import { useEffect } from 'react';
 
 export default function App() {
-  const { selectedCareerId, language } = useMallaStore();
+  const { selectedCareerId, language, theme } = useMallaStore();
   const [isPlannerOpen, setIsPlannerOpen] = useState(false);
   const [currentView, setCurrentView] = useState<'dashboard' | 'planner' | 'privacy' | 'terms'>('dashboard');
 
   const selectedCareer = careers.find(c => c.id === selectedCareerId);
   const t = translations[language];
 
+  useEffect(() => {
+    const html = document.documentElement;
+    if (theme === 'dark') {
+      html.classList.add('dark');
+    } else {
+      html.classList.remove('dark');
+    }
+  }, [theme]);
+
   return (
-    <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-emerald-500/30">
+    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-emerald-500/30 transition-colors duration-500">
       <Sidebar currentView={currentView} setCurrentView={setCurrentView} />
       
       <div className="flex flex-col relative z-10 min-h-screen pb-24 md:pb-0 md:ml-24 min-w-0">
@@ -74,13 +83,13 @@ export default function App() {
           </AnimatePresence>
         </main>
 
-        <footer className="w-full py-8 px-6 sm:px-8 lg:px-12 text-[11px] text-white/30 relative z-10 mt-auto border-t border-white/5 bg-black/20">
+        <footer className="w-full py-8 px-6 sm:px-8 lg:px-12 text-[11px] text-foreground/30 relative z-10 mt-auto border-t border-border bg-background backdrop-blur-xl bg-opacity-80">
           <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row justify-between gap-10 md:gap-8">
             
             {/* Left Column (75%) */}
             <div className="w-full md:w-[75%] flex flex-col gap-6 text-left">
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                <span>© {new Date().getFullYear()} - Hecho con ❤️ por <a href="https://github.com/jayjanick" target="_blank" rel="noopener noreferrer" className="hover:text-white/50 transition-colors">Jay</a></span>
+                <span>© {new Date().getFullYear()} - Hecho con ❤️ por <a href="https://github.com/jayjanick" target="_blank" rel="noopener noreferrer" className="hover:text-foreground/50 transition-colors">Jay</a></span>
                 <span className="hidden sm:inline">•</span>
                 <div className="flex flex-wrap gap-4">
                   <button 
@@ -88,7 +97,7 @@ export default function App() {
                       setCurrentView('privacy');
                       window.scrollTo({ top: 0, behavior: 'smooth' });
                     }} 
-                    className="hover:text-white/80 transition-colors underline decoration-white/20 underline-offset-2"
+                    className="hover:text-foreground/80 transition-colors underline decoration-foreground/20 underline-offset-2"
                   >
                     Políticas de Privacidad
                   </button>
@@ -97,16 +106,16 @@ export default function App() {
                       setCurrentView('terms');
                       window.scrollTo({ top: 0, behavior: 'smooth' });
                     }} 
-                    className="hover:text-white/80 transition-colors underline decoration-white/20 underline-offset-2"
+                    className="hover:text-foreground/80 transition-colors underline decoration-foreground/20 underline-offset-2"
                   >
                     Términos de Uso
                   </button>
                 </div>
-                <span className="hidden xl:inline-block font-mono bg-white/5 px-2 py-0.5 rounded-md border border-white/10 sm:ml-auto">v1.0.2</span>
+                <span className="hidden xl:inline-block font-mono bg-foreground/5 px-2 py-0.5 rounded-md border border-border sm:ml-auto">v1.2.3</span>
               </div>
 
               <div className="space-y-3">
-                <h3 className="text-white/50 font-medium text-xs uppercase tracking-wider">Sobre el Planificador de Mallas ESPOL</h3>
+                <h3 className="text-foreground/50 font-medium text-xs uppercase tracking-wider">Sobre el Planificador de Mallas ESPOL</h3>
                 <p className="leading-relaxed">
                   Creé este Planificador Interactivo como una herramienta no oficial esperando que, al igual que a mí, les sirva a mis compañeros de la ESPOL para organizarse con tiempo y proyectar su carrera. Nos permite visualizar las materias por semestre, verificar prerrequisitos y calcular automáticamente los créditos aprobados.
                 </p>
@@ -118,13 +127,13 @@ export default function App() {
 
             {/* Right Column (25%) */}
             <div className="w-full md:w-[25%] flex flex-col items-center justify-center gap-4">
-              <h3 className="text-white/50 font-medium text-xs uppercase tracking-wider text-center">Contacto</h3>
+              <h3 className="text-foreground/50 font-medium text-xs uppercase tracking-wider text-center">Contacto</h3>
               <div className="flex gap-4 justify-center">
                 <a 
                   href="https://github.com/jayjanick" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="p-3 bg-white/5 hover:bg-white/10 rounded-full text-white/50 hover:text-white transition-colors"
+                  className="p-3 bg-foreground/5 hover:bg-emerald-500/10 rounded-full text-foreground/50 hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors cursor-pointer"
                   aria-label="GitHub"
                 >
                   <Github className="w-5 h-5" />
@@ -133,14 +142,14 @@ export default function App() {
                   href="https://www.linkedin.com/in/jay-janick" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="p-3 bg-white/5 hover:bg-white/10 rounded-full text-white/50 hover:text-white transition-colors"
+                  className="p-3 bg-foreground/5 hover:bg-emerald-500/10 rounded-full text-foreground/50 hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors cursor-pointer"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a 
                   href="mailto:jay.palacios2111@gmail.com" 
-                  className="p-3 bg-white/5 hover:bg-white/10 rounded-full text-white/50 hover:text-white transition-colors"
+                  className="p-3 bg-foreground/5 hover:bg-emerald-500/10 rounded-full text-foreground/50 hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors cursor-pointer"
                   aria-label="Correo Electrónico"
                 >
                   <Mail className="w-5 h-5" />
@@ -173,7 +182,6 @@ export default function App() {
           )}
         </AnimatePresence>
       </div>
-      <Analytics />
     </div>
   );
 }

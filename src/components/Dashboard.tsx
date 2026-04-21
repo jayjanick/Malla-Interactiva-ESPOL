@@ -56,14 +56,14 @@ function CircularStatCard({ title, value, progress }: { title: string, value: st
 
   return (
     <motion.div 
-      whileHover={{ y: -2 }}
-      className="bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/[0.05] rounded-xl sm:rounded-2xl p-2 sm:p-4 relative overflow-hidden group flex flex-col sm:flex-row items-center justify-center sm:justify-between text-center sm:text-left"
+      whileHover={{ y: -4 }}
+      className="ios-glass ios-shadow rounded-2xl sm:rounded-3xl p-3 sm:p-5 relative overflow-hidden group flex flex-col sm:flex-row items-center justify-center sm:justify-between text-center sm:text-left transition-all duration-500"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-100 dark:from-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+      <div className="absolute inset-0 bg-gradient-to-br from-foreground/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
       
       <div className="relative z-10 flex flex-col justify-center h-full w-full">
-        <p className="text-slate-500 dark:text-white/50 text-[9px] sm:text-[11px] font-medium uppercase tracking-wider mb-0.5 sm:mb-1 truncate">{title}</p>
-        <h3 className="text-base sm:text-2xl font-mono font-medium tracking-tight text-slate-900 dark:text-white">{value}</h3>
+        <p className="text-foreground/50 text-[9px] sm:text-[11px] font-medium uppercase tracking-wider mb-0.5 sm:mb-1 truncate">{title}</p>
+        <h3 className="text-base sm:text-2xl font-mono font-medium tracking-tight text-foreground uppercase">{value}</h3>
       </div>
 
       <div className="hidden sm:flex relative z-10 items-center justify-center w-16 h-16 shrink-0">
@@ -75,7 +75,7 @@ function CircularStatCard({ title, value, progress }: { title: string, value: st
             fill="transparent"
             stroke="currentColor"
             strokeWidth="8"
-            className="text-slate-200 dark:text-white/5"
+            className="text-foreground/10"
           />
           <motion.circle
             cx="50"
@@ -85,7 +85,7 @@ function CircularStatCard({ title, value, progress }: { title: string, value: st
             stroke="currentColor"
             strokeWidth="8"
             strokeLinecap="round"
-            className="text-emerald-500"
+            className="text-emerald-600 dark:text-emerald-500"
             strokeDasharray={circumference}
             initial={{ strokeDashoffset: circumference }}
             animate={{ strokeDashoffset }}
@@ -93,17 +93,17 @@ function CircularStatCard({ title, value, progress }: { title: string, value: st
           />
         </svg>
         <div className="absolute inset-0 flex items-center justify-center">
-          <Target className="w-5 h-5 text-emerald-400 opacity-50" />
+          <Target className="w-5 h-5 text-emerald-600 dark:text-emerald-400 opacity-50" />
         </div>
       </div>
       
       {/* Mobile progress bar */}
-      <div className="w-full h-1 bg-slate-100 dark:bg-white/5 rounded-full overflow-hidden relative z-10 mt-2 sm:hidden">
+      <div className="w-full h-1 bg-foreground/10 rounded-full overflow-hidden relative z-10 mt-2 sm:hidden">
         <motion.div 
           initial={{ width: 0 }}
           animate={{ width: `${progress}%` }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="h-full rounded-full bg-emerald-500"
+          className="h-full rounded-full bg-emerald-600 dark:bg-emerald-500"
         />
       </div>
     </motion.div>
@@ -112,15 +112,15 @@ function CircularStatCard({ title, value, progress }: { title: string, value: st
 
 function StatCard({ title, value, icon, progress, color }: { title: string, value: string, icon: ReactNode, progress: number, color: 'emerald' | 'indigo' | 'amber' }) {
   const bgColors = {
-    emerald: 'bg-emerald-500',
+    emerald: 'bg-emerald-600 dark:bg-emerald-500',
     indigo: 'bg-indigo-500',
     amber: 'bg-amber-500',
   };
 
   const textColors = {
-    emerald: 'text-emerald-400',
-    indigo: 'text-indigo-400',
-    amber: 'text-amber-400',
+    emerald: 'text-emerald-600 dark:text-emerald-500',
+    indigo: 'text-indigo-500',
+    amber: 'text-amber-500',
   };
 
   const radius = 36;
@@ -129,14 +129,14 @@ function StatCard({ title, value, icon, progress, color }: { title: string, valu
 
   return (
     <motion.div 
-      whileHover={{ y: -2 }}
-      className="bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/[0.05] rounded-xl sm:rounded-2xl p-2 sm:p-4 relative overflow-hidden group flex flex-col sm:flex-row items-center justify-center sm:justify-between text-center sm:text-left"
+      whileHover={{ y: -4 }}
+      className="ios-glass ios-shadow rounded-2xl sm:rounded-3xl p-3 sm:p-5 relative overflow-hidden group flex flex-col sm:flex-row items-center justify-center sm:justify-between text-center sm:text-left transition-all duration-500"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-100 dark:from-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+      <div className="absolute inset-0 bg-gradient-to-br from-foreground/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
       
       <div className="relative z-10 flex flex-col justify-center h-full w-full">
-        <p className="text-slate-500 dark:text-white/50 text-[9px] sm:text-[11px] font-medium uppercase tracking-wider mb-0.5 sm:mb-1 truncate">{title}</p>
-        <h3 className="text-base sm:text-2xl font-mono font-medium tracking-tight text-slate-900 dark:text-white">{value}</h3>
+        <p className="text-foreground/50 text-[9px] sm:text-[11px] font-medium uppercase tracking-wider mb-0.5 sm:mb-1 truncate">{title}</p>
+        <h3 className="text-base sm:text-2xl font-mono font-medium tracking-tight text-foreground uppercase">{value}</h3>
       </div>
 
       <div className="hidden sm:flex relative z-10 items-center justify-center w-16 h-16 shrink-0">
@@ -148,7 +148,7 @@ function StatCard({ title, value, icon, progress, color }: { title: string, valu
             fill="transparent"
             stroke="currentColor"
             strokeWidth="8"
-            className="text-slate-200 dark:text-white/5"
+            className="text-foreground/10"
           />
           <motion.circle
             cx="50"
@@ -171,7 +171,7 @@ function StatCard({ title, value, icon, progress, color }: { title: string, valu
       </div>
       
       {/* Mobile progress bar */}
-      <div className="w-full h-1 bg-slate-100 dark:bg-white/5 rounded-full overflow-hidden relative z-10 mt-2 sm:hidden">
+      <div className="w-full h-1 bg-foreground/10 rounded-full overflow-hidden relative z-10 mt-2 sm:hidden">
         <motion.div 
           initial={{ width: 0 }}
           animate={{ width: `${progress}%` }}

@@ -33,7 +33,10 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
   const hasRequisites = subject.prerequisites.length > 0 || (subject.corequisites && subject.corequisites.length > 0) || !!subject.minApprovedSubjects;
 
   return (
-    <div
+    <motion.div
+      layout
+      whileHover={!isLocked ? { opacity: 0.95 } : {}}
+      transition={{ duration: 0.3 }}
       onClick={() => {
         if (isLocked && !isApproved) {
           setShowAlert(true);
@@ -62,17 +65,17 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
         }
       }}
       className={cn(
-        "w-full h-full text-left p-4 rounded-xl border transition-all duration-300 relative overflow-hidden group flex flex-col focus:outline-none focus:ring-2 focus:ring-emerald-500/50",
+        "w-full h-full text-left p-4 rounded-3xl transition-all duration-300 relative group flex flex-col focus:outline-none focus:ring-2 focus:ring-emerald-500/50",
         isApproved 
-          ? "bg-emerald-500/10 border-emerald-500/30 hover:bg-emerald-500/20" 
+          ? "bg-emerald-500/10 ring-1 ring-emerald-500/40 ring-inset ios-float" 
           : isLocked
-            ? "bg-white/[0.01] border-white/5 opacity-60 cursor-pointer"
-            : "bg-white/[0.02] border-white/10 hover:bg-white/[0.03] hover:border-white/15 cursor-pointer"
+            ? "bg-foreground/[0.01] ring-1 ring-border/50 ring-inset opacity-60 cursor-pointer"
+            : "ios-glass hover:bg-foreground/[0.03] hover:ring-1 hover:ring-emerald-500/40 hover:ring-inset cursor-pointer ios-shadow hover:ios-float hover:z-10"
       )}
     >
       {/* Background glow effect on hover */}
       {!isLocked && !isApproved && (
-        <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+        <div className="absolute inset-0 bg-gradient-to-br from-foreground/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
       )}
       {isApproved && (
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/[0.05] to-transparent opacity-100" />
@@ -81,17 +84,17 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
       <div className="relative z-10 flex flex-col gap-2 flex-1 min-w-0">
         {/* Row 1: Code and Total Hours */}
         <div className="flex items-center justify-between w-full">
-          <span className="text-xs font-mono text-white/40">{subject.code}</span>
+          <span className="text-xs font-mono text-foreground/40">{subject.code}</span>
           <div className="flex items-center gap-2">
             {isApproved ? (
-              <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+              <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
             ) : isLocked ? (
-              <Lock className="w-4 h-4 text-white/20 shrink-0" />
+              <Lock className="w-4 h-4 text-foreground/20 shrink-0" />
             ) : (
-              <Unlock className="w-4 h-4 text-white/20 shrink-0 transition-opacity" />
+              <Unlock className="w-4 h-4 text-foreground/20 shrink-0 transition-opacity" />
             )}
             {subject.hoursTotal && (
-              <span className="text-xs font-mono text-white/40">{subject.hoursTotal}h</span>
+              <span className="text-xs font-mono text-foreground/40">{subject.hoursTotal}h</span>
             )}
           </div>
         </div>
@@ -101,37 +104,46 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
           <div className="flex flex-col min-w-0">
             <h4 className={cn(
               "text-[11px] sm:text-sm md:text-xs lg:text-sm font-medium leading-tight break-words",
-              isApproved ? "text-emerald-50" : isLocked ? "text-white/50" : "text-white/90"
+              isApproved ? "text-emerald-900 dark:text-emerald-50" : isLocked ? "text-foreground/50" : "text-foreground/90"
             )}>
-              {isApproved && subject.isItinerary && itinerarySelections[subject.id]
-                ? subject.itineraryOptions?.find(o => o.id === itinerarySelections[subject.id])?.name || subject.name
-                : isApproved && subject.isComplementary && itinerarySelections[subject.id]
-                ? materiasComplementarias.find(o => o.value === itinerarySelections[subject.id])?.label.split('] - ')[1]?.replace(' (1 CR)', '') || subject.name
-                : subject.name}
+              {(() => {
+                if (!isApproved) return subject.name;
+                if (subject.isItinerary && itinerarySelections[subject.id]) {
+                  return subject.itineraryOptions?.find(o => o.id === itinerarySelections[subject.id])?.name || subject.name;
+                }
+                if (subject.isComplementary && itinerarySelections[subject.id]) {
+                  const comp = materiasComplementarias.find(o => o.value === itinerarySelections[subject.id]);
+                  if (comp) {
+                    return comp.label.replace(/^\[.*?\]\s*-\s*/, '').replace(/\s*\(1\s*CR\)$/, '') || subject.name;
+                  }
+                  return subject.name;
+                }
+                return subject.name;
+              })()}
             </h4>
             {isApproved && subject.isItinerary && itinerarySelections[subject.id] && (
-              <span className="text-[10px] text-emerald-400/70 mt-1 leading-tight">
+              <span className="text-[10px] text-emerald-600/80 dark:text-emerald-400/80 mt-1 leading-tight font-medium">
                 {subject.itineraryOptions?.find(o => o.id === itinerarySelections[subject.id])?.track}
               </span>
             )}
             {isApproved && subject.isComplementary && itinerarySelections[subject.id] && (
-              <span className="text-[10px] text-emerald-400/70 mt-1 leading-tight">
-                {itinerarySelections[subject.id]}
+              <span className="text-[10px] text-emerald-600/80 dark:text-emerald-400/80 mt-1 leading-tight font-medium">
+                Opción: {itinerarySelections[subject.id]}
               </span>
             )}
           </div>
           {subject.hoursDetail && (
-            <span className="text-[10px] font-mono text-white/30 shrink-0 text-right mt-0.5">
+            <span className="text-[10px] font-mono text-foreground/30 shrink-0 text-right mt-0.5">
               {subject.hoursDetail}
             </span>
           )}
         </div>
 
-        <div className="flex flex-col gap-2 mt-2 pt-2 border-t border-white/5">
+        <div className="flex flex-col gap-2 mt-2 pt-2 border-t border-border">
           <div className="flex items-center justify-between">
             <span className={cn(
               "text-xs font-medium px-2 py-0.5 rounded-md",
-              isApproved ? "bg-emerald-500/20 text-emerald-300" : "bg-white/5 text-white/50"
+              isApproved ? "bg-emerald-500/20 text-emerald-800 dark:text-emerald-300" : "bg-foreground/5 text-foreground/50"
             )}>
               {subject.credits} CR
             </span>
@@ -139,13 +151,13 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
             <div className="flex flex-col items-end gap-1">
               {subject.minApprovedSubjects && (
                 <div 
-                  className="flex gap-1 items-center cursor-pointer hover:bg-white/5 p-1 -mr-1 rounded transition-colors"
+                  className="flex gap-1 items-center cursor-pointer hover:bg-foreground/5 p-1 -mr-1 rounded transition-colors"
                   onClick={(e) => {
                     e.stopPropagation();
                     setShowAlert(true);
                   }}
                 >
-                  <span className="text-[9px] text-white/30 uppercase tracking-wider mr-1">{t.malla.min}</span>
+                  <span className="text-[9px] text-foreground/30 uppercase tracking-wider mr-1">{t.malla.min}</span>
                   <div 
                     className={cn(
                       "w-1.5 h-1.5 rounded-full",
@@ -156,13 +168,13 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
               )}
               {subject.prerequisites.length > 0 && (
                 <div 
-                  className="flex gap-1 items-center cursor-pointer hover:bg-white/5 p-1 -mr-1 rounded transition-colors"
+                  className="flex gap-1 items-center cursor-pointer hover:bg-foreground/5 p-1 -mr-1 rounded transition-colors"
                   onClick={(e) => {
                     e.stopPropagation();
                     setShowAlert(true);
                   }}
                 >
-                  <span className="text-[9px] text-white/30 uppercase tracking-wider mr-1">{t.malla.req}</span>
+                  <span className="text-[9px] text-foreground/30 uppercase tracking-wider mr-1">{t.malla.req}</span>
                   {subject.prerequisites.map(prereqId => {
                     const isPrereqApproved = approvedSubjects.includes(prereqId);
                     return (
@@ -179,13 +191,13 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
               )}
               {subject.corequisites && subject.corequisites.length > 0 && (
                 <div 
-                  className="flex gap-1 items-center cursor-pointer hover:bg-white/5 p-1 -mr-1 rounded transition-colors"
+                  className="flex gap-1 items-center cursor-pointer hover:bg-foreground/5 p-1 -mr-1 rounded transition-colors"
                   onClick={(e) => {
                     e.stopPropagation();
                     setShowAlert(true);
                   }}
                 >
-                  <span className="text-[9px] text-white/30 uppercase tracking-wider mr-1">{t.malla.coreq}</span>
+                  <span className="text-[9px] text-foreground/30 uppercase tracking-wider mr-1">{t.malla.coreq}</span>
                   {subject.corequisites.map(coreqId => {
                     const isCoreqApproved = approvedSubjects.includes(coreqId);
                     return (
@@ -209,21 +221,21 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
       <AnimatePresence>
         {showAlert && hasRequisites && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.15 }}
-            className="absolute inset-0 z-20 bg-[#0a0a0a]/95 backdrop-blur-md p-4 flex flex-col gap-3 border border-white/10 rounded-xl shadow-2xl"
+            className="absolute inset-x-0 inset-y-0 z-20 bg-card/95 backdrop-blur-md p-4 flex flex-col gap-3 rounded-3xl transition-colors duration-500 overflow-hidden shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)]"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between">
-              <span className="text-xs font-medium text-white/90 uppercase tracking-wider">{t.malla.prerequisitesNotMet}</span>
+              <span className="text-xs font-medium text-foreground/90 uppercase tracking-wider">{t.malla.prerequisitesNotMet}</span>
               <button 
                 onClick={(e) => {
                   e.stopPropagation();
                   setShowAlert(false);
                 }} 
-                className="p-1.5 bg-white/5 hover:bg-white/10 rounded-lg text-white/50 hover:text-white transition-colors"
+                className="p-1.5 bg-foreground/5 hover:bg-foreground/10 rounded-lg text-foreground/50 hover:text-foreground transition-colors"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -284,21 +296,21 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
       <AnimatePresence>
         {showItineraryOptions && subject.isItinerary && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.15 }}
-            className="absolute inset-0 z-30 bg-[#0a0a0a]/95 backdrop-blur-md p-4 flex flex-col gap-3 border border-white/10 rounded-xl shadow-2xl"
+            className="absolute inset-x-0 inset-y-0 z-30 bg-card/95 backdrop-blur-md p-4 flex flex-col gap-3 rounded-3xl transition-colors duration-500 overflow-hidden shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)]"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between">
-              <span className="text-xs font-medium text-white/90 uppercase tracking-wider">{t.malla.chooseOption}</span>
+              <span className="text-xs font-medium text-foreground/90 uppercase tracking-wider">{t.malla.chooseOption}</span>
               <button 
                 onClick={(e) => {
                   e.stopPropagation();
                   setShowItineraryOptions(false);
                 }} 
-                className="p-1.5 bg-white/5 hover:bg-white/10 rounded-lg text-white/50 hover:text-white transition-colors"
+                className="p-1.5 bg-foreground/5 hover:bg-foreground/10 rounded-lg text-foreground/50 hover:text-foreground transition-colors"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -311,9 +323,9 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
                     toggleApproved(subject.id);
                     setShowItineraryOptions(false);
                   }}
-                  className="w-full text-left text-xs p-2 rounded-lg border border-red-500/20 bg-red-500/10 text-red-400 hover:bg-red-500/20 transition-colors"
+                  className="w-full text-left text-xs p-2 rounded-lg border border-red-500/20 bg-red-500/10 text-red-500 hover:bg-red-500/20 transition-colors"
                 >
-                  {t.malla.clickToRemove}
+                  {t.malla.clickToRemoveItinerary}
                 </button>
               )}
               {subject.itineraryOptions?.map(option => {
@@ -332,8 +344,8 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
                     className={cn(
                       "text-xs flex flex-col gap-1 p-2 rounded-lg border transition-colors text-left",
                       isSelected 
-                        ? "bg-emerald-500/20 border-emerald-500/30 text-emerald-100" 
-                        : "bg-white/5 border-white/10 text-white/70 hover:bg-white/10 hover:text-white"
+                        ? "bg-emerald-500/20 border-emerald-500/30 text-emerald-800 dark:text-emerald-100" 
+                        : "bg-foreground/5 border-border text-foreground/70 hover:bg-foreground/10 hover:text-foreground"
                     )}
                   >
                     <span className="font-semibold">{option.name}</span>
@@ -352,21 +364,21 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
       <AnimatePresence>
         {showComplementaryOptions && subject.isComplementary && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.15 }}
-            className="absolute inset-0 z-30 bg-[#0a0a0a]/95 backdrop-blur-md p-4 flex flex-col gap-3 border border-white/10 rounded-xl shadow-2xl"
+            className="absolute inset-x-0 inset-y-0 z-30 bg-card/95 backdrop-blur-md p-4 flex flex-col gap-3 rounded-3xl transition-colors duration-500 overflow-hidden shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)]"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between">
-              <span className="text-xs font-medium text-white/90 uppercase tracking-wider">{t.malla.chooseOption}</span>
+              <span className="text-xs font-medium text-foreground/90 uppercase tracking-wider">{t.malla.chooseOption}</span>
               <button 
                 onClick={(e) => {
                   e.stopPropagation();
                   setShowComplementaryOptions(false);
                 }} 
-                className="p-1.5 bg-white/5 hover:bg-white/10 rounded-lg text-white/50 hover:text-white transition-colors"
+                className="p-1.5 bg-foreground/5 hover:bg-foreground/10 rounded-lg text-foreground/50 hover:text-foreground transition-colors"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -379,9 +391,9 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
                     toggleApproved(subject.id);
                     setShowComplementaryOptions(false);
                   }}
-                  className="w-full text-left text-xs p-2 rounded-lg border border-red-500/20 bg-red-500/10 text-red-400 hover:bg-red-500/20 transition-colors"
+                  className="w-full text-left text-xs p-2 rounded-lg border border-red-500/20 bg-red-500/10 text-red-500 hover:bg-red-500/20 transition-colors"
                 >
-                  {t.malla.clickToRemove}
+                  {t.malla.clickToRemoveComplementary}
                 </button>
               )}
               {materiasComplementarias.map(option => {
@@ -406,8 +418,8 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
                     className={cn(
                       "text-xs flex flex-col gap-1 p-2 rounded-lg border transition-colors text-left",
                       isSelected 
-                        ? "bg-emerald-500/20 border-emerald-500/30 text-emerald-100" 
-                        : "bg-white/5 border-white/10 text-white/70 hover:bg-white/10 hover:text-white"
+                        ? "bg-emerald-500/20 border-emerald-500/30 text-emerald-800 dark:text-emerald-100" 
+                        : "bg-foreground/5 border-border text-foreground/70 hover:bg-foreground/10 hover:text-foreground"
                     )}
                   >
                     <span className="font-semibold">{option.label.split('] - ')[1]?.replace(' (1 CR)', '') || option.label}</span>
@@ -422,6 +434,6 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </motion.div>
   );
 }

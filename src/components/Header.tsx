@@ -14,7 +14,7 @@ export function Header() {
   const careerOptions = filteredCareers.map(c => ({ value: c.id, label: c.name }));
 
   return (
-    <header className="sticky top-0 z-30 w-full border-b border-slate-200 dark:border-white/5 bg-white/80 dark:bg-[#050505]/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-30 w-full border-b border-border bg-background/80 backdrop-blur-xl transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
         <div className="flex items-center justify-between w-full">
           <CustomSelect

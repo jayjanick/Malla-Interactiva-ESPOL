@@ -25,11 +25,11 @@ export function MallaGrid({ career }: MallaGridProps) {
         
         return (
           <div key={period} className="flex flex-col gap-4">
-            <div className="flex items-center justify-between px-2 border-b border-slate-300 dark:border-white/10 pb-2">
-              <h3 className="text-sm font-medium text-slate-600 dark:text-white/70 uppercase tracking-widest">
+            <div className="flex items-center justify-between px-2 border-b border-border pb-2">
+              <h3 className="text-sm font-medium text-foreground/70 uppercase tracking-widest">
                 {period.toLowerCase() === 'complementarias' ? 'COMPLEMENTARIAS' : `${t.malla.level} ${period}`}
               </h3>
-              <span className="text-xs font-mono text-slate-400 dark:text-white/40 bg-slate-100 dark:bg-white/5 px-2 py-1 rounded-md border border-slate-200 dark:border-white/5">
+              <span className="text-xs font-mono text-foreground/40 bg-foreground/5 px-2 py-1 rounded-md border border-border">
                 {approvedInPeriod}/{subjectsInPeriod.length} - {approvedCredits}/{totalCredits} CR
               </span>
             </div>
