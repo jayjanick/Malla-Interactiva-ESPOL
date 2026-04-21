@@ -598,62 +598,62 @@ export const careers: Career[] = [
     facultyId: 'fcs',
     subjects: [
       // NIVEL 100 - I
-      { id: 'matg1045', code: 'MATG1045', name: 'Cálculo de Una Variable', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], period: '100 - I' },
+      { id: 'matg2007', code: 'MATG2007', name: 'Matemáticas', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], period: '100 - I' },
+      { id: 'hisg2002', code: 'HISG2002', name: 'Introducción a la Historia y Etnohistoria', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '100 - I' },
+      { id: 'arqg2042', code: 'ARQG2042', name: 'Introducción a la Antropología y Arqueología', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], period: '100 - I' },
+      { id: 'arqg2041', code: 'ARQG2041', name: 'Geografía Física', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - I' },
       { id: 'indg1033', code: 'INDG1033', name: 'Análisis y Resolución de Problemas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '100 - I' },
-      { id: 'ecog2067', code: 'ECOG2067', name: 'Introducción a la Economía', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: [], period: '100 - I' },
-      { id: 'ccag2022', code: 'CCAG2022', name: 'Estudio de Casos de Ciencias Sociales', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], period: '100 - I' },
-      { id: 'turg2025', code: 'TURG2025', name: 'Fundamentos de Turismo', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: [], period: '100 - I' },
       { id: 'idig1006', code: 'IDIG1006', name: 'Inglés I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - I' },
 
       // NIVEL 100 - II
-      { id: 'matg1047', code: 'MATG1047', name: 'Cálculo de Varias Variables', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1045'], period: '100 - II' },
-      { id: 'ecog2063', code: 'ECOG2063', name: 'Macroeconomía I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ecog2067'], period: '100 - II' },
-      { id: 'ecog2047', code: 'ECOG2047', name: 'Economía Gerencial', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ecog2067'], period: '100 - II' },
-      { id: 'admg2029', code: 'ADMG2029', name: 'Fundamentos de Administración', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['ccag2022', 'ecog2067'], period: '100 - II' },
-      { id: 'turg2026', code: 'TURG2026', name: 'Geografía del Turismo', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['turg2025'], period: '100 - II' },
+      { id: 'admg2030', code: 'ADMG2030', name: 'Fundamentos de Marketing', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], period: '100 - II' },
+      { id: 'turg2022', code: 'TURG2022', name: 'Derecho Turístico y Ambiental', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['hisg2002'], period: '100 - II' },
+      { id: 'turg2036_t', code: 'TURG2036', name: 'Teoría del Turismo', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['arqg2042'], period: '100 - II' },
+      { id: 'turg2035_t', code: 'TURG2035', name: 'Geografía Turística', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['arqg2041'], period: '100 - II' },
+      { id: 'ecog2067', code: 'ECOG2067', name: 'Introducción a la Economía', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: [], period: '100 - II' },
       { id: 'idig1007', code: 'IDIG1007', name: 'Inglés II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1006'], period: '100 - II' },
 
       // NIVEL 200 - I
-      { id: 'estg1036', code: 'ESTG1036', name: 'Estadística I', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1047'], period: '200 - I' },
-      { id: 'ccpg1043', code: 'CCPG1043', name: 'Fundamentos de Programación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1045'], period: '200 - I' },
-      { id: 'audg2034', code: 'AUDG2034', name: 'Contabilidad Financiera', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 5, period: '200 - I' },
-      { id: 'turg2027', code: 'TURG2027', name: 'Patrimonio Natural y Cultural', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['turg2026'], period: '200 - I' },
+      { id: 'ccpg1043', code: 'CCPG1043', name: 'Fundamentos de Programación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg2007'], period: '200 - I' },
       { id: 'idig2012', code: 'IDIG2012', name: 'Comunicación', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 6, period: '200 - I' },
+      { id: 'turg2034_t', code: 'TURG2034', name: 'Patrimonio Natural y Cultural', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['turg2036_t'], period: '200 - I' },
+      { id: 'audg2034', code: 'AUDG2034', name: 'Contabilidad Financiera', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 6, period: '200 - I' },
+      { id: 'admg2029', code: 'ADMG2029', name: 'Fundamentos de Administración', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['ecog2067'], period: '200 - I' },
       { id: 'idig1008', code: 'IDIG1008', name: 'Inglés III', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1007'], period: '200 - I' },
 
       // NIVEL 200 - II
-      { id: 'estg1037', code: 'ESTG1037', name: 'Estadística II', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['estg1036'], period: '200 - II' },
-      { id: 'admg2030', code: 'ADMG2030', name: 'Fundamentos de Marketing', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], minApprovedSubjects: 15, period: '200 - II' },
-      { id: 'ccag2023', code: 'CCAG2023', name: 'Sociología', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], minApprovedSubjects: 15, period: '200 - II' },
-      { id: 'matg2008', code: 'MATG2008', name: 'Matemáticas Financieras', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 5, period: '200 - II' },
-      { id: 'turg2028', code: 'TURG2028', name: 'Operación de Servicios Turísticos', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['turg2027'], period: '200 - II' },
+      { id: 'estg2004', code: 'ESTG2004', name: 'Estadística', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['ccpg1043'], period: '200 - II' },
+      { id: 'turg2024', code: 'TURG2024', name: 'Fundamentos de Planificación Turística', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['turg2035_t', 'turg2022'], period: '200 - II' },
+      { id: 'turg2019', code: 'TURG2019', name: 'Alimentos y Bebidas', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['turg2034_t'], period: '200 - II' },
+      { id: 'matg2008', code: 'MATG2008', name: 'Matemáticas Financieras', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 12, period: '200 - II' },
+      { id: 'admg2022', code: 'ADMG2022', name: 'Administración de Operaciones', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['admg2029'], period: '200 - II' },
       { id: 'idig1009', code: 'IDIG1009', name: 'Inglés IV', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1008'], period: '200 - II' },
 
       // NIVEL 300 - I
+      { id: 'turg2032_m', code: 'TURG2032', name: 'Métodos de Investigación en Turismo', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['estg2004'], period: '300 - I' },
+      { id: 'admg2035', code: 'ADMG2035', name: 'Investigación de Mercados', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['estg2004'], period: '300 - I' },
+      { id: 'turg2033_p', code: 'TURG2033', name: 'Planificación de Espacios Turísticos', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['turg2024'], period: '300 - I' },
+      { id: 'adsg1026', code: 'ADSG1026', name: 'Ciencias de la Sostenibilidad', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 20, period: '300 - I' },
       { id: 'admg1005', code: 'ADMG1005', name: 'Emprendimiento e Innovación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], minApprovedSubjects: 20, period: '300 - I' },
-      { id: 'admg2035', code: 'ADMG2035', name: 'Investigación de Mercados', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['admg2030'], period: '300 - I' },
-      { id: 'ccpg1054', code: 'CCPG1054', name: 'Sistemas de Información', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], minApprovedSubjects: 15, period: '300 - I' },
-      { id: 'ecog2042', code: 'ECOG2042', name: 'Análisis Financiero', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['matg2008', 'audg2034'], period: '300 - I' },
-      { id: 'turg2029', code: 'TURG2029', name: 'Gestión de Destinos Turísticos', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['turg2028'], period: '300 - I' },
       { id: 'idig1010', code: 'IDIG1010', name: 'Inglés V', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1009'], period: '300 - I' },
 
       // NIVEL 300 - II
-      { id: 'adsg1026', code: 'ADSG1026', name: 'Ciencias de la Sostenibilidad', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 20, period: '300 - II' },
-      { id: 'turg2030', code: 'TURG2030', name: 'Marketing Turístico', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['admg2035'], period: '300 - II' },
-      { id: 'turg2031', code: 'TURG2031', name: 'Planificación Turística', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['turg2029'], period: '300 - II' },
-      { id: 'turg2032', code: 'TURG2032', name: 'Gestión de Empresas Turísticas', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['turg2029', 'admg2029'], period: '300 - II' },
-      { id: 'jurg2005', code: 'JURG2005', name: 'Derecho Societario y Laboral', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['admg2029'], period: '300 - II' },
+      { id: 'turg2031_m', code: 'TURG2031', name: 'Marketing Turístico', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['admg2030'], period: '300 - II' },
+      { id: 'turg2021', code: 'TURG2021', name: 'Conservación y Manejo Ambiental en Turismo', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['adsg1026'], period: '300 - II' },
+      { id: 'turg2037_o', code: 'TURG2037', name: 'Operación Turística', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['turg2035_t'], period: '300 - II' },
+      { id: 'ecog2042', code: 'ECOG2042', name: 'Análisis Financiero', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['matg2008', 'audg2034'], period: '300 - II' },
       { id: 'psc_tur', code: 'PSC', name: 'Prácticas de Servicio Comunitario', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '300 - II' },
 
       // NIVEL 400 - I
-      { id: 'turg2033', code: 'TURG2033', name: 'Desarrollo de Productos Turísticos', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['turg2031'], period: '400 - I' },
-      { id: 'turg2034', code: 'TURG2034', name: 'Evaluación de Proyectos Turísticos', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['turg2031', 'ecog2042'], period: '400 - I' },
-      { id: 'admg2036', code: 'ADMG2036', name: 'Planificación Estratégica', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ccag2023', 'turg2032'], period: '400 - I' },
-      { id: 'turg2035', code: 'TURG2035', name: 'Turismo Sostenible', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['turg2031'], period: '400 - I' },
+      { id: 'turg2023', code: 'TURG2023', name: 'Desarrollo Sostenible del Turismo', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['turg2021'], period: '400 - I' },
+      { id: 'turg2030_gh', code: 'TURG2030', name: 'Gestión Hotelera', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['turg2019', 'admg2022'], period: '400 - I' },
+      { id: 'turg2018', code: 'TURG2018', name: 'Agencias de Viaje', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['turg2037_o'], period: '400 - I' },
+      { id: 'admg2037', code: 'ADMG2037', name: 'Gestión de Proyectos', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['ecog2042'], period: '400 - I' },
       { id: 'itin1_tur', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true, itineraryOptions: turismoItineraryOptions },
 
       // NIVEL 400 - II
-      { id: 'turg2036', code: 'TURG2036', name: 'Materia Integradora de Turismo', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 42, period: '400 - II' },
+      { id: 'turg2020', code: 'TURG2020', name: 'Congresos y Eventos', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], minApprovedSubjects: 30, period: '400 - II' },
+      { id: 'turg2029_mt', code: 'TURG2029', name: 'Materia Integradora de Turismo', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 40, period: '400 - II' },
       { id: 'itin2_tur', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: turismoItineraryOptions },
 
       // NIVEL 500 - I
