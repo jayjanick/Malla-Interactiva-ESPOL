@@ -104,7 +104,7 @@ export function Sidebar({ currentView, setCurrentView }: SidebarProps) {
 
       {/* Mobile Bottom Navigation */}
       <div className="md:hidden fixed bottom-4 left-1/2 -translate-x-1/2 w-[95%] z-50">
-        <div className="ios-glass ios-shadow rounded-3xl flex items-center justify-around py-2.5 px-3 transition-colors duration-500">
+        <div className="bg-card/95 backdrop-blur-md rounded-3xl flex items-center justify-around py-2.5 px-3 transition-colors duration-500 border border-border/50">
           <button
             onClick={() => setCurrentView('dashboard')}
             className={cn(
