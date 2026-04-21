@@ -43,7 +43,7 @@ export function Sidebar({ currentView, setCurrentView }: SidebarProps) {
   return (
     <>
       <motion.div 
-        className="hidden md:flex flex-col h-[calc(100vh-2rem)] fixed top-4 left-4 rounded-3xl shrink-0 z-50 overflow-hidden ios-glass ios-shadow transition-colors duration-500"
+        className="hidden md:flex flex-col h-[calc(100vh-2rem)] fixed top-4 left-4 rounded-3xl shrink-0 z-50 overflow-hidden sidebar-solid ios-shadow transition-colors duration-500"
         animate={{ width: isHovered ? 256 : 80 }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}

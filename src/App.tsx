@@ -29,11 +29,10 @@ export default function App() {
   const t = translations[language];
 
   useEffect(() => {
-    const html = document.documentElement;
     if (theme === 'dark') {
-      html.classList.add('dark');
+      document.documentElement.classList.add('dark');
     } else {
-      html.classList.remove('dark');
+      document.documentElement.classList.remove('dark');
     }
   }, [theme]);
 

@@ -39,11 +39,28 @@
   .ios-glass {
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    @apply bg-card dark:bg-card; /* Solid card background instead of transparent */
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    @apply bg-white/10 dark:bg-zinc-900/10;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+      inset 1px 1px 0px 0px rgba(255, 255, 255, 0.5),
+      inset -1px -1px 0px 0px rgba(0, 0, 0, 0.1),
+      0px 4px 12px rgba(0, 0, 0, 0.05);
   }
 
   .dark .ios-glass {
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 
+      inset 1px 1px 0px 0px rgba(255, 255, 255, 0.1),
+      inset -1px -1px 0px 0px rgba(0, 0, 0, 0.3),
+      0px 8px 24px rgba(0, 0, 0, 0.4);
+  }
+
+  .sidebar-solid {
+    @apply bg-card dark:bg-card;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .dark .sidebar-solid {
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
