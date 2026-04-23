@@ -30,6 +30,7 @@
 @layer base {
   html, body {
     @apply bg-background text-foreground;
+    transition: background-color 0.5s ease, color 0.5s ease;
     overflow-x: hidden;
     width: 100%;
   }
@@ -68,9 +69,16 @@
   /* Specific mobile override to force better separation */
   @media (max-width: 767px) {
     .sidebar-solid {
-      @apply bg-card/90 dark:bg-card/90 backdrop-blur-md;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+      background-color: rgba(249, 249, 249, 0.85) !important;
+      backdrop-filter: blur(16px) !important;
+      -webkit-backdrop-filter: blur(16px) !important;
+      border: 1px solid rgba(0, 0, 0, 0.1) !important;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E") !important;
+    }
+    
+    .dark .sidebar-solid {
+      background-color: rgba(24, 24, 26, 0.85) !important;
+      border: 1px solid rgba(255, 255, 255, 0.15) !important;
     }
   }
 

@@ -5,20 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- SEO Básico -->
-    <!-- Prevent Uncaught TypeError: Cannot set property fetch of #<Window> which has only a getter -->
     <script>
-      (function() {
-        try {
-          var storage = localStorage.getItem('espol-malla-storage');
-          var parsed = JSON.parse(storage || '{}');
-          if (parsed && parsed.state && (parsed.state.theme === 'dark' || !parsed.state.theme)) {
-            document.documentElement.classList.add('dark');
-          }
-        } catch (e) {
-          document.documentElement.classList.add('dark');
-        }
-      })();
-
       (function() {
         try {
           var originalFetch = window.fetch;
@@ -26,12 +13,22 @@
             configurable: true,
             enumerable: true,
             get: function() { return originalFetch; },
-            set: function(newFetch) { 
-              console.warn('Blocked attempt to override window.fetch'); 
-            }
+            set: function() { /* Silently ignore to prevent TypeError in preview extension environments */ }
           });
+        } catch (e) {}
+        
+        try {
+          var storage = localStorage.getItem('espol-malla-storage');
+          var parsed = JSON.parse(storage || '{}');
+          if (parsed && parsed.state && (parsed.state.theme === 'dark' || !parsed.state.theme)) {
+            document.documentElement.classList.add('dark');
+            document.documentElement.style.backgroundColor = '#121212';
+          } else {
+            document.documentElement.style.backgroundColor = '#EAEAEA';
+          }
         } catch (e) {
-          console.error('Failed to protect window.fetch', e);
+          document.documentElement.classList.add('dark');
+          document.documentElement.style.backgroundColor = '#121212';
         }
       })();
     </script>

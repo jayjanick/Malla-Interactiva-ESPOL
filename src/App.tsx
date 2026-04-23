@@ -37,7 +37,7 @@ export default function App() {
   }, [theme]);
 
   return (
-    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-emerald-500/30 transition-colors duration-500">
+    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-emerald-500/30 transition-colors duration-500 flex sm:block">
       <Sidebar currentView={currentView} setCurrentView={setCurrentView} />
       
       <div className="flex flex-col relative z-10 min-h-screen pb-24 md:pb-0 md:ml-24 min-w-0">

@@ -65,12 +65,12 @@ export function SubjectCard({ subject, career }: SubjectCardProps) {
         }
       }}
       className={cn(
-        "w-full h-full text-left p-4 rounded-3xl overflow-hidden transition-all duration-300 relative group flex flex-col focus:outline-none focus:ring-2 focus:ring-emerald-500/50",
+        "w-full h-full text-left p-4 rounded-[24px] overflow-hidden transition-all duration-300 relative group flex flex-col focus:outline-none focus:ring-2 focus:ring-emerald-500/50",
         isApproved 
-          ? "bg-emerald-500/10 ring-1 ring-emerald-500/40 ring-inset ios-float" 
+          ? "bg-emerald-500/10 ring-1 ring-emerald-500/40 ring-inset ios-float rounded-[24px]" 
           : isLocked
-            ? "bg-foreground/[0.01] ring-1 ring-border/50 ring-inset opacity-60 cursor-pointer"
-            : "ios-glass hover:bg-foreground/[0.03] hover:ring-1 hover:ring-emerald-500/40 hover:ring-inset cursor-pointer ios-shadow hover:ios-float hover:z-10"
+            ? "bg-foreground/[0.01] ring-1 ring-border/50 ring-inset opacity-60 cursor-pointer rounded-[24px]"
+            : "ios-glass hover:bg-foreground/[0.03] hover:ring-1 hover:ring-emerald-500/40 hover:ring-inset cursor-pointer ios-shadow hover:ios-float hover:z-10 rounded-[24px]"
       )}
     >
       {/* Background glow effect on hover */}

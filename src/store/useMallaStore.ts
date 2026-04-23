@@ -12,6 +12,7 @@ export interface PlannedSubject {
   subjectId: string;
   periodId: string;
   professor: string;
+  parallel?: string;
 }
 
 export type Theme = 'light' | 'dark';

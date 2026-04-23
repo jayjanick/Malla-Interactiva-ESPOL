@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronDown, Check } from 'lucide-react';
 import { cn } from '../lib/utils';
@@ -37,17 +37,36 @@ export function CustomSelect({
   align = 'left'
 }: CustomSelectProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
   const ref = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (ref.current && !ref.current.contains(event.target as Node)) {
         setIsOpen(false);
+        setSearchTerm('');
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
+
+  useEffect(() => {
+    if (isOpen && inputRef.current) {
+      // Small timeout to ensure AnimatePresence mount and focus stealing doesn't prevent focus
+      setTimeout(() => {
+        inputRef.current?.focus();
+      }, 10);
+    }
+  }, [isOpen]);
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (!isOpen && e.key.length === 1) {
+      setIsOpen(true);
+      setSearchTerm(e.key);
+    }
+  };
 
   const flatOptions = options.reduce<Option[]>((acc, curr) => {
     if ('options' in curr) {
@@ -55,6 +74,25 @@ export function CustomSelect({
     }
     return [...acc, curr];
   }, []);
+
+  const normalizeString = (str: string) => {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+  };
+
+  const isMatch = (label: string, term: string) => {
+    if (!term) return true;
+    const normalizedLabel = normalizeString(label);
+    const searchWords = normalizeString(term).split(/\s+/);
+    return searchWords.every(word => normalizedLabel.includes(word));
+  };
+
+  const filteredOptions = options.map(item => {
+    if ('options' in item) {
+      const filtered = item.options.filter(opt => isMatch(opt.label, searchTerm));
+      return filtered.length > 0 ? { ...item, options: filtered } : null;
+    }
+    return isMatch(item.label, searchTerm) ? item : null;
+  }).filter(Boolean) as SelectOption[];
 
   const selectedOption = flatOptions.find(opt => opt.value === value);
   const alignClass = align === 'right' ? 'right-0 origin-top-right' : 'left-0 origin-top-left';
@@ -67,6 +105,7 @@ export function CustomSelect({
         onClick={() => {
           onChange(option.value);
           setIsOpen(false);
+          setSearchTerm('');
         }}
         className={cn(
           "flex items-center justify-between w-full px-3 py-2 text-sm transition-colors rounded-lg text-left group",
@@ -85,6 +124,7 @@ export function CustomSelect({
     <div className={cn("relative", className)} ref={ref}>
       <button
         type="button"
+        onKeyDown={handleKeyDown}
         onClick={() => !disabled && setIsOpen(!isOpen)}
         disabled={disabled}
         className={cn(
@@ -111,8 +151,20 @@ export function CustomSelect({
               dropdownClassName
             )}
           >
+            <div className="p-2 border-b border-border">
+              <input
+                ref={inputRef}
+                autoFocus
+                type="text"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                placeholder="Buscar..."
+                className="w-full px-3 py-2 text-sm bg-foreground/5 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500/50"
+                onClick={(e) => e.stopPropagation()}
+              />
+            </div>
             <div className="flex flex-col max-h-60 overflow-y-auto custom-scrollbar p-1.5 gap-0.5">
-              {options.map((item, index) => {
+              {filteredOptions.length > 0 ? filteredOptions.map((item, index) => {
                 if ('options' in item) {
                   return (
                     <div key={`group-${index}`} className="mb-2 last:mb-0">
@@ -126,7 +178,9 @@ export function CustomSelect({
                   );
                 }
                 return renderOption(item);
-              })}
+              }) : (
+                <div className="px-3 py-2 text-sm text-foreground/50 text-center">No encontrado</div>
+              )}
             </div>
           </motion.div>
         )}

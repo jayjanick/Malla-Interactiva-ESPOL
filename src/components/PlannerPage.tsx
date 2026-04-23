@@ -28,23 +28,29 @@ export function PlannerPage({ career }: PlannerPageProps) {
   const [selectedSubjectId, setSelectedSubjectId] = useState<string>('');
   const [selectedOptionId, setSelectedOptionId] = useState<string>('');
   const [professor, setProfessor] = useState('');
+  const [parallel, setParallel] = useState('');
 
   const availableSubjects = career.subjects.filter(s => !approvedSubjects.includes(s.id) && !plannedSubjects.some(p => p.subjectId === s.id));
   
-  // Group subjects by level
-  const subjectsByLevel = availableSubjects.reduce((acc, subject) => {
-    const level = parseInt(subject.period.split(' ')[0], 10) || 0;
-    if (!acc[level]) {
-      acc[level] = [];
+  // Group subjects by their exact period string
+  const subjectsByPeriod = availableSubjects.reduce((acc, subject) => {
+    const periodName = subject.period || 'Otros';
+    if (!acc[periodName]) {
+      acc[periodName] = [];
     }
-    acc[level].push(subject);
+    acc[periodName].push(subject);
     return acc;
-  }, {} as Record<number, typeof availableSubjects>);
+  }, {} as Record<string, typeof availableSubjects>);
 
-  const subjectOptions = Object.entries(subjectsByLevel)
-    .sort(([levelA], [levelB]) => Number(levelA) - Number(levelB))
-    .map(([level, subjects]) => ({
-      label: level === '0' ? 'COMPLEMENTARIAS' : `Nivel ${level}`,
+  const subjectOptions = Object.entries(subjectsByPeriod)
+    .sort(([periodA], [periodB]) => {
+      // Sort so '100 - I' comes before '100 - II', '200 - I', etc., and others go to the end
+      if (periodA.match(/^\d/) && !periodB.match(/^\d/)) return -1;
+      if (!periodA.match(/^\d/) && periodB.match(/^\d/)) return 1;
+      return periodA.localeCompare(periodB);
+    })
+    .map(([periodName, subjects]) => ({
+      label: periodName.includes('-') ? `Nivel ${periodName.replace(/\s+/g, '')}` : periodName.toUpperCase(),
       options: subjects.map(s => ({
         value: s.id,
         label: `${s.name} (${s.credits} CR)`
@@ -78,7 +84,8 @@ export function PlannerPage({ career }: PlannerPageProps) {
     addPlanned({
       subjectId: selectedSubjectId,
       periodId,
-      professor: professor.trim() || 'Por definir'
+      professor: professor.trim() || 'Por definir',
+      parallel: parallel.trim() || ''
     });
 
     if (selectedOptionId) {
@@ -88,6 +95,7 @@ export function PlannerPage({ career }: PlannerPageProps) {
     setSelectedSubjectId('');
     setSelectedOptionId('');
     setProfessor('');
+    setParallel('');
     setAddingToPeriodId(null);
   };
 
@@ -228,7 +236,16 @@ export function PlannerPage({ career }: PlannerPageProps) {
               </div>
 
               {addingToPeriodId === period.id ? (
-                <div className="flex flex-col gap-4 bg-foreground/[0.02] border border-border rounded-xl p-4 transition-colors duration-500">
+                <div 
+                  className="flex flex-col gap-4 bg-foreground/[0.02] border border-border rounded-xl p-4 transition-colors duration-500"
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' && selectedSubjectId) {
+                      if (!((selectedSubject?.isComplementary || selectedSubject?.isItinerary) && !selectedOptionId)) {
+                        handleAddSubject(period.id);
+                      }
+                    }
+                  }}
+                >
                   <div className="flex flex-col gap-1.5">
                     <label className="text-xs font-medium text-foreground/50 uppercase tracking-wider">{t.planner.addSubject}</label>
                     <CustomSelect
@@ -276,15 +293,27 @@ export function PlannerPage({ career }: PlannerPageProps) {
                       />
                     </div>
                   )}
-                  <div className="flex flex-col gap-1.5">
-                    <label className="text-xs font-medium text-foreground/50 uppercase tracking-wider">{t.planner.professor}</label>
-                    <input 
-                      type="text"
-                      placeholder="Ej. Juan Pérez"
-                      value={professor}
-                      onChange={(e) => setProfessor(e.target.value)}
-                      className="bg-foreground/5 border border-border hover:border-emerald-500/30 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/50 text-foreground placeholder:text-foreground/20 transition-all"
-                    />
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <div className="flex flex-col gap-1.5 flex-[2] w-full">
+                      <label className="text-xs font-medium text-foreground/50 uppercase tracking-wider">{t.planner.professor}</label>
+                      <input 
+                        type="text"
+                        placeholder="Ej. Juan Pérez"
+                        value={professor}
+                        onChange={(e) => setProfessor(e.target.value)}
+                        className="bg-foreground/5 border border-border hover:border-emerald-500/30 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/50 text-foreground placeholder:text-foreground/20 transition-all"
+                      />
+                    </div>
+                    <div className="flex flex-col gap-1.5 flex-[1] w-full">
+                      <label className="text-xs font-medium text-foreground/50 uppercase tracking-wider">Paralelo</label>
+                      <input 
+                        type="text"
+                        placeholder="Ej. 101"
+                        value={parallel}
+                        onChange={(e) => setParallel(e.target.value)}
+                        className="bg-foreground/5 border border-border hover:border-emerald-500/30 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/50 text-foreground placeholder:text-foreground/20 transition-all"
+                      />
+                    </div>
                   </div>
                   <div className="flex items-center gap-2 justify-end mt-2">
                     <button
@@ -293,6 +322,7 @@ export function PlannerPage({ career }: PlannerPageProps) {
                         setSelectedSubjectId('');
                         setSelectedOptionId('');
                         setProfessor('');
+                        setParallel('');
                       }}
                       className="px-3 py-1.5 text-sm bg-foreground/5 hover:bg-foreground/10 text-foreground rounded-lg transition-colors"
                     >
@@ -331,19 +361,39 @@ export function PlannerPage({ career }: PlannerPageProps) {
 
                   return (
                     <div key={planned.id} className="flex items-center justify-between p-3 rounded-xl bg-card border border-border group hover:ios-float hover:border-emerald-500/30 ios-shadow transition-all duration-300">
-                      <div className="flex flex-col">
-                        <span className="text-sm font-medium text-foreground/90">{displayTitle}</span>
+                      <div className="flex flex-col flex-1 min-w-0 mr-3">
+                        <span className="text-sm font-medium text-foreground/90 truncate" title={displayTitle}>{displayTitle}</span>
                         <div className="flex items-center gap-2 mt-1">
-                          <span className="text-xs font-mono text-foreground/40">{subject.code}</span>
-                          <span className="text-foreground/20 text-xs">•</span>
-                          <span className="text-xs text-foreground/50">{planned.professor}</span>
+                          <span className="text-xs font-mono text-foreground/40 shrink-0">{subject.code}</span>
+                          {planned.parallel && (
+                            <>
+                              <span className="text-foreground/20 text-[10px] shrink-0">•</span>
+                              <span className="text-[11px] font-mono font-medium text-foreground/50 uppercase shrink-0">PAR {planned.parallel}</span>
+                            </>
+                          )}
                         </div>
+                        <span className="text-xs text-foreground/50 mt-0.5 truncate" title={planned.professor}>{planned.professor}</span>
                       </div>
                       
-                      <div className="flex items-center gap-4">
-                        <span className="text-xs font-medium px-2 py-1 rounded-md bg-foreground/5 text-foreground/50">
+                      <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+                        <span className="text-xs font-medium px-2 py-1 rounded-md bg-foreground/5 text-foreground/50 shrink-0 whitespace-nowrap">
                           {subject.credits} CR
                         </span>
+                        <button
+                          onClick={() => {
+                            setProfessor(planned.professor);
+                            setParallel(planned.parallel || '');
+                            setSelectedSubjectId(planned.subjectId);
+                            setAddingToPeriodId(planned.periodId);
+                            // Set itinerary if needed
+                            if (itinerarySelection) setSelectedOptionId(itinerarySelection);
+                            removePlanned(planned.id);
+                          }}
+                          className="p-1.5 rounded-md text-foreground/40 hover:text-emerald-500 hover:bg-emerald-500/10 transition-colors"
+                          title="Editar"
+                        >
+                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+                        </button>
                         <button
                           onClick={() => removePlanned(planned.id)}
                           className="p-1.5 rounded-md text-foreground/40 hover:text-red-500 hover:bg-red-500/10 transition-colors"

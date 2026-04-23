@@ -104,7 +104,7 @@ export function Sidebar({ currentView, setCurrentView }: SidebarProps) {
 
       {/* Mobile Bottom Navigation */}
       <div className="md:hidden fixed bottom-4 left-1/2 -translate-x-1/2 w-[95%] z-50">
-        <div className="bg-card/95 backdrop-blur-md rounded-3xl flex items-center justify-around py-2.5 px-3 transition-colors duration-500 border border-border/50">
+        <div className="bg-card dark:bg-card/95 backdrop-blur-md rounded-3xl flex items-center justify-around py-2.5 px-3 transition-colors duration-500 border border-border/50 shadow-xl sidebar-solid">
           <button
             onClick={() => setCurrentView('dashboard')}
             className={cn(
@@ -246,10 +246,16 @@ export function Sidebar({ currentView, setCurrentView }: SidebarProps) {
                   <div className="flex items-center justify-between p-4 bg-foreground/[0.02] border border-border rounded-xl">
                     <div className="flex flex-col">
                       <span className="font-medium">{t.settings.version}</span>
+                      <span className="text-[10px] text-foreground/50">Iteración actual</span>
                     </div>
-                    <span className="text-sm font-mono text-foreground/50">
-                      v1.2.3
-                    </span>
+                    <div className="flex items-center gap-2">
+                       <span className="text-xs font-semibold px-2 py-0.5 rounded-md bg-indigo-500/10 text-indigo-500 dark:text-indigo-400">
+                         Build 29
+                       </span>
+                       <span className="text-sm font-mono text-foreground/50">
+                         v1.0.29
+                       </span>
+                    </div>
                   </div>
 
                   <div className="flex flex-col gap-2 mt-2">
