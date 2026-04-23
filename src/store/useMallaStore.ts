@@ -34,6 +34,7 @@ interface MallaState {
   toggleApproved: (subjectId: string) => void;
   setItinerarySelection: (subjectId: string, optionId: string) => void;
   addPlanned: (subject: Omit<PlannedSubject, 'id'>) => void;
+  updatePlanned: (id: string, updates: Partial<Omit<PlannedSubject, 'id'>>) => void;
   removePlanned: (id: string) => void;
   addPeriod: (name: string) => void;
   updatePeriod: (id: string, name: string) => void;
@@ -82,6 +83,12 @@ export const useMallaStore = create<MallaState>()(
           ...state.plannedSubjects,
           { ...subject, id: crypto.randomUUID() }
         ]
+      })),
+
+      updatePlanned: (id, updates) => set((state) => ({
+        plannedSubjects: state.plannedSubjects.map(sub => 
+          sub.id === id ? { ...sub, ...updates } : sub
+        )
       })),
 
       removePlanned: (id) => set((state) => ({

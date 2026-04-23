@@ -29,8 +29,12 @@ export function PlannerPage({ career }: PlannerPageProps) {
   const [selectedOptionId, setSelectedOptionId] = useState<string>('');
   const [professor, setProfessor] = useState('');
   const [parallel, setParallel] = useState('');
+  const [editingPlannedSubjectId, setEditingPlannedSubjectId] = useState<string | null>(null);
 
-  const availableSubjects = career.subjects.filter(s => !approvedSubjects.includes(s.id) && !plannedSubjects.some(p => p.subjectId === s.id));
+  const availableSubjects = career.subjects.filter(s => 
+    !approvedSubjects.includes(s.id) && 
+    (!plannedSubjects.some(p => p.subjectId === s.id) || editingPlannedSubjectId === plannedSubjects.find(p => p.subjectId === s.id)?.id)
+  );
   
   // Group subjects by their exact period string
   const subjectsByPeriod = availableSubjects.reduce((acc, subject) => {
@@ -81,12 +85,22 @@ export function PlannerPage({ career }: PlannerPageProps) {
   const handleAddSubject = (periodId: string) => {
     if (!selectedSubjectId) return;
     
-    addPlanned({
-      subjectId: selectedSubjectId,
-      periodId,
-      professor: professor.trim() || 'Por definir',
-      parallel: parallel.trim() || ''
-    });
+    if (editingPlannedSubjectId) {
+      useMallaStore.getState().updatePlanned(editingPlannedSubjectId, {
+        subjectId: selectedSubjectId,
+        periodId,
+        professor: professor.trim() || 'Por definir',
+        parallel: parallel.trim() || ''
+      });
+      setEditingPlannedSubjectId(null);
+    } else {
+      useMallaStore.getState().addPlanned({
+        subjectId: selectedSubjectId,
+        periodId,
+        professor: professor.trim() || 'Por definir',
+        parallel: parallel.trim() || ''
+      });
+    }
 
     if (selectedOptionId) {
       useMallaStore.getState().setItinerarySelection(selectedSubjectId, selectedOptionId);
@@ -97,6 +111,15 @@ export function PlannerPage({ career }: PlannerPageProps) {
     setProfessor('');
     setParallel('');
     setAddingToPeriodId(null);
+  };
+
+  const handleCancelAddEdit = () => {
+    setSelectedSubjectId('');
+    setSelectedOptionId('');
+    setProfessor('');
+    setParallel('');
+    setAddingToPeriodId(null);
+    setEditingPlannedSubjectId(null);
   };
 
   const selectedSubject = career.subjects.find(s => s.id === selectedSubjectId);
@@ -317,13 +340,7 @@ export function PlannerPage({ career }: PlannerPageProps) {
                   </div>
                   <div className="flex items-center gap-2 justify-end mt-2">
                     <button
-                      onClick={() => {
-                        setAddingToPeriodId(null);
-                        setSelectedSubjectId('');
-                        setSelectedOptionId('');
-                        setProfessor('');
-                        setParallel('');
-                      }}
+                      onClick={handleCancelAddEdit}
                       className="px-3 py-1.5 text-sm bg-foreground/5 hover:bg-foreground/10 text-foreground rounded-lg transition-colors"
                     >
                       {t.planner.cancel}
@@ -333,7 +350,7 @@ export function PlannerPage({ career }: PlannerPageProps) {
                       disabled={!selectedSubjectId || ((selectedSubject?.isComplementary || selectedSubject?.isItinerary) && !selectedOptionId)}
                       className="px-3 py-1.5 text-sm bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white rounded-lg transition-colors"
                     >
-                      {t.planner.add}
+                      {editingPlannedSubjectId ? "Guardar" : t.planner.add}
                     </button>
                   </div>
                 </div>
@@ -387,7 +404,7 @@ export function PlannerPage({ career }: PlannerPageProps) {
                             setAddingToPeriodId(planned.periodId);
                             // Set itinerary if needed
                             if (itinerarySelection) setSelectedOptionId(itinerarySelection);
-                            removePlanned(planned.id);
+                            setEditingPlannedSubjectId(planned.id);
                           }}
                           className="p-1.5 rounded-md text-foreground/40 hover:text-emerald-500 hover:bg-emerald-500/10 transition-colors"
                           title="Editar"

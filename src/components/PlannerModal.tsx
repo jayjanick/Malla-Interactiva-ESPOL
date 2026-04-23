@@ -21,19 +21,33 @@ export function PlannerModal({ onClose, career }: PlannerModalProps) {
   const [selectedOptionId, setSelectedOptionId] = useState<string>('');
   const [professor, setProfessor] = useState('');
   const [parallel, setParallel] = useState('');
+  const [editingPlannedSubjectId, setEditingPlannedSubjectId] = useState<string | null>(null);
 
   // Filter subjects that are not approved yet
-  const availableSubjects = career.subjects.filter(s => !approvedSubjects.includes(s.id));
+  const availableSubjects = career.subjects.filter(s => 
+    !approvedSubjects.includes(s.id) && 
+    (!plannedSubjects.some(p => p.subjectId === s.id) || editingPlannedSubjectId === plannedSubjects.find(p => p.subjectId === s.id)?.id)
+  );
 
   const handleAdd = () => {
     if (!selectedSubjectId) return;
     
-    addPlanned({
-      subjectId: selectedSubjectId,
-      periodId: selectedPeriod,
-      professor: professor.trim() || 'Por definir',
-      parallel: parallel.trim() || ''
-    });
+    if (editingPlannedSubjectId) {
+      useMallaStore.getState().updatePlanned(editingPlannedSubjectId, {
+        subjectId: selectedSubjectId,
+        periodId: selectedPeriod,
+        professor: professor.trim() || 'Por definir',
+        parallel: parallel.trim() || ''
+      });
+      setEditingPlannedSubjectId(null);
+    } else {
+      useMallaStore.getState().addPlanned({
+        subjectId: selectedSubjectId,
+        periodId: selectedPeriod,
+        professor: professor.trim() || 'Por definir',
+        parallel: parallel.trim() || ''
+      });
+    }
 
     if (selectedOptionId) {
       useMallaStore.getState().setItinerarySelection(selectedSubjectId, selectedOptionId);
@@ -43,6 +57,14 @@ export function PlannerModal({ onClose, career }: PlannerModalProps) {
     setSelectedOptionId('');
     setProfessor('');
     setParallel('');
+  };
+
+  const handleCancelAddEdit = () => {
+    setSelectedSubjectId('');
+    setSelectedOptionId('');
+    setProfessor('');
+    setParallel('');
+    setEditingPlannedSubjectId(null);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -191,36 +213,48 @@ export function PlannerModal({ onClose, career }: PlannerModalProps) {
               </div>
             )}
 
-            <div className="flex flex-col sm:flex-row gap-4 items-end">
-              <div className="flex flex-col gap-1.5 flex-[2] w-full">
-                <label className="text-xs font-medium text-foreground/50 uppercase tracking-wider">{t.planner.professor}</label>
-                <input 
-                  type="text"
-                  placeholder="Ej. Juan Pérez"
-                  value={professor}
-                  onChange={(e) => setProfessor(e.target.value)}
-                  className="bg-foreground/5 border border-border hover:border-emerald-500/30 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/50 text-foreground placeholder:text-foreground/20 transition-all"
-                />
-              </div>
-              <div className="flex flex-col gap-1.5 flex-[1] w-full">
-                <label className="text-xs font-medium text-foreground/50 uppercase tracking-wider">Paralelo</label>
-                <input 
-                  type="text"
-                  placeholder="Ej. 101"
-                  value={parallel}
-                  onChange={(e) => setParallel(e.target.value)}
-                  className="bg-foreground/5 border border-border hover:border-emerald-500/30 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/50 text-foreground placeholder:text-foreground/20 transition-all"
-                />
+            <div className="flex flex-col gap-4 items-end">
+              <div className="flex flex-col sm:flex-row gap-4 w-full">
+                <div className="flex flex-col gap-1.5 flex-[2] w-full">
+                  <label className="text-xs font-medium text-foreground/50 uppercase tracking-wider">{t.planner.professor}</label>
+                  <input 
+                    type="text"
+                    placeholder="Ej. Juan Pérez"
+                    value={professor}
+                    onChange={(e) => setProfessor(e.target.value)}
+                    className="bg-foreground/5 border border-border hover:border-emerald-500/30 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/50 text-foreground placeholder:text-foreground/20 transition-all"
+                  />
+                </div>
+                <div className="flex flex-col gap-1.5 flex-[1] w-full">
+                  <label className="text-xs font-medium text-foreground/50 uppercase tracking-wider">Paralelo</label>
+                  <input 
+                    type="text"
+                    placeholder="Ej. 101"
+                    value={parallel}
+                    onChange={(e) => setParallel(e.target.value)}
+                    className="bg-foreground/5 border border-border hover:border-emerald-500/30 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/50 text-foreground placeholder:text-foreground/20 transition-all"
+                  />
+                </div>
               </div>
               
-              <button
-                onClick={handleAdd}
-                disabled={!selectedSubjectId || ((selectedSubject?.isComplementary || selectedSubject?.isItinerary) && !selectedOptionId)}
-                className="w-full sm:w-auto px-6 py-2 bg-emerald-600 hover:bg-emerald-500 disabled:bg-foreground/5 disabled:text-foreground/30 disabled:cursor-not-allowed text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2 h-[38px]"
-              >
-                <Plus className="w-4 h-4" />
-                {t.planner.add}
-              </button>
+              <div className="flex items-center gap-2 w-full sm:w-auto mt-2">
+                {editingPlannedSubjectId && (
+                  <button
+                    onClick={handleCancelAddEdit}
+                    className="flex-1 sm:flex-none px-4 py-2 bg-foreground/5 hover:bg-foreground/10 text-foreground rounded-lg font-medium transition-colors h-[38px]"
+                  >
+                    {t.planner.cancel}
+                  </button>
+                )}
+                <button
+                  onClick={handleAdd}
+                  disabled={!selectedSubjectId || ((selectedSubject?.isComplementary || selectedSubject?.isItinerary) && !selectedOptionId)}
+                  className="flex-1 sm:flex-none px-6 py-2 bg-emerald-600 hover:bg-emerald-500 disabled:bg-foreground/5 disabled:text-foreground/30 disabled:cursor-not-allowed text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2 h-[38px]"
+                >
+                  {!editingPlannedSubjectId && <Plus className="w-4 h-4" />}
+                  {editingPlannedSubjectId ? "Guardar" : t.planner.add}
+                </button>
+              </div>
             </div>
           </div>
 
@@ -291,10 +325,9 @@ export function PlannerModal({ onClose, career }: PlannerModalProps) {
                             setProfessor(planned.professor);
                             setParallel(planned.parallel || '');
                             setSelectedSubjectId(planned.subjectId);
-                            setSelectedPeriod(planned.periodId);
                             // Set itinerary if needed
                             if (itinerarySelection) setSelectedOptionId(itinerarySelection);
-                            removePlanned(planned.id);
+                            setEditingPlannedSubjectId(planned.id);
                           }}
                           className="p-1.5 rounded-md text-foreground/40 hover:text-emerald-500 hover:bg-emerald-500/10 transition-colors"
                           title="Editar"
