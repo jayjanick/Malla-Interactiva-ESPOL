@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useMallaStore } from '../store/useMallaStore';
 import { translations, Language } from '../i18n/translations';
 import { CustomSelect } from './CustomSelect';
+import packageInfo from '../../package.json';
 
 interface SidebarProps {
   currentView: 'dashboard' | 'planner' | 'privacy' | 'terms';
@@ -250,10 +251,10 @@ export function Sidebar({ currentView, setCurrentView }: SidebarProps) {
                     </div>
                     <div className="flex items-center gap-2">
                        <span className="text-xs font-semibold px-2 py-0.5 rounded-md bg-indigo-500/10 text-indigo-500 dark:text-indigo-400">
-                         Build 29
+                         Build {packageInfo.version.split('.').pop()}
                        </span>
                        <span className="text-sm font-mono text-foreground/50">
-                         v1.0.29
+                         v{packageInfo.version}
                        </span>
                     </div>
                   </div>

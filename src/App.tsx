@@ -19,8 +19,10 @@ import { motion, AnimatePresence } from 'motion/react';
 import { BookOpen, Github, Mail, Linkedin } from 'lucide-react';
 import { translations } from './i18n/translations';
 import { useEffect } from 'react';
+import packageInfo from '../package.json';
 
 export default function App() {
+  const version = packageInfo.version;
   const { selectedCareerId, language, theme } = useMallaStore();
   const [isPlannerOpen, setIsPlannerOpen] = useState(false);
   const [currentView, setCurrentView] = useState<'dashboard' | 'planner' | 'privacy' | 'terms'>('dashboard');
@@ -110,7 +112,7 @@ export default function App() {
                     Términos de Uso
                   </button>
                 </div>
-                <span className="hidden xl:inline-block font-mono bg-foreground/5 px-2 py-0.5 rounded-md border border-border sm:ml-auto">v1.2.3</span>
+                <span className="hidden xl:inline-block font-mono bg-foreground/5 px-2 py-0.5 rounded-md border border-border sm:ml-auto">v{version}</span>
               </div>
 
               <div className="space-y-3">
