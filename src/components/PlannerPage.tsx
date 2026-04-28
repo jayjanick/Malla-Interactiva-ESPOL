@@ -29,6 +29,8 @@ export function PlannerPage({ career }: PlannerPageProps) {
   const [selectedOptionId, setSelectedOptionId] = useState<string>('');
   const [professor, setProfessor] = useState('');
   const [parallel, setParallel] = useState('');
+  const [building, setBuilding] = useState('');
+  const [room, setRoom] = useState('');
   const [editingPlannedSubjectId, setEditingPlannedSubjectId] = useState<string | null>(null);
 
   const availableSubjects = career.subjects.filter(s => 
@@ -90,7 +92,9 @@ export function PlannerPage({ career }: PlannerPageProps) {
         subjectId: selectedSubjectId,
         periodId,
         professor: professor.trim() || 'Por definir',
-        parallel: parallel.trim() || ''
+        parallel: parallel.trim() || '',
+        building: building.trim() || '',
+        room: room.trim() || ''
       });
       setEditingPlannedSubjectId(null);
     } else {
@@ -98,7 +102,9 @@ export function PlannerPage({ career }: PlannerPageProps) {
         subjectId: selectedSubjectId,
         periodId,
         professor: professor.trim() || 'Por definir',
-        parallel: parallel.trim() || ''
+        parallel: parallel.trim() || '',
+        building: building.trim() || '',
+        room: room.trim() || ''
       });
     }
 
@@ -110,6 +116,8 @@ export function PlannerPage({ career }: PlannerPageProps) {
     setSelectedOptionId('');
     setProfessor('');
     setParallel('');
+    setBuilding('');
+    setRoom('');
     setAddingToPeriodId(null);
   };
 
@@ -118,6 +126,8 @@ export function PlannerPage({ career }: PlannerPageProps) {
     setSelectedOptionId('');
     setProfessor('');
     setParallel('');
+    setBuilding('');
+    setRoom('');
     setAddingToPeriodId(null);
     setEditingPlannedSubjectId(null);
   };
@@ -338,6 +348,28 @@ export function PlannerPage({ career }: PlannerPageProps) {
                       />
                     </div>
                   </div>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <div className="flex flex-col gap-1.5 w-full">
+                      <label className="text-xs font-medium text-foreground/50 uppercase tracking-wider">Edificio</label>
+                      <input 
+                        type="text"
+                        placeholder="Ej: 9B"
+                        value={building}
+                        onChange={(e) => setBuilding(e.target.value)}
+                        className="bg-foreground/5 border border-border hover:border-emerald-500/30 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/50 text-foreground placeholder:text-foreground/20 transition-all"
+                      />
+                    </div>
+                    <div className="flex flex-col gap-1.5 w-full">
+                      <label className="text-xs font-medium text-foreground/50 uppercase tracking-wider">Aula</label>
+                      <input 
+                        type="text"
+                        placeholder="Ej: A104"
+                        value={room}
+                        onChange={(e) => setRoom(e.target.value)}
+                        className="bg-foreground/5 border border-border hover:border-emerald-500/30 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/50 text-foreground placeholder:text-foreground/20 transition-all"
+                      />
+                    </div>
+                  </div>
                   <div className="flex items-center gap-2 justify-end mt-2">
                     <button
                       onClick={handleCancelAddEdit}
@@ -388,6 +420,14 @@ export function PlannerPage({ career }: PlannerPageProps) {
                               <span className="text-[11px] font-mono font-medium text-foreground/50 uppercase shrink-0">PAR {planned.parallel}</span>
                             </>
                           )}
+                          {(planned.building || planned.room) && (
+                            <>
+                              <span className="text-foreground/20 text-[10px] shrink-0">•</span>
+                              <span className="text-[11px] font-mono font-medium text-foreground/50 uppercase shrink-0">
+                                {planned.building}{planned.room ? ` - ${planned.room}` : ''}
+                              </span>
+                            </>
+                          )}
                         </div>
                         <span className="text-xs text-foreground/50 mt-0.5 truncate" title={planned.professor}>{planned.professor}</span>
                       </div>
@@ -400,6 +440,8 @@ export function PlannerPage({ career }: PlannerPageProps) {
                           onClick={() => {
                             setProfessor(planned.professor);
                             setParallel(planned.parallel || '');
+                            setBuilding(planned.building || '');
+                            setRoom(planned.room || '');
                             setSelectedSubjectId(planned.subjectId);
                             setAddingToPeriodId(planned.periodId);
                             // Set itinerary if needed
