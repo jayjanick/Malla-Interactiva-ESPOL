@@ -444,77 +444,78 @@ export const careers: Career[] = [
   },
   {
     id: 'aud',
-    name: 'Auditoría y Control de Gestión',
+    name: 'Auditoría y Gestión',
     facultyId: 'fcs',
     subjects: [
       // NIVEL 100 - I
       { id: 'matg1045', code: 'MATG1045', name: 'Cálculo de Una Variable', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: [], period: '100 - I' },
       { id: 'indg1033', code: 'INDG1033', name: 'Análisis y Resolución de Problemas', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '100 - I' },
-      { id: 'ecog2067', code: 'ECOG2067', name: 'Introducción a la Economía', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: [], period: '100 - I' },
       { id: 'ccag2022', code: 'CCAG2022', name: 'Estudio de Casos de Ciencias Sociales', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], period: '100 - I' },
-      { id: 'audg2034', code: 'AUDG2034', name: 'Contabilidad Financiera', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - I' },
+      { id: 'ecog2067', code: 'ECOG2067', name: 'Introducción a la Economía', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: [], period: '100 - I' },
+      { id: 'audg2035', code: 'AUDG2035', name: 'Contabilidad I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - I' },
       { id: 'idig1006', code: 'IDIG1006', name: 'Inglés I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '100 - I' },
 
       // NIVEL 100 - II
       { id: 'matg1047', code: 'MATG1047', name: 'Cálculo de Varias Variables', credits: 3, hoursTotal: 9, hoursDetail: '3/2/4', prerequisites: ['matg1045'], period: '100 - II' },
-      { id: 'ecog2063', code: 'ECOG2063', name: 'Macroeconomía I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ecog2067'], period: '100 - II' },
-      { id: 'ecog2047', code: 'ECOG2047', name: 'Economía Gerencial', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ecog2067'], period: '100 - II' },
+      { id: 'ccpg1043', code: 'CCPG1043', name: 'Fundamentos de Programación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1045'], period: '100 - II' },
+      { id: 'audg2039', code: 'AUDG2039', name: 'Fundamentos de Auditoría', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['ccag2022'], period: '100 - II' },
       { id: 'admg2029', code: 'ADMG2029', name: 'Fundamentos de Administración', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['ccag2022', 'ecog2067'], period: '100 - II' },
-      { id: 'matg2008', code: 'MATG2008', name: 'Matemáticas Financieras', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 5, period: '100 - II' },
+      { id: 'audg2036', code: 'AUDG2036', name: 'Contabilidad II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['audg2035'], period: '100 - II' },
       { id: 'idig1007', code: 'IDIG1007', name: 'Inglés II', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1006'], period: '100 - II' },
 
       // NIVEL 200 - I
       { id: 'estg1036', code: 'ESTG1036', name: 'Estadística I', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1047'], period: '200 - I' },
-      { id: 'ccpg1043', code: 'CCPG1043', name: 'Fundamentos de Programación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['matg1045'], period: '200 - I' },
-      { id: 'admg2025', code: 'ADMG2025', name: 'Comportamiento Organizacional', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['ecog2063', 'ecog2047'], period: '200 - I' },
-      { id: 'audg2035', code: 'AUDG2035', name: 'Contabilidad Intermedia', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['audg2034'], period: '200 - I' },
       { id: 'idig2012', code: 'IDIG2012', name: 'Comunicación', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 6, period: '200 - I' },
+      { id: 'matg2008', code: 'MATG2008', name: 'Matemáticas Financieras', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], minApprovedSubjects: 6, period: '200 - I' },
+      { id: 'jurg2005', code: 'JURG2005', name: 'Derecho Societario y Laboral', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['admg2029'], period: '200 - I' },
+      { id: 'audg2037', code: 'AUDG2037', name: 'Contabilidad III', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['audg2036'], period: '200 - I' },
       { id: 'idig1008', code: 'IDIG1008', name: 'Inglés III', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1007'], period: '200 - I' },
 
       // NIVEL 200 - II
-      { id: 'estg1037', code: 'ESTG1037', name: 'Estadística II', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['estg1036'], period: '200 - II' },
-      { id: 'audg2036', code: 'AUDG2036', name: 'Contabilidad Avanzada', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['audg2035'], period: '200 - II' },
-      { id: 'ccag2023', code: 'CCAG2023', name: 'Sociología', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], minApprovedSubjects: 15, period: '200 - II' },
-      { id: 'ecog2042', code: 'ECOG2042', name: 'Análisis Financiero', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['matg2008', 'audg2034'], period: '200 - II' },
-      { id: 'audg2033', code: 'AUDG2033', name: 'Contabilidad de Costos', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['audg2034'], period: '200 - II' },
+      { id: 'estg1037', code: 'ESTG1037', name: 'Estadística II', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['estg1036', 'ccpg1043'], period: '200 - II' },
+      { id: 'audg2043', code: 'AUDG2043', name: 'Introducción a las Técnicas de Auditoría', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['audg2039'], period: '200 - II' },
+      { id: 'ecog2042', code: 'ECOG2042', name: 'Análisis Financiero', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['matg2008'], period: '200 - II' },
+      { id: 'jurg2006', code: 'JURG2006', name: 'Derecho Tributario', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['jurg2005'], period: '200 - II' },
+      { id: 'audg2032', code: 'AUDG2032', name: 'Contabilidad Avanzada', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['audg2037'], period: '200 - II' },
       { id: 'idig1009', code: 'IDIG1009', name: 'Inglés IV', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1008'], period: '200 - II' },
 
       // NIVEL 300 - I
+      { id: 'estg1041', code: 'ESTG1041', name: 'Muestreo', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['estg1037'], period: '300 - I' },
       { id: 'admg1005', code: 'ADMG1005', name: 'Emprendimiento e Innovación', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: [], minApprovedSubjects: 20, period: '300 - I' },
-      { id: 'audg2039', code: 'AUDG2039', name: 'Fundamentos de Auditoría', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['audg2036'], period: '300 - I' },
-      { id: 'ccpg1054', code: 'CCPG1054', name: 'Sistemas de Información', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], minApprovedSubjects: 15, period: '300 - I' },
-      { id: 'audg2037', code: 'AUDG2037', name: 'Contabilidad Gerencial', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['audg2033'], period: '300 - I' },
-      { id: 'ecog2055', code: 'ECOG2055', name: 'Fundamentos de Inversiones', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['ecog2042'], period: '300 - I' },
+      { id: 'admg2026', code: 'ADMG2026', name: 'Desarrollo Organizacional', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['audg2043'], period: '300 - I' },
+      { id: 'ecog2054', code: 'ECOG2054', name: 'Presupuesto', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['ecog2042'], period: '300 - I' },
+      { id: 'audg2033', code: 'AUDG2033', name: 'Contabilidad de Costos', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['audg2035'], period: '300 - I' },
       { id: 'idig1010', code: 'IDIG1010', name: 'Inglés V', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['idig1009'], period: '300 - I' },
 
       // NIVEL 300 - II
       { id: 'adsg1026', code: 'ADSG1026', name: 'Ciencias de la Sostenibilidad', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 20, period: '300 - II' },
-      { id: 'audg2038', code: 'AUDG2038', name: 'Auditoría Financiera', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['audg2039'], period: '300 - II' },
-      { id: 'audg2040', code: 'AUDG2040', name: 'Control Interno', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['audg2039'], period: '300 - II' },
-      { id: 'ecog2065', code: 'ECOG2065', name: 'Gestión Tributaria', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['audg2033', 'ecog2055'], period: '300 - II' },
-      { id: 'jurg2005', code: 'JURG2005', name: 'Derecho Societario y Laboral', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['admg2029'], period: '300 - II' },
+      { id: 'indg1057', code: 'INDG1057', name: 'Ingeniería de la Calidad', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['estg1037'], period: '300 - II' },
+      { id: 'audg2044', code: 'AUDG2044', name: 'Gestión de la Productividad', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['estg1041', 'admg2026'], period: '300 - II' },
+      { id: 'audg2042', code: 'AUDG2042', name: 'Sistemas de Control de Gestión', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['ecog2054'], period: '300 - II' },
+      { id: 'audg2041', code: 'AUDG2041', name: 'Práctica Tributaria', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['jurg2006', 'audg2036'], period: '300 - II' },
       { id: 'psc_aud', code: 'PSC', name: 'Prácticas de Servicio Comunitario', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: [], period: '300 - II' },
 
       // NIVEL 400 - I
-      { id: 'audg2041', code: 'AUDG2041', name: 'Auditoría de Gestión', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['audg2038', 'audg2040'], period: '400 - I' },
-      { id: 'audg2042', code: 'AUDG2042', name: 'Auditoría de Sistemas', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['audg2040', 'ccpg1054'], period: '400 - I' },
-      { id: 'admg2036', code: 'ADMG2036', name: 'Planificación Estratégica', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['ccag2023', 'audg2037'], period: '400 - I' },
-      { id: 'ecog2066', code: 'ECOG2066', name: 'Planificación y Control Financiero', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['ecog2065'], period: '400 - I' },
-      { id: 'admg2037', code: 'ADMG2037', name: 'Gestión de Proyectos', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['ecog2065'], period: '400 - I' },
+      { id: 'audg2030', code: 'AUDG2030', name: 'Auditoría Operacional', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['indg1057'], period: '400 - I' },
+      { id: 'audg2026', code: 'AUDG2026', name: 'Auditoría de Sistemas Integrados', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: ['indg1057'], period: '400 - I' },
+      { id: 'audg2038', code: 'AUDG2038', name: 'Control Interno', credits: 2, hoursTotal: 6, hoursDetail: '2/0/4', prerequisites: ['audg2044', 'audg2042'], period: '400 - I' },
+      { id: 'audg2027', code: 'AUDG2027', name: 'Auditoría Financiera I', credits: 2, hoursTotal: 6, hoursDetail: '2/2/2', prerequisites: ['ecog2054'], period: '400 - I' },
+      { id: 'ccpg1059', code: 'CCPG1059', name: 'Auditoría de Sistemas de Información', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], minApprovedSubjects: 33, period: '400 - I' },
+      { id: 'ccag2023', code: 'CCAG2023', name: 'Sociología', credits: 2, hoursTotal: 6, hoursDetail: '2/1/3', prerequisites: [], minApprovedSubjects: 15, period: '400 - I' },
       { id: 'itin1_aud', code: 'ITIN1', name: 'Itinerario I', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - I', isItinerary: true, itineraryOptions: auditoriaItineraryOptions },
 
       // NIVEL 400 - II
-      { id: 'audg2044', code: 'AUDG2044', name: 'Gestión de Riesgos', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: ['audg2041'], period: '400 - II' },
-      { id: 'audg2043', code: 'AUDG2043', name: 'Materia Integradora de Auditoría y Control de Gestión', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 42, period: '400 - II' },
+      { id: 'audg2028', code: 'AUDG2028', name: 'Auditoría Financiera II', credits: 3, hoursTotal: 9, hoursDetail: '3/1/5', prerequisites: ['audg2027'], period: '400 - II' },
+      { id: 'audg2040', code: 'AUDG2040', name: 'Materia Integradora de Auditoría y Control de Gestión', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], minApprovedSubjects: 43, period: '400 - II' },
       { id: 'itin2_aud', code: 'ITIN2', name: 'Itinerario II', credits: 3, hoursTotal: 9, hoursDetail: '3/0/6', prerequisites: [], period: '400 - II', isItinerary: true, itineraryOptions: auditoriaItineraryOptions },
 
       // NIVEL 500 - I
       { id: 'ppp_aud', code: 'PPP', name: 'Prácticas Preprofesionales Empresariales', credits: 5, hoursTotal: 5, hoursDetail: '5/0/0', prerequisites: [], period: '500 - I' },
 
       // COMPLEMENTARIAS
-      { id: 'comp1_aud', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
-      { id: 'comp2_aud', code: 'COMP2', name: 'Materia Complementaria 2', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
-      { id: 'comp3_aud', code: 'COMP3', name: 'Materia Complementaria 3', credits: 1, hoursTotal: 3, prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp1_aud', code: 'COMP1', name: 'Materia Complementaria 1', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp2_aud', code: 'COMP2', name: 'Materia Complementaria 2', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
+      { id: 'comp3_aud', code: 'COMP3', name: 'Materia Complementaria 3', credits: 1, hoursTotal: 3, hoursDetail: '1/1/1', prerequisites: [], period: 'Complementarias', isComplementary: true },
     ]
   },
   {
